@@ -14,6 +14,7 @@
     "catalogs/hardware/hinges.json",
     "catalogs/hardware/lifts.json",
     "catalogs/hardware/shelf-supports.json",
+    "catalogs/hardware/models",
     "catalogs/materials",
     "catalogs/registry/brands.json",
     "apps/web/src/view3d",
@@ -21,5 +22,5 @@
   ],
   "decision": "AI-DEC-003",
   "dir": "vendor/modulero-next-cbaf1534",
-  "manifestSha256": "2889c7649eae94458f674fdcd5b2d88bcb6ac88fbdcc12092ca4b2b8b0796687"
+  "manifestSha256": "1fba0c2a1f16b15310e474a607e6d69e88548bfce006a6ab24d6807fef0ae976"
 }

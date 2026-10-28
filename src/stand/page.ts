@@ -5,7 +5,7 @@
 import { MAIN_MODEL, PRICING, type ModelId, type SessionCost } from './cost.ts';
 import type { ProductKind, ProductView, Stand } from './stand.ts';
 import { buildSync } from 'esbuild';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { engineDir } from '../engine/pin.mjs';
 
@@ -107,7 +107,7 @@ function stage3d(stand: Stand, view: ProductView): string {
     <div class="v3d-bar"><button type="button" data-act="fronts" aria-pressed="true">Фасады</button><button type="button" data-act="open">Открыть фасады</button><button type="button" data-act="neutral" aria-pressed="false">Без декоров</button><button type="button" data-act="xray" aria-pressed="false">Рентген</button><button type="button" data-act="explode" aria-pressed="false">Взрыв</button><button type="button" data-act="fit">Вписать</button></div></div>
     <p class="muted">3D-вид конструктора Modulero ${esc(stand.data.engine.sha.slice(0, 8))}: та же сцена, материалы и свет. Тяните — повернуть, колесо или два пальца — приблизить, правая кнопка — сдвинуть, нажатие на дверь или ящик — открыть или закрыть его, на створку купе — сдвинуть её.</p>
     <div class="v3d-fallback" hidden>${view.previewSvg ? `<div class="preview">${view.previewSvg}</div>` : ''}</div>
-    <script type="application/json" id="scene3d">${json(view.scene3d)}</script><script>${view3dModule()}</script><script>${explodeModule()}</script><script>${VIEWER}</script>`
+    <script type="application/json" id="scene3d">${json(view.scene3d)}</script><script type="application/json" id="models3d">${json(modelFiles(view.scene3d.scene))}</script><script>${view3dModule()}</script><script>${explodeModule()}</script><script>${VIEWER}</script>`
       : `<p class="muted">${'plan' in view ? 'Модулей' : 'Деталей'} пока нет.</p>`
   }</section>`;
 }
@@ -311,16 +311,30 @@ function view3dModule(): string {
   return module3d;
 }
 
+/**
+ * Файлы моделей каталога, которые называет сцена (scene.models[].file, MOD-DEC-536), — base64 из копии каталога
+ * (catalogs/hardware/models на закреплённом SHA). 3D-вид грузит их по адресу data: и сверяет sha256 с каталогом;
+ * без файла он рисует параметрическую модель (корзина — коробом из пластин).
+ */
+function modelFiles(scene: { models?: { file: string }[] }): Record<string, string> {
+  const files = [...new Set((scene.models ?? []).map((m) => m.file))].sort();
+  return Object.fromEntries(files.flatMap((f) => {
+    const path = join(engineDir(), 'catalogs/hardware', f);
+    return existsSync(path) ? [[f, readFileSync(path).toString('base64')]] : [];
+  }));
+}
+
 let moduleExplode: string | null = null;
 /**
  * Ходы деталей «Взрыва» — функции ядра explodeOffsets и explodeLift (packages/core/src/engine/explode.ts на закреплённом
  * SHA), и правила створок купе slidePose и slideClears (engine/motion.ts, MOD-DEC-571), как их даёт 3D-виду редактор;
+ * и посадку файлов моделей каталога в их место modelLocal, modelDirection, modelMirrored (engine/scene.ts, MOD-DEC-536);
  * собираются esbuild из копии ядра без изменений.
  */
 function explodeModule(): string {
   moduleExplode ??= buildSync({
     stdin: {
-      contents: "export { explodeOffsets, explodeLift } from './explode.ts'; export { slidePose, slideClears } from './motion.ts';",
+      contents: "export { explodeOffsets, explodeLift } from './explode.ts'; export { slidePose, slideClears } from './motion.ts'; export { modelLocal, modelDirection, modelMirrored } from './scene.ts';",
       resolveDir: join(engineDir(), 'packages/core/src/engine'),
       loader: 'ts',
     },
@@ -344,13 +358,13 @@ function explodeModule(): string {
  * ядра: створка останавливается у соседней на своей дорожке). Без WebGL — статичное превью ядра.
  */
 const VIEWER = `(()=>{
-const D=JSON.parse(document.getElementById('scene3d').textContent),host=document.getElementById('v3d');
+const D=JSON.parse(document.getElementById('scene3d').textContent),F=JSON.parse(document.getElementById('models3d').textContent),host=document.getElementById('v3d');
 const fail=t=>{host.closest('.v3d').hidden=true;const f=document.querySelector('.v3d-fallback');f.hidden=false;f.insertAdjacentHTML('afterbegin','<p class="muted">3D недоступен: '+t+'</p>');};
 try{
   const M=window.ModuleroView3D;host.replaceChildren();
   const E=window.ModuleroExplode;
   const slide=m=>{const l=v.motion.systems().find(x=>x.some(y=>y.key===m.key));if(!l)return;const p=v.motion.slidePositions(l,true),i=l.indexOf(m),far=m.closedMm-m.minMm>m.maxMm-m.closedMm?m.minMm:m.maxMm;p[i]=Math.abs(p[i]-m.closedMm)<1?far:m.closedMm;v.moveLeaves(m.mechanismId,p);};
-  const v=M.create(host,part=>{const m=part&&v.motion.of(part.id);if(m)m.kind==='slide'?slide(m):v.toggleMotion(m.key);},{decor:id=>D.looks[id]||null,explode:E?{offsets:E.explodeOffsets,lift:E.explodeLift}:undefined,slides:E?{pose:E.slidePose,clears:E.slideClears}:undefined});
+  const v=M.create(host,part=>{const m=part&&v.motion.of(part.id);if(m)m.kind==='slide'?slide(m):v.toggleMotion(m.key);},{decor:id=>D.looks[id]||null,explode:E?{offsets:E.explodeOffsets,lift:E.explodeLift}:undefined,slides:E?{pose:E.slidePose,clears:E.slideClears}:undefined,models:E?{local:E.modelLocal,direction:E.modelDirection,mirrored:E.modelMirrored,url:f=>F[f]?'data:model/gltf-binary;base64,'+F[f]:null}:undefined});
   if(v.error){fail(v.error);return;}
   let display={fronts:true,neutral:false};v.update(D.scene,display);
   const btn=a=>document.querySelector('.v3d-bar [data-act='+a+']');

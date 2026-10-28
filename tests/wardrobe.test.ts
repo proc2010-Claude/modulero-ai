@@ -89,6 +89,9 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     // Створки купе двигаются по правилам ядра slidePose и slideClears.
     assert.match(page, /slides:E\?\{pose:E\.slidePose,clears:E\.slideClears\}/);
     assert.match(page, /ModuleroExplode/);
+    // Модели каталога (MOD-DEC-536): файлы сцены — в странице, 3D-вид сажает их функциями ядра modelLocal….
+    assert.match(page, /id="models3d"/);
+    assert.match(page, /models:E\?\{local:E\.modelLocal,direction:E\.modelDirection,mirrored:E\.modelMirrored,/);
     // Текущая цена — в углу поля 3D (AI-DEC-008).
     assert.match(page, /id="v3d-price">Ориентир /);
   } finally {
