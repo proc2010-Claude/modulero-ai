@@ -17,7 +17,8 @@ const KIND_RU: Record<string, string> = { base: 'нижний', niche: 'ниша
 export function renderPage(stand: Stand, cost: SessionCost): string {
   const view = stand.currentView();
   const head = stand.data.history.find((v) => v.n === stand.data.head);
-  const body = view && head ? project(stand, view, head) : '<section class="card"><p class="muted">Проекта ещё нет: помощник создаст его первым вызовом start_project.</p></section>';
+  const empty = '<section class="card"><p class="muted">Проекта ещё нет: помощник создаст его первым вызовом start_project.</p></section>';
+  const parts = view && head ? project(stand, view, head) : { stage: empty, details: '' };
   return `<!doctype html>
 <html lang="ru">
 <head>
@@ -33,17 +34,19 @@ export function renderPage(stand: Stand, cost: SessionCost): string {
     <p class="muted">Сеанс ${esc(stand.name)}${head ? ` · версия ${head.n} · ${esc(head.revision)}` : ''} · движок Modulero ${esc(stand.data.engine.sha.slice(0, 8))}, каталог ${esc(stand.data.engine.hardwareCatalog)}</p>
   </div>
 </header>
-<main class="grid">
-  <div class="col">${body}</div>
-  <aside class="col">${feed(stand)}${costCard(cost)}${history(stand)}</aside>
+<main class="stage">
+  <div class="stage-3d">${parts.stage}</div>
+  <aside class="stage-dialog">${feed(stand)}</aside>
 </main>
+<div class="details">${parts.details}${costCard(cost)}${history(stand)}</div>
+<script>document.querySelectorAll('.stage-dialog .feed').forEach(f=>{f.scrollTop=f.scrollHeight;});</script>
 <footer class="muted">Стенд без Claude API и без публикации: размеры, состав, отказы и цена — ответы ядра Modulero. Цена — ориентир, не предложение.</footer>
 </body>
 </html>
 `;
 }
 
-function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']>>, head: { label: string }): string {
+function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']>>, head: { label: string }): { stage: string; details: string } {
   const s = view.state as any,
     p = view.price as any;
   const full = p.amount_rub !== null && p.amount_rub !== undefined;
@@ -87,7 +90,7 @@ function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']
           .join('')}</tbody></table>`
       : '<p class="muted">Пусто.</p>'
   }</section>`;
-  return price + facts + preview + walls + table + variants(stand);
+  return { stage: preview, details: price + facts + walls + table + variants(stand) };
 }
 
 const TYPE_RU: Record<string, string> = { straight: 'вдоль одной стены', l: 'угловая (Г)', u: 'П-образная' };
@@ -195,11 +198,14 @@ const CSS = `
 --m-base:#5a4b33;--m-niche:#3c3a34;--m-upper:#2f4258;--m-tall:#463d63;--m-mezz:#3d3954;--m-island:#2f4a3a;--human:#252b3d;--ai:#262830;--v3d-bg:#2a2d35}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.top{padding:16px 16px 0;max-width:1240px;margin:0 auto}
+.top{padding:12px 16px 0}.top h1{font-size:18px;margin:0}.top p{margin:2px 0 0}
 h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;margin:0 0 10px}
 .muted{color:var(--muted);font-size:13px}
-.grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px;padding:16px;max-width:1240px;margin:0 auto}
-@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);gap:16px;padding:16px;height:calc(100vh - 62px);min-height:480px}
+.stage-3d,.stage-dialog{min-height:0;display:flex;flex-direction:column}.stage-3d>.card,.stage-dialog>.card{flex:1;min-height:0;display:flex;flex-direction:column}
+.stage-3d .v3d{flex:1;height:auto;min-height:320px}.stage-dialog .feed{flex:1;max-height:none}
+.details{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px;padding:0 16px 16px;align-items:start}
+@media (max-width:860px){.stage{grid-template-columns:minmax(0,1fr);height:auto}.stage-3d .v3d{height:62vh;flex:none}.stage-dialog .feed{max-height:60vh}}
 .col{display:flex;flex-direction:column;gap:16px;min-width:0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
 .price .badge{display:inline-block;font-weight:600;font-size:13px;padding:2px 10px;border-radius:99px}
@@ -227,7 +233,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;p
 .msg{padding:8px 10px;border-radius:10px;font-size:14px}.msg.human{background:var(--human);align-self:flex-end;max-width:92%}.msg.ai{background:var(--ai);max-width:96%}
 .who{font-size:12px;color:var(--muted);margin-bottom:2px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}.chip{border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:2px 10px;font-size:13px}
-footer{max-width:1240px;margin:0 auto;padding:0 16px 24px}
+footer{padding:0 16px 24px}
 `;
 
 const json = (v: unknown) => JSON.stringify(v).replace(/</g, '\\u003c');
