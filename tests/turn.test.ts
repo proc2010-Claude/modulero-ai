@@ -7,7 +7,7 @@ import { join } from 'node:path';
 import { test } from 'node:test';
 import { loadCore } from '../src/stand/engine.ts';
 import { Stand } from '../src/stand/stand.ts';
-import { parseTurn, runTurn } from '../src/stand/turn.ts';
+import { outPaths, parseTurn, runTurn } from '../src/stand/turn.ts';
 
 test('ход: вызовы по порядку, ответ пишется только без отказа', async () => {
   const core = await loadCore();
@@ -35,6 +35,10 @@ test('ход: вызовы по порядку, ответ пишется тол
     assert.equal(a.revision, a.calls[1]!.revision);
     assert.equal(JSON.parse(readFileSync(live, 'utf8')).head.label, 'Шкаф 2 м');
     assert.ok(existsSync(join(copy, 'prototype.html')));
+    // Всё для треда — в ответе хода: текст со строкой расхода, «ход», state с id и высотами.
+    assert.match(a.reply!, /^Готово: шкаф 2 м\.\n\n_Расход через Claude API \(оценка/);
+    assert.equal(a.notify, 'ход w');
+    assert.equal((a.state as { size: { width: number } }).size.width, 2000);
 
     // Отказ: ход останавливается, ответ не пишется, реплика человека остаётся.
     const b = runTurn(
@@ -50,6 +54,8 @@ test('ход: вызовы по порядку, ответ пишется тол
     assert.equal(b.ok, false);
     assert.equal(b.stopped_at, 0);
     assert.equal(b.ai_written, false);
+    assert.equal(b.reply, null);
+    assert.equal(b.notify, null);
     assert.equal(b.revision, a.revision);
     assert.ok(b.last && b.last.refused);
     assert.deepEqual(
@@ -57,6 +63,12 @@ test('ход: вызовы по порядку, ответ пишется тол
       ['human', 'ai', 'human'],
     );
     assert.throws(() => parseTurn({ human: null, calls: 'x', ai: null }), /calls/);
+    // Без полей live и copy — пути по папке вывода сеанса; явный null — не писать.
+    const d = outPaths('/pf', 'w');
+    assert.deepEqual(d, { live: join('/pf', 'ai-dialog/live/w.json'), copy: join('/pf', 'ai-dialog/sessions/w') });
+    assert.deepEqual(parseTurn({ human: null, calls: [], ai: null }, d), { human: null, calls: [], ai: null, live: d.live, copy: d.copy });
+    assert.equal(parseTurn({ human: null, calls: [], ai: null, live: null }, d).live, null);
+    assert.deepEqual(outPaths(null, 'w'), { live: null, copy: null });
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

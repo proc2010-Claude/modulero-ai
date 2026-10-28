@@ -1,12 +1,14 @@
 // npm run dialog -- … — стенд ИИ-диалога из треда (TASK_FIRST.md п. 1, CLAUDE.md «Режим диалога»).
 //
-//   new <сеанс>                 новый сеанс и сделать его текущим
-//   use <сеанс>                 сделать сеанс текущим
+//   new <сеанс> [--out <папка>] новый сеанс и сделать его текущим; --out — папка файлов проекта для хода
+//   use <сеанс> [--out <папка>] сделать сеанс текущим
 //   human '<текст>'             реплика человека в ленту диалога
 //   ai '<текст>'                реплика помощника в ленту диалога
 //   <инструмент> '<JSON>'       вызов инструмента (tools.claude-api.json); JSON можно дать как - (stdin) или @файл
-//   turn '<JSON>'               ход одной командой: {human, calls: [{tool, input}], ai, live, copy} — см. src/stand/turn.ts;
-//                               ответ пишется, только если все вызовы прошли; base_revision "head" — текущая версия
+//   turn '<JSON>'               ход одной командой: {human, calls: [{tool, input}], ai, live?, copy?} — см. src/stand/turn.ts;
+//                               ответ пишется, только если все вызовы прошли; base_revision "head" — текущая версия;
+//                               без live и copy — пути по --out сеанса; печатает reply (ответ со строкой расхода),
+//                               notify («ход <сеанс>»), state после хода и краткий ответ последнего вызова
 //   page                        перерисовать страницу прототипа текущего сеанса и напечатать путь к ней
 //   export <файл> [название]    записать сеанс как сценарий для npm run check
 //
@@ -17,11 +19,11 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { MAIN_MODEL, type SessionCost } from '../stand/cost.ts';
+import { costLine } from '../stand/cost.ts';
 import { loadCore } from '../stand/engine.ts';
 import { exportScenario } from '../stand/scenario.ts';
 import { Stand } from '../stand/stand.ts';
-import { parseTurn, runTurn } from '../stand/turn.ts';
+import { outPaths, parseTurn, runTurn } from '../stand/turn.ts';
 
 const repo = fileURLToPath(new URL('../..', import.meta.url));
 const root = resolve(process.env.DIALOG_SESSIONS || join(repo, 'sessions'));
@@ -32,11 +34,18 @@ if (k >= 0) {
   session = args[k + 1] ?? null;
   args.splice(k, 2);
 }
+const o = args.indexOf('--out');
+let outArg: string | null = null;
+if (o >= 0) {
+  outArg = resolve(args[o + 1] ?? '');
+  args.splice(o, 2);
+}
 const f = args.indexOf('--full');
 const full = f >= 0;
 if (full) args.splice(f, 1);
 const [cmd, ...rest] = args;
 const currentFile = join(root, '.current');
+const outFile = join(root, '.out');
 
 function fail(text: string): never {
   console.error(text);
@@ -59,7 +68,8 @@ if (cmd === 'new' || cmd === 'use') {
   if (cmd === 'new' && existsSync(join(root, name, 'session.json'))) fail(`Сеанс ${name} уже есть: npm run dialog -- use ${name}`);
   const stand = new Stand(await loadCore(), root, name);
   writeFileSync(currentFile, name + '\n');
-  console.log(JSON.stringify({ session: name, dir: stand.dir, page: join(stand.dir, 'prototype.html') }, null, 2));
+  if (outArg !== null) writeFileSync(outFile, outArg + '\n');
+  console.log(JSON.stringify({ session: name, dir: stand.dir, page: join(stand.dir, 'prototype.html'), out: existsSync(outFile) ? readFileSync(outFile, 'utf8').trim() : null }, null, 2));
   process.exit(0);
 }
 
@@ -77,14 +87,14 @@ switch (cmd) {
   case 'turn': {
     let turn;
     try {
-      turn = parseTurn(JSON.parse(readArg(rest[0])));
+      turn = parseTurn(JSON.parse(readArg(rest[0])), outPaths(existsSync(outFile) ? readFileSync(outFile, 'utf8').trim() : null, session));
     } catch (e) {
       fail(`Ход не читается: ${e instanceof Error ? e.message : e}`);
     }
     const r = runTurn(stand, turn);
     const { last, last_full, ...brief } = r;
-    console.log(JSON.stringify({ ...brief, last: full ? last_full : last }, null, 2));
-    if (r.ai_written) console.log(costLine(stand.cost()));
+    // Одной строкой: ход читает модель, отступы только добавляют токенов.
+    console.log(JSON.stringify({ ...brief, last: full ? last_full : last }));
     if (!r.ok) process.exitCode = 2;
     break;
   }
@@ -110,13 +120,4 @@ switch (cmd) {
     console.log(JSON.stringify(full ? out : brief, null, 2));
     if (out.is_error) process.exitCode = 2;
   }
-}
-
-/** Строка для треда после ответа помощника: расход хода и сеанса через Claude API (оценка). */
-function costLine(c: SessionCost): string {
-  const t = c.turns.at(-1);
-  if (!t) return '';
-  const tok = (u: { input: number; cache_write: number; cache_read: number; output: number }) => (u.input + u.cache_write + u.cache_read + u.output).toLocaleString('ru-RU');
-  const usd = (v: number) => '$' + v.toFixed(3);
-  return `Расход через Claude API (оценка, ${MAIN_MODEL}): ход ${t.turn} — ${t.requests} запр., ${tok(t)} ток. (кэш: запись ${t.cache_write.toLocaleString('ru-RU')}, чтение ${t.cache_read.toLocaleString('ru-RU')}; выход ${t.output.toLocaleString('ru-RU')}), ${usd(t.usd[MAIN_MODEL])}; за сеанс ${c.turns.length} ход., ${usd(c.total.usd[MAIN_MODEL])}.`;
 }

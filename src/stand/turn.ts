@@ -1,6 +1,7 @@
 import { copyFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { liveState } from '../live/export.ts';
+import { costLine } from './cost.ts';
 import type { Stand } from './stand.ts';
 
 /** Ход диалога одной командой: реплика человека, вызовы инструментов, ответ помощника, страница и live-файл. */
@@ -11,10 +12,16 @@ export interface TurnInput {
   calls: { tool: string; input: Record<string, unknown> }[];
   /** Ответ помощника; пишется, только если все вызовы прошли без отказа и ошибки. */
   ai: string | null;
-  /** Куда записать live-файл для конструктора владельца; null — не писать. */
+  /** Куда записать live-файл для конструктора владельца; null — не писать; поля нет — по папке вывода сеанса. */
   live: string | null;
-  /** Папка для копии prototype.html (файлы проекта); null — не копировать. */
+  /** Папка для копии prototype.html (файлы проекта); null — не копировать; поля нет — по папке вывода сеанса. */
   copy: string | null;
+}
+
+/** Пути по умолчанию для хода без полей live и copy: папка вывода (файлы проекта), заданная `new/use --out`. */
+export function outPaths(out: string | null, session: string): { live: string | null; copy: string | null } {
+  if (out === null) return { live: null, copy: null };
+  return { live: join(out, 'ai-dialog/live', `${session}.json`), copy: join(out, 'ai-dialog/sessions', session) };
 }
 
 export interface TurnCall {
@@ -34,13 +41,19 @@ export interface TurnResult {
   /** Полный ответ последнего вызова (с state); CLI печатает его вместо last с флагом --full. */
   last_full: Record<string, unknown> | null;
   ai_written: boolean;
+  /** Готовый текст для треда: ответ помощника и строка расхода курсивом; null — ответ не записан. */
+  reply: string | null;
+  /** Сообщение в тред конструктора после записи live-файла («ход <сеанс>»); null — live не писался. */
+  notify: string | null;
   revision: string | null;
+  /** Полный state текущей версии после хода: id и высоты для следующего хода без get_project. */
+  state: unknown;
   page: string;
   live: string | null;
   copy: string | null;
 }
 
-export function parseTurn(raw: unknown): TurnInput {
+export function parseTurn(raw: unknown, defaults: { live: string | null; copy: string | null } = { live: null, copy: null }): TurnInput {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error('Ход — объект JSON.');
   const t = raw as Record<string, unknown>;
   const text = (k: string) => {
@@ -54,7 +67,8 @@ export function parseTurn(raw: unknown): TurnInput {
     if (!x || typeof x.tool !== 'string' || !x.input || typeof x.input !== 'object') throw new Error(`calls[${i}]: нужны tool и input.`);
     return { tool: x.tool, input: x.input as Record<string, unknown> };
   });
-  return { human: text('human'), calls, ai: text('ai'), live: text('live'), copy: text('copy') };
+  const path = (k: 'live' | 'copy') => (k in t ? text(k) : defaults[k]);
+  return { human: text('human'), calls, ai: text('ai'), live: path('live'), copy: path('copy') };
 }
 
 export function runTurn(stand: Stand, turn: TurnInput): TurnResult {
@@ -87,5 +101,20 @@ export function runTurn(stand: Stand, turn: TurnInput): TurnResult {
     mkdirSync(turn.copy, { recursive: true });
     copyFileSync(page, join(turn.copy, 'prototype.html'));
   }
-  return { ok, stopped_at: stopped, calls, last, last_full: lastFull, ai_written: ok && turn.ai !== null, revision: stand.headRevision(), page, live: turn.live, copy: turn.copy };
+  const written = ok && turn.ai !== null;
+  return {
+    ok,
+    stopped_at: stopped,
+    calls,
+    last,
+    last_full: lastFull,
+    ai_written: written,
+    reply: written ? `${turn.ai}\n\n_${costLine(stand.cost())}_` : null,
+    notify: turn.live !== null ? `ход ${stand.projectId}` : null,
+    revision: stand.headRevision(),
+    state: stand.currentView()?.state ?? null,
+    page,
+    live: turn.live,
+    copy: turn.copy,
+  };
 }

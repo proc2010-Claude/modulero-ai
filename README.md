@@ -28,6 +28,8 @@ npm run dialog -- ai '…'        # печатает строку расхода
 npm run dialog -- page          # путь к sessions/<сеанс>/prototype.html
 ```
 
+В треде ход делается одной командой: `npm run dialog -- new <сеанс> --out /mnt/project-files`, затем на каждую реплику `npm run dialog -- turn -` с `{"human", "calls", "ai"}` в stdin. Она записывает реплики и правки, live-файл и копию страницы в файлы проекта и печатает одной строкой `reply` (ответ со строкой расхода), `notify` («ход <сеанс>»), `state` после хода и краткий ответ последнего вызова (`src/stand/turn.ts`, CLAUDE.md «Режим диалога»).
+
 Шкаф — так же: `start_project '{"kind":"wardrobe","template":"start"}'` (купе — `"sliding"`), правки — `wardrobe_edits`; другая мебель — `start_project '{"kind":"home","template":"chest"}'`, правки — `home_edits`.
 
 Всё, что умеет редактор конструктора, сверх `*_edits` — командами ядра (AI-DEC-007): `list_commands '{"kind":"wardrobe"}'`, затем `editor_call` с `calls: [{"command":"wardrobe/toggleBodyJoint","args_json":"{\"joint\":2}"}]`. Список команд и схемы параметров снимаются с типов ядра: `npm run contract:commands` → `contract/commands-cbaf1534.json` (`npm run check` сверяет).

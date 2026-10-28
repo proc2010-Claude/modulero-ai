@@ -137,3 +137,12 @@ export function sessionCost(events: Event[]): SessionCost {
   const total = turns.reduce((s, t) => ({ requests: s.requests + t.requests, input: s.input + t.input, cache_write: s.cache_write + t.cache_write, cache_read: s.cache_read + t.cache_read, output: s.output + t.output }), zero());
   return { model: MAIN_MODEL, turns, total: { ...total, usd: usdOf(total) }, fixed_tokens: fixedTokens(), assumptions: A, pricing: { source: PRICING.source, date: PRICING.date } };
 }
+
+/** Строка для треда после ответа помощника: расход хода и сеанса через Claude API (оценка). */
+export function costLine(c: SessionCost): string {
+  const t = c.turns.at(-1);
+  if (!t) return '';
+  const tok = (u: { input: number; cache_write: number; cache_read: number; output: number }) => (u.input + u.cache_write + u.cache_read + u.output).toLocaleString('ru-RU');
+  const usd = (v: number) => '$' + v.toFixed(3);
+  return `Расход через Claude API (оценка, ${MAIN_MODEL}): ход ${t.turn} — ${t.requests} запр., ${tok(t)} ток. (кэш: запись ${t.cache_write.toLocaleString('ru-RU')}, чтение ${t.cache_read.toLocaleString('ru-RU')}; выход ${t.output.toLocaleString('ru-RU')}), ${usd(t.usd[MAIN_MODEL])}; за сеанс ${c.turns.length} ход., ${usd(c.total.usd[MAIN_MODEL])}.`;
+}
