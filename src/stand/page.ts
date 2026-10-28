@@ -40,10 +40,8 @@ export function renderPage(stand: Stand, cost: SessionCost): string {
 </header>
 <main class="stage">
   <div class="stage-3d">${parts.stage}</div>
-  <aside class="stage-dialog">${feed(stand)}</aside>
 </main>
 <div class="details">${parts.details}${costCard(cost)}${history(stand)}</div>
-<script>document.querySelectorAll('.stage-dialog .feed').forEach(f=>{f.scrollTop=f.scrollHeight;});</script>
 <footer class="muted">Стенд без Claude API и без публикации: размеры, состав, отказы и цена — ответы ядра Modulero. Цена — ориентир, не предложение.</footer>
 </body>
 </html>
@@ -258,21 +256,6 @@ function history(stand: Stand): string {
     .join('')}</ol></section>`;
 }
 
-function feed(stand: Stand): string {
-  const lines = stand.dialog();
-  // Кнопки показываются под ответом помощника, даже если offer_choices вызван до текста ответа.
-  for (let i = 0; i + 1 < lines.length; i++)
-    if (lines[i]!.who === 'choices' && lines[i + 1]!.who === 'ai') [lines[i], lines[i + 1]] = [lines[i + 1]!, lines[i]!];
-  if (!lines.length) return '<section class="card"><h2>Диалог</h2><p class="muted">Реплик пока нет.</p></section>';
-  return `<section class="card"><h2>Диалог</h2><div class="feed">${lines
-    .map((l) =>
-      l.who === 'choices'
-        ? `<div class="chips">${(l.options ?? []).map((o) => `<span class="chip">${esc(o)}</span>`).join('')}</div>`
-        : `<div class="msg ${l.who}"><div class="who">${l.who === 'human' ? 'Человек' : 'Помощник'}</div>${esc(l.text).replace(/\n/g, '<br>')}</div>`,
-    )
-    .join('')}</div></section>`;
-}
-
 const CSS = `
 :root{--bg:#f6f5f2;--card:#fff;--ink:#1b1f2a;--muted:#6b6f7a;--line:#d9d7d0;--accent:#3b5bdb;--ok:#2f7d4f;--okbg:#e6f4ec;--part:#9a5b00;--partbg:#fff3df;
 --m-base:#e9dcc4;--m-niche:#f1ece2;--m-upper:#dbe6f3;--m-tall:#d9d2ee;--m-mezz:#e4e0f2;--m-island:#d8eadf;--zone:#0000;--human:#eef1fb;--ai:#f3f2ee;--v3d-bg:#eceae4}
@@ -285,11 +268,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-ap
 .top{padding:12px 16px 0}.top h1{font-size:18px;margin:0}.top p{margin:2px 0 0}
 h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;margin:0 0 10px}
 .muted{color:var(--muted);font-size:13px}
-.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);gap:16px;padding:16px;height:calc(100vh - 62px);min-height:480px}
-.stage-3d,.stage-dialog{min-height:0;display:flex;flex-direction:column}.stage-3d>.card,.stage-dialog>.card{flex:1;min-height:0;display:flex;flex-direction:column}
-.stage-3d .v3d{flex:1;height:auto;min-height:320px}.stage-dialog .feed{flex:1;max-height:none}
+.stage{display:grid;grid-template-columns:minmax(0,1fr);padding:16px;height:calc(100vh - 62px);min-height:480px}
+.stage-3d{min-height:0;display:flex;flex-direction:column}.stage-3d>.card{flex:1;min-height:0;display:flex;flex-direction:column}
+.stage-3d .v3d{flex:1;height:auto;min-height:320px}
 .details{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px;padding:0 16px 16px;align-items:start}
-@media (max-width:860px){.stage{grid-template-columns:minmax(0,1fr);height:auto}.stage-3d .v3d{height:62vh;flex:none}.stage-dialog .feed{max-height:60vh}}
+@media (max-width:860px){.stage{height:auto}.stage-3d .v3d{height:70vh;flex:none}}
 .col{display:flex;flex-direction:column;gap:16px;min-width:0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
 .price .badge{display:inline-block;font-weight:600;font-size:13px;padding:2px 10px;border-radius:99px}
@@ -314,8 +297,6 @@ svg .wlbl{fill:var(--muted);font-size:80px;text-anchor:middle;dominant-baseline:
 table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:6px 6px;border-top:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-weight:500;border-top:0}
 .plain{list-style:none;padding:0;margin:0}
 .hist{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}.hist li{padding:6px 8px;border-radius:8px}.hist li.cur{background:var(--okbg)}
-.feed{display:flex;flex-direction:column;gap:8px;max-height:70vh;overflow:auto}
-.msg{padding:8px 10px;border-radius:10px;font-size:14px}.msg.human{background:var(--human);align-self:flex-end;max-width:92%}.msg.ai{background:var(--ai);max-width:96%}
 .who{font-size:12px;color:var(--muted);margin-bottom:2px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}.chip{border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:2px 10px;font-size:13px}
 footer{padding:0 16px 24px}
