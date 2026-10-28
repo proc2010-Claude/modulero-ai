@@ -1,0 +1,199 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w02-all-params",
+  "title": "Шкаф в нишу со всеми параметрами",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Человек сразу даёт все параметры: ИИ одним вызовом ставит нишу, размеры, секции и наполнение; задняя стенка — по решению конструктора.",
+  "criteria": [
+    "Все правки первой реплики — один вызов wardrobe_edits",
+    "Ниша отмечена в помещении",
+    "На вопрос «нужна ли стенка» ИИ не решает сам, а предлагает проверить конструктором",
+    "Цена — только из ответа стенда"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Нужен распашной шкаф в нишу: ширина 2400, высота 2600, глубина 600. Четыре двери, внутри две штанги, полки и ящики.",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "parts": 14
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Ниша 2400 × 2600 × 600, 4 секции, наполнение",
+            "edits": [
+              {
+                "op": "set_room",
+                "niche": true,
+                "left": null,
+                "right": null,
+                "width": 2400,
+                "ceiling": 2600,
+                "skirting": null,
+                "skirt_height": null,
+                "skirt_depth": null
+              },
+              {
+                "op": "set_size",
+                "width": 2400,
+                "height": 2600,
+                "depth": 600
+              },
+              {
+                "op": "set_section_count",
+                "n": 4
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 2
+              },
+              {
+                "op": "add_fill",
+                "section": 3,
+                "kind": "drawer",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 3,
+                "kind": "drawer",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 3,
+                "kind": "shelf",
+                "execution": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-f6e14706fe971bfe",
+            "applied": [
+              "set_room",
+              "set_size",
+              "set_section_count",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "distribute_shelves",
+              "add_fill",
+              "add_fill",
+              "add_fill"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 86447.91,
+              "known_amount_rub": 86447.91
+            },
+            "sections": 4,
+            "parts": 34
+          }
+        }
+      ],
+      "ai": "Готово: шкаф в нишу 2,4 × 2,6 м, глубина 60 см, четыре секции по 60 см с дверями. В первых двух — штанги, в третьей четыре полки, в четвёртой два внутренних ящика и полка. Ориентир около 86 тыс. ₽. Какой цвет корпуса хотите?"
+    },
+    {
+      "human": "А задняя стенка в нише нужна?",
+      "calls": [],
+      "ai": "В нише задняя стенка часто не нужна, но допустимо ли это, решает конструктор: могу попробовать убрать её и покажу, что получится. Убрать?"
+    },
+    {
+      "human": "Тогда уберите её.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Без задней стенки",
+            "edits": [
+              {
+                "op": "set_panel",
+                "panel": "back",
+                "on": false
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-2e23c62fcd1d1c2c",
+            "applied": [
+              "set_panel"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 78114.8,
+              "known_amount_rub": 78114.8
+            },
+            "sections": 4,
+            "parts": 30
+          }
+        }
+      ],
+      "ai": "Убрал заднюю стенку — конструктор принял, потому что шкаф стоит в нише. Остальное без изменений. Ориентир около 78 тыс. ₽. Какой цвет корпуса выбираете?"
+    }
+  ],
+  "review": "Хватило: правки договора покрывают всю реплику — ниша, размеры, 4 секции, штанги, полки, ящики. Принято за один вызов. Неудобно: «четыре двери» ИИ понял как 4 секции по одной двери; можно было 2 секции по 2 двери — стоило уточнить, но ответ показал, что поставлено."
+}

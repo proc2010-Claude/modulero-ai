@@ -1,0 +1,177 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w08-sliding",
+  "title": "Шкаф-купе с зеркалом",
+  "kind": "sliding",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Шкаф-купе: размеры и двери; просьба о зеркале — честно, что зеркальных вставок нет; наполнение.",
+  "criteria": [
+    "Изделие — купе с первого вызова (start_project sliding)",
+    "Материалы вставок — из get_options sliding_inserts; не обещано зеркало, которого нет",
+    "Поле mirror не используется как «зеркало»: в ядре это зеркальная раскладка дверей по дорожкам",
+    "Состав пересказан по сводке get_project",
+    "Цена — только из ответа стенда"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Хочу шкаф-купе 2,4 м, три двери, одна с зеркалом.",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "sliding",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-f37330d632e721d6",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 55428.11,
+              "known_amount_rub": 55428.11
+            },
+            "sections": 3,
+            "parts": 11
+          }
+        },
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "sliding",
+            "topic": "sliding_inserts"
+          },
+          "expect": {
+            "values": 2
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "2,4 м, три двери",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": 2400,
+                "height": null,
+                "depth": null
+              },
+              {
+                "op": "set_sliding_doors",
+                "n": 3,
+                "system": null,
+                "scheme": null,
+                "mirror": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-abe1b3f540a9dfb4",
+            "applied": [
+              "set_size",
+              "set_sliding_doors"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 69723.6,
+              "known_amount_rub": 69723.6
+            },
+            "sections": 3,
+            "parts": 12
+          }
+        }
+      ],
+      "ai": "Сделал шкаф-купе 2,4 м с тремя дверями системы ЭКО, внутри три секции по 80 см. Зеркальных вставок в этом прототипе пока нет: двери можно сделать из ЛДСП или ЛМДФ. Ориентир около 70 тыс. ₽. Что храним внутри: штанги, полки, ящики?"
+    },
+    {
+      "human": "А внутри что?",
+      "calls": [
+        {
+          "tool": "get_project",
+          "input": {
+            "project_id": "$project"
+          },
+          "expect": {
+            "revision": "MWD-abe1b3f540a9dfb4",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 69723.6,
+              "known_amount_rub": 69723.6
+            },
+            "sections": 3,
+            "parts": 12
+          }
+        }
+      ],
+      "ai": "Пока внутри пусто: три секции по 80 см без полок и штанг. Что поставить — штангу для одежды, полки?"
+    },
+    {
+      "human": "Добавьте штангу и полки.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Штанга и полки",
+            "edits": [
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 1
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-e0ded244f6e4999c",
+            "applied": [
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "distribute_shelves"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 79200.54,
+              "known_amount_rub": 79200.54
+            },
+            "sections": 3,
+            "parts": 15
+          }
+        }
+      ],
+      "ai": "Добавил штангу в левую секцию и три полки во вторую. Ориентир около 79 тыс. ₽. Правую секцию заполнить?"
+    }
+  ],
+  "review": "Мешает: зеркальных вставок в каталоге выпуска нет (sliding_inserts — ЛДСП и ЛМДФ), а в договоре поле mirror у set_sliding_doors подписано «Зеркало», хотя в ядре это зеркальная раскладка дверей по дорожкам (tracksOf). ИИ, поверив подписи, пообещал бы зеркало. Нужны: поправка описания поля в договоре 0.2 (Д) и зеркальные вставки купе в каталоге — задача MOD-AI-22."
+}

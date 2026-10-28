@@ -1,0 +1,201 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w04-no-back-push",
+  "title": "Без задней стенки и без ручек",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Шкаф без задней стенки: отказ «только в нише» и сбой построения шкафа без стенки с открыванием нажатием — оба пересказаны честно, без обхода.",
+  "criteria": [
+    "Отказ движка пересказан своими словами, причина сохранена",
+    "Ниша отмечена только после слов человека",
+    "Сбой построения не скрыт: ИИ говорит, что проект не изменился, и предлагает варианты",
+    "Цена — только из ответа стенда"
+  ],
+  "expected_refusals": [
+    "Без задней стенки шкаф стоит только в нише или между стенами",
+    "Конструктор не строит шкаф после этой правки"
+  ],
+  "turns": [
+    {
+      "human": "Шкаф без задней стенки, хочу подешевле.",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "parts": 14
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Без задней стенки",
+            "edits": [
+              {
+                "op": "set_panel",
+                "panel": "back",
+                "on": false
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "set_panel",
+              "problem": "Без задней стенки шкаф стоит только в нише или между стенами: отметьте «В нише» или стены слева и справа (MOD-DEC-168). Проект не изменён."
+            },
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "parts": 14
+          }
+        }
+      ],
+      "ai": "Без задней стенки конструктор шкаф не делает, если он стоит отдельно: это можно только в нише или между двумя стенами. Ориентир около 49 тыс. ₽ со стенкой. Шкаф будет в нише или между стенами?"
+    },
+    {
+      "human": "Он будет в нише.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "В нише без задней стенки",
+            "edits": [
+              {
+                "op": "set_room",
+                "niche": true,
+                "left": null,
+                "right": null,
+                "width": null,
+                "ceiling": null,
+                "skirting": null,
+                "skirt_height": null,
+                "skirt_depth": null
+              },
+              {
+                "op": "set_panel",
+                "panel": "back",
+                "on": false
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-ee8a6644f7ef623c",
+            "applied": [
+              "set_room",
+              "set_panel"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 43470.58,
+              "known_amount_rub": 43470.58
+            },
+            "sections": 3,
+            "parts": 11
+          }
+        }
+      ],
+      "ai": "Отметил нишу и убрал заднюю стенку — конструктор принял. Ориентир около 43 тыс. ₽. Что ещё поменять: размеры, наполнение?"
+    },
+    {
+      "human": "И без ручек, чтобы открывались нажатием.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Открывание нажатием",
+            "edits": [
+              {
+                "op": "set_push_to_open",
+                "on": true
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-ee8a6644f7ef623c",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "set_push_to_open",
+              "problem": "Конструктор не строит шкаф после этой правки: Операция: идентификатор M01-CARCASS-TOP/undefined повторяется. Проект не изменён."
+            },
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 43470.58,
+              "known_amount_rub": 43470.58
+            },
+            "sections": 3,
+            "parts": 11
+          }
+        }
+      ],
+      "ai": "Открывание нажатием сейчас не получилось: конструктор не смог построить шкаф в нише без задней стенки с такими дверями, проект остался прежним. Можно вернуть заднюю стенку и тогда сделать открывание нажатием или оставить ручки. Как лучше?"
+    },
+    {
+      "human": "Тогда верните заднюю стенку, но нажатием оставьте.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Задняя стенка и открывание нажатием",
+            "edits": [
+              {
+                "op": "set_panel",
+                "panel": "back",
+                "on": true
+              },
+              {
+                "op": "set_push_to_open",
+                "on": true
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-2db264409c537696",
+            "applied": [
+              "set_panel",
+              "set_push_to_open"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 46503.74,
+              "known_amount_rub": 46503.74
+            },
+            "sections": 3,
+            "parts": 14
+          }
+        }
+      ],
+      "ai": "Вернул заднюю стенку и сделал двери без ручек, с открыванием нажатием. Ориентир около 47 тыс. ₽. Что-нибудь ещё?"
+    }
+  ],
+  "review": "Хватило: правило «без задней стенки — только в нише» ядро говорит само. Мешает: в нише без задней стенки открывание нажатием редактор принимает, а граф шкафа не строится («идентификатор M01-CARCASS-TOP/undefined повторяется») — стенд отказывает словами ядра, ИИ предлагает вернуть стенку. Задача MOD-AI-18."
+}

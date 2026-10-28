@@ -7,15 +7,22 @@ import { loadCore } from '../src/stand/engine.ts';
 import { SCENARIO_FORMAT, answerProblems, replay, type Scenario } from '../src/stand/scenario.ts';
 
 const DIR = new URL('../scenarios/kitchen/', import.meta.url);
-const files = readdirSync(DIR).filter((f) => f.endsWith('.json')).sort();
+const WARDROBE = new URL('../scenarios/wardrobe/', import.meta.url);
+const list = (dir: URL) => readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
+const files = list(DIR);
 
 test('сценарии кухни: не меньше 12 диалогов из TASK_FIRST.md п. 5', () => {
   assert.ok(files.length >= 12, files.join(', '));
 });
 
-for (const f of files) {
+test('сценарии шкафа: не меньше 8 диалогов (EXCHANGE_SPEC.md §9)', () => {
+  assert.ok(list(WARDROBE).length >= 8, list(WARDROBE).join(', '));
+});
+
+for (const url of [...files.map((f) => new URL(f, DIR)), ...list(WARDROBE).map((f) => new URL(f, WARDROBE))]) {
+  const f = url.pathname.split('/').slice(-2).join('/');
   test(`сценарий ${f}`, async () => {
-    const sc: Scenario = JSON.parse(readFileSync(new URL(f, DIR), 'utf8'));
+    const sc: Scenario = JSON.parse(readFileSync(url, 'utf8'));
     assert.equal(sc.format, SCENARIO_FORMAT);
     assert.ok(sc.goal && sc.criteria.length, 'нет цели или критериев');
     assert.ok(sc.review, 'нет разбора');

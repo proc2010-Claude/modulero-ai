@@ -1,6 +1,7 @@
 // Кухня на стенде: правки договора (EXCHANGE_SPEC.md §4.1) → функции ядра modulero-next и сводка
 // «в объёме экрана» (§5 п. 3–4). Стенд ничего не считает: размеры, состав, отказы и цена — ответы ядра.
 import type { Core } from './engine.ts';
+import { scene3dOf, type Scene3dView } from './scene3d.ts';
 
 export type KitchenProject = Record<string, unknown>;
 export type Edit = { op: string } & Record<string, unknown>;
@@ -75,14 +76,8 @@ export interface KitchenView {
   scene3d: Scene3dView;
 }
 
-/** 3D-сцена ядра (engine.sceneOf) и вид её декоров — то, что конструктор отдаёт своему 3D-виду. */
-export interface Scene3dView {
-  scene: any;
-  looks: Record<string, { color: number; texture?: string } | null>;
-}
-
 /** Условия мебельщика в словах цены: проценты сборки, наценка (MOD-DEC-497). */
-const TERMS = /наценк|\d\s*%/i;
+export const TERMS = /наценк|\d\s*%/i;
 
 /** Граф, версия, сводка, цена и замечания проекта — всё из ядра. */
 export function kitchenView(c: Core, p: KitchenProject): KitchenView {
@@ -182,17 +177,4 @@ export function kitchenOptions(c: Core, topic: string): unknown {
     default:
       return null;
   }
-}
-
-/** Сцена для 3D-вида страницы: та же, что строит конструктор (engine.sceneOf графа), и вид каждого её декора. */
-function scene3dOf(c: Core, graph: any): Scene3dView {
-  const scene = c.sceneOf(graph),
-    ids = new Set<string>();
-  for (const p of scene.parts) {
-    ids.add(p.decorId);
-    if (p.edgeDecor) ids.add(p.edgeDecor.decorId);
-  }
-  // Отверстия нужны только «Рентгену» конструктора; на странице его нет.
-  const { holes: _holes, ...rest } = scene;
-  return { scene: rest, looks: Object.fromEntries([...ids].map((id) => [id, c.decorLook(id)])) };
 }

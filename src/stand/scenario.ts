@@ -5,7 +5,7 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import type { Core } from './engine.ts';
-import { Stand, type Output } from './stand.ts';
+import { Stand, type Output, type ProductKind } from './stand.ts';
 
 export const SCENARIO_FORMAT = 'modulero-ai.scenario/1';
 
@@ -26,7 +26,7 @@ export interface Scenario {
   format: typeof SCENARIO_FORMAT;
   id: string;
   title: string;
-  kind: 'kitchen';
+  kind: ProductKind;
   engine: { sha: string; hardwareCatalog: string };
   /** Что проверяет сценарий и критерии ответа помощника (TASK_FIRST.md п. 5). */
   goal: string;
@@ -50,8 +50,9 @@ export function expectOf(out: Output): Record<string, unknown> {
     e.price = { status: p.status, amount_rub: p.amount_rub, known_amount_rub: p.known_amount_rub };
   }
   if (out.state) {
-    const s = out.state as { modules: unknown[]; parts: number };
-    e.modules = s.modules.length;
+    const s = out.state as { modules?: unknown[]; sections?: unknown[]; parts: number };
+    if (s.modules) e.modules = s.modules.length;
+    if (s.sections) e.sections = s.sections.length;
     e.parts = s.parts;
   }
   if (Array.isArray(out.variants)) e.variants = (out.variants as { name: string }[]).map((v) => v.name);
@@ -86,7 +87,7 @@ export function exportScenario(stand: Stand, title: string): Scenario {
     format: SCENARIO_FORMAT,
     id: stand.name,
     title,
-    kind: 'kitchen',
+    kind: stand.data.kind ?? 'kitchen',
     engine: { sha: stand.data.engine.sha, hardwareCatalog: stand.data.engine.hardwareCatalog },
     goal: '',
     criteria: [],
@@ -118,6 +119,8 @@ export function replay(core: Core, sc: Scenario): ReplayResult {
     let head: string | null = null;
     sc.turns.forEach((t, ti) => {
       stand.say('human', t.human);
+      // Цены вариантов из ответа variants за этот ход — тоже ответ стенда (сравнение вариантов).
+      const variantPrices: Record<string, unknown>[] = [];
       t.calls.forEach((c, ci) => {
         const input = JSON.parse(JSON.stringify(c.input));
         if (input.project_id === '$project') input.project_id = stand.projectId;
@@ -129,13 +132,14 @@ export function replay(core: Core, sc: Scenario): ReplayResult {
           if (!same(got[key], want)) problems.push(`ход ${ti + 1}, вызов ${ci + 1} ${c.tool}: ${key} = ${JSON.stringify(got[key])}, записано ${JSON.stringify(want)}`);
         if (typeof out.revision === 'string') head = out.revision;
         if (out.price) price = out.price as Record<string, unknown>;
+        if (Array.isArray(out.variants)) variantPrices.push(...(out.variants as { price: Record<string, unknown> }[]).map((v) => v.price));
         const r = out.refused as { problem?: string } | null | undefined;
         if (r?.problem) refusals.push(r.problem);
         last = out;
       });
       if (t.ai) {
         stand.say('ai', t.ai);
-        problems.push(...answerProblems(t.ai, price).map((p) => `ход ${ti + 1}, ответ помощника: ${p}`));
+        problems.push(...answerProblems(t.ai, price, variantPrices).map((p) => `ход ${ti + 1}, ответ помощника: ${p}`));
       }
     });
     for (const want of sc.expected_refusals) if (!refusals.some((r) => r.includes(want))) problems.push(`нет ожидаемого отказа движка: «${want}»`);
@@ -147,10 +151,10 @@ export function replay(core: Core, sc: Scenario): ReplayResult {
 
 /**
  * Проверки реплики помощника по последней цене стенда (SYSTEM_PROMPT_DRAFT.md «После правки»):
- * каждая сумма в тыс. ₽ — это сумма или известная часть из ответа (округление до тысяч);
+ * каждая сумма в тыс. ₽ — это сумма или известная часть из ответа (округление до тысяч) или цена варианта из ответа variants;
  * при неполной цене названная сумма сопровождается словом «неполная»; не больше трёх вопросов.
  */
-export function answerProblems(text: string, price: Record<string, unknown> | null): string[] {
+export function answerProblems(text: string, price: Record<string, unknown> | null, variants: Record<string, unknown>[] = []): string[] {
   const problems: string[] = [];
   const amounts = [...text.matchAll(/(\d[\d\s ]*(?:[.,]\d+)?)\s*тыс\.?\s*₽/g)].map((m) => Number(m[1]!.replace(/[\s ]/g, '').replace(',', '.')));
   const rubles = [...text.matchAll(/(\d[\d\s ]{2,}(?:[.,]\d+)?)\s*₽/g)].filter((m) => !/тыс/.test(m[0]));
@@ -158,7 +162,7 @@ export function answerProblems(text: string, price: Record<string, unknown> | nu
   if (amounts.length) {
     if (!price) problems.push(`названа цена ${amounts.join(', ')} тыс. ₽, а цены от стенда ещё нет`);
     else {
-      const allowed = [price.amount_rub, price.known_amount_rub].filter((v): v is number => typeof v === 'number').map((v) => Math.round(v / 1000));
+      const allowed = [price, ...variants].flatMap((x) => [x.amount_rub, x.known_amount_rub]).filter((v): v is number => typeof v === 'number').map((v) => Math.round(v / 1000));
       for (const a of amounts) if (!allowed.includes(Math.round(a))) problems.push(`названо ${a} тыс. ₽, в ответе стенда ${allowed.join(' / ') || 'цены нет'} тыс. ₽`);
       if (price.amount_rub === null && !/неполн/i.test(text)) problems.push('цена неполная, а в ответе нет слова «неполная»');
     }

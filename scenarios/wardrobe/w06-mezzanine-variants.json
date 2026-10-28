@@ -1,0 +1,205 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w06-mezzanine-variants",
+  "title": "Антресоль, ножки, декор, варианты",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Антресоль, ножки и декор корпуса; сравнение вариантов с антресолью и без.",
+  "criteria": [
+    "Декор — по id из get_options",
+    "Вариант сохранён до правки, цены обоих названы",
+    "Переключение варианта — инструментом variants, а не повтором правок",
+    "Цена — только из ответа стенда"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Шкаф 1,6 м, высота 2,7 м, с антресолью.",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "parts": 14
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "1,6 × 2,7 м с антресолью",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": 1600,
+                "height": 2700,
+                "depth": null
+              },
+              {
+                "op": "set_mezzanine",
+                "height": 450
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-364b8dd66e44a22b",
+            "applied": [
+              "set_size",
+              "set_mezzanine"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 61939.53,
+              "known_amount_rub": 61939.53
+            },
+            "sections": 4,
+            "parts": 19
+          }
+        }
+      ],
+      "ai": "Сделал шкаф 1,6 × 2,7 м с антресолью 45 см: внизу три секции по двери, сверху антресоль. Ориентир около 62 тыс. ₽. Какой цвет корпуса и какое основание — цоколь или ножки?"
+    },
+    {
+      "human": "На ножках и серый корпус.",
+      "calls": [
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "wardrobe",
+            "topic": "decors"
+          },
+          "expect": {
+            "values": 57
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Ножки, серый корпус",
+            "edits": [
+              {
+                "op": "set_base",
+                "base": "fixedLegs",
+                "height": null
+              },
+              {
+                "op": "set_decor",
+                "decor_id": "DEC-EGG-U708"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-51ae8df2efa1f495",
+            "applied": [
+              "set_base",
+              "set_decor"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 72963.82,
+              "known_amount_rub": 72963.82
+            },
+            "sections": 4,
+            "parts": 17
+          }
+        }
+      ],
+      "ai": "Поставил шкаф на ножки и сделал корпус светло-серым, EGGER U708. Ориентир около 73 тыс. ₽. Что-нибудь поменять внутри?"
+    },
+    {
+      "human": "Сохраните так, и покажите без антресоли для сравнения.",
+      "calls": [
+        {
+          "tool": "variants",
+          "input": {
+            "project_id": "$project",
+            "action": "save",
+            "name": "С антресолью"
+          },
+          "expect": {
+            "variants": [
+              "С антресолью",
+              "Вариант 2"
+            ]
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Без антресоли",
+            "edits": [
+              {
+                "op": "set_mezzanine",
+                "height": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-b4edae7fcbd0adc5",
+            "applied": [
+              "set_mezzanine"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 60590.02,
+              "known_amount_rub": 60590.02
+            },
+            "sections": 3,
+            "parts": 12
+          }
+        }
+      ],
+      "ai": "Сохранил вариант «С антресолью» — ориентир около 73 тыс. ₽. Без антресоли шкаф той же высоты, три секции, ориентир около 61 тыс. ₽. Какой оставляем?"
+    },
+    {
+      "human": "Нет, всё-таки с антресолью.",
+      "calls": [
+        {
+          "tool": "variants",
+          "input": {
+            "project_id": "$project",
+            "action": "switch",
+            "name": "С антресолью"
+          },
+          "expect": {
+            "revision": "MWD-51ae8df2efa1f495",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 72963.82,
+              "known_amount_rub": 72963.82
+            },
+            "sections": 4,
+            "parts": 17,
+            "variants": [
+              "С антресолью",
+              "Вариант 2"
+            ]
+          }
+        }
+      ],
+      "ai": "Вернул вариант «С антресолью»: 1,6 × 2,7 м, на ножках, светло-серый. Ориентир около 73 тыс. ₽. Что дальше — наполнение секций?"
+    }
+  ],
+  "review": "Хватило: варианты шкафа работают тем же черновиком ядра, что у кухни. Неудобно: секция антресоли идёт в сводке после секций низа (номер 3) и по умолчанию открытая — ИИ надо помнить, что фасад антресоли ставится отдельно."
+}

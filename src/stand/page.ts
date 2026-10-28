@@ -1,9 +1,9 @@
-// Страница прототипа сеанса (TASK_FIRST.md п. 3): превью версии, план, стены, состав, цена «полная / неполная»,
-// история версий и лента диалога. Одна самодостаточная HTML-страница без внешних файлов: 3D-вид конструктора
+// Страница прототипа сеанса (TASK_FIRST.md п. 3): 3D, состав, цена «полная / неполная», история версий и лента
+// диалога; у кухни ещё план и стены, у шкафа — секции с наполнением. Одна самодостаточная HTML-страница без внешних файлов: 3D-вид конструктора
 // (сборка apps/web/src/view3d) и образцы декоров лежат в ней. Рисует то, что
-// вернуло ядро (3D-сцена sceneOf, previewSvg, kitchenPlan, kitchenWallElevation); ничего не пересчитывает.
+// вернуло ядро (3D-сцена sceneOf, previewSvg, kitchenPlan, kitchenWallElevation, сводки редактора шкафа); ничего не пересчитывает.
 import { MAIN_MODEL, PRICING, type ModelId, type SessionCost } from './cost.ts';
-import type { Stand } from './stand.ts';
+import type { ProductKind, ProductView, Stand } from './stand.ts';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { engineDir } from '../engine/pin.mjs';
@@ -12,6 +12,8 @@ const esc = (s: unknown) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '
 const rub = (v: number | null | undefined) => (typeof v === 'number' ? v.toLocaleString('ru-RU', { maximumFractionDigits: 2 }) + ' ₽' : '—');
 const mm = (v: unknown) => (typeof v === 'number' ? v.toLocaleString('ru-RU') : '—');
 
+const PRODUCT_RU: Record<ProductKind, [string, string]> = { kitchen: ['кухня', 'кухни'], wardrobe: ['распашной шкаф', 'шкафа'], sliding: ['шкаф-купе', 'шкафа-купе'] };
+
 const KIND_RU: Record<string, string> = { base: 'нижний', niche: 'ниша', upper: 'навесной', tall: 'пенал', mezz: 'антресоль', island: 'остров' };
 
 export function renderPage(stand: Stand, cost: SessionCost): string {
@@ -19,18 +21,19 @@ export function renderPage(stand: Stand, cost: SessionCost): string {
   const head = stand.data.history.find((v) => v.n === stand.data.head);
   const empty = '<section class="card"><p class="muted">Проекта ещё нет: помощник создаст его первым вызовом start_project.</p></section>';
   const parts = view && head ? project(stand, view, head) : { stage: empty, details: '' };
+  const product = stand.data.kind ? PRODUCT_RU[stand.data.kind] : null;
   return `<!doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Прототип кухни</title>
+<title>Прототип ${esc(product?.[1] ?? 'изделия')}</title>
 <style>${CSS}</style>
 </head>
 <body>
 <header class="top">
   <div>
-    <h1>Прототип · ${esc(stand.data.kind === 'kitchen' ? 'кухня' : 'изделие')}</h1>
+    <h1>Прототип · ${esc(product?.[0] ?? 'изделие')}</h1>
     <p class="muted">Сеанс ${esc(stand.name)}${head ? ` · версия ${head.n} · ${esc(head.revision)}` : ''} · движок Modulero ${esc(stand.data.engine.sha.slice(0, 8))}, каталог ${esc(stand.data.engine.hardwareCatalog)}</p>
   </div>
 </header>
@@ -53,9 +56,11 @@ function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']
   const price = `<section class="card price ${full ? 'ok' : 'partial'}">
     <div class="badge">${full ? 'Цена полная' : 'Цена неполная'}</div>
     <div class="sum">${full ? `Ориентир ${rub(p.amount_rub)}` : `Известная часть ${rub(p.known_amount_rub)}`}</div>
-    ${p.appliances_included ? '<p class="muted">Техника включена в итог.</p>' : '<p class="muted">Техника в итог не входит.</p>'}
+    ${'appliances_included' in p ? (p.appliances_included ? '<p class="muted">Техника включена в итог.</p>' : '<p class="muted">Техника в итог не входит.</p>') : ''}
     ${p.missing?.length ? `<details open><summary>Чего не хватает (${p.missing.length})</summary><ul>${p.missing.map((m: string) => `<li>${esc(m)}</li>`).join('')}</ul></details>` : ''}
   </section>`;
+  const stage = stage3d(stand, view);
+  if (!('plan' in view)) return { stage, details: price + wardrobeFacts(s, head.label) + wardrobeSections(s) + variants(stand) };
   const facts = `<section class="card">
     <h2>${esc(head.label)}</h2>
     <dl class="facts">
@@ -68,15 +73,6 @@ function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']
     </dl>
     ${view.warnings.length ? `<ul class="warnings">${view.warnings.map((w) => `<li>${esc(w)}</li>`).join('')}</ul>` : ''}
   </section>`;
-  const preview = `<section class="card"><h2>3D</h2>${
-    view.scene3d.scene.parts.length
-      ? `<div class="v3d"><div class="view3d" id="v3d"><p class="view3d-status" role="status">Загружаем 3D…</p></div>
-    <div class="v3d-bar"><button type="button" data-act="fronts" aria-pressed="true">Фасады</button><button type="button" data-act="open">Открыть фасады</button><button type="button" data-act="neutral" aria-pressed="false">Без декоров</button><button type="button" data-act="fit">Вписать</button></div></div>
-    <p class="muted">3D-вид конструктора Modulero ${esc(stand.data.engine.sha.slice(0, 8))}: та же сцена, материалы и свет. Тяните — повернуть, колесо или два пальца — приблизить, правая кнопка — сдвинуть.</p>
-    <div class="v3d-fallback" hidden>${view.previewSvg ? `<div class="preview">${view.previewSvg}</div>` : ''}</div>
-    <script type="application/json" id="scene3d">${json(view.scene3d)}</script><script>${view3dModule()}</script><script>${VIEWER}</script>`
-      : '<p class="muted">Модулей пока нет.</p>'
-  }</section>`;
   const walls = `<section class="card"><h2>План сверху</h2>${planSvg(view.plan, s)}</section>
     ${view.elevations.filter((e: any) => e.items.length).map((e: any) => `<section class="card"><h2>${esc(cap(e.title))}, ${mm(e.wall.lengthMm)} мм</h2>${elevationSvg(e)}</section>`).join('')}`;
   const titles = new Map<string, string>(s.walls.map((w: any) => [w.id, w.title]));
@@ -90,7 +86,63 @@ function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']
           .join('')}</tbody></table>`
       : '<p class="muted">Пусто.</p>'
   }</section>`;
-  return { stage: preview, details: price + facts + walls + table + variants(stand) };
+  return { stage, details: price + facts + walls + table + variants(stand) };
+}
+
+/** 3D-вид конструктора во всё окно слева, под ним — статичное превью ядра, если нет WebGL. */
+function stage3d(stand: Stand, view: ProductView): string {
+  return `<section class="card"><h2>3D</h2>${
+    view.scene3d.scene.parts.length
+      ? `<div class="v3d"><div class="view3d" id="v3d"><p class="view3d-status" role="status">Загружаем 3D…</p></div>
+    <div class="v3d-bar"><button type="button" data-act="fronts" aria-pressed="true">Фасады</button><button type="button" data-act="open">Открыть фасады</button><button type="button" data-act="neutral" aria-pressed="false">Без декоров</button><button type="button" data-act="fit">Вписать</button></div></div>
+    <p class="muted">3D-вид конструктора Modulero ${esc(stand.data.engine.sha.slice(0, 8))}: та же сцена, материалы и свет. Тяните — повернуть, колесо или два пальца — приблизить, правая кнопка — сдвинуть.</p>
+    <div class="v3d-fallback" hidden>${view.previewSvg ? `<div class="preview">${view.previewSvg}</div>` : ''}</div>
+    <script type="application/json" id="scene3d">${json(view.scene3d)}</script><script>${view3dModule()}</script><script>${VIEWER}</script>`
+      : `<p class="muted">${'plan' in view ? 'Модулей' : 'Деталей'} пока нет.</p>`
+  }</section>`;
+}
+
+const yes = (v: unknown) => (v ? 'есть' : 'нет');
+
+/** Шкаф: габарит, основание, помещение, декор, ручки — из сводок редактора ядра (wardrobe.ts). */
+function wardrobeFacts(s: any, label: string): string {
+  const room = [s.room.niche ? 'в нише' : null, s.room.wall_left ? 'стена слева' : null, s.room.wall_right ? 'стена справа' : null, s.room.ceiling ? `потолок ${mm(s.room.ceiling)} мм` : null].filter(Boolean);
+  const d = s.sliding;
+  return `<section class="card">
+    <h2>${esc(label)}</h2>
+    <dl class="facts">
+      <dt>Ш × В × Г</dt><dd>${mm(s.size.width)} × ${mm(s.size.height)} × ${mm(s.size.depth)} мм</dd>
+      <dt>Секции</dt><dd>${s.sections.filter((x: any) => !x.mezzanine).length}${s.mezzanine_height ? `, антресоль ${mm(s.mezzanine_height)} мм` : ''}</dd>
+      ${d ? `<dt>Двери-купе</dt><dd>${d.doors ? `створок ${d.doors}, ${esc(d.system)}${d.mirrored_tracks ? ', раскладка зеркальная' : ''}` : 'не заданы'}</dd>` : `<dt>Двери</dt><dd>${esc(s.facade_mounting)}</dd>`}
+      <dt>Основание</dt><dd>${esc(s.base.kind)}${s.base.height ? ` ${mm(s.base.height)} мм` : ''}</dd>
+      <dt>Крыша / задняя стенка</dt><dd>${yes(s.top)} / ${yes(s.back)}</dd>
+      <dt>Помещение</dt><dd>${esc(room.join(', ') || 'отдельно стоящий')}</dd>
+      <dt>Корпус</dt><dd>${esc(s.corpus)}</dd>
+      <dt>Ручки</dt><dd>${esc(s.handles)}</dd>
+      <dt>Подсветка</dt><dd>${esc(Array.isArray(s.lighting) ? s.lighting.join(', ') : (s.lighting ?? 'нет'))}</dd>
+      <dt>Детали</dt><dd>${mm(s.parts)}</dd>
+    </dl>
+  </section>`;
+}
+
+/** Секции шкафа слева направо, затем антресоль: фасад и наполнение. */
+function wardrobeSections(s: any): string {
+  const fill = (x: any) =>
+    [
+      x.shelves ? `полок ${x.shelves}` : null,
+      x.rods.length ? `штанга${x.rods.length > 1 ? ` ×${x.rods.length}` : ''} (верх ${x.rods.map((r: any) => mm(r.top_from_floor_mm)).join(', ')} мм от пола)` : null,
+      ...x.drawers.map((d: any) => `ящик ${d.execution}`),
+      ...x.storage,
+      x.lit ? 'подсветка' : null,
+    ]
+      .filter(Boolean)
+      .join(', ') || 'пусто';
+  return `<section class="card"><h2>Секции (${s.sections.length})</h2><table><thead><tr><th>№</th><th>Ширина, мм</th>${s.sliding ? '' : '<th>Фасад</th>'}<th>Наполнение</th></tr></thead><tbody>${s.sections
+    .map(
+      (x: any) =>
+        `<tr><td>${x.section + 1}${x.mezzanine ? '<div class="muted">антресоль</div>' : ''}</td><td>${mm(x.width_mm)}</td>${s.sliding ? '' : `<td>${esc(x.facade)}${x.hinge_side ? `<div class="muted">петли ${esc(x.hinge_side)}</div>` : ''}</td>`}<td>${esc(fill(x))}</td></tr>`,
+    )
+    .join('')}</tbody></table></section>`;
 }
 
 const TYPE_RU: Record<string, string> = { straight: 'вдоль одной стены', l: 'угловая (Г)', u: 'П-образная' };
