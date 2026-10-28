@@ -14,6 +14,8 @@ export interface Core {
   /** Граф кухни: engine/generators/kitchen.ts. */
   kitchenGraph: (scene: any) => any;
   previewSvg: (graph: any) => string | null;
+  /** 3D-сцена графа: детали с размещением, фурнитура — engine/scene.ts. */
+  sceneOf: (graph: any) => any;
   writeProjectFile: (kind: string, project: unknown, opts: { appVersion: string; now?: Date; hardwareCatalog: { version: string; sha256: string } }) => string;
   readProjectFile: (text: string, hw: any) => any;
   /** Действующий выпуск каталога фурнитуры: catalogs/index.ts. */
@@ -32,17 +34,18 @@ export async function loadCore(): Promise<Core> {
   if (!existsSync(join(dir, 'packages/core/src/kitchen/index.ts')))
     throw new EngineMissing(`Нет копии ядра modulero-next ${PIN.sha.slice(0, 8)} в ${dir}: выполните npm run engine:setup.`);
   const at = (p: string) => pathToFileURL(join(dir, p)).href;
-  const [K, standard, gen, preview, file, catalogs] = await Promise.all([
+  const [K, standard, gen, preview, file, catalogs, scene3d] = await Promise.all([
     import(at('packages/core/src/kitchen/index.ts')),
     import(at('packages/core/src/kitchen/standard.ts')),
     import(at('packages/core/src/engine/generators/kitchen.ts')),
     import(at('packages/core/src/project/preview.ts')),
     import(at('packages/core/src/project/file.ts')),
     import(at('catalogs/index.ts')),
+    import(at('packages/core/src/engine/scene.ts')),
   ]);
   const HW = catalogs.hardwareCatalogs;
   if (HW.release.version !== PIN.hardwareCatalog)
     throw new Error(`Выпуск каталога ${HW.release.version}, а закреплён ${PIN.hardwareCatalog} (engine.json).`);
-  core = { K, cards: standard.KITCHEN_CARDS, kitchenGraph: gen.kitchenGraph, previewSvg: preview.previewSvg, writeProjectFile: file.writeProjectFile, readProjectFile: file.readProjectFile, HW, pin: PIN };
+  core = { K, cards: standard.KITCHEN_CARDS, kitchenGraph: gen.kitchenGraph, previewSvg: preview.previewSvg, sceneOf: scene3d.sceneOf, writeProjectFile: file.writeProjectFile, readProjectFile: file.readProjectFile, HW, pin: PIN };
   return core;
 }

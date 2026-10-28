@@ -352,7 +352,7 @@ export class Stand {
     return sessionCost(events.map((x) => x.e));
   }
 
-  private renderPage() {
+  renderPage() {
     const cost = this.cost();
     writeFileSync(join(this.dir, 'usage.json'), JSON.stringify(cost, null, 2) + '\n');
     writeFileSync(join(this.dir, 'prototype.html'), renderPage(this, cost));

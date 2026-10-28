@@ -5,7 +5,7 @@
 //   human '<текст>'             реплика человека в ленту диалога
 //   ai '<текст>'                реплика помощника в ленту диалога
 //   <инструмент> '<JSON>'       вызов инструмента (tools.claude-api.json); JSON можно дать как - (stdin) или @файл
-//   page                        путь к странице прототипа текущего сеанса
+//   page                        перерисовать страницу прототипа текущего сеанса и напечатать путь к ней
 //   export <файл> [название]    записать сеанс как сценарий для npm run check
 //
 // --session <сеанс> — вместо текущего. Папка сеансов — DIALOG_SESSIONS или sessions/ репозитория.
@@ -66,6 +66,7 @@ switch (cmd) {
     if (cmd === 'ai') console.log(costLine(stand.cost()));
     break;
   case 'page':
+    stand.renderPage();
     console.log(join(stand.dir, 'prototype.html'));
     break;
   case 'export': {

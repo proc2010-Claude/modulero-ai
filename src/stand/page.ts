@@ -1,6 +1,6 @@
 // Страница прототипа сеанса (TASK_FIRST.md п. 3): превью версии, план, стены, состав, цена «полная / неполная»,
 // история версий и лента диалога. Одна самодостаточная HTML-страница без внешних файлов. Рисует то, что
-// вернуло ядро (previewSvg, kitchenPlan, kitchenWallElevation); ничего не пересчитывает.
+// вернуло ядро (3D-сцена sceneOf, previewSvg, kitchenPlan, kitchenWallElevation); ничего не пересчитывает.
 import { MAIN_MODEL, PRICING, type ModelId, type SessionCost } from './cost.ts';
 import type { Stand } from './stand.ts';
 
@@ -61,7 +61,15 @@ function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']
     </dl>
     ${view.warnings.length ? `<ul class="warnings">${view.warnings.map((w) => `<li>${esc(w)}</li>`).join('')}</ul>` : ''}
   </section>`;
-  const preview = `<section class="card"><h2>Вид</h2>${view.previewSvg ? `<div class="preview">${view.previewSvg}</div>` : '<p class="muted">Модулей пока нет.</p>'}</section>`;
+  const preview = `<section class="card"><h2>3D</h2>${
+    view.scene3d.parts.length
+      ? `<div class="v3d"><canvas id="v3d" aria-label="3D-вид кухни: тяните, чтобы повернуть, колесо — приблизить"></canvas>
+    <div class="v3d-bar"><button type="button" data-view="front">Спереди</button><button type="button" data-view="iso">Сбоку</button><button type="button" data-view="top">Сверху</button><button type="button" data-fronts>Без фасадов</button></div></div>
+    <p class="muted">Тяните, чтобы повернуть; колесо или два пальца — приблизить. Детали, размеры и места — из 3D-сцены конструктора; цвета условные, декоры — в составе.</p>
+    <script type="application/json" id="scene3d">${JSON.stringify(view.scene3d).replace(/</g, '\\u003c')}</script><script>${VIEWER}</script>
+    ${view.previewSvg ? `<noscript><div class="preview">${view.previewSvg}</div></noscript>` : ''}`
+      : '<p class="muted">Модулей пока нет.</p>'
+  }</section>`;
   const walls = `<section class="card"><h2>План сверху</h2>${planSvg(view.plan, s)}</section>
     ${view.elevations.filter((e: any) => e.items.length).map((e: any) => `<section class="card"><h2>${esc(cap(e.title))}, ${mm(e.wall.lengthMm)} мм</h2>${elevationSvg(e)}</section>`).join('')}`;
   const titles = new Map<string, string>(s.walls.map((w: any) => [w.id, w.title]));
@@ -176,11 +184,11 @@ function feed(stand: Stand): string {
 
 const CSS = `
 :root{--bg:#f6f5f2;--card:#fff;--ink:#1b1f2a;--muted:#6b6f7a;--line:#d9d7d0;--accent:#3b5bdb;--ok:#2f7d4f;--okbg:#e6f4ec;--part:#9a5b00;--partbg:#fff3df;
---m-base:#e9dcc4;--m-niche:#f1ece2;--m-upper:#dbe6f3;--m-tall:#d9d2ee;--m-mezz:#e4e0f2;--m-island:#d8eadf;--zone:#0000;--human:#eef1fb;--ai:#f3f2ee}
+--m-base:#e9dcc4;--m-niche:#f1ece2;--m-upper:#dbe6f3;--m-tall:#d9d2ee;--m-mezz:#e4e0f2;--m-island:#d8eadf;--zone:#0000;--human:#eef1fb;--ai:#f3f2ee;--v3d-bg:#eceae4}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15171c;--card:#1e2128;--ink:#e8e8ea;--muted:#9a9ea8;--line:#343843;--accent:#8ea6ff;--ok:#7fd3a0;--okbg:#1d3328;--part:#f0b75a;--partbg:#3a2c14;
---m-base:#5a4b33;--m-niche:#3c3a34;--m-upper:#2f4258;--m-tall:#463d63;--m-mezz:#3d3954;--m-island:#2f4a3a;--human:#252b3d;--ai:#262830}}
+--m-base:#5a4b33;--m-niche:#3c3a34;--m-upper:#2f4258;--m-tall:#463d63;--m-mezz:#3d3954;--m-island:#2f4a3a;--human:#252b3d;--ai:#262830;--v3d-bg:#2a2d35}}
 :root[data-theme="dark"]{--bg:#15171c;--card:#1e2128;--ink:#e8e8ea;--muted:#9a9ea8;--line:#343843;--accent:#8ea6ff;--ok:#7fd3a0;--okbg:#1d3328;--part:#f0b75a;--partbg:#3a2c14;
---m-base:#5a4b33;--m-niche:#3c3a34;--m-upper:#2f4258;--m-tall:#463d63;--m-mezz:#3d3954;--m-island:#2f4a3a;--human:#252b3d;--ai:#262830}
+--m-base:#5a4b33;--m-niche:#3c3a34;--m-upper:#2f4258;--m-tall:#463d63;--m-mezz:#3d3954;--m-island:#2f4a3a;--human:#252b3d;--ai:#262830;--v3d-bg:#2a2d35}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .top{padding:16px 16px 0;max-width:1240px;margin:0 auto}
@@ -196,6 +204,9 @@ h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;margin:0 0 10px}
 .price ul{margin:6px 0 0;padding-left:18px;font-size:13px}
 .facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0}.facts dt{color:var(--muted)}.facts dd{margin:0}
 .warn{color:var(--part)}.warnings{color:var(--part);margin:10px 0 0;padding-left:18px}
+.v3d{position:relative}.v3d canvas{width:100%;height:440px;display:block;border-radius:8px;background:var(--v3d-bg);touch-action:none;cursor:grab}
+.v3d-bar{position:absolute;top:8px;left:8px;display:flex;flex-wrap:wrap;gap:6px}.v3d-bar button{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:3px 10px;cursor:pointer}.v3d-bar button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+@media (max-width:560px){.v3d canvas{height:340px}}
 .preview svg{width:100%;height:auto;max-height:420px;display:block;background:#fff;border-radius:8px}
 svg.plan,svg.elev{width:100%;height:auto;display:block}
 svg .room{fill:none;stroke:var(--line);stroke-width:8;stroke-dasharray:30 20}
@@ -214,3 +225,62 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;p
 .chips{display:flex;flex-wrap:wrap;gap:6px}.chip{border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:2px 10px;font-size:13px}
 footer{max-width:1240px;margin:0 auto;padding:0 16px 24px}
 `;
+
+/**
+ * 3D-вид без библиотек: детали сцены ядра — призмы (контур в плоскости u, v, толщина вдоль n); ортогональная
+ * проекция, грани по глубине от дальней к ближней, свет по нормали. Поворот — мышью или пальцем, масштаб — колесом.
+ */
+const VIEWER = `(()=>{
+const S=JSON.parse(document.getElementById('scene3d').textContent),cv=document.getElementById('v3d'),cx=cv.getContext('2d');
+const COL={CORPUS:[226,221,211],FACADE:[244,242,236],WORKTOP:[150,128,104],HARDWARE:[120,124,132],BACK:[196,192,184]};
+const add=(a,b,k)=>[a[0]+b[0]*k,a[1]+b[1]*k,a[2]+b[2]*k];
+const faces=[];
+for(const p of S.parts){
+  const [L,W,T]=p.s,out=p.c||[[0,0],[L,0],[L,W],[0,W]];
+  const pt=(a,b,r)=>add(add(add(p.o,p.u,a),p.v,b),p.n,r);
+  const lo=out.map(([a,b])=>pt(a,b,0)),hi=out.map(([a,b])=>pt(a,b,T));
+  const col=p.r==='BACK_PANEL'?COL.BACK:(COL[p.f]||COL.CORPUS),kind=p.f==='FACADE'?1:0;
+  faces.push({v:lo.slice().reverse(),col,kind,a:p.g?.35:1},{v:hi,col,kind,a:p.g?.35:1});
+  for(let i=0;i<out.length;i++){const j=(i+1)%out.length;faces.push({v:[lo[i],lo[j],hi[j],hi[i]],col,kind,a:p.g?.35:1});}
+}
+const R=S.room,room=[];
+room.push({v:[[0,0,0],[R.width,0,0],[R.width,R.depth,0],[0,R.depth,0]],col:[205,201,192],room:1,a:1});
+for(const [x1,y1,x2,y2] of S.walls){room.push({v:[[x1,y1,0],[x2,y2,0],[x2,y2,R.height],[x1,y1,R.height]],col:[214,210,202],room:1,a:.55,wall:1});}
+const cen=[R.width/2,R.depth/2,R.height*0.42];
+let yaw=0.6,pitch=0.42,zoom=1,noFronts=false;
+const VIEWS={front:[0,0.12],iso:[0.6,0.42],top:[0,1.45]};
+const nrm=f=>{const [a,b,c]=f.v;const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]],w=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];const n=[u[1]*w[2]-u[2]*w[1],u[2]*w[0]-u[0]*w[2],u[0]*w[1]-u[1]*w[0]];const l=Math.hypot(...n)||1;return n.map(x=>x/l);};
+for(const f of faces)f.n=nrm(f);for(const f of room)f.n=nrm(f);
+const wallIn=f=>{const m=[(f.v[0][0]+f.v[1][0])/2,(f.v[0][1]+f.v[1][1])/2];const d=[cen[0]-m[0],cen[1]-m[1]];return f.n[0]*d[0]+f.n[1]*d[1]>0?f.n:f.n.map(x=>-x);};
+for(const f of room)if(f.wall)f.n=wallIn(f);
+function draw(){
+  const dpr=window.devicePixelRatio||1,w=cv.clientWidth,h=cv.clientHeight;cv.width=w*dpr;cv.height=h*dpr;cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,w,h);
+  const cy=Math.cos(yaw),sy=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);
+  const span=Math.max(R.width,R.depth,R.height),k=zoom*Math.min(w,h)/(span*1.4);
+  const view=[-sy*cp,cy*cp,-sp];
+  const P=q=>{const x=q[0]-cen[0],y=q[1]-cen[1],z=q[2]-cen[2];const X=cy*x+sy*y,Dp=-sy*x+cy*y;return [w/2+X*k,h/2-(z*cp+Dp*sp)*k,Dp*cp-z*sp];};
+  const light=[-0.35,-0.55,0.75],ll=Math.hypot(...light);
+  const list=[];
+  for(const f of room){const dot=f.n[0]*view[0]+f.n[1]*view[1]+f.n[2]*view[2];if(dot<0)list.push({f,pr:f.v.map(P),bg:1});}
+  for(const f of faces){if(noFronts&&f.kind)continue;const dot=f.n[0]*view[0]+f.n[1]*view[1]+f.n[2]*view[2];if(dot>=0&&f.a===1)continue;const pr=f.v.map(P);list.push({f,pr,d:pr.reduce((s,q)=>s+q[2],0)/pr.length});}
+  const bg=list.filter(x=>x.bg),fg=list.filter(x=>!x.bg).sort((a,b)=>b.d-a.d);
+  for(const {f,pr} of [...bg,...fg]){
+    const l=Math.abs(f.n[0]*light[0]+f.n[1]*light[1]+f.n[2]*light[2])/ll,s=0.62+0.38*l;
+    cx.beginPath();pr.forEach((q,i)=>i?cx.lineTo(q[0],q[1]):cx.moveTo(q[0],q[1]));cx.closePath();
+    cx.fillStyle='rgba('+f.col.map(c=>Math.round(c*s)).join(',')+','+f.a+')';cx.fill();
+    if(!f.room){cx.strokeStyle='rgba(40,40,46,.55)';cx.lineWidth=.7;cx.stroke();}
+  }
+}
+let drag=null;const pts=new Map();
+cv.addEventListener('pointerdown',e=>{cv.setPointerCapture(e.pointerId);pts.set(e.pointerId,[e.clientX,e.clientY]);drag={x:e.clientX,y:e.clientY,yaw,pitch,dist:null,zoom};cv.style.cursor='grabbing';});
+cv.addEventListener('pointermove',e=>{if(!drag||!pts.has(e.pointerId))return;pts.set(e.pointerId,[e.clientX,e.clientY]);
+  if(pts.size===2){const [a,b]=[...pts.values()],d=Math.hypot(a[0]-b[0],a[1]-b[1]);if(drag.dist===null){drag.dist=d;drag.zoom=zoom;}zoom=Math.min(6,Math.max(.4,drag.zoom*d/drag.dist));}
+  else{yaw=drag.yaw+(e.clientX-drag.x)*0.008;pitch=Math.min(1.5,Math.max(-0.1,drag.pitch+(e.clientY-drag.y)*0.006));}
+  draw();});
+const up=e=>{pts.delete(e.pointerId);if(!pts.size){drag=null;cv.style.cursor='grab';}else if(drag)drag.dist=null;};
+cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
+cv.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.min(6,Math.max(.4,zoom*Math.exp(-e.deltaY*0.0015)));draw();},{passive:false});
+document.querySelectorAll('.v3d-bar [data-view]').forEach(b=>b.addEventListener('click',()=>{[yaw,pitch]=VIEWS[b.dataset.view];zoom=1;draw();}));
+const fb=document.querySelector('.v3d-bar [data-fronts]');fb.setAttribute('aria-pressed','false');fb.addEventListener('click',()=>{noFronts=!noFronts;fb.setAttribute('aria-pressed',String(noFronts));draw();});
+window.addEventListener('resize',draw);draw();
+})();`;
