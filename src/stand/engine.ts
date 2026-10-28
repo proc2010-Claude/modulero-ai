@@ -13,6 +13,16 @@ export interface Core {
   cards: Record<string, any>;
   /** Граф кухни: engine/generators/kitchen.ts. */
   kitchenGraph: (scene: any) => any;
+  /** Правки и сводки распашного шкафа и купе: packages/core/src/wardrobe/editor.ts. */
+  W: any;
+  /** Черновик шкафа с вариантами: wardrobe/draft.ts. */
+  WD: any;
+  /** Граф шкафа: engine/generators/wardrobe.ts. */
+  wardrobeGraph: (input: any, hw: any) => any;
+  /** Цена шкафа по графу: wardrobe/outputs.ts. */
+  wardrobeOutputs: (graph: any, hw: any, input: any) => any;
+  /** Проект шкафа для файла: вход и то, чем посчитан результат (wardrobe/project.ts). */
+  wardrobeProject: (input: any, hw: any, graph?: any) => any;
   previewSvg: (graph: any) => string | null;
   /** 3D-сцена графа: детали с размещением, фурнитура — engine/scene.ts. */
   sceneOf: (graph: any) => any;
@@ -36,7 +46,7 @@ export async function loadCore(): Promise<Core> {
   if (!existsSync(join(dir, 'packages/core/src/kitchen/index.ts')))
     throw new EngineMissing(`Нет копии ядра modulero-next ${PIN.sha.slice(0, 8)} в ${dir}: выполните npm run engine:setup.`);
   const at = (p: string) => pathToFileURL(join(dir, p)).href;
-  const [K, standard, gen, preview, file, catalogs, scene3d, coreIndex] = await Promise.all([
+  const [K, standard, gen, preview, file, catalogs, scene3d, coreIndex, W, WD, wgen, wout, wproj] = await Promise.all([
     import(at('packages/core/src/kitchen/index.ts')),
     import(at('packages/core/src/kitchen/standard.ts')),
     import(at('packages/core/src/engine/generators/kitchen.ts')),
@@ -45,11 +55,32 @@ export async function loadCore(): Promise<Core> {
     import(at('catalogs/index.ts')),
     import(at('packages/core/src/engine/scene.ts')),
     import(at('packages/core/src/index.ts')),
+    import(at('packages/core/src/wardrobe/editor.ts')),
+    import(at('packages/core/src/wardrobe/draft.ts')),
+    import(at('packages/core/src/engine/generators/wardrobe.ts')),
+    import(at('packages/core/src/wardrobe/outputs.ts')),
+    import(at('packages/core/src/wardrobe/project.ts')),
   ]);
   const HW = catalogs.hardwareCatalogs;
   if (HW.release.version !== PIN.hardwareCatalog)
     throw new Error(`Выпуск каталога ${HW.release.version}, а закреплён ${PIN.hardwareCatalog} (engine.json).`);
-  core = { K, cards: standard.KITCHEN_CARDS, kitchenGraph: gen.kitchenGraph, previewSvg: preview.previewSvg, sceneOf: scene3d.sceneOf, decorLook: decorLookOf(coreIndex, HW, join(dir, 'apps/web/public/decors')), writeProjectFile: file.writeProjectFile, readProjectFile: file.readProjectFile, HW, pin: PIN };
+  core = {
+    K,
+    cards: standard.KITCHEN_CARDS,
+    kitchenGraph: gen.kitchenGraph,
+    W,
+    WD,
+    wardrobeGraph: wgen.wardrobeGraph,
+    wardrobeOutputs: wout.wardrobeOutputs,
+    wardrobeProject: wproj.wardrobeProject,
+    previewSvg: preview.previewSvg,
+    sceneOf: scene3d.sceneOf,
+    decorLook: decorLookOf(coreIndex, HW, join(dir, 'apps/web/public/decors')),
+    writeProjectFile: file.writeProjectFile,
+    readProjectFile: file.readProjectFile,
+    HW,
+    pin: PIN,
+  };
   return core;
 }
 

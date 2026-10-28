@@ -1,0 +1,183 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w01-no-params",
+  "title": "Шкаф без параметров",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Человек не знает параметров: ИИ берёт стартовый шкаф конструктора и подгоняет по примерной ширине и высоте.",
+  "criteria": [
+    "Прототип с первого ответа",
+    "Не больше трёх вопросов за реплику",
+    "На «не знаю» — стартовый шкаф, сказано, что поставлено",
+    "«1,8 метра» — 1800 мм, «2,5 м» — 2500 мм",
+    "Цена — только из ответа стенда, ориентир в тысячах"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Хочу шкаф",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "parts": 14
+          }
+        },
+        {
+          "tool": "offer_choices",
+          "input": {
+            "options": [
+              "В нише",
+              "Между стенами",
+              "У одной стены",
+              "Пока не знаю"
+            ],
+            "allow_free_text": true
+          },
+          "expect": {
+            "shown": [
+              "В нише",
+              "Между стенами",
+              "У одной стены",
+              "Пока не знаю"
+            ]
+          }
+        }
+      ],
+      "ai": "Поставил стартовый шкаф конструктора: 1,5 м в ширину, 2,2 м в высоту, 60 см глубиной, три секции по одной двери. Ориентир около 49 тыс. ₽. Где он будет стоять, какой ширины место и какая высота потолка?",
+      "choices": [
+        "В нише",
+        "Между стенами",
+        "У одной стены",
+        "Пока не знаю"
+      ]
+    },
+    {
+      "human": "Пока не знаю. В спальню, для одежды, место примерно 1,8 метра.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Ширина 1,8 м, штанги и полки",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": 1800,
+                "height": null,
+                "depth": null
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 2
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-d538fa99a4b7e073",
+            "applied": [
+              "set_size",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "distribute_shelves"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 57436.61,
+              "known_amount_rub": 57436.61
+            },
+            "sections": 3,
+            "parts": 17
+          }
+        }
+      ],
+      "ai": "Сделал шкаф 1,8 м: три секции по 60 см, в двух штанги для одежды, в третьей три полки. Высота пока 2,2 м. Ориентир около 57 тыс. ₽. Какой высоты потолок — поднять шкаф повыше?"
+    },
+    {
+      "human": "Хорошо. Потолок 2,5 м, сделайте повыше.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Высота 2,5 м",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": null,
+                "height": 2500,
+                "depth": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-5211ecc42c935180",
+            "applied": [
+              "set_size"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 62499.57,
+              "known_amount_rub": 62499.57
+            },
+            "sections": 3,
+            "parts": 17
+          }
+        }
+      ],
+      "ai": "Поднял шкаф до 2,5 м, ширина та же, 1,8 м: две секции со штангами и одна с полками. Ориентир около 62 тыс. ₽. Добавить ящики или антресоль?"
+    }
+  ],
+  "review": "Хватило: стартовый шкаф конструктора закрывает «не знаю», ширину и высоту человек дал примерно. Наполнение по словам «для одежды» — штанги и полки — выбрал ИИ и сказал об этом. Неудобно: notice штанги содержит номер решения (MOD-DEC-310) — в пересказ не идёт."
+}

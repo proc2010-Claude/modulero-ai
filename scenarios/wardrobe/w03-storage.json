@@ -1,0 +1,237 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w03-storage",
+  "title": "Корзина для обуви не помещается",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Корзина для обуви не помещается в секцию: отказ пересказан, одна попытка исправить по смыслу отказа, затем вопрос человеку вместо подбора размеров.",
+  "criteria": [
+    "Отказ движка пересказан без смены смысла",
+    "После отказа — не больше одной повторной попытки",
+    "ИИ не подбирает ширину секции «на глаз» дальше, а спрашивает человека",
+    "Цена — только из ответа стенда"
+  ],
+  "expected_refusals": [
+    "Корзина для обуви не подходит: ширина секции в свету 460 мм",
+    "Корзина для обуви не подходит: ширина секции в свету 626 мм"
+  ],
+  "turns": [
+    {
+      "human": "Хочу шкаф 2 метра на 4 секции, в крайней справа — корзина для обуви.",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "parts": 14
+          }
+        },
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "wardrobe",
+            "topic": "storage"
+          },
+          "expect": {
+            "values": 4
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "2 м, 4 секции, корзина для обуви",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": 2000,
+                "height": null,
+                "depth": null
+              },
+              {
+                "op": "set_section_count",
+                "n": 4
+              },
+              {
+                "op": "add_storage",
+                "section": 3,
+                "kind": "SHOE_BASKET"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-203fb3af719c4b59",
+            "applied": [
+              "set_size",
+              "set_section_count"
+            ],
+            "refused": {
+              "i": 2,
+              "op": "add_storage",
+              "problem": "Корзина для обуви не подходит: ширина секции в свету 460 мм, а BELLE ставится в проём от 464 до 910 мм (MOD-DEC-484). Проект не изменён."
+            },
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 63335.72,
+              "known_amount_rub": 63335.72
+            },
+            "sections": 4,
+            "parts": 17
+          }
+        }
+      ],
+      "ai": "Сделал шкаф 2 м на четыре секции по 50 см. Корзина для обуви в правую секцию не встала: конструктор говорит, что ей нужна секция чуть шире. Ориентир около 63 тыс. ₽. Сделать правую секцию пошире?"
+    },
+    {
+      "human": "А если правую секцию сделать пошире?",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Правая секция 600, корзина для обуви",
+            "edits": [
+              {
+                "op": "set_section_width",
+                "section": 3,
+                "width": 600
+              },
+              {
+                "op": "add_storage",
+                "section": 3,
+                "kind": "SHOE_BASKET"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-2535e399b533da9e",
+            "applied": [
+              "set_section_width"
+            ],
+            "refused": {
+              "i": 1,
+              "op": "add_storage",
+              "problem": "Корзина для обуви не подходит: ширина секции в свету 560 мм между размерами BELLE: 464–510, 564–610, 664–710, 764–810, 864–910 мм (MOD-DEC-484). Проект не изменён."
+            },
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 62119.36,
+              "known_amount_rub": 62119.36
+            },
+            "sections": 4,
+            "parts": 17
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Правая секция 650, корзина для обуви",
+            "edits": [
+              {
+                "op": "set_section_width",
+                "section": 3,
+                "width": 650
+              },
+              {
+                "op": "add_storage",
+                "section": 3,
+                "kind": "SHOE_BASKET"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-966b937646a91bb3",
+            "applied": [
+              "set_section_width"
+            ],
+            "refused": {
+              "i": 1,
+              "op": "add_storage",
+              "problem": "Корзина для обуви не подходит: ширина секции в свету 626 мм между размерами BELLE: 464–510, 564–610, 664–710, 764–810, 864–910 мм (MOD-DEC-484). Проект не изменён."
+            },
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 62119.36,
+              "known_amount_rub": 62119.36
+            },
+            "sections": 4,
+            "parts": 17
+          }
+        }
+      ],
+      "ai": "Расширил правую секцию, соседняя стала уже, но корзина всё равно не встаёт: она ставится только в секции определённой ширины, и я дважды не попал. Ориентир около 62 тыс. ₽. Поставить в эту секцию полки для обуви или выбрать другую корзину?"
+    },
+    {
+      "human": "Тогда в правую — полки для обуви, а в первую — вешало для брюк.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Полки в правой секции, вешало для брюк",
+            "edits": [
+              {
+                "op": "add_fill",
+                "section": 3,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 3,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 3
+              },
+              {
+                "op": "add_storage",
+                "section": 0,
+                "kind": "TROUSER_RACK"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-374e6731db659a44",
+            "applied": [
+              "add_fill",
+              "add_fill",
+              "distribute_shelves",
+              "add_storage"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 73468.76,
+              "known_amount_rub": 73468.76
+            },
+            "sections": 4,
+            "parts": 19
+          }
+        }
+      ],
+      "ai": "Поставил в правую секцию две полки для обуви, а в первую — вешало для брюк. Ориентир около 73 тыс. ₽. Что положим во вторую и третью секции?"
+    }
+  ],
+  "review": "Хватило: отказ ядра точный — какие ширины в свету подходят корзине. Неудобно: ширина «в свету» не равна ширине секции и меняется нелинейно (600 → 560, 650 → 626 мм), поэтому ИИ не может сам подобрать секцию под корзину. Нужна правка «поставить корзину и подогнать секцию» или ответ ядра с подходящей шириной секции — задача MOD-AI-20."
+}
