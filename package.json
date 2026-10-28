@@ -9,6 +9,7 @@
   },
   "scripts": {
     "check": "node scripts/check.mjs",
+    "engine:setup": "node scripts/engine-setup.mjs",
     "test": "node --test \"tests/**/*.test.ts\"",
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },

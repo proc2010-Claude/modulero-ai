@@ -1,0 +1,662 @@
+{
+ "source": {
+  "prototype": "reference/prototype_r1/MODULERO_UNIFIED_PROTOTYPE_r1.html",
+  "sha256": "c840be56e2286039f2cdc1ab1e21a1b52c4d979678255f401be0a9aed382945c",
+  "RA05_DATA": "r1.html:64443",
+  "generator": "scripts/gen-back-panels.mjs"
+ },
+ "paletteVersion": "RA05-HDF-KRONOSPAN-GE-20261014-r1",
+ "algorithmVersion": "RA05-LAB76-MEAN-SRGB-1",
+ "corpus": [
+  {
+   "corpusDecorId": "DEC-EGG-H1145-ST10",
+   "corpusAssetSha256": "1a62f786c05c45dd78535322cd116feba618911dad053aa9e1a69bd4c8cb5854",
+   "labD65": [
+    69.33094061069103,
+    6.594612302396053,
+    19.61657466676483
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-H1180-ST37",
+   "corpusAssetSha256": "caedbbc5c1f2e1822750cc20bb258146e599219173e66285aa17fa9f866e84e6",
+   "labD65": [
+    63.81479734760909,
+    6.568500868795512,
+    24.0099531750402
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-H1330",
+   "corpusAssetSha256": "050a280b03bcd4bece0602d9889ab6a7cb3c0c0c15a13d7697d3e9c6c8b10e78",
+   "labD65": [
+    43.98603996989447,
+    5.394025027253113,
+    15.886831782345467
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-H3157-ST12",
+   "corpusAssetSha256": "8caaf3885be24262c377484eefd905c89dcbbc656ca6815110904c9d490c3089",
+   "labD65": [
+    74.6526902467281,
+    5.125174093002894,
+    25.6531413121875
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-H3303-ST10",
+   "corpusAssetSha256": "a00ff5c7a946d9760d2597ee663eef2db155ad72ef1dacdfc1034b3cc65d4b26",
+   "labD65": [
+    67.53000437906383,
+    5.677056717979911,
+    28.42367969915969
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-H3395-ST12",
+   "corpusAssetSha256": "3848b841222fac565eec3ace949d843d9076a1d3f01e5ebbedf7b1f1f39f711c",
+   "labD65": [
+    64.13562594577037,
+    9.604356233951117,
+    33.10798203039482
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-H3700-ST10",
+   "corpusAssetSha256": "4bc116dda3566e0a38471de0071355c66599e5f00f08af2cf1ae746503d77e78",
+   "labD65": [
+    63.160102636905194,
+    6.963095398066887,
+    23.222376796227586
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-H3730",
+   "corpusAssetSha256": "15ad5f5a794f4da29b32485026c4b6a5c1c7fac7b8d6d734be166249f1ceb911",
+   "labD65": [
+    68.282052702617,
+    6.838036796513791,
+    30.32443302604353
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U104-ST9",
+   "corpusAssetSha256": "7102553b67e6f715f1a730e94fc857c0e19882106e40297d05c1d501f14a1beb",
+   "labD65": [
+    97.80273916445347,
+    -1.8227242460487347,
+    10.670615718888143
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U113-ST9",
+   "corpusAssetSha256": "b0f665c19e91268362450802cee0d4074ca8121e76f3e3dd83f05ccbf091f308",
+   "labD65": [
+    94.68502879323621,
+    0.9769435288558559,
+    15.509721076030436
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U504-ST9",
+   "corpusAssetSha256": "34eb70abd181ac3863ed50a2ca152af39ef6cf7fdeda46e444a39d9a2a79c417",
+   "labD65": [
+    34.46610051740529,
+    -1.1101359465737204,
+    -19.008916425288213
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U636-ST9",
+   "corpusAssetSha256": "5c0a7b9c1ec001a6d83f778fea38f1057ef0a4c7abfe9e681042661a728c5a70",
+   "labD65": [
+    64.0402256653661,
+    -4.952381888782886,
+    -1.6990207152783432
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U702",
+   "corpusAssetSha256": "72fd70a9557c2ee9ff410597bfd80601bc4f724e6fb062001f4ab2a32af8819c",
+   "labD65": [
+    82.11921181349622,
+    2.693379208501878,
+    8.239933328609105
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U708",
+   "corpusAssetSha256": "20f101ddf8155f141c79bf3526cc61bfa3800b9568d7781a45ec3b279932b591",
+   "labD65": [
+    83.10295844652279,
+    1.1867189287725344,
+    3.2155733146375987
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U727-ST9",
+   "corpusAssetSha256": "26ec142b99f49332461d056b655a652c32a9d3f1eef170748610d614a797bb52",
+   "labD65": [
+    63.91418741617599,
+    2.040343253515209,
+    10.137296049623345
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U732-ST9",
+   "corpusAssetSha256": "28dcbfaa2b2c23827c72022302d68f63161cd6fbf4a4133fe9bedf219c7fc90b",
+   "labD65": [
+    55.5980117016875,
+    -1.7045235916787749,
+    1.2237529503074107
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U963-ST9",
+   "corpusAssetSha256": "8b2849734e15a3df151e5090b783dc76c557437cd6602b4158a9b5afa14bcf70",
+   "labD65": [
+    31.888747393429803,
+    -0.0000068805666997295845,
+    0.0000027522266798918338
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-U999-ST19",
+   "corpusAssetSha256": "bbc89e7105eb722e3c21015c31e8dcbfef67a86f83922b9de250a14fac951b5e",
+   "labD65": [
+    1.2154725879377537,
+    0.676425195424199,
+    -1.0416244884201453
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-W1000-ST19",
+   "corpusAssetSha256": "96186c6139c5e2738ae0ea969ddd0d57b5e1d9dd0efaa54afb3cb9232f14bdfa",
+   "labD65": [
+    99.03898950779751,
+    -1.7121458265992873,
+    3.703139125929278
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-EGG-W980-ST7",
+   "corpusAssetSha256": "2d185c01bd8d2ecaefde1d9f64e6be6ced3c9f516c33bd083d7e310231ab6f4d",
+   "labD65": [
+    98.52701101482765,
+    -1.2104378563829177,
+    6.574938781105022
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-BRUNO-WALNUT",
+   "corpusAssetSha256": "f3974f582b2820806e809fff3bac1e419f258262f7fc388354586526bdd35fed",
+   "labD65": [
+    18.686346417705032,
+    3.803493629061988,
+    10.286947772970256
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-CAPPUCCINO",
+   "corpusAssetSha256": "af148fad7dee48005a7ab6ecf8e55ce69196d24733d12d96aff8d905c278c8cd",
+   "labD65": [
+    45.375194772155325,
+    3.4044329868735956,
+    3.023761130361957
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-CREAM",
+   "corpusAssetSha256": "5a7118984bacb5885d0bd1251953fad3f62d434633de6d648d0aba98d556b74b",
+   "labD65": [
+    94.39987157620762,
+    0.9482213407557838,
+    18.196135811532876
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-GRAPHITE",
+   "corpusAssetSha256": "41da7a81090994d0d0664bf26f03ef12ea9acf00178981a0c9520cb00c102fa2",
+   "labD65": [
+    28.85190389346336,
+    -0.000006444238642711042,
+    0.000002577695457084417
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-GREY-STONE",
+   "corpusAssetSha256": "a823cf2e45203d28db9b6b46bd9cb0637dd61842aa58a65bd283456be14199dc",
+   "labD65": [
+    70.19860530549043,
+    -0.2868865110104424,
+    9.12084566716429
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-NAMIBIA",
+   "corpusAssetSha256": "4e6644238b0f093bda281721cc1994137bc46e312d867e221e6bfc77f2b09244",
+   "labD65": [
+    60.466646304013224,
+    1.3458508033811767,
+    6.445849373623447
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-PHANTOM",
+   "corpusAssetSha256": "5e622589b2022e7d5f54d4c7037cb3bb0a0c4f75c58443867364771194439e83",
+   "labD65": [
+    61.30421504580869,
+    0.9430489507615825,
+    5.677016630161913
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-SANTORINI-PINE",
+   "corpusAssetSha256": "ce1e971f6049cbfd29c819d73e5d285ba6f374d080cdc3f3b48b816d4389b6cc",
+   "labD65": [
+    40.55003950103284,
+    4.651565401869339,
+    10.637064212210834
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-SCANDI",
+   "corpusAssetSha256": "e65047d15e38bc8ff6bbc37c2444f94dd0896018fd67f7fdd52ed86bda0313ac",
+   "labD65": [
+    82.39604218326203,
+    3.5931426960460477,
+    8.779034500579353
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-SNOW-WHITE",
+   "corpusAssetSha256": "4f76f06b13786b3ff3dfd52129455c7098bb809f07ece31aa8d1c2c9601419ee",
+   "labD65": [
+    100.00000386666655,
+    -0.000016666666158293708,
+    0.000006666666463317483
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-SONOMA-EICHE",
+   "corpusAssetSha256": "1d358b0fa18c8eeefc6f2f85246c121a788c3434cba10b08e7d8a80bc5d54c12",
+   "labD65": [
+    79.71154141363903,
+    7.627822531488027,
+    28.427398596664588
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-SWISS-ELM",
+   "corpusAssetSha256": "1f28c53f868716b13c93d5d5c0104666a0a170ecefe8832cfe9c5faced3aa0b5",
+   "labD65": [
+    34.38643535408151,
+    13.355596265713949,
+    15.978220785529352
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-TEFFY",
+   "corpusAssetSha256": "4abac0d88d3c5e63afdb7b505fed348ffb13060464385cfdd1d2d5846bc9e181",
+   "labD65": [
+    86.9709387932069,
+    0.4995677553912836,
+    6.26379959641572
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-VOLCANIC-GREY",
+   "corpusAssetSha256": "6b8ae97da594f974f92f92596a6b179f7f680659d1a74d37163ec91c1d4c4aba",
+   "labD65": [
+    62.71572643740521,
+    0.7310098163841872,
+    0.251158940727203
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-WHITE",
+   "corpusAssetSha256": "e532ef5dabeacb343fdbaab8a0d5f96a2b99f1eb74d707739dba0e13ee9c561a",
+   "labD65": [
+    99.73332756321214,
+    -1.8854050594753202,
+    5.248803878397901
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-LAM-WOTAN-OAK",
+   "corpusAssetSha256": "75832b8e695bbf391671c5b6abe45d70c09d0cc27831b6aaf906585e8ecf3590",
+   "labD65": [
+    60.074832270964265,
+    10.675669338970739,
+    26.822913691523254
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U0080-UNKNOWN",
+   "corpusAssetSha256": "01b4c5bfc43aa052c11ecb195ebb2556c564b4d5f719783668a9c945a691db20",
+   "labD65": [
+    12.847073347789461,
+    -0.7838106793584682,
+    -7.175036261431522
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U11116-UNKNOWN",
+   "corpusAssetSha256": "02dd8a02bb518a79ff3ed7e32509584d7a8f40b40af5116cad203b1bd244ef64",
+   "labD65": [
+    45.96133999063264,
+    7.624204221458597,
+    15.730885694053798
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U1114-UNKNOWN",
+   "corpusAssetSha256": "c44f38c882945cb7fe71d468caf4c969188e5c82bcb0a9a5c850d267fa55b6b7",
+   "labD65": [
+    66.21441207102893,
+    4.394166946004252,
+    20.142240256088463
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U1147-UNKNOWN",
+   "corpusAssetSha256": "c310bba3d8995ee7047855733b055e1fb1e73191b6c4744dd8828f9e6c536b3a",
+   "labD65": [
+    50.47746846114154,
+    13.019320692030655,
+    25.622541979034064
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U1158-UNKNOWN",
+   "corpusAssetSha256": "db938cc7dc0002353d5f5584f7b28a1ed9f1c7a48362e30742e23800d9c53b52",
+   "labD65": [
+    59.1332784708937,
+    10.259321291824609,
+    23.933869130921416
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U1503-UNKNOWN",
+   "corpusAssetSha256": "e6d4b6a705f1b160afdf0dc092c6470743f8cb34aa84da1113bc7bedd79cd046",
+   "labD65": [
+    81.80498987708934,
+    3.022817672641509,
+    7.2442621444329
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U1507-UNKNOWN",
+   "corpusAssetSha256": "763f8ed4a8db9bcca6a6c089d3671f8f7721b3a49c681f8a499b0e52bce0195a",
+   "labD65": [
+    44.64099788426861,
+    2.107940930497876,
+    7.060129793240821
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U1508-UNKNOWN",
+   "corpusAssetSha256": "67b3e2c3787c93d310e41480780e08c70699516e438c966346e54d5722f9066c",
+   "labD65": [
+    82.88197867789108,
+    -4.28620559428855,
+    12.433270915683314
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U1600-UNKNOWN",
+   "corpusAssetSha256": "214b7690fffa69db5cf98648e8d20d91b01d7e3647a5910b93339341d05909ca",
+   "labD65": [
+    31.957836841460058,
+    -5.627141292071175,
+    -16.666198852492574
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U1605-UNKNOWN",
+   "corpusAssetSha256": "488fd7ca2792069c61d13a827a87b5301f4cdafe70dcc33ec1a17173ce8979f8",
+   "labD65": [
+    99.98153365559442,
+    0.000436915093715573,
+    -0.0003175493892726422
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U2108-UNKNOWN",
+   "corpusAssetSha256": "5ff62d0b05b5a237e4ef2627eed70b33596810df6ccdcf159fb9c31aff2c910e",
+   "labD65": [
+    13.330912749671803,
+    15.939770396376035,
+    15.731548694216603
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U2123-UNKNOWN",
+   "corpusAssetSha256": "1d50470919827a189d997a9925de24054520fed5dd7f99c9ddf96de69b3eeab1",
+   "labD65": [
+    82.47388953146553,
+    3.1557692898335765,
+    13.888861326016677
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U2167-UNKNOWN",
+   "corpusAssetSha256": "29beef3262f9afbd2cdca28157f580c12881f2bf01fa8e0d10060c8f66df2381",
+   "labD65": [
+    60.436131163512414,
+    10.051520293760719,
+    27.33684287257376
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U2236-UNKNOWN",
+   "corpusAssetSha256": "99b5a82917c5ecfb72bb153875bb05b0ca66eca479a566f98bd7e953386381ee",
+   "labD65": [
+    90.11827025198266,
+    1.7532501129317035,
+    8.3054452102046
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U2264-UNKNOWN",
+   "corpusAssetSha256": "2a5e343c123495e1039e4f9b5f280d20da297537cb8b77d54a0ab63e0f227b44",
+   "labD65": [
+    98.98409411596533,
+    -2.689848819695806,
+    9.804073856045337
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U3509-UNKNOWN",
+   "corpusAssetSha256": "23bc2efd2bdc41ffc9baa3b100f29115b587540c44455b9a88206fc84461e14b",
+   "labD65": [
+    81.6662606796072,
+    -0.7290132775311098,
+    5.34790256915425
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U3612-UNKNOWN",
+   "corpusAssetSha256": "a0b4cbae71ba89049fa8b5decdfa7e80478e5df3f1ddd0a979bf04b8d8d3350c",
+   "labD65": [
+    34.30627192493746,
+    -0.5863439503278056,
+    -0.8683412790651657
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U7211-UNKNOWN",
+   "corpusAssetSha256": "244002117f9c62a77b77b44647d053cad5833fc070566c49c53b50aab6740f15",
+   "labD65": [
+    100.00000386666655,
+    -0.000016666666158293708,
+    0.000006666666463317483
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U9201-UNKNOWN",
+   "corpusAssetSha256": "f24676e99d373abd255a4d8a2b6a58e11d405ef899dc565057d2c8464d3e7546",
+   "labD65": [
+    86.21479289286836,
+    -0.4955333130813866,
+    -0.7293254553161654
+   ]
+  },
+  {
+   "corpusDecorId": "DEC-UVA-U9510-UNKNOWN",
+   "corpusAssetSha256": "e89473eecfc5893e66037661d76d89475fbb2eedaa3b36621fe439c6a8efb5cb",
+   "labD65": [
+    84.43092107771749,
+    9.424621434981628,
+    27.393691100995543
+   ]
+  }
+ ],
+ "hdf": [
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:0344:PE",
+   "labD65": [
+    50.59205320401273,
+    23.957355913954647,
+    41.76177942410491
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:0375:PE",
+   "labD65": [
+    81.83887031516328,
+    5.002293136471659,
+    23.10385055748656
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:0381:PE",
+   "labD65": [
+    65.05881290312428,
+    15.66847791901721,
+    32.43201252871055
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:0522:PE",
+   "labD65": [
+    84.66918421885978,
+    0.4901784973112555,
+    15.137881381813646
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:0729:PE",
+   "labD65": [
+    30.846118790086855,
+    14.151482885965905,
+    22.207320908219906
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:0740:PE",
+   "labD65": [
+    58.6062665690915,
+    17.45315008218129,
+    31.97185617494023
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:0854:PE",
+   "labD65": [
+    17.246191658168925,
+    12.540716981660205,
+    12.761845672186206
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:0881:PE",
+   "labD65": [
+    77.47807554521397,
+    -0.8156556841898421,
+    -1.9896619517627556
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:3025:PE",
+   "labD65": [
+    70.50303565125648,
+    5.755927816352924,
+    15.683593466107236
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:8197:PE",
+   "labD65": [
+    63.59326543355125,
+    3.6080342040242797,
+    13.004255242468577
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:K101:PE",
+   "labD65": [
+    94.57318332696317,
+    -1.385803666240748,
+    2.77655162215118
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:K112:PE",
+   "labD65": [
+    81.7469472065167,
+    -1.1456100967120464,
+    -2.08590736492853
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:K164:PE",
+   "labD65": [
+    25.36224934259502,
+    -1.9164720766864096,
+    0.03318070579269028
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:K190:PE",
+   "labD65": [
+    7.585646527046773,
+    -3.166991301244773,
+    0.44853284401670246
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:K2738:PE",
+   "labD65": [
+    65.70903768235951,
+    3.5817539372075546,
+    19.610923065262796
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:K535:PE",
+   "labD65": [
+    63.8534131222776,
+    10.068759085415103,
+    27.657281158935444
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:K536:PE",
+   "labD65": [
+    49.75910342587187,
+    12.747975602725115,
+    26.04271222999136
+   ]
+  },
+  {
+   "stable_id": "kronospan:lhdf:ru_GE:K537:PE",
+   "labD65": [
+    29.049447415610608,
+    7.513773786386263,
+    12.321720454609475
+   ]
+  }
+ ]
+}

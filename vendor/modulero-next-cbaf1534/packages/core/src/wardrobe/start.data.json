@@ -1,0 +1,304 @@
+{
+ "schema": "modulero.wardrobe-input/1",
+ "prototype": "0.13.85-unified-r1",
+ "domain": "wardrobe",
+ "session": {
+  "role": "CUSTOMER"
+ },
+ "controls": {
+  "width": "1500",
+  "height": "2200",
+  "depth": "600",
+  "material": "1610",
+  "roomHeight": "",
+  "rearWallGap": "0",
+  "leftWall": false,
+  "rightWall": false,
+  "roomSkirtingHeight": "0",
+  "roomSkirtingDepth": "0",
+  "skirtingSolution": "warning",
+  "thickness": "16",
+  "shelfReduction": "30",
+  "shelfDeflectionLimit": "3",
+  "baseSystem": "plinth",
+  "plinthHeight": "70",
+  "plinthSetback": "20",
+  "doorBottomClearance": "70",
+  "internalDrawerGap": "32",
+  "maxCabinetModuleWidth": "2400",
+  "gap": "2",
+  "hdfPrice": "333",
+  "system32Assist": true
+ },
+ "rates": {
+  "edgePrice": "153",
+  "holePrice": "14",
+  "cupPrice": "79",
+  "hingePrice": "250",
+  "handlePrice": "300",
+  "rodPrice": "350",
+  "drawerKitPrice": "407",
+  "groovePrice": "104",
+  "delivery": "0",
+  "assembly": "0",
+  "markup": "15"
+ },
+ "state": {
+  "inputPriceSnapshot": null,
+  "ejConnections": null,
+  "facadeGapProfile": {
+   "profileId": "MOD-FACADE-SEAM-3-V1",
+   "seamX": 3,
+   "seamY": 3,
+   "insetLeft": 1.5,
+   "insetRight": 1.5,
+   "topInset": 2,
+   "bottomInset": 2
+  },
+  "heightIncludesBase": true,
+  "modulePolicyVersion": "UI-MANUAL-FLOW-01",
+  "engineeringRuleSetVersion": "1.2",
+  "frontGridMode": "EQUAL",
+  "facadeWidthPolicy": "EQUAL_ROW",
+  "frontGridExactWidthsMm": null,
+  "frontGridEditProvenance": null,
+  "moduleGroupingMode": "AUTO",
+  "moduleSoftLimitMm": 2400,
+  "advancedModuleWidthInputMm": 2400,
+  "moduleBreaksProvenance": null,
+  "p2GapInputMm": "2",
+  "p2MigrationNotices": [],
+  "view": "2d",
+  "workspaceMode": "2d",
+  "sidebarTab": "project",
+  "inspectorTab": "selection",
+  "doors": false,
+  "drawingZoom": 1,
+  "drawingFit": true,
+  "productionFilter": "",
+  "selected": 2,
+  "selectedObject": null,
+  "selectedPart": "M01-CARCASS-SIDE-L",
+  "selectedFace": "inside",
+  "moduleBreaks": null,
+  "doorBottomClearanceMode": "auto",
+  "internalDrawerGap": 32,
+  "system32Assist": true,
+  "system32Policy": {
+   "version": "SYSTEM32-193-196-R10",
+   "enabled": true,
+   "provenance": "NEW_PROJECT"
+  },
+  "edgeOverrides": {},
+  "sections": [
+   {
+    "ratio": 0.3333333333333333,
+    "content": "empty",
+    "shelvesEnabled": false,
+    "shelfType": "fixedShelf",
+    "rodCount": 0,
+    "drawersEnabled": false,
+    "shelfCount": 4,
+    "shelfLoadKg": 10,
+    "drawerCount": 3,
+    "drawerBoxHeight": 160,
+    "drawerWallThickness": 16,
+    "drawerMode": "internal",
+    "facade": "one",
+    "hingeSide": "left",
+    "bodyId": "M01",
+    "nominalMm": {
+     "numerator": 500,
+     "denominator": 1
+    },
+    "physicalId": "M01-S01",
+    "uiSectionId": "UI-SECTION-000001",
+    "shelfUids": [
+     "UI-SECTION-000001-SHELF-1",
+     "UI-SECTION-000001-SHELF-2",
+     "UI-SECTION-000001-SHELF-3",
+     "UI-SECTION-000001-SHELF-4"
+    ],
+    "shelfSequence": 4,
+    "shelfDepths": [],
+    "shelfRearPolicy": "BACK_INNER_FACE_V1",
+    "shelfRearMigration": {
+     "sourceVersion": "0.13.17",
+     "previousDepths": [],
+     "previousDefaultRearMm": 10
+    }
+   },
+   {
+    "ratio": 0.3333333333333333,
+    "content": "empty",
+    "shelvesEnabled": false,
+    "shelfType": "fixedShelf",
+    "rodCount": 0,
+    "drawersEnabled": false,
+    "shelfCount": 4,
+    "shelfLoadKg": 10,
+    "drawerCount": 3,
+    "drawerBoxHeight": 160,
+    "drawerWallThickness": 16,
+    "drawerMode": "internal",
+    "facade": "one",
+    "hingeSide": "left",
+    "bodyId": "M01",
+    "nominalMm": {
+     "numerator": 500,
+     "denominator": 1
+    },
+    "physicalId": "M01-S02",
+    "uiSectionId": "UI-SECTION-000002",
+    "shelfUids": [
+     "UI-SECTION-000002-SHELF-1",
+     "UI-SECTION-000002-SHELF-2",
+     "UI-SECTION-000002-SHELF-3",
+     "UI-SECTION-000002-SHELF-4"
+    ],
+    "shelfSequence": 4,
+    "shelfDepths": [],
+    "shelfRearPolicy": "BACK_INNER_FACE_V1",
+    "shelfRearMigration": {
+     "sourceVersion": "0.13.17",
+     "previousDepths": [],
+     "previousDefaultRearMm": 10
+    }
+   },
+   {
+    "ratio": 0.3333333333333333,
+    "content": "empty",
+    "shelvesEnabled": false,
+    "shelfType": "fixedShelf",
+    "rodCount": 0,
+    "drawersEnabled": false,
+    "shelfCount": 4,
+    "shelfLoadKg": 10,
+    "drawerCount": 3,
+    "drawerBoxHeight": 160,
+    "drawerWallThickness": 16,
+    "drawerMode": "internal",
+    "facade": "one",
+    "hingeSide": "left",
+    "bodyId": "M01",
+    "nominalMm": {
+     "numerator": 500,
+     "denominator": 1
+    },
+    "physicalId": "M01-S03",
+    "uiSectionId": "UI-SECTION-000003",
+    "shelfUids": [
+     "UI-SECTION-000003-SHELF-1",
+     "UI-SECTION-000003-SHELF-2",
+     "UI-SECTION-000003-SHELF-3",
+     "UI-SECTION-000003-SHELF-4"
+    ],
+    "shelfSequence": 4,
+    "shelfDepths": [],
+    "shelfRearPolicy": "BACK_INNER_FACE_V1",
+    "shelfRearMigration": {
+     "sourceVersion": "0.13.17",
+     "previousDepths": [],
+     "previousDefaultRearMm": 10
+    }
+   }
+  ],
+  "bodies": [
+   {
+    "id": "M01",
+    "width": 1500,
+    "height": null,
+    "depth": null,
+    "floor": 0,
+    "panels": {
+     "left": true,
+     "right": true,
+     "top": true,
+     "bottom": true,
+     "back": true
+    },
+    "base": null,
+    "back": null,
+    "parent": null
+   }
+  ],
+  "construction": {
+   "schema": 1,
+   "intent": "automatic",
+   "nextBody": 2,
+   "nextSection": 1,
+   "room": {
+    "niche": false,
+    "left": false,
+    "right": false,
+    "width": null,
+    "ceiling": null,
+    "assembly": null,
+    "skirting": false,
+    "skirtHeight": null,
+    "skirtDepth": null,
+    "widths": [
+     null,
+     null,
+     null
+    ],
+    "heights": [
+     null,
+     null
+    ]
+   },
+   "uprights": []
+  },
+  "backProfile": {
+   "id": "MODULERO-QUARTER-PROPOSAL-1",
+   "mode": "quarter",
+   "status": "WORKING_PROPOSAL_NOT_QUALIFIED",
+   "rebateDepthMm": 8,
+   "rebateWidthMm": 4.5,
+   "inPlaneClearanceMm": 0.5,
+   "rearClearanceMm": 0.5,
+   "materialThicknessMm": 4
+  },
+  "seamBindings": [],
+  "priceProfile": {
+   "id": "MODULERO-PUBLIC-DEMO-2026-09-r1",
+   "status": "PROVISIONAL_NOT_QUALIFIED",
+   "delivery": 5000,
+   "assemblyPercent": 14,
+   "makerPercent": 30,
+   "sawRate": 35,
+   "kerf": 3.2,
+   "trim": 10
+  },
+  "facadeFinish": {
+   "code": "W960",
+   "material": "Готовые фасады · демонстрационный тариф",
+   "rate": 2500
+  },
+  "depthProfile": {
+   "version": "DEPTH-EDGE-1",
+   "inputBasis": "OVERALL",
+   "overallMm": 600,
+   "frontGapMm": 2,
+   "status": "NOMINAL",
+   "sourceBasis": "NEW_STANDARD"
+  },
+  "appearanceSelection": {
+   "schema": "EXPLICIT-APPEARANCE-1",
+   "corpus": {
+    "chosen": false,
+    "origin": "legacy-unconfirmed"
+   },
+   "facade": {
+    "chosen": false,
+    "origin": "legacy-unconfirmed"
+   }
+  },
+  "fastenersR7": {
+   "schema": "modulero.fasteners/7",
+   "enabled": true,
+   "records": {},
+   "newProjectDefault": true
+  }
+ }
+}

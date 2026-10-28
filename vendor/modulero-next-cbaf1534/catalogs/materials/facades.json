@@ -1,0 +1,286 @@
+{
+ "version": "1",
+ "priceSource": "HOLZCOM (fasad.holzcom-mebel.ru), прайс готовых фасадов от 2026-09-21, Москва и МО, ₽ за м² одной проекции; ориентир (MOD-DEC-573). Минимум заказа 15 000 ₽ и доплата 1 800 ₽ за фрезу не входят",
+ "materials": [
+  {
+   "id": "LDSP",
+   "title": "ЛДСП",
+   "supply": "MANUFACTURE",
+   "color": "BOARD_DECOR",
+   "boardProduct": "ЛДСП",
+   "boardPrice": "AS_CARCASS",
+   "decors": [
+    "DEC-EGG-W1000-ST19",
+    "DEC-EGG-U104-ST9",
+    "DEC-EGG-U113-ST9",
+    "DEC-EGG-U702",
+    "DEC-EGG-U708",
+    "DEC-EGG-U727-ST9",
+    "DEC-EGG-U732-ST9",
+    "DEC-EGG-U963-ST9",
+    "DEC-EGG-U999-ST19",
+    "DEC-EGG-H1145-ST10",
+    "DEC-EGG-H3157-ST12",
+    "DEC-EGG-H3303-ST10",
+    "DEC-EGG-H3395-ST12",
+    "DEC-EGG-H1330",
+    "DEC-EGG-H3730",
+    "DEC-EGG-H3700-ST10",
+    "DEC-EGG-U636-ST9",
+    "DEC-EGG-U504-ST9"
+   ],
+   "executions": [
+    {
+     "id": "LDSP-BOARD",
+     "title": "Толщина корпуса",
+     "thicknessMm": "BOARD",
+     "priceRubPerM2": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "дверь изготавливается в заказе из плиты: цена — по раскрою плиты декора"
+     }
+    }
+   ]
+  },
+  {
+   "id": "LMDF",
+   "title": "ЛМДФ",
+   "supply": "MANUFACTURE",
+   "color": "BOARD_DECOR",
+   "boardProduct": "ЛМДФ",
+   "boardPrice": "AS_CARCASS",
+   "decors": [
+    "DEC-EGG-H1180-ST37"
+   ],
+   "executions": [
+    {
+     "id": "LMDF-16",
+     "title": "16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "дверь изготавливается в заказе из плиты: цена — по раскрою плиты ЛМДФ декора, лист каталога материалов (MOD-DEC-569, FINDINGS 1606)"
+     }
+    },
+    {
+     "id": "LMDF-18",
+     "title": "18 мм",
+     "thicknessMm": 18,
+     "priceRubPerM2": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "дверь изготавливается в заказе из плиты: цена — по раскрою плиты ЛМДФ декора, лист каталога материалов (MOD-DEC-569, FINDINGS 1606)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "MDF_PVC",
+   "title": "МДФ в плёнке ПВХ",
+   "supply": "PURCHASED",
+   "color": "SAMPLE_OR_CODE",
+   "decors": null,
+   "executions": [
+    {
+     "id": "MDF_PVC-06",
+     "title": "Гладкий, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 4900,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 06 «Плёнка 16 мм»: 4900 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_PVC-07",
+     "title": "Гладкий, 18 мм",
+     "thicknessMm": 18,
+     "priceRubPerM2": {
+      "value": 5150,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 07 «Плёнка 18 мм»: 5145 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_PVC-08",
+     "title": "Гладкий, 22 мм",
+     "thicknessMm": 22,
+     "priceRubPerM2": {
+      "value": 5640,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 08 «Плёнка 22 мм»: 5635 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_PVC-09",
+     "title": "С фрезеровкой, 18 мм",
+     "thicknessMm": 18,
+     "priceRubPerM2": {
+      "value": 6050,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 09 «Плёнка с фрезеровкой 18 мм (+ фрезеровка)»: 6045 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    }
+   ]
+  },
+  {
+   "id": "MDF_ENAMEL",
+   "title": "МДФ в эмали",
+   "supply": "PURCHASED",
+   "color": "SAMPLE_OR_CODE",
+   "decors": null,
+   "executions": [
+    {
+     "id": "MDF_ENAMEL-01",
+     "title": "Мат, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 6500,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 01 «Эмаль мат 16 мм»: 6500 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_ENAMEL-02",
+     "title": "Мат, 19 мм",
+     "thicknessMm": 19,
+     "priceRubPerM2": {
+      "value": 7020,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 02 «Эмаль мат 19 мм»: 7020 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_ENAMEL-03",
+     "title": "Глянец, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 7800,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 03 «Эмаль глянец 16 мм (high gloss)»: 7800 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_ENAMEL-04",
+     "title": "Глянец, 19 мм",
+     "thicknessMm": 19,
+     "priceRubPerM2": {
+      "value": 8430,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 04 «Эмаль глянец 19 мм»: 8424 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_ENAMEL-05",
+     "title": "Две стороны, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 8450,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 05 «Эмаль 2 стороны 16 мм»: 8450 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_ENAMEL-14",
+     "title": "Мат с фрезеровкой, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 7800,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 2, строка 14 «Фрезеровка мат 16 мм»: 7800 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_ENAMEL-15",
+     "title": "Мат с фрезеровкой, 18 мм",
+     "thicknessMm": 18,
+     "priceRubPerM2": {
+      "value": 8190,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 2, строка 15 «Фрезеровка мат 18 мм»: 8190 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "MDF_ENAMEL-16",
+     "title": "Глянец с фрезеровкой, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 8580,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 2, строка 16 «Фрезеровка глянец 16 мм»: 8580 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    }
+   ]
+  },
+  {
+   "id": "VENEER",
+   "title": "Шпон",
+   "supply": "PURCHASED",
+   "color": "SPECIES",
+   "decors": [],
+   "executions": [
+    {
+     "id": "VENEER-10",
+     "title": "Мат, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 11000,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 10 «Шпон мат 16 мм»: 11000 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "VENEER-11",
+     "title": "Мат, 19 мм",
+     "thicknessMm": 19,
+     "priceRubPerM2": {
+      "value": 11880,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 11 «Шпон мат 19 мм»: 11880 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "VENEER-12",
+     "title": "Глянец, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 12650,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 12 «Шпон глянец 16 мм»: 12650 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    },
+    {
+     "id": "VENEER-13",
+     "title": "Две стороны, 16 мм",
+     "thicknessMm": 16,
+     "priceRubPerM2": {
+      "value": 14850,
+      "status": "CONFIRMED",
+      "ref": null
+     },
+     "priceNote": "HOLZCOM, прайс от 2026-09-21, с. 1, строка 13 «Шпон 2 стороны 16 мм (premium)»: 14850 ₽/м², округлено вверх до 10 ₽ (MOD-DEC-346)"
+    }
+   ]
+  }
+ ],
+ "documents": []
+}

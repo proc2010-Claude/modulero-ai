@@ -1,0 +1,2003 @@
+{
+ "supports": [
+  {
+   "mounting": "VISIBLE",
+   "shelfOperations": [],
+   "unplacedFasteners": [],
+   "tier": "ECONOMY",
+   "parts": [],
+   "id": "BOYARD_P101ZN56",
+   "brand": "BOYARD",
+   "article": "P101Zn.56",
+   "ref": {
+    "doc": "BOYARD-2024",
+    "sha256": "6c00dc31",
+    "page": "297"
+   },
+   "name": "Полкодержатель-штифт Ø5, полка кладётся сверху",
+   "components": [
+    "P101Zn.56"
+   ],
+   "retention": "NONE",
+   "retentionDocumented": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "штифт без удержания: «Эконом», только по явному выбору (MOD-DEC-332)"
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "297",
+      "note": "совпадает с комплектом БАЗИС Полкодержатель P101ZN.56.fr3d"
+     }
+    },
+    "depthMm": {
+     "value": 8,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "297",
+      "note": "совпадает с комплектом БАЗИС Полкодержатель P101ZN.56.fr3d"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": 2.45,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "297",
+     "note": "d/2 штифта Ø4,9: полка лежит на верхней образующей штифта"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "материал полки в источнике не указан"
+   },
+   "loadPerPairKg": {
+    "value": 10,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "297",
+     "note": "значок «10 кг» — максимальная нагрузка на пару (легенда с. 296)"
+    }
+   }
+  },
+  {
+   "mounting": "HIDDEN",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 15,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "298",
+       "note": "совпадает с комплектом БАЗИС Полкодержатель скрытого монтажа P521Ni.0.fr3d"
+      }
+     },
+     "depthMm": {
+      "value": 12,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "298",
+       "note": "совпадает с комплектом БАЗИС Полкодержатель скрытого монтажа P521Ni.0.fr3d"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 6,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-SHELF",
+       "sha256": "59df10fa",
+       "page": "архив: Полкодержатель скрытого монтажа P521Ni.0.fr3d",
+       "note": "от плоскости боковины; на чертеже с. 298 — 6 мм от торца полки, прижатой к боковине"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "BOYARD_P521NI0",
+   "brand": "BOYARD",
+   "article": "P521Ni.0",
+   "ref": {
+    "doc": "BOYARD-2024",
+    "sha256": "6c00dc31",
+    "page": "298"
+   },
+   "name": "Полкодержатель скрытого монтажа с фиксацией (P521BN.0 — чёрный никель, та же присадка)",
+   "components": [
+    "P521Ni.0"
+   ],
+   "retention": "HIDDEN_BODY",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "298",
+     "note": "«Полкодержатель скрытого монтажа с фиксацией»"
+    }
+   },
+   "sideFixing": {
+    "kind": "SCREW",
+    "diameterMm": {
+     "value": 2.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-SHELF",
+      "sha256": "59df10fa",
+      "page": "архив: Полкодержатель скрытого монтажа P521Ni.0.fr3d",
+      "note": "отверстие 2,5×2,5 под крепёж корпуса; в каталоге (с. 298) у корпуса отверстие Ø6, саморез и его поставка не указаны"
+     }
+    },
+    "depthMm": {
+     "value": 2.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-SHELF",
+      "sha256": "59df10fa",
+      "page": "архив: Полкодержатель скрытого монтажа P521Ni.0.fr3d"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": -8,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "298",
+     "note": "ось крепления на 8 мм выше нижней пласти; так же в комплекте БАЗИС"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "с. 298: на чертеже «min 16», а значок «16 мм» по легенде с. 296 — «максимальная толщина полки»; противоречие (FINDINGS 151)"
+   },
+   "shelfMaterials": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "материал полки в источнике не указан"
+   },
+   "loadPerPairKg": {
+    "value": 20,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "298",
+     "note": "значок «20 кг» на пару"
+    }
+   }
+  },
+  {
+   "mounting": "HIDDEN",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "END",
+     "widthMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "шток Ø11,2 × 100 мм (с. 298); отверстие в полке не указано"
+     },
+     "depthMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "шток Ø11,2 × 100 мм (с. 298); отверстие в полке не указано"
+     },
+     "fromSideFaceMm": null,
+     "aboveLowerMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "высота штока над нижней пластью не указана"
+     },
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "BOYARD_P701ZN0",
+   "brand": "BOYARD",
+   "article": "P701ZN.0",
+   "ref": {
+    "doc": "BOYARD-2024",
+    "sha256": "6c00dc31",
+    "page": "298"
+   },
+   "name": "Полкодержатель скрытого монтажа: шток в торце полки, пластина на боковине",
+   "components": [
+    "P701ZN.0"
+   ],
+   "retention": "HIDDEN_BODY",
+   "retentionDocumented": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "каталог (с. 298) называет его «скрытого монтажа», без «с фиксацией»"
+   },
+   "sideFixing": {
+    "kind": "SCREW",
+    "diameterMm": {
+     "value": 2.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-SHELF",
+      "sha256": "59df10fa",
+      "page": "архив: Полкодержатель P701ZN.0.fr3d",
+      "note": "два отверстия под саморезы; на чертеже с. 298 между ними 54 мм"
+     }
+    },
+    "depthMm": {
+     "value": 2.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-SHELF",
+      "sha256": "59df10fa",
+      "page": "архив: Полкодержатель P701ZN.0.fr3d"
+     }
+    },
+    "offsetsAlongMm": [
+     -27,
+     27
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "положение полки относительно пластины не указано"
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "материал полки в источнике не указан"
+   },
+   "loadPerPairKg": {
+    "value": 9,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "298",
+     "note": "значок «9 кг» на пару"
+    }
+   }
+  },
+  {
+   "mounting": "VISIBLE",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "299"
+      }
+     },
+     "depthMm": {
+      "value": 7,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "299"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 10,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "299",
+       "note": "ось трёхгранного штифта в 10 мм от плоскости боковины"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "BOYARD_P901NI59",
+   "brand": "BOYARD",
+   "article": "P901Ni.59",
+   "ref": {
+    "doc": "BOYARD-2024",
+    "sha256": "6c00dc31",
+    "page": "299"
+   },
+   "name": "Полкодержатель металлический с фиксирующим трёхгранным штифтом",
+   "components": [
+    "P901Ni.59"
+   ],
+   "retention": "SHELF_PIN",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "299",
+     "note": "«с фиксирующим трехгранным штифтом»"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "299"
+     }
+    },
+    "depthMm": {
+     "value": 8,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "299"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": 5,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "299",
+     "note": "ось штифта боковины на 5 мм ниже нижней пласти полки"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "материал полки в источнике не указан"
+   },
+   "loadPerPairKg": {
+    "value": 10,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "299",
+     "note": "значок «10 кг» на пару"
+    }
+   }
+  },
+  {
+   "mounting": "HIDDEN",
+   "shelfOperations": [
+    {
+     "kind": "GROOVE",
+     "face": "END",
+     "widthMm": {
+      "value": 11,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "58"
+      }
+     },
+     "depthMm": {
+      "value": 12,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "58"
+      }
+     },
+     "fromSideFaceMm": null,
+     "aboveLowerMm": {
+      "value": 8,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "58",
+       "note": "8 + 8 при толщине 16"
+      }
+     },
+     "stopFromBackMm": {
+      "value": 10,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "58",
+       "note": "паз открыт спереди и кончается в 10 мм от заднего края"
+      }
+     },
+     "rearShiftMm": null
+    },
+    {
+     "kind": "BORE",
+     "face": "END",
+     "widthMm": {
+      "value": 8,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "58"
+      }
+     },
+     "depthMm": {
+      "value": 47,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "58",
+       "note": "от торца полки"
+      }
+     },
+     "fromSideFaceMm": null,
+     "aboveLowerMm": {
+      "value": 8,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "58"
+      }
+     },
+     "stopFromBackMm": null,
+     "rearShiftMm": {
+      "value": 5,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "58",
+       "note": "37 − 32: заднее Ø8 в 32 мм от заднего края полки, Ø5 боковины — в 37 мм от заднего края боковины"
+      }
+     }
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "PERMO_ZERO_PRM0109",
+   "brand": "PERMO",
+   "article": "PRM0109",
+   "ref": {
+    "doc": "TBM-2026",
+    "sha256": "907d626c",
+    "page": "58"
+   },
+   "name": "Полкодержатель скрытый «ZERO» для плит 16 мм, с замком LOCK",
+   "components": [
+    "PRM0109.F (фронтальная часть)",
+    "PRM0109.R (тыльная часть)",
+    "PRM0109.D (дюбель ввинчиваемый, по одному на часть)"
+   ],
+   "retention": "LOCK",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "TBM-2026",
+     "sha256": "907d626c",
+     "page": "58",
+     "note": "схема монтажа: полка задвигается и запирается («LOCK»)"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "TBM-2026",
+      "sha256": "907d626c",
+      "page": "58",
+      "note": "Ø5 в боковине на 37 мм от переднего и заднего края"
+     }
+    },
+    "depthMm": {
+     "value": 9,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "TBM-2026",
+      "sha256": "907d626c",
+      "page": "58",
+      "note": "«9 min.»: не меньше 9 мм"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "высота оси дюбеля относительно полки на схеме (с. 58) не дана"
+   },
+   "shelfThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": 16
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "TBM-2026",
+     "sha256": "907d626c",
+     "page": "58",
+     "note": "«для плит толщиной 16мм»"
+    }
+   },
+   "shelfMaterials": {
+    "value": [
+     "CHIPBOARD"
+    ],
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "TBM-2026",
+     "sha256": "907d626c",
+     "page": "58",
+     "note": "«для плит»"
+    }
+   },
+   "loadPerPairKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузка в источнике не указана"
+   }
+  },
+  {
+   "mounting": "HIDDEN",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "корпус 15 × 10,5 мм; размер гнезда в полке не указан"
+     },
+     "depthMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "глубина гнезда не указана"
+     },
+     "fromSideFaceMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "положение гнезда не указано"
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "PERMO_PRM0107",
+   "brand": "PERMO",
+   "article": "PRM0107",
+   "ref": {
+    "doc": "TBM-2026",
+    "sha256": "907d626c",
+    "page": "57"
+   },
+   "name": "Полкодержатель врезной с дюбелем-штоком Ø5",
+   "components": [
+    "PRM0107.07 (белый; .43 серый, .05 коричневый, .06 чёрный)",
+    "PRM0107.D/1 (дюбель-шток Ø5) или PRM0107.D (дюбель-евровинт)"
+   ],
+   "retention": "HIDDEN_BODY",
+   "retentionDocumented": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "каталог (с. 57) — «врезной», о фиксации не сказано"
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "TBM-2026",
+      "sha256": "907d626c",
+      "page": "57",
+      "note": "дюбель-шток Ø5, длина 12"
+     }
+    },
+    "depthMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "глубина отверстия в боковине не указана"
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "не указано"
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "материал полки в источнике не указан"
+   },
+   "loadPerPairKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузка в источнике не указана"
+   }
+  },
+  {
+   "mounting": "VISIBLE",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "57",
+       "note": "Ø1 штифта в полку 5"
+      }
+     },
+     "depthMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "глубина отверстия в полке не указана (штифт H1 7,5)"
+     },
+     "fromSideFaceMm": {
+      "value": 10,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "TBM-2026",
+       "sha256": "907d626c",
+       "page": "57",
+       "note": "A1 = 10 от плоскости боковины"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "PERMO_PRM0100",
+   "brand": "PERMO",
+   "article": "PRM0100",
+   "ref": {
+    "doc": "TBM-2026",
+    "sha256": "907d626c",
+    "page": "57"
+   },
+   "name": "Полкодержатель с упором и фиксацией полки",
+   "components": [
+    "PRM0100"
+   ],
+   "retention": "SHELF_PIN",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "TBM-2026",
+     "sha256": "907d626c",
+     "page": "57",
+     "note": "«с упором и фиксацией полки»"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "TBM-2026",
+      "sha256": "907d626c",
+      "page": "57",
+      "note": "Ø штифта боковины 5, длина L 7,5"
+     }
+    },
+    "depthMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "глубина отверстия в боковине не указана (штифт L 7,5)"
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": 6,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "TBM-2026",
+     "sha256": "907d626c",
+     "page": "57",
+     "note": "A = 6: от оси штифта боковины до опорной поверхности"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "материал полки в источнике не указан"
+   },
+   "loadPerPairKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузка в источнике не указана"
+   }
+  },
+  {
+   "mounting": "VISIBLE",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 11,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d"
+      }
+     },
+     "depthMm": {
+      "value": 13.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 4.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d",
+       "note": "от плоскости боковины"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    },
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 14,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d",
+       "note": "зенковка под фланец корпуса"
+      }
+     },
+     "depthMm": {
+      "value": 2.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 4.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": "PREMIUM",
+   "parts": [
+    {
+     "role": "BODY",
+     "article": "2600 116 MAORI16",
+     "colour": null,
+     "priceRub": {
+      "value": 19.01,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-10433",
+       "sha256": "3567866c",
+       "page": "снимок страницы 2600 116 MAORI16, цена для физических лиц, руб./шт, актуально на 22.10.2026 09:44:17"
+      }
+     }
+    },
+    {
+     "role": "STEM",
+     "article": "2600 420 MAORI16",
+     "colour": null,
+     "priceRub": {
+      "value": 56.38,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-10435",
+       "sha256": "262f11fa",
+       "page": "снимок страницы 2600 420 MAORI16, цена для физических лиц, руб./шт, 21.10.2026",
+       "note": "та же цена на снимке 22.10.2026 (reference/sources/mdm-shelf-supports-2026-10-22)"
+      }
+     }
+    }
+   ],
+   "id": "IF_MAORI16",
+   "brand": "Italiana Ferramenta",
+   "article": "2600 116 MAORI16 + 2600 420 MAORI16",
+   "ref": {
+    "doc": "IF-BAZIS",
+    "sha256": "0331a357",
+    "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d"
+   },
+   "name": "MAORI: полкодержатель для деревянных полок от 16 мм с фиксацией, опора с дюбелем и винтом",
+   "components": [
+    "2600 116 MAORI16 (корпус)",
+    "2600 420 MAORI16 (опора с дюбелем и винтом)"
+   ],
+   "retention": "HIDDEN_BODY",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-SHOT-10435",
+     "sha256": "262f11fa",
+     "page": "снимок страницы 2600 420 MAORI16: «Тип крепления полки: с фиксацией»; в библиотеке IF — «с фикс.»"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d",
+      "note": "дюбель опоры в отверстие Ø5; винт опоры вкручивается в этот дюбель, отдельного отверстия нет — ответ владельца (дополнение MOD-DEC-344) и фото на странице МДМ"
+     }
+    },
+    "depthMm": {
+     "value": 8,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": -8,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d",
+     "note": "ось дюбеля опоры на 8 мм выше нижней пласти"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": null
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-SHOT-10435",
+     "sha256": "262f11fa",
+     "page": "снимок страницы 2600 420 MAORI16: «Толщина полки, мм: 16, 18, 22, 25 и более», пиктограмма «от 16 мм»; так же в библиотеке IF «для полок от 16 мм»"
+    }
+   },
+   "shelfMaterials": {
+    "value": [
+     "CHIPBOARD",
+     "WOOD"
+    ],
+    "status": "DERIVED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс. + опора.fr3d",
+     "note": "выведено по разделу библиотеки «Для ДСП», не по артикулу; в названиях деталей — «для дер. полок»; продавец: «Материал полки: дерево»"
+    }
+   },
+   "loadPerPairKg": {
+    "value": 30,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-SHOT-10433",
+     "sha256": "3567866c",
+     "page": "снимок страницы 2600 116 MAORI16: пиктограмма «60 кг на полку»",
+     "note": "наименьшая из частей комплекта, делённая на две пары: корпус 2600 116 — «60 кг на полку», опора 2600 420 (снимок MDM-SHOT-10435) — «80 кг на полку»; на полку — четыре полкодержателя; 60 / 2"
+    }
+   }
+  },
+  {
+   "mounting": "HIDDEN",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 12,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d"
+      }
+     },
+     "depthMm": {
+      "value": 12,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 4.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d",
+       "note": "от плоскости боковины"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "IF_MAORI16_D12",
+   "brand": "Italiana Ferramenta",
+   "article": "11701140IL + 2600 420 MAORI16",
+   "ref": {
+    "doc": "IF-BAZIS",
+    "sha256": "0331a357",
+    "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d"
+   },
+   "name": "MAORI d=12: скрытый полкодержатель для полок от 16 мм с фиксацией",
+   "components": [
+    "11701140IL (корпус d=12)",
+    "2600 420 MAORI16 (опора с дюбелем и винтом)"
+   ],
+   "retention": "HIDDEN_BODY",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d",
+     "note": "название в библиотеке: «с фикс.»"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d",
+      "note": "дюбель опоры в отверстие Ø5; винт опоры вкручивается в этот дюбель, отдельного отверстия нет — ответ владельца (дополнение MOD-DEC-344) и фото на странице МДМ"
+     }
+    },
+    "depthMm": {
+     "value": 8,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": -6.8,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d",
+     "note": "ось дюбеля опоры на 6,8 мм выше нижней пласти"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": null
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d",
+     "note": "«для полок от 16 мм»"
+    }
+   },
+   "shelfMaterials": {
+    "value": [
+     "CHIPBOARD"
+    ],
+    "status": "DERIVED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/MAORI/MAORI Полкодерж. для полок от 16 мм с фикс., d=12 мм + опора.fr3d",
+     "note": "выведено по разделу библиотеки «Для ДСП», не по артикулу; в названиях деталей — «для дер. полок»"
+    }
+   },
+   "loadPerPairKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузка в источнике не указана"
+   }
+  },
+  {
+   "mounting": "VISIBLE",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 15,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d"
+      }
+     },
+     "depthMm": {
+      "value": 12,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 6.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d",
+       "note": "от плоскости боковины"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "IF_FLIPPER_2574",
+   "brand": "Italiana Ferramenta",
+   "article": "2574 21 + 2574 50",
+   "ref": {
+    "doc": "IF-BAZIS",
+    "sha256": "0331a357",
+    "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d"
+   },
+   "name": "FLIPPER: полкодержатель для деревянных полок с фиксацией (эффект стягивания), шток с гладким штифтом",
+   "components": [
+    "2574 21 (корпус; 20, 22, 23, 30 — другие цвета)",
+    "2574 50 (шток с гладким штифтом)"
+   ],
+   "retention": "HIDDEN_BODY",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d",
+     "note": "название в библиотеке: «с фикс.»"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d"
+     }
+    },
+    "depthMm": {
+     "value": 13,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": -7,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d",
+     "note": "ось штока на 7 мм выше нижней пласти"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": [
+     "CHIPBOARD"
+    ],
+    "status": "DERIVED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток гладкий штифт/FLIPPER Полкодерж. белый + шток гладкий штифт.fr3d",
+     "note": "выведено по разделу библиотеки «Для ДСП», не по артикулу; в названиях деталей — «для дер. полок»"
+    }
+   },
+   "loadPerPairKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузка в источнике не указана"
+   }
+  },
+  {
+   "mounting": "VISIBLE",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 15,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d"
+      }
+     },
+     "depthMm": {
+      "value": 12,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 6.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d",
+       "note": "от плоскости боковины"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": "STANDARD",
+   "parts": [
+    {
+     "role": "BODY",
+     "article": "2574 21",
+     "colour": "белый",
+     "priceRub": {
+      "value": 10.61,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-10366",
+       "sha256": "1bad9059",
+       "page": "снимок страницы 2574 21, цена для физических лиц, руб./шт, актуально на 22.10.2026 09:42:13"
+      }
+     }
+    },
+    {
+     "role": "BODY",
+     "article": "2574 31",
+     "colour": "антрацит",
+     "priceRub": {
+      "value": 10.61,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-106745",
+       "sha256": "05601c1a",
+       "page": "снимок страницы 2574 31, цена для физических лиц, руб./шт, актуально на 22.10.2026 09:43:15"
+      }
+     }
+    },
+    {
+     "role": "BODY",
+     "article": "2574 23",
+     "colour": "коричневый",
+     "priceRub": {
+      "value": 10.61,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-10368",
+       "sha256": "0265a232",
+       "page": "снимок страницы 2574 23, цена для физических лиц, руб./шт, актуально на 22.10.2026 09:43:15"
+      }
+     }
+    },
+    {
+     "role": "BODY",
+     "article": "2574 20",
+     "colour": "прозрачный",
+     "priceRub": {
+      "value": 11.73,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-10448",
+       "sha256": "8b4d838a",
+       "page": "снимок страницы 2574 20, цена для физических лиц, руб./шт, актуально на 22.10.2026 09:43:15"
+      }
+     }
+    },
+    {
+     "role": "BODY",
+     "article": "2574 30",
+     "colour": "серый",
+     "priceRub": {
+      "value": 10.61,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-10425",
+       "sha256": "490d1876",
+       "page": "снимок страницы 2574 30, цена для физических лиц, руб./шт, актуально на 22.10.2026 09:43:15"
+      }
+     }
+    },
+    {
+     "role": "BODY",
+     "article": "2574 22",
+     "colour": "черный",
+     "priceRub": {
+      "value": 10.61,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-10367",
+       "sha256": "8c7e3122",
+       "page": "снимок страницы 2574 22, цена для физических лиц, руб./шт, актуально на 22.10.2026 09:44:17"
+      }
+     }
+    },
+    {
+     "role": "STEM",
+     "article": "2574 36",
+     "colour": null,
+     "priceRub": {
+      "value": 10.61,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "MDM-SHOT-10369",
+       "sha256": "16d67f0b",
+       "page": "снимок страницы 2574 36, цена для физических лиц, руб./шт, актуально на 22.10.2026 09:44:17"
+      }
+     }
+    }
+   ],
+   "id": "IF_FLIPPER_2574_EURO",
+   "brand": "Italiana Ferramenta",
+   "article": "2574 21 + 2574 36",
+   "ref": {
+    "doc": "IF-BAZIS",
+    "sha256": "0331a357",
+    "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d"
+   },
+   "name": "FLIPPER: полкодержатель для деревянных полок с фиксацией, шток-евровинт",
+   "components": [
+    "2574 21 (корпус белый; 2574 31 антрацит, 23 коричневый, 20 прозрачный, 30 серый, 22 черный)",
+    "2574 36 (шток-евровинт)"
+   ],
+   "retention": "HIDDEN_BODY",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d",
+     "note": "название в библиотеке: «с фикс.»"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d",
+      "note": "евровинт в отверстие Ø5"
+     }
+    },
+    "depthMm": {
+     "value": 9,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": -7,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d",
+     "note": "ось штока на 7 мм выше нижней пласти"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": null
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-SHOT-10366",
+     "sha256": "1bad9059",
+     "page": "снимок страницы 2574 21: «Толщина полки, мм: 16, 18, 22, 25 и более», пиктограмма «от 16 мм»; так же у остальных цветов и штока 2574 36"
+    }
+   },
+   "shelfMaterials": {
+    "value": [
+     "CHIPBOARD",
+     "WOOD"
+    ],
+    "status": "DERIVED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/FLIPPER/FLIPPER + шток евровинт/FLIPPER Полкодерж. белый + шток евровинт.fr3d",
+     "note": "выведено по разделу библиотеки «Для ДСП», не по артикулу; в названиях деталей — «для дер. полок»; продавец: «Материал полки: дерево»"
+    }
+   },
+   "loadPerPairKg": {
+    "value": 25,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-SHOT-10366",
+     "sha256": "1bad9059",
+     "page": "снимок страницы 2574 21: пиктограмма «50 кг на полку»",
+     "note": "на полку — четыре полкодержателя (FINDINGS 153); так же у штока 2574 36 (снимок MDM-SHOT-10369) — на две пары: 50 / 2"
+    }
+   }
+  },
+  {
+   "mounting": "HIDDEN",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "END",
+     "widthMm": {
+      "value": 15,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d",
+       "note": "деталь библиотеки, не комплект"
+      }
+     },
+     "depthMm": {
+      "value": 16,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d"
+      }
+     },
+     "fromSideFaceMm": null,
+     "aboveLowerMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "в библиотеке высота 6 мм дана от начала координат детали; к какой пласти она относится, без чертежа производителя не установить"
+     },
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    },
+    {
+     "kind": "BORE",
+     "face": "END",
+     "widthMm": {
+      "value": 8,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d"
+      }
+     },
+     "depthMm": {
+      "value": 37,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d"
+      }
+     },
+     "fromSideFaceMm": null,
+     "aboveLowerMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "в библиотеке высота 6 мм дана от начала координат детали; к какой пласти она относится, без чертежа производителя не установить"
+     },
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "IF_KINTAI",
+   "brand": "Italiana Ferramenta",
+   "article": "P1903171 AB",
+   "ref": {
+    "doc": "IF-BAZIS",
+    "sha256": "0331a357",
+    "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d"
+   },
+   "name": "KINTAI: скрытый полкодержатель с подпружиненным штоком в торце полки, с фиксацией",
+   "components": [
+    "P1903171 AB (белый; антрацит — другой артикул)"
+   ],
+   "retention": "HIDDEN_BODY",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d",
+     "note": "название в библиотеке: «с фикс.»"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d"
+     }
+    },
+    "depthMm": {
+     "value": 9,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в библиотеке высота 6 мм дана от начала координат детали; к какой пласти она относится, без чертежа производителя не установить"
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": [
+     "CHIPBOARD"
+    ],
+    "status": "DERIVED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/KINTAI/KINTAI Полкодерж. с подпруж. штоком для дер. полок с фикс., белый.f3d",
+     "note": "выведено по разделу библиотеки «Для ДСП», не по артикулу; в названиях деталей — «для дер. полок»"
+    }
+   },
+   "loadPerPairKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузка в источнике не указана"
+   }
+  },
+  {
+   "mounting": "VISIBLE",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d"
+      }
+     },
+     "depthMm": {
+      "value": 6,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 10,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "IF-BAZIS",
+       "sha256": "0331a357",
+       "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d",
+       "note": "от плоскости боковины"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "IF_KLINE_FIX",
+   "brand": "Italiana Ferramenta",
+   "article": "1 02080 50 YA",
+   "ref": {
+    "doc": "IF-BAZIS",
+    "sha256": "0331a357",
+    "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d"
+   },
+   "name": "K-LINE: полкодержатель с дополнительным упором для деревянных полок с фиксацией",
+   "components": [
+    "1 02080 50 YA"
+   ],
+   "retention": "SHELF_PIN",
+   "retentionDocumented": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d",
+     "note": "название в библиотеке: «c фиксацией»"
+    }
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d",
+      "note": "деталь библиотеки, не комплект"
+     }
+    },
+    "depthMm": {
+     "value": 8,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "IF-BAZIS",
+      "sha256": "0331a357",
+      "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": 2,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d",
+     "note": "ось штифта боковины на 2 мм ниже нижней пласти"
+    }
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": [
+     "CHIPBOARD"
+    ],
+    "status": "DERIVED",
+    "ref": {
+     "doc": "IF-BAZIS",
+     "sha256": "0331a357",
+     "page": "архив: Фрагменты/Полкодержатели/Для ДСП/K-LINE/K-LINE Полкодерж. с доп. упором для дер. полок c фикс., никель.f3d",
+     "note": "выведено по разделу библиотеки «Для ДСП», не по артикулу; в названиях деталей — «для дер. полок»"
+    }
+   },
+   "loadPerPairKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузка в источнике не указана"
+   }
+  },
+  {
+   "mounting": "VISIBLE",
+   "shelfOperations": [
+    {
+     "kind": "BORE",
+     "face": "LOWER",
+     "widthMm": {
+      "value": 5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "AKS-BAZIS",
+       "sha256": "4f84101a",
+       "page": "архив: Фурнитура AKS/Полкодержатели/Полкодержатель SEKURA 6 никель AKS  (60714).fr3d"
+      }
+     },
+     "depthMm": {
+      "value": 10,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "AKS-BAZIS",
+       "sha256": "4f84101a",
+       "page": "архив: Фурнитура AKS/Полкодержатели/Полкодержатель SEKURA 6 никель AKS  (60714).fr3d"
+      }
+     },
+     "fromSideFaceMm": {
+      "value": 10,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "AKS-BAZIS",
+       "sha256": "4f84101a",
+       "page": "архив: Фурнитура AKS/Полкодержатели/Полкодержатель SEKURA 6 никель AKS  (60714).fr3d",
+       "note": "от плоскости боковины"
+      }
+     },
+     "aboveLowerMm": null,
+     "stopFromBackMm": null,
+     "rearShiftMm": null
+    }
+   ],
+   "unplacedFasteners": [],
+   "tier": null,
+   "parts": [],
+   "id": "HETTICH_SEKURA6_AKS60714",
+   "brand": "Hettich (библиотека AKS)",
+   "article": "SEKURA 6 (AKS 60714)",
+   "ref": {
+    "doc": "AKS-BAZIS",
+    "sha256": "4f84101a",
+    "page": "архив: Фурнитура AKS/Полкодержатели/Полкодержатель SEKURA 6 никель AKS  (60714).fr3d"
+   },
+   "name": "SEKURA 6: полкодержатель со штифтом в нижней пласти полки",
+   "components": [
+    "SEKURA 6 никель (AKS 60714; 70245 — та же присадка)"
+   ],
+   "retention": "SHELF_PIN",
+   "retentionDocumented": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в библиотеке AKS о фиксации не сказано; каталога Hettich с полкодержателями в КАТАЛОГИ нет"
+   },
+   "sideFixing": {
+    "kind": "PIN",
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "AKS-BAZIS",
+      "sha256": "4f84101a",
+      "page": "архив: Фурнитура AKS/Полкодержатели/Полкодержатель SEKURA 6 никель AKS  (60714).fr3d"
+     }
+    },
+    "depthMm": {
+     "value": 12,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "AKS-BAZIS",
+      "sha256": "4f84101a",
+      "page": "архив: Фурнитура AKS/Полкодержатели/Полкодержатель SEKURA 6 никель AKS  (60714).fr3d",
+      "note": "в прототипе r1 штифт боковины 8 мм (r1.html:86677) — FINDINGS 152"
+     }
+    },
+    "offsetsAlongMm": [
+     0
+    ]
+   },
+   "shelfLowerAboveAxisMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "библиотека AKS: ось на 1,25 мм ниже нижней пласти; прототип r1 (профиль 79707): на 8 мм ниже (r1.html:86662) — противоречие (FINDINGS 152)"
+   },
+   "shelfThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина полки в источнике не указана"
+   },
+   "shelfMaterials": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "материал полки в источнике не указан"
+   },
+   "loadPerPairKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "прототип r1: группа нагрузки L75, 75 кг/м² (r1.html:86730) — не предел полкодержателя"
+   }
+  }
+ ],
+ "documents": [
+  {
+   "id": "BOYARD-2024",
+   "path": "КАТАЛОГИ\\НОВЫЕ БД 2\\BOYARD\\Каталог функциональной фурнитуры BOYARD 2024 .pdf",
+   "sha256": "6c00dc31abacdede5d572af5a81a3206220b9a8a64fab8f35ee5ef741fdba719",
+   "title": "Каталог функциональной фурнитуры BOYARD 2024, с. 296–299"
+  },
+  {
+   "id": "BOYARD-BAZIS-SHELF",
+   "path": "КАТАЛОГИ\\НОВЫЕ БД\\BOYARD\\БАЗИС BOYARD - ПОЛКОДЕРЖАТЕЛИ - BOYARD (13-05-2026).zip",
+   "sha256": "59df10fa83e3efd576ad40a5bec74a5cc2e7f2b4d9f731adad96c457ab9ba445",
+   "title": "Библиотека БАЗИС BOYARD «Полкодержатели» (13-05-2026)"
+  },
+  {
+   "id": "TBM-2026",
+   "path": "КАТАЛОГИ\\ТБМ\\LIT0157_2026.pdf",
+   "sha256": "907d626c77ddf172caf57b0453ef68f5eeb18a403ce3d31fe050d4888b50ae7b",
+   "title": "Каталог ТБМ 2026, «Полкодержатели», с. 57–58 (PERMO)"
+  },
+  {
+   "id": "IF-BAZIS",
+   "path": "КАТАЛОГИ\\ТБМ\\IF_082026.zip",
+   "sha256": "0331a357c26a4e2ebab59bdfd8587c80a471df825031f090d402170409554280",
+   "title": "Библиотека БАЗИС Italiana Ferramenta (ТБМ, 08.2026)"
+  },
+  {
+   "id": "AKS-BAZIS",
+   "path": "КАТАЛОГИ\\ФУРНИТУРА\\AKS\\База 3D моделей для БАЗИС-Мебельщик (15.09.2025).zip",
+   "sha256": "4f84101a74f2cd6659013057053e9dd3c083f31903ff27f5d7842fa683b15b2b",
+   "title": "Библиотека БАЗИС AKS (15.09.2025)"
+  },
+  {
+   "id": "MDM-SHOT-10435",
+   "path": "modulero-next\\reference\\sources\\mdm-maori16-2026-10-21\\mdm_10435_2600_420_MAORI16.png",
+   "sha256": "262f11fa6c7e1fc2a0a163f721812bc2e848e97a0ce4f40e924ea4a2ea457040",
+   "title": "Снимок страницы МДМ 2600 420 MAORI16 (владелец, 21.10.2026)"
+  },
+  {
+   "id": "MDM-SHOT-10366",
+   "path": "modulero-next\\reference\\sources\\mdm-shelf-supports-2026-10-22\\mdm_10366_2574_21_FLIPPER.png",
+   "sha256": "1bad9059b94f507fbf3f91d2095606472f0116a98dc6c0aa366aa9a1039ca95f",
+   "title": "Снимок страницы МДМ 2574 21 (FLIPPER, корпус белый) (владелец, 22.10.2026)"
+  },
+  {
+   "id": "MDM-SHOT-106745",
+   "path": "modulero-next\\reference\\sources\\mdm-shelf-supports-2026-10-22\\mdm_106745_2574_31_FLIPPER.png",
+   "sha256": "05601c1ace5bd9f011533da2d56d53dc9e35b8731cb66457613c0b3feb379e50",
+   "title": "Снимок страницы МДМ 2574 31 (FLIPPER, корпус антрацит) (владелец, 22.10.2026)"
+  },
+  {
+   "id": "MDM-SHOT-10368",
+   "path": "modulero-next\\reference\\sources\\mdm-shelf-supports-2026-10-22\\mdm_10368_2574_23_FLIPPER.png",
+   "sha256": "0265a2322302d6c9f0626a48c9e36bf480f31cc94d67fe8358e5723f3d99c4da",
+   "title": "Снимок страницы МДМ 2574 23 (FLIPPER, корпус коричневый) (владелец, 22.10.2026)"
+  },
+  {
+   "id": "MDM-SHOT-10448",
+   "path": "modulero-next\\reference\\sources\\mdm-shelf-supports-2026-10-22\\mdm_10448_2574_20_FLIPPER.png",
+   "sha256": "8b4d838ab31dc3a4bc29b90d71b2a83803fb481e96b7ce2102b3d4182ef156af",
+   "title": "Снимок страницы МДМ 2574 20 (FLIPPER, корпус прозрачный) (владелец, 22.10.2026)"
+  },
+  {
+   "id": "MDM-SHOT-10425",
+   "path": "modulero-next\\reference\\sources\\mdm-shelf-supports-2026-10-22\\mdm_10425_2574_30_FLIPPER.png",
+   "sha256": "490d18766d8c8d35a763e791b6f46d1fd830224902c7adfa5091c410e476eaee",
+   "title": "Снимок страницы МДМ 2574 30 (FLIPPER, корпус серый) (владелец, 22.10.2026)"
+  },
+  {
+   "id": "MDM-SHOT-10367",
+   "path": "modulero-next\\reference\\sources\\mdm-shelf-supports-2026-10-22\\mdm_10367_2574_22_FLIPPER.png",
+   "sha256": "8c7e3122d87ffdc080db6f25bd91e39036e070054d4788ff3d7ba056656827b0",
+   "title": "Снимок страницы МДМ 2574 22 (FLIPPER, корпус черный) (владелец, 22.10.2026)"
+  },
+  {
+   "id": "MDM-SHOT-10369",
+   "path": "modulero-next\\reference\\sources\\mdm-shelf-supports-2026-10-22\\mdm_10369_2574_36_FLIPPER.png",
+   "sha256": "16d67f0b5c60c98067c1d23148400d71d64a53e9ac9b8f39d7feb42b221377af",
+   "title": "Снимок страницы МДМ 2574 36 (FLIPPER, шток-евровинт) (владелец, 22.10.2026)"
+  },
+  {
+   "id": "MDM-SHOT-10433",
+   "path": "modulero-next\\reference\\sources\\mdm-shelf-supports-2026-10-22\\mdm_10433_2600_116_MAORI16.png",
+   "sha256": "3567866c7fb8be64f581902886fe110d5b185f97bcd6ae2b6fd4a6252a96befb",
+   "title": "Снимок страницы МДМ 2600 116 MAORI16 (MAORI16, корпус с бортиком) (владелец, 22.10.2026)"
+  }
+ ]
+}

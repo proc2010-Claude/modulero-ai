@@ -1,0 +1,27 @@
+// @modulero/bazis — reader and writer of BAZIS BZ85 files (.f3d, .fr3d, .b3d). Pure functions: bytes in, JSON out;
+// a tree in, bytes out.
+export { decodeBazis, HANDOFF_SCHEMA, HANDOFF_INPUT_LIMIT } from './decode.js';
+export type { BazisDecoded } from './decode.js';
+export { decodeBz85, decodeDocument } from './bz85.js';
+export type { Bz85File, BzDocument, Node, PropertyNode, RecordNode, Value } from './bz85.js';
+export { readHoles } from './holes.js';
+export type { BazisHoles } from './holes.js';
+export { holeDefinitions, partHoles, placedHoles, poseOf, compose, rotate, multiply } from './placement.js';
+export type { HoleDefinition, RawHole, RawHoleFields, Pose, Quat, Vec3, PlacedResult } from './placement.js';
+export { normalizeHoles, MARKING_MAX_DEPTH, POSITION_EPS, DIRECTION_EPS, SIZE_EPS } from './normalize.js';
+export type { BazisHole, HoleLayer, HoleSource } from './normalize.js';
+export { inflateZlib, inflateRaw, adler32, InflateError } from './inflate.js';
+export { deflateZlib, deflateRaw } from './deflate.js';
+export { SEGMENT_LINE, SEGMENT_CIRCLE, SEGMENT_ARC, SEGMENT_CIRCLE_DISPLAY, toBazisPoint, toBazisVector, fromBazisPoint, fromBazisVector } from './axes.js';
+export { encodeBz85, encodeDocument, record, flag, u8, i32, int, f64, text, bytes, zero } from './write.js';
+export type { WriteNode, WriteProperty, WriteRecord, WriteValue } from './write.js';
+export { BazisError } from './errors.js';
+export type { OffsetSpace } from './errors.js';
+export { sha256Hex } from './sha256.js';
+export type { Json, JsonObject } from './tree-json.js';
+export { readPanels, readModel, decodeContour, OBJ_PANEL, OBJ_HARDWARE, OBJ_BLOCK, OBJ_BOOLEAN, OBJ_FRAME, OBJ_PROFILE, CONTOUR_LINE, CONTOUR_CIRCLE, CONTOUR_ARC, CONTOUR_CIRCLE_DISPLAY } from './panels.js';
+export type { BazisModel, BazisPanel, BazisHardware, BazisFrame, BazisOther, BazisEdge, BazisCut, Contour, ContourElement, Bounds2, Box3, Vec2 } from './panels.js';
+export { decodeTriData, readMeshes, meshBounds, OBJ_HARDWARE_MESH } from './mesh.js';
+export type { MeshGroup, PlacedMesh } from './mesh.js';
+export { meshesToGlb } from './gltf.js';
+export type { GltfMesh } from './gltf.js';

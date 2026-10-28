@@ -1,0 +1,283 @@
+{
+ "schema": "modulero.kitchen-catalog/1",
+ "source": "reference/prototype_r1/MODULERO_UNIFIED_PROTOTYPE_r1.html: fixtures r1.html:67362 (учебные примеры: помещение, карточки палитры и их размещение). Модули создаются карточкой (makeModule) — KF-14, FINDINGS 327; полуостров примера «island» примыкает к торцу ряда (attach: end, x 1700, y 0) вместо стены A без несущего узла — KF-13, FINDINGS 327; повёрнут на 180°, лицом в помещение, как модули ряда: при 0° его фасады и свес столешницы уходили в стену A — FINDINGS 501; пример «straight» в r1 был пустым — заполнен рядом нижних и навесных модулей на стене A с выводом воды у мойки (Д, R4-003, FINDINGS 1891)",
+ "data": {
+  "straight": {
+   "type": "straight",
+   "orientation": "left",
+   "islandEnabled": false,
+   "room": {
+    "width": 3000,
+    "depth": 2600,
+    "height": 2500
+   },
+   "modules": [
+    {
+     "catalogId": "lower-drawers",
+     "place": {
+      "wall": "A",
+      "pos": 0,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "lower-sink",
+     "place": {
+      "wall": "A",
+      "pos": 600,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "dishwasher",
+     "place": {
+      "wall": "A",
+      "pos": 1200,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "lower-oven",
+     "place": {
+      "wall": "A",
+      "pos": 1800,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "lower-shelves",
+     "place": {
+      "wall": "A",
+      "pos": 2400,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "upper-shelves",
+     "place": {
+      "wall": "A",
+      "pos": 0,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "upper-dish",
+     "place": {
+      "wall": "A",
+      "pos": 600,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "upper-shelves",
+     "place": {
+      "wall": "A",
+      "pos": 1200,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "upper-hood",
+     "place": {
+      "wall": "A",
+      "pos": 1800,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "upper-shelves",
+     "place": {
+      "wall": "A",
+      "pos": 2400,
+      "width": 600
+     }
+    }
+   ],
+   "obstacles": [
+    {
+     "id": "o1",
+     "type": "Вывод воды",
+     "wall": "A",
+     "pos": 840,
+     "width": 120,
+     "height": null
+    }
+   ]
+  },
+  "l": {
+   "type": "l",
+   "orientation": "left",
+   "islandEnabled": false,
+   "room": {
+    "width": 3000,
+    "depth": 2600,
+    "height": 2500
+   },
+   "modules": [
+    {
+     "catalogId": "lower-shelves",
+     "place": {
+      "wall": "A",
+      "pos": 650,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "dishwasher",
+     "place": {
+      "wall": "B",
+      "pos": 650,
+      "width": 600,
+      "name": "Ниша под посудомоечную машину"
+     }
+    },
+    {
+     "catalogId": "filler",
+     "place": {
+      "wall": "A",
+      "pos": 600,
+      "width": 50,
+      "name": "Угловой добор"
+     }
+    }
+   ],
+   "obstacles": [
+    {
+     "id": "o1",
+     "type": "Вывод воды",
+     "wall": "B",
+     "pos": 1470,
+     "width": 120,
+     "height": null
+    }
+   ]
+  },
+  "u": {
+   "type": "u",
+   "orientation": "left",
+   "islandEnabled": false,
+   "room": {
+    "width": 3200,
+    "depth": 2600,
+    "height": 2500
+   },
+   "modules": [
+    {
+     "catalogId": "lower-shelves",
+     "place": {
+      "wall": "A",
+      "pos": 850,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "lower-drawers",
+     "place": {
+      "wall": "B",
+      "pos": 850,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "upper-shelves",
+     "place": {
+      "wall": "C",
+      "pos": 850,
+      "width": 600
+     }
+    }
+   ],
+   "obstacles": []
+  },
+  "island": {
+   "type": "straight",
+   "orientation": "left",
+   "islandEnabled": true,
+   "room": {
+    "width": 3400,
+    "depth": 2900,
+    "height": 2500
+   },
+   "modules": [
+    {
+     "catalogId": "lower-shelves",
+     "place": {
+      "wall": "A",
+      "pos": 1100,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "island-doors",
+     "place": {
+      "x": 1000,
+      "y": 1450,
+      "width": 600,
+      "decorBack": true
+     }
+    },
+    {
+     "catalogId": "island-storage",
+     "place": {
+      "zone": "peninsula",
+      "attach": "end",
+      "x": 1700,
+      "y": 0,
+      "rotation": 180,
+      "width": 600,
+      "endPanels": true
+     }
+    }
+   ],
+   "obstacles": []
+  },
+  "l-old": {
+   "type": "l",
+   "orientation": "left",
+   "islandEnabled": false,
+   "room": {
+    "width": 3000,
+    "depth": 2600,
+    "height": 2500
+   },
+   "modules": [
+    {
+     "catalogId": "lower-shelves",
+     "place": {
+      "wall": "A",
+      "pos": 650,
+      "width": 600
+     }
+    },
+    {
+     "catalogId": "dishwasher",
+     "place": {
+      "wall": "B",
+      "pos": 650,
+      "width": 600,
+      "name": "Ниша под посудомоечную машину"
+     }
+    },
+    {
+     "catalogId": "filler",
+     "place": {
+      "wall": "A",
+      "pos": 600,
+      "width": 50,
+      "name": "Угловой добор"
+     }
+    }
+   ],
+   "obstacles": [
+    {
+     "id": "o1",
+     "type": "Вывод воды",
+     "wall": "B",
+     "pos": 1470,
+     "width": 120,
+     "height": null
+    }
+   ]
+  }
+ }
+}
