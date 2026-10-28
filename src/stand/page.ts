@@ -12,7 +12,7 @@ const esc = (s: unknown) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '
 const rub = (v: number | null | undefined) => (typeof v === 'number' ? v.toLocaleString('ru-RU', { maximumFractionDigits: 2 }) + ' ₽' : '—');
 const mm = (v: unknown) => (typeof v === 'number' ? v.toLocaleString('ru-RU') : '—');
 
-const PRODUCT_RU: Record<ProductKind, [string, string]> = { kitchen: ['кухня', 'кухни'], wardrobe: ['распашной шкаф', 'шкафа'], sliding: ['шкаф-купе', 'шкафа-купе'] };
+const PRODUCT_RU: Record<ProductKind, [string, string]> = { kitchen: ['кухня', 'кухни'], wardrobe: ['распашной шкаф', 'шкафа'], sliding: ['шкаф-купе', 'шкафа-купе'], home: ['другая мебель', 'мебели'] };
 
 const KIND_RU: Record<string, string> = { base: 'нижний', niche: 'ниша', upper: 'навесной', tall: 'пенал', mezz: 'антресоль', island: 'остров' };
 
@@ -60,6 +60,7 @@ function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']
     ${p.missing?.length ? `<details open><summary>Чего не хватает (${p.missing.length})</summary><ul>${p.missing.map((m: string) => `<li>${esc(m)}</li>`).join('')}</ul></details>` : ''}
   </section>`;
   const stage = stage3d(stand, view);
+  if (s.kind === 'home') return { stage, details: price + homeFacts(s, head.label, view.warnings) + variants(stand) };
   if (!('plan' in view)) return { stage, details: price + wardrobeFacts(s, head.label) + wardrobeSections(s) + variants(stand) };
   const facts = `<section class="card">
     <h2>${esc(head.label)}</h2>
@@ -113,6 +114,7 @@ function wardrobeFacts(s: any, label: string): string {
     <dl class="facts">
       <dt>Ш × В × Г</dt><dd>${mm(s.size.width)} × ${mm(s.size.height)} × ${mm(s.size.depth)} мм</dd>
       <dt>Секции</dt><dd>${s.sections.filter((x: any) => !x.mezzanine).length}${s.mezzanine_height ? `, антресоль ${mm(s.mezzanine_height)} мм` : ''}</dd>
+      <dt>Корпуса</dt><dd>${s.bodies.filter((b: any) => !b.over).length}${s.body_joints.length ? `, стык после секции ${s.body_joints.join(', ')}` : ''}</dd>
       ${d ? `<dt>Двери-купе</dt><dd>${d.doors ? `створок ${d.doors}, ${esc(d.system)}${d.mirrored_tracks ? ', раскладка зеркальная' : ''}` : 'не заданы'}</dd>` : `<dt>Двери</dt><dd>${esc(s.facade_mounting)}</dd>`}
       <dt>Основание</dt><dd>${esc(s.base.kind)}${s.base.height ? ` ${mm(s.base.height)} мм` : ''}</dd>
       <dt>Крыша / задняя стенка</dt><dd>${yes(s.top)} / ${yes(s.back)}</dd>
@@ -123,6 +125,25 @@ function wardrobeFacts(s: any, label: string): string {
       <dt>Детали</dt><dd>${mm(s.parts)}</dd>
     </dl>
   </section>`;
+}
+
+/** Другая мебель: заготовка, материал, корпуса с наполнением — из проекта редактора HOME (home.ts). */
+function homeFacts(s: any, label: string, warnings: string[]): string {
+  const fill = (b: any) => [b.shelves.length ? `полок ${b.shelves.length}` : null, b.doors.length ? `дверец ${b.doors.length}` : null, b.drawers.length ? `ящиков ${b.drawers.length}` : null, b.partitions.length ? `перегородок ${b.partitions.length}` : null].filter(Boolean).join(', ') || 'пусто';
+  return `<section class="card">
+    <h2>${esc(label)}</h2>
+    <dl class="facts">
+      <dt>Изделие</dt><dd>${esc(s.name)}</dd>
+      <dt>Материал</dt><dd>${esc(s.material)}${s.facade ? ` · фасады ${esc(s.facade)}` : ''}</dd>
+      <dt>Ручка</dt><dd>${esc(s.handle ?? '—')}</dd>
+      <dt>Пол</dt><dd>${esc(s.floor)}</dd>
+      <dt>Детали</dt><dd>${mm(s.parts)}</dd>
+    </dl>
+    ${warnings.length ? `<ul class="warnings">${warnings.map((w) => `<li>${esc(w)}</li>`).join('')}</ul>` : ''}
+  </section>
+  <section class="card"><h2>Корпуса (${s.bodies.length})</h2><table><thead><tr><th>Корпус</th><th>Ш × В × Г, мм</th><th>Основание, задняя стенка</th><th>Наполнение</th></tr></thead><tbody>${s.bodies
+    .map((b: any) => `<tr><td>${esc(b.id)}<div class="muted">${esc(b.kind)}</div></td><td>${mm(b.width)} × ${mm(b.height)} × ${mm(b.depth)}</td><td>${esc(b.base ? `${b.base.kind}${b.base.height ? ` ${mm(b.base.height)} мм` : ''}` : '—')}, ${esc(b.back)}</td><td>${esc(fill(b))}</td></tr>`)
+    .join('')}</tbody></table></section>`;
 }
 
 /** Секции шкафа слева направо, затем антресоль: фасад и наполнение. */

@@ -1,0 +1,123 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "h01-chest",
+  "title": "Комод",
+  "kind": "home",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Другая мебель (HOME) на стенде: комод из заготовки, правки home_edits 0.1 и команды редактора, которых нет в договоре 0.1: пол и копирование корпуса.",
+  "criteria": [
+    "Заготовка и её размеры — из ответа стенда",
+    "Пол и копия корпуса — команды setFloor и copy редактора HOME",
+    "Цена — только из ответа стенда"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Хочу комод",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "home",
+            "template": "chest"
+          },
+          "expect": {
+            "revision": "MWD-7d6ebc04da3b65a8",
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 38433.07,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 22
+          }
+        }
+      ],
+      "ai": "Поставил комод из заготовок конструктора: 80 см в ширину, 80 см в высоту, 45 см глубиной, три выдвижных ящика, светлый дуб. Ориентир около 38 тыс. ₽. Какой цвет и размер нужен?"
+    },
+    {
+      "human": "Белый и шириной метр",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Белый, ширина 1 м",
+            "edits": [
+              {
+                "op": "set_material",
+                "material_id": "white"
+              },
+              {
+                "op": "resize",
+                "axis": "w",
+                "value": 1000,
+                "body_id": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-f58f75b499c953ec",
+            "applied": [
+              "set_material",
+              "resize"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 39330.54,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 22
+          }
+        }
+      ],
+      "ai": "Сделал комод белым и шириной 1 м, ящики подстроились под новую ширину. Ориентир около 39 тыс. ₽."
+    },
+    {
+      "human": "Он будет стоять на ковре. И поставь рядом второй такой же",
+      "calls": [
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "На ковёр, второй корпус рядом",
+            "calls": [
+              {
+                "command": "home/setFloor",
+                "args_json": "{\"floor\": \"carpet\"}"
+              },
+              {
+                "command": "home/copy",
+                "args_json": "{\"bodyId\": \"h2\"}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-e0292c905bbe44fe",
+            "applied": [
+              "home/setFloor",
+              "home/copy"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 63033.45,
+              "known_amount_rub": null
+            },
+            "bodies": 2,
+            "parts": 44
+          }
+        }
+      ],
+      "ai": "Учёл ковёр, конструктор поменял опоры под мягкий пол. Рядом поставил второй такой же корпус. Ориентир за оба около 63 тыс. ₽."
+    }
+  ],
+  "review": "HOME раньше отвечал «дальше на этапе 2». Теперь start_project kind=home ставит заготовку редактора createHomeEditor, home_edits и editor_call выполняют его методы с проверкой validate, файл версии открывается в конструкторе. Id новых элементов стенд даёт по порядку (h1, h2…), чтобы проигрыш давал те же версии."
+}

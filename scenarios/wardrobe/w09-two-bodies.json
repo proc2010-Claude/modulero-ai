@@ -1,0 +1,242 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w09-two-bodies",
+  "title": "Шкаф из двух корпусов",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Владелец просит разбить шкаф на два корпуса со стыком между 2-й и 3-й секцией, добавить антресоль и сменить ручки: правок нет в wardrobe_edits 0.1, помощник делает их командами редактора через editor_call (AI-DEC-007).",
+  "criteria": [
+    "Стык корпусов — команда конструктора toggleBodyJoint, ширины корпусов — из ответа стенда",
+    "Антресоль идёт над каждым корпусом, как в редакторе",
+    "Модели ручек — из get_options, ручка поставлена командой setFittings",
+    "Цена — только из ответа стенда, вопросов не больше трёх"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Хочу шкаф в прихожую: 2,4 м шириной, четыре секции",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 14
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "2,4 м, четыре секции",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": 2400,
+                "height": null,
+                "depth": null
+              },
+              {
+                "op": "set_section_count",
+                "n": 4
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-113999733adcef7e",
+            "applied": [
+              "set_size",
+              "set_section_count"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 64079.52,
+              "known_amount_rub": 64079.52
+            },
+            "sections": 4,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 17
+          }
+        }
+      ],
+      "ai": "Поставил шкаф 2,4 м в ширину, 2,2 м в высоту и 60 см глубиной: четыре секции по 60 см, у каждой своя дверь. Ориентир около 64 тыс. ₽. Что будет внутри: штанги для верхней одежды, полки, ящики?"
+    },
+    {
+      "human": "Разбей шкаф на 2 корпуса. Стык 2-3",
+      "calls": [
+        {
+          "tool": "list_commands",
+          "input": {
+            "kind": "wardrobe"
+          },
+          "expect": {
+            "commands": 61
+          }
+        },
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Два корпуса, стык между 2-й и 3-й секцией",
+            "calls": [
+              {
+                "command": "wardrobe/toggleBodyJoint",
+                "args_json": "{\"joint\": 2}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-2036690505c793e4",
+            "applied": [
+              "wardrobe/toggleBodyJoint"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 71693.38,
+              "known_amount_rub": 71693.38
+            },
+            "sections": 4,
+            "bodies": 2,
+            "body_joints": [
+              2
+            ],
+            "parts": 22
+          }
+        }
+      ],
+      "ai": "Готово: шкаф теперь из двух корпусов по 1,2 м, стык между второй и третьей секцией. Так его проще занести и собрать. Ориентир около 72 тыс. ₽."
+    },
+    {
+      "human": "Добавь антресоль 45 см и ручки поставь другие",
+      "calls": [
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "wardrobe",
+            "topic": "handles"
+          },
+          "expect": {
+            "values": 4
+          }
+        },
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Антресоль 450 мм",
+            "calls": [
+              {
+                "command": "wardrobe/setMezzanine",
+                "args_json": "{\"height\": 450}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-16a223d4103d92db",
+            "applied": [
+              "wardrobe/setMezzanine"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 76313.77,
+              "known_amount_rub": 76313.77
+            },
+            "sections": 6,
+            "bodies": 4,
+            "body_joints": [
+              2
+            ],
+            "parts": 32
+          }
+        },
+        {
+          "tool": "offer_choices",
+          "input": {
+            "options": [
+              "Скоба 96 мм",
+              "TILDA 160 мм",
+              "Кнопка POP LINE",
+              "Без ручек"
+            ],
+            "allow_free_text": true
+          },
+          "expect": {
+            "shown": [
+              "Скоба 96 мм",
+              "TILDA 160 мм",
+              "Кнопка POP LINE",
+              "Без ручек"
+            ]
+          }
+        }
+      ],
+      "ai": "Добавил антресоль 45 см, она стоит над каждым корпусом отдельно. Ориентир около 76 тыс. ₽. Ручки в конструкторе есть такие: скоба 96 мм, TILDA 160 мм, кнопка POP LINE. Какую ставим?",
+      "choices": [
+        "Скоба 96 мм",
+        "TILDA 160 мм",
+        "Кнопка POP LINE",
+        "Без ручек"
+      ]
+    },
+    {
+      "human": "TILDA",
+      "calls": [
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Ручки TILDA",
+            "calls": [
+              {
+                "command": "wardrobe/setFittings",
+                "args_json": "{\"change\": {\"handleId\": \"BOYARD_RS308MBSG_160\"}}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-913c8c38954bbe12",
+            "applied": [
+              "wardrobe/setFittings"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 80806.57,
+              "known_amount_rub": 80806.57
+            },
+            "sections": 6,
+            "bodies": 4,
+            "body_joints": [
+              2
+            ],
+            "parts": 32
+          }
+        }
+      ],
+      "ai": "Поставил ручки TILDA 160 мм на все двери. Ориентир около 81 тыс. ₽."
+    }
+  ],
+  "review": "Раньше (w05) ИИ мог показать список ручек, но не поставить ручку (MOD-AI-21), и не умел стыки корпусов. Через общий проход editor_call обе правки делает сам конструктор: стык 2-3 дал корпуса M01 и B2 по 1200 мм, антресоль — корпуса B3 и B4 над ними, ручка TILDA — из каталога выпуска. Задачи MOD-AI-21 для договора больше не нужно: команда есть в ядре и в списке list_commands."
+}

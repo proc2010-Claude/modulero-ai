@@ -7,6 +7,7 @@
 // Кэш: автоматический, 5 минут; каждый запрос читает из кэша то, что записал предыдущий, и записывает новое
 // (первый запрос сеанса пишет всё). Выход — JSON вызова или текст ответа плюс рассуждения (допущение).
 import { readFileSync } from 'node:fs';
+import { loadStandTools } from '../tools.ts';
 
 /** Цены за 1 млн токенов, USD, на 2026-10-28 (docs/SOURCES.md). */
 export const PRICING = {
@@ -45,10 +46,10 @@ export function tokensOf(text: string): number {
 }
 
 let fixed: number | null = null;
-/** Постоянная часть запроса: инструменты (tools.claude-api.json), системный промт помощника, служебный промт. */
+/** Постоянная часть запроса: инструменты стенда (договор 0.1 и расширение 0.2), системный промт помощника, служебный промт. */
 export function fixedTokens(): number {
   if (fixed !== null) return fixed;
-  const tools = JSON.parse(readFileSync(new URL('../../reference/start/examples/tools.claude-api.json', import.meta.url), 'utf8')).tools;
+  const tools = loadStandTools().tools;
   const prompt = readFileSync(new URL('../../docs/start/SYSTEM_PROMPT_DRAFT.md', import.meta.url), 'utf8').split('\n---\n')[1] ?? '';
   fixed = tokensOf(JSON.stringify(tools)) + tokensOf(prompt) + ASSUMPTIONS.toolSystemTokens;
   return fixed;

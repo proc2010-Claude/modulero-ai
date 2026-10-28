@@ -104,6 +104,8 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
       floor: m.floor,
       corpus: m.corpusMaterial ? decor(m.corpusMaterial) : undefined,
       facade: m.facadeMaterial ? decor(m.facadeMaterial) : undefined,
+      // Панели «Наполнение» и «Фасады» редактора: полки с id и поля модуля — для команд editor_call.
+      ...moduleFill(c, p, m.id),
     });
   });
   const sceneError: string | null = K.kitchenSceneError(scene);
@@ -141,6 +143,15 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
   const warnings = [...K.kitchenObstacleWarnings(p, HW).map((w: any) => w.text), ...(sceneError ? [sceneError] : [])];
   const elevations = plan.walls.map((w: any) => ({ title: wallTitle(w.line, plan.room.width), ...K.kitchenWallElevation(p, HW, w.id) }));
   return { revision: out.revision, state, price, warnings, previewSvg: c.previewSvg(graph), plan, elevations, scene3d: scene3dOf(c, graph) };
+}
+
+/** Полки и поля модуля из панелей редактора (kitchenModuleFill, kitchenModuleFront); у модуля без них — ничего. */
+function moduleFill(c: Core, p: KitchenProject, id: string): Record<string, unknown> {
+  const { K, HW } = c;
+  const fill = K.kitchenModuleFill(p, HW, id),
+    front = K.kitchenModuleFront(p, HW, id);
+  const fields = [...(fill?.fields ?? []), ...(front?.fields ?? [])].map((f: any) => defined({ key: f.key, label: f.label, kind: f.kind, value: f.value, options: f.options, min: f.min, max: f.max }));
+  return defined({ can_add_shelf: fill ? !!fill.canAddShelf : undefined, shelves: fill?.shelves?.length ? fill.shelves.map((s: any) => ({ id: s.id, level_mm: s.levelMm, fixed: !!s.fixed })) : undefined, fields: fields.length ? fields : undefined });
 }
 
 /** Справочники для get_options (§4): из ядра и выпуска каталога, без цен, ставок и номеров правил. */

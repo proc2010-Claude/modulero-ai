@@ -50,14 +50,17 @@ export function expectOf(out: Output): Record<string, unknown> {
     e.price = { status: p.status, amount_rub: p.amount_rub, known_amount_rub: p.known_amount_rub };
   }
   if (out.state) {
-    const s = out.state as { modules?: unknown[]; sections?: unknown[]; parts: number };
+    const s = out.state as { modules?: unknown[]; sections?: unknown[]; bodies?: unknown[]; body_joints?: number[]; parts: number };
     if (s.modules) e.modules = s.modules.length;
     if (s.sections) e.sections = s.sections.length;
+    if (s.bodies) e.bodies = s.bodies.length;
+    if (s.body_joints) e.body_joints = s.body_joints;
     e.parts = s.parts;
   }
   if (Array.isArray(out.variants)) e.variants = (out.variants as { name: string }[]).map((v) => v.name);
   if (out.values) e.values = Array.isArray(out.values) ? out.values.length : Object.keys(out.values as object).length;
   if (out.shown) e.shown = out.shown;
+  if (Array.isArray(out.commands)) e.commands = out.commands.length;
   return e;
 }
 

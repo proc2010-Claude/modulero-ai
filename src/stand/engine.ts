@@ -23,6 +23,8 @@ export interface Core {
   wardrobeOutputs: (graph: any, hw: any, input: any) => any;
   /** Проект шкафа для файла: вход и то, чем посчитан результат (wardrobe/project.ts). */
   wardrobeProject: (input: any, hw: any, graph?: any) => any;
+  /** Другая мебель (HOME): редактор createHomeEditor, validate, граф homeEngineGraph, цена price — home/index.ts. */
+  H: any;
   previewSvg: (graph: any) => string | null;
   /** 3D-сцена графа: детали с размещением, фурнитура — engine/scene.ts. */
   sceneOf: (graph: any) => any;
@@ -46,7 +48,7 @@ export async function loadCore(): Promise<Core> {
   if (!existsSync(join(dir, 'packages/core/src/kitchen/index.ts')))
     throw new EngineMissing(`Нет копии ядра modulero-next ${PIN.sha.slice(0, 8)} в ${dir}: выполните npm run engine:setup.`);
   const at = (p: string) => pathToFileURL(join(dir, p)).href;
-  const [K, standard, gen, preview, file, catalogs, scene3d, coreIndex, W, WD, wgen, wout, wproj] = await Promise.all([
+  const [K, standard, gen, preview, file, catalogs, scene3d, coreIndex, W, WD, wgen, wout, wproj, H] = await Promise.all([
     import(at('packages/core/src/kitchen/index.ts')),
     import(at('packages/core/src/kitchen/standard.ts')),
     import(at('packages/core/src/engine/generators/kitchen.ts')),
@@ -60,6 +62,7 @@ export async function loadCore(): Promise<Core> {
     import(at('packages/core/src/engine/generators/wardrobe.ts')),
     import(at('packages/core/src/wardrobe/outputs.ts')),
     import(at('packages/core/src/wardrobe/project.ts')),
+    import(at('packages/core/src/home/index.ts')),
   ]);
   const HW = catalogs.hardwareCatalogs;
   if (HW.release.version !== PIN.hardwareCatalog)
@@ -73,6 +76,7 @@ export async function loadCore(): Promise<Core> {
     wardrobeGraph: wgen.wardrobeGraph,
     wardrobeOutputs: wout.wardrobeOutputs,
     wardrobeProject: wproj.wardrobeProject,
+    H,
     previewSvg: preview.previewSvg,
     sceneOf: scene3d.sceneOf,
     decorLook: decorLookOf(coreIndex, HW, join(dir, 'apps/web/public/decors')),
