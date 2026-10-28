@@ -15,7 +15,6 @@ export function scene3dOf(c: Core, graph: any): Scene3dView {
     ids.add(p.decorId);
     if (p.edgeDecor) ids.add(p.edgeDecor.decorId);
   }
-  // Отверстия нужны только «Рентгену» конструктора; на странице его нет.
-  const { holes: _holes, ...rest } = scene;
-  return { scene: rest, looks: Object.fromEntries([...ids].map((id) => [id, c.decorLook(id)])) };
+  // Отверстия сцены — для «Рентгена» конструктора: контуры присадки и фурнитура в них.
+  return { scene, looks: Object.fromEntries([...ids].map((id) => [id, c.decorLook(id)])) };
 }

@@ -77,6 +77,10 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     const page = readFileSync(join(dir, 'w', 'prototype.html'), 'utf8');
     assert.match(page, /Прототип · распашной шкаф/);
     assert.match(page, /id="scene3d"/);
+    // «Рентген» и «Взрыв» — режимы 3D-вида конструктора; ходы «Взрыва» — функции ядра explodeOffsets, explodeLift.
+    assert.match(page, /data-act="xray"/);
+    assert.match(page, /data-act="explode"/);
+    assert.match(page, /ModuleroExplode/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
