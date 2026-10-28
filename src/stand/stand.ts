@@ -345,6 +345,11 @@ export class Stand {
     return v;
   }
 
+  /** Ревизия текущей версии сеанса; null — проекта ещё нет. */
+  headRevision(): string | null {
+    return this.headVersion()?.revision ?? null;
+  }
+
   private headVersion(): Version | null {
     return this.data.history.find((v) => v.n === this.data.head) ?? null;
   }
