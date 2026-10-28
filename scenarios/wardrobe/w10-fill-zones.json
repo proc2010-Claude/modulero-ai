@@ -1,0 +1,285 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w10-fill-zones",
+  "title": "Наполнение по зонам удобства",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Шкаф 2000×2400 из жалобы владельца: наполнение по зонам удобства (EXCHANGE_SPEC §4.2, SYSTEM_PROMPT_DRAFT «Наполнение шкафа»): штанги подняты к верху секции, полки равномерно, ящики блоком, сезонное — на антресоль; просьба поднять ящики — отказ движка (петля), пересказан.",
+  "criteria": [
+    "Одна секция — одно назначение, длинная одежда в крайней секции",
+    "Штанги подняты moveRod: верх 1835 мм от пола, а не на 900 мм над дном секции",
+    "Полки выровнены distribute_shelves, высокого пустого отсека нет",
+    "Ящики не поднимаются выше петли: отказ движка пересказан без обхода",
+    "Каждое число ответа — из ответа стенда; цены в тексте нет"
+  ],
+  "expected_refusals": [
+    "Ящик не перенести: на этой высоте его задевает петля двери"
+  ],
+  "turns": [
+    {
+      "human": "Распашной шкаф 2000 на 2400, глубина 600, четыре секции. Храню пальто и платья, рубашки, сложенные вещи и бельё, сезонное — наверх.",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 14
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "2000×2400, 4 секции, антресоль, наполнение по зонам",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": 2000,
+                "height": 2400,
+                "depth": 600
+              },
+              {
+                "op": "set_section_count",
+                "n": 4
+              },
+              {
+                "op": "set_mezzanine",
+                "height": 450
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 1
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "drawer",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "drawer",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "drawer",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 2
+              },
+              {
+                "op": "add_fill",
+                "section": 3,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 3,
+                "kind": "rod",
+                "execution": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-975da73229d3d61e",
+            "applied": [
+              "set_size",
+              "set_section_count",
+              "set_mezzanine",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "distribute_shelves",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "distribute_shelves",
+              "add_fill",
+              "add_fill"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 91524.73,
+              "known_amount_rub": 91524.73
+            },
+            "sections": 5,
+            "bodies": 2,
+            "body_joints": [],
+            "parts": 47
+          }
+        },
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Штанги на удобную высоту",
+            "calls": [
+              {
+                "command": "wardrobe/moveRod",
+                "args_json": "{\"section\": 0, \"index\": 0, \"yMm\": 1734}"
+              },
+              {
+                "command": "wardrobe/moveRod",
+                "args_json": "{\"section\": 3, \"index\": 1, \"yMm\": 1734}"
+              },
+              {
+                "command": "wardrobe/moveRod",
+                "args_json": "{\"section\": 3, \"index\": 0, \"yMm\": 814}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-54b18f3e47314713",
+            "applied": [
+              "wardrobe/moveRod",
+              "wardrobe/moveRod",
+              "wardrobe/moveRod"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 91524.73,
+              "known_amount_rub": 91524.73
+            },
+            "sections": 5,
+            "bodies": 2,
+            "body_joints": [],
+            "parts": 47
+          }
+        }
+      ],
+      "ai": "Сделал шкаф 2000×2400 на четыре секции и антресоль 450 мм для сезонного. Слева — штанга под пальто и платья, верх штанги на 1835 мм от пола. Во второй секции пять полок для сложенного, в третьей — три ящика для белья внизу и полки над ними. Справа — две штанги для рубашек и коротких вещей, верхняя на уровне руки. Посмотрите, так удобно? Обувь нужна в шкафу?"
+    },
+    {
+      "human": "А ящики можно повыше, чтобы не нагибаться?",
+      "calls": [
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Ящики выше",
+            "calls": [
+              {
+                "command": "wardrobe/moveDrawer",
+                "args_json": "{\"section\": 2, \"index\": 2, \"yMm\": 614}"
+              },
+              {
+                "command": "wardrobe/moveDrawer",
+                "args_json": "{\"section\": 2, \"index\": 1, \"yMm\": 422}"
+              },
+              {
+                "command": "wardrobe/moveDrawer",
+                "args_json": "{\"section\": 2, \"index\": 0, \"yMm\": 230}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-54b18f3e47314713",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "wardrobe/moveDrawer",
+              "problem": "Ящик не перенести: на этой высоте его задевает петля двери (FE-04, MOD-DEC-050). Проект не изменён."
+            },
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 91524.73,
+              "known_amount_rub": 91524.73
+            },
+            "sections": 5,
+            "bodies": 2,
+            "body_joints": [],
+            "parts": 47
+          }
+        }
+      ],
+      "ai": "Выше не получается: конструктор не даёт поднять ящики — на этой высоте их задевает петля двери. Оставил блок как был, верхний ящик заканчивается на 742 мм от пола. Если важно не нагибаться, могу вместо нижнего ящика поставить полку под обувь, а бельё — в два верхних. Сделать?"
+    }
+  ],
+  "review": "Хватило: add_fill + distribute_shelves + moveRod дают раскладку по зонам за два вызова. Неудобно: шаблонов наполнения в ядре нет, а новая штанга встаёт на 900 мм над элементом ниже — в пустой секции посередине; ориентиры высот помощник берёт из правил, движок проверяет. Ящики за дверью ограничены петлёй."
+}

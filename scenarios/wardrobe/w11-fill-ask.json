@@ -1,0 +1,224 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w11-fill-ask",
+  "title": "Сначала спросить, что хранить",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "«Хочу шкаф для одежды» без параметров: прототип с первого ответа и вопрос, что хранить; по ответу — наполнение по зонам удобства (SYSTEM_PROMPT_DRAFT «Наполнение шкафа»): две штанги для коротких вещей подняты, полка над ними, полки для сложенного выровнены, обувь внизу.",
+  "criteria": [
+    "Первый ответ — прототип и не больше трёх вопросов, среди них — что хранить",
+    "Короткая одежда — две штанги друг над другом, верхняя поднята moveRod, над ней полка",
+    "Полки выровнены distribute_shelves; обувь — в нижней зоне",
+    "Каждое число ответа — из ответа стенда; цены в тексте нет"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Хочу шкаф для одежды",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 14
+          }
+        }
+      ],
+      "ai": "Поставил стартовый распашной шкаф: 1500×2200, глубина 600, три секции, пока пустые. Чтобы разложить наполнение удобно, подскажите: какие размеры места под шкаф? Что в основном хранить — длинные вещи (пальто, платья), короткие (рубашки, брюки), сложенное, обувь? Распашные двери или купе?"
+    },
+    {
+      "human": "Место 1600 в ширину и 2200 в высоту, распашной. Вещи в основном короткие: рубашки, брюки, свитера. И обувь.",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "1600×2200: две штанги, полки, обувь",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": 1600,
+                "height": 2200,
+                "depth": null
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "rod",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 1
+              },
+              {
+                "op": "add_storage",
+                "section": 2,
+                "kind": "SHOE_BASKET"
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 2,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 2
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-7e5bb4047eb52793",
+            "applied": [
+              "set_size",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "distribute_shelves",
+              "add_storage",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "distribute_shelves"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 68671.6,
+              "known_amount_rub": 68671.6
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 25
+          }
+        },
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Штанги и полка над ними на удобную высоту",
+            "calls": [
+              {
+                "command": "wardrobe/moveRod",
+                "args_json": "{\"section\": 0, \"index\": 1, \"yMm\": 1764}"
+              },
+              {
+                "command": "wardrobe/moveRod",
+                "args_json": "{\"section\": 0, \"index\": 0, \"yMm\": 864}"
+              },
+              {
+                "command": "wardrobe/moveShelf",
+                "args_json": "{\"section\": 0, \"index\": 0, \"yMm\": 1944}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-2fac751bb80e292e",
+            "applied": [
+              "wardrobe/moveRod",
+              "wardrobe/moveRod",
+              "wardrobe/moveShelf"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 68671.6,
+              "known_amount_rub": 68671.6
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 25
+          }
+        }
+      ],
+      "ai": "Сделал шкаф 1600×2200 на три секции. Слева две штанги друг над другом для рубашек и брюк: верх верхней на 1865 мм от пола, нижней — на 965 мм, над ними полка для шапок и коробок. В середине пять полок для свитеров, справа внизу корзина для обуви и полки над ней. Так подходит? Если длинных вещей всё же немного, одну штангу можно сделать под них."
+    }
+  ],
+  "review": "Хватило: вопрос «что хранить» сразу даёт назначение секций; корзина для обуви встала в секцию 533 мм. Неудобно: высоты корзин и вешал не видны в state.sections[].geometry — помощник не может проверить, сколько места над корзиной."
+}
