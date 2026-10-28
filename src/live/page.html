@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modulero — диалог в конструкторе</title>
+<style>
+  :root { --ink: #1c2430; --muted: #5d6877; --line: #e2e6eb; --bg: #f6f7f9; --card: #fff; --accent: #1f3a5f; --human: #e8eef6; --warn: #8a5a00; --warn-bg: #fff4dc; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font: 14px/1.45 system-ui, "Segoe UI", Roboto, sans-serif; }
+  .app { display: grid; grid-template-columns: 360px 1fr; height: 100vh; }
+  .app.wide { grid-template-columns: 0 1fr; }
+  aside { display: flex; flex-direction: column; min-height: 0; border-right: 1px solid var(--line); background: var(--card); overflow: hidden; }
+  header { padding: 14px 16px 10px; border-bottom: 1px solid var(--line); }
+  h1 { margin: 0; font-size: 16px; font-weight: 650; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #b8c0ca; flex: none; }
+  .dot.on { background: #2e9d5b; }
+  .status { margin-top: 4px; color: var(--muted); font-size: 12.5px; }
+  .version { margin: 10px 16px 0; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); font-size: 13px; }
+  .version b { font-weight: 600; }
+  .version .price { color: var(--muted); margin-top: 2px; }
+  .version .price.partial { color: var(--warn); }
+  .controls { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 16px 0; }
+  button { font: inherit; font-size: 13px; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button:hover { filter: brightness(0.97); }
+  .feed { flex: 1; overflow-y: auto; padding: 12px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .msg { max-width: 92%; padding: 8px 11px; border-radius: 10px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .msg.human { align-self: flex-end; background: var(--human); border-bottom-right-radius: 3px; }
+  .msg.ai { align-self: flex-start; background: var(--bg); border: 1px solid var(--line); border-bottom-left-radius: 3px; }
+  .msg .who { display: block; font-size: 11.5px; color: var(--muted); margin-bottom: 2px; }
+  .choices { display: flex; flex-wrap: wrap; gap: 6px; align-self: flex-start; }
+  .choices span { padding: 4px 9px; border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; font-size: 12.5px; }
+  .empty { color: var(--muted); }
+  .note { padding: 10px 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+  .alert { margin: 10px 16px 0; padding: 8px 10px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 13px; }
+  .alert:empty { display: none; }
+  main { position: relative; min-width: 0; }
+  iframe { border: 0; width: 100%; height: 100%; display: block; background: #fff; }
+  .toggle { position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 2; padding: 10px 3px; border-radius: 0 6px 6px 0; border-left: 0; opacity: 0.8; writing-mode: vertical-rl; font-size: 12px; }
+  .drop { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(31, 58, 95, 0.12); font-size: 18px; color: var(--accent); z-index: 5; }
+  .drop.on { display: flex; }
+  @media (max-width: 900px) { .app { grid-template-columns: 1fr; grid-template-rows: 45vh 1fr; } aside { border-right: 0; border-bottom: 1px solid var(--line); } .toggle { display: none; } }
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <aside>
+    <header>
+      <h1><span class="dot" id="dot"></span><span id="title">Диалог с помощником</span></h1>
+      <div class="status" id="status">Папка с диалогом не выбрана.</div>
+    </header>
+    <div class="controls">
+      <button class="primary" id="pick" type="button">Выбрать папку с диалогом</button>
+      <button id="resume" type="button" hidden>Продолжить следить за папкой</button>
+      <button id="manual" type="button">Открыть файл…</button>
+      <input id="file" type="file" accept=".json,application/json" hidden>
+    </div>
+    <div class="alert" id="alert" role="alert"></div>
+    <div class="version" id="version" hidden></div>
+    <div class="feed" id="feed"><p class="empty">Здесь появится разговор из треда. Кухня из последнего ответа помощника откроется в конструкторе справа.</p></div>
+    <div class="note">Писать помощнику — в треде проекта. Правки, сделанные здесь в конструкторе, в диалог не попадают: со следующим ответом откроется версия помощника.</div>
+  </aside>
+  <main>
+    <iframe id="frame" title="Конструктор Modulero"></iframe>
+    <button class="toggle" id="toggle" type="button" title="Скрыть или показать ленту диалога">Лента</button>
+  </main>
+</div>
+<div class="drop" id="drop">Отпустите файл диалога (.json)</div>
+<script>
+/* Конструктор modulero-next (сборка без изменений, vendor/modulero-next-cbaf1534-web). */
+const CONSTRUCTOR = /*__CONSTRUCTOR__*/"";
+</script>
+<script>
+(() => {
+  'use strict';
+  const FORMAT = 'modulero-ai.live/1';
+  const POLL_MS = 1500;
+  const $ = (id) => document.getElementById(id);
+  const frame = $('frame');
+  const view = { revision: null, opened: 0, lastKey: null, dir: null, timer: 0, state: null };
+
+  // ---------------------------------------------------------------- конструктор
+  const frameReady = new Promise((resolve) => frame.addEventListener('load', resolve, { once: true }));
+  frame.srcdoc = CONSTRUCTOR || '<p style="font:16px system-ui;padding:24px">Страница собрана без конструктора.</p>';
+
+  const buttons = (doc) => [...doc.querySelectorAll('button')];
+  const byText = (doc, re) => buttons(doc).find((b) => re.test(b.textContent.trim()) && !b.disabled);
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  /** Открыть файл проекта в конструкторе его же кнопкой «Открыть проект»: выбор файла подменяется этим файлом. */
+  async function openInConstructor(text, name) {
+    await frameReady;
+    const w = frame.contentWindow, doc = frame.contentDocument;
+    if (!w || !doc) throw new Error('конструктор не загрузился');
+    if (!w.__modLive) {
+      const click = w.HTMLInputElement.prototype.click;
+      w.__modLive = { file: null };
+      w.HTMLInputElement.prototype.click = function () {
+        const next = w.__modLive.file;
+        if (this.type !== 'file' || !next) return click.call(this);
+        w.__modLive.file = null;
+        const dt = new w.DataTransfer();
+        dt.items.add(new w.File([next.text], next.name, { type: 'application/json' }));
+        this.files = dt.files;
+        this.dispatchEvent(new w.Event('change'));
+      };
+    }
+    const open = /^Открыть (проект|файл проекта)$/;
+    let btn = byText(doc, open);
+    if (!btn) {
+      byText(doc, /^Меню$/)?.click();
+      await sleep(50);
+      btn = byText(doc, open);
+    }
+    if (!btn) throw new Error('в конструкторе не видно кнопки «Открыть проект»');
+    w.__modLive.file = { text, name };
+    btn.click();
+    w.__modLive.file = null;
+    view.opened += 1;
+    // В первый раз — сразу в 3D; дальше конструктор сам помнит выбранный вид.
+    if (view.opened === 1) {
+      for (let i = 0; i < 20; i += 1) {
+        await sleep(100);
+        const b3 = byText(doc, /^3D$/);
+        if (b3) { b3.click(); break; }
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------- лента
+  // Сумма как её отдал движок, только с разрядами.
+  const rub = (n) => n.toLocaleString('ru-RU', { maximumFractionDigits: 2 }) + ' ₽';
+  function priceLine(p) {
+    if (!p) return null;
+    if (p.amount_rub !== null && p.amount_rub !== undefined) return { text: 'Ориентир: ' + rub(p.amount_rub), partial: false };
+    if (p.known_amount_rub !== null && p.known_amount_rub !== undefined) return { text: 'Известная часть: ' + rub(p.known_amount_rub) + ' — цена неполная', partial: true };
+    return { text: 'Цена неизвестна', partial: true };
+  }
+
+  function el(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function render(state) {
+    $('title').textContent = 'Диалог · ' + state.session;
+    const v = $('version');
+    v.replaceChildren();
+    if (state.head) {
+      v.hidden = false;
+      const top = el('div');
+      top.append(el('b', '', 'Версия ' + state.head.n), document.createTextNode(' · ' + state.head.label));
+      v.append(top);
+      const p = priceLine(state.head.price);
+      if (p) v.append(el('div', 'price' + (p.partial ? ' partial' : ''), p.text));
+    } else v.hidden = true;
+
+    const feed = $('feed');
+    const atBottom = feed.scrollHeight - feed.scrollTop - feed.clientHeight < 40;
+    feed.replaceChildren();
+    if (!state.dialog.length) feed.append(el('p', 'empty', 'Разговор ещё не начался.'));
+    for (const line of state.dialog) {
+      if (line.who === 'choices') {
+        const c = el('div', 'choices');
+        if (line.text) c.append(el('span', '', line.text));
+        for (const o of line.options || []) c.append(el('span', '', o));
+        feed.append(c);
+        continue;
+      }
+      const m = el('div', 'msg ' + (line.who === 'human' ? 'human' : 'ai'));
+      m.append(el('span', 'who', line.who === 'human' ? 'Вы' : 'Помощник'), document.createTextNode(line.text));
+      feed.append(m);
+    }
+    if (atBottom || view.state === null || view.state.dialog.length !== state.dialog.length) feed.scrollTop = feed.scrollHeight;
+  }
+
+  const alertBox = (text) => { $('alert').textContent = text || ''; };
+
+  async function apply(state) {
+    if (!state || state.format !== FORMAT) throw new Error('это не файл диалога (' + FORMAT + ')');
+    render(state);
+    view.state = state;
+    if (state.project && state.head && state.head.revision !== view.revision) {
+      await openInConstructor(state.project.text, state.project.name);
+      view.revision = state.head.revision;
+    }
+    alertBox('');
+  }
+
+  // ---------------------------------------------------------------- папка с диалогом
+  const status = (text, on) => { $('status').textContent = text; $('dot').classList.toggle('on', !!on); };
+  const time = () => new Date().toLocaleTimeString('ru-RU');
+
+  const DB = 'modulero-live', STORE = 'handles';
+  function idb(mode, fn) {
+    return new Promise((resolve, reject) => {
+      const req = indexedDB.open(DB, 1);
+      req.onupgradeneeded = () => req.result.createObjectStore(STORE);
+      req.onerror = () => reject(req.error);
+      req.onsuccess = () => {
+        const tx = req.result.transaction(STORE, mode);
+        const r = fn(tx.objectStore(STORE));
+        tx.oncomplete = () => resolve(r && r.result);
+        tx.onerror = () => reject(tx.error);
+      };
+    });
+  }
+  const saveDir = (h) => idb('readwrite', (s) => s.put(h, 'dir')).catch(() => {});
+  const loadDir = () => idb('readonly', (s) => s.get('dir')).catch(() => null);
+
+  /** Самый свежий файл *.json в папке: один файл — один сеанс. */
+  async function newest(dir) {
+    let best = null;
+    for await (const [name, h] of dir.entries()) {
+      if (h.kind !== 'file' || !name.endsWith('.json')) continue;
+      const f = await h.getFile();
+      if (!best || f.lastModified > best.lastModified) best = f;
+    }
+    return best;
+  }
+
+  async function poll() {
+    clearTimeout(view.timer);
+    try {
+      const f = await newest(view.dir);
+      if (!f) status('Папка «' + view.dir.name + '»: файлов диалога пока нет. Жду…', true);
+      else {
+        const key = f.name + ':' + f.lastModified + ':' + f.size;
+        if (key !== view.lastKey) {
+          await apply(JSON.parse(await f.text()));
+          view.lastKey = key;
+        }
+        status('Слежу за папкой «' + view.dir.name + '» · ' + f.name + ' · проверено в ' + time(), true);
+      }
+    } catch (e) {
+      alertBox('Не получилось обновить: ' + (e && e.message ? e.message : e) + '. Попробую ещё раз.');
+    }
+    view.timer = setTimeout(poll, POLL_MS);
+  }
+
+  async function watch(dir) {
+    view.dir = dir;
+    view.lastKey = null;
+    $('pick').textContent = 'Другая папка…';
+    $('pick').classList.remove('primary');
+    $('resume').hidden = true;
+    await poll();
+  }
+
+  $('pick').onclick = async () => {
+    if (!window.showDirectoryPicker) return alertBox('Этот браузер не умеет следить за папкой. Откройте страницу в Chrome, Edge или Яндекс Браузере — или открывайте файл вручную.');
+    try {
+      const dir = await window.showDirectoryPicker({ id: 'modulero-live', mode: 'read' });
+      await saveDir(dir);
+      await watch(dir);
+    } catch (e) {
+      if (e && e.name !== 'AbortError') alertBox('Папку открыть не удалось: ' + e.message);
+    }
+  };
+
+  // Папка, выбранная в прошлый раз: браузер просит подтвердить доступ одним щелчком.
+  loadDir().then(async (dir) => {
+    if (!dir || !dir.queryPermission) return;
+    if ((await dir.queryPermission({ mode: 'read' })) === 'granted') return watch(dir);
+    const r = $('resume');
+    r.hidden = false;
+    r.textContent = 'Продолжить: папка «' + dir.name + '»';
+    r.classList.add('primary');
+    $('pick').classList.remove('primary');
+    r.onclick = async () => {
+      if ((await dir.requestPermission({ mode: 'read' })) === 'granted') await watch(dir);
+    };
+  });
+
+  // ---------------------------------------------------------------- вручную: выбор или перетаскивание файла
+  async function applyFile(file) {
+    try {
+      await apply(JSON.parse(await file.text()));
+      if (!view.dir) status('Открыт файл ' + file.name + ' (без слежения) · ' + time(), false);
+    } catch (e) {
+      alertBox('Файл ' + file.name + ' не открыт: ' + (e && e.message ? e.message : e));
+    }
+  }
+  $('manual').onclick = () => $('file').click();
+  $('file').onchange = () => { const f = $('file').files[0]; if (f) applyFile(f); $('file').value = ''; };
+  let depth = 0;
+  addEventListener('dragenter', (e) => { if (e.dataTransfer && [...e.dataTransfer.types].includes('Files')) { depth += 1; $('drop').classList.add('on'); } });
+  addEventListener('dragleave', () => { depth = Math.max(0, depth - 1); if (!depth) $('drop').classList.remove('on'); });
+  addEventListener('dragover', (e) => e.preventDefault());
+  addEventListener('drop', (e) => {
+    e.preventDefault();
+    depth = 0;
+    $('drop').classList.remove('on');
+    const f = e.dataTransfer && e.dataTransfer.files[0];
+    if (f) applyFile(f);
+  });
+
+  $('toggle').onclick = () => $('app').classList.toggle('wide');
+
+  // Для проверки страницы без папки.
+  window.modLive = { apply, watch, view };
+})();
+</script>
+</body>
+</html>
