@@ -9,7 +9,7 @@
 - `docs/DECISIONS.md`, `docs/ROADMAP.md`, `docs/SOURCES.md` — журнал решений, план, внешние материалы.
 - `src/stand/` — стенд движка: инструменты `tools.claude-api.json` функциями ядра, сеансы, страница прототипа, оценка расхода API; `src/cli/dialog.ts` — команда `npm run dialog`.
 - `vendor/modulero-next-cbaf1534/` — копия ядра modulero-next (только чтение, AI-DEC-003); состав сверяет `npm run check`, обновление — `npm run engine:setup`.
-- `scenarios/kitchen/` — 13 сценариев кухни, `scenarios/wardrobe/` — 8 сценариев шкафа и купе; `npm run check` проигрывает их без ИИ.
+- `scenarios/kitchen/` — 13 сценариев кухни, `scenarios/wardrobe/` — 11 сценариев шкафа и купе; `npm run check` проигрывает их без ИИ.
 - `docs/reports/` — отчёты владельцу; `tests/` — тесты.
 
 ```
