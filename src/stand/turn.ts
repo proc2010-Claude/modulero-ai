@@ -29,8 +29,10 @@ export interface TurnResult {
   /** Номер вызова, на котором ход остановился (отказ или ошибка), иначе null. */
   stopped_at: number | null;
   calls: TurnCall[];
-  /** Полный ответ последнего выполненного вызова — для пересказа отказа или состояния. */
+  /** Краткий ответ последнего выполненного вызова (brief.ts) — для пересказа отказа или изменений. */
   last: Record<string, unknown> | null;
+  /** Полный ответ последнего вызова (с state); CLI печатает его вместо last с флагом --full. */
+  last_full: Record<string, unknown> | null;
   ai_written: boolean;
   revision: string | null;
   page: string;
@@ -58,12 +60,14 @@ export function parseTurn(raw: unknown): TurnInput {
 export function runTurn(stand: Stand, turn: TurnInput): TurnResult {
   if (turn.human !== null) stand.say('human', turn.human);
   const calls: TurnCall[] = [];
-  let last: Record<string, unknown> | null = null;
+  let last: Record<string, unknown> | null = null,
+    lastFull: Record<string, unknown> | null = null;
   let stopped: number | null = null;
   for (const [i, c] of turn.calls.entries()) {
     const input = c.input.base_revision === 'head' ? { ...c.input, base_revision: stand.headRevision() } : c.input;
-    const out = stand.run(c.tool, input) as Record<string, unknown>;
-    last = out;
+    const { full: out, brief } = stand.runBrief(c.tool, input);
+    last = brief;
+    lastFull = out;
     const refused = out.refused ?? null;
     const error = out.is_error ? String(out.error ?? 'ошибка') : null;
     calls.push({ tool: c.tool, revision: (out.revision as string | undefined) ?? null, refused, error });
@@ -83,5 +87,5 @@ export function runTurn(stand: Stand, turn: TurnInput): TurnResult {
     mkdirSync(turn.copy, { recursive: true });
     copyFileSync(page, join(turn.copy, 'prototype.html'));
   }
-  return { ok, stopped_at: stopped, calls, last, ai_written: ok && turn.ai !== null, revision: stand.headRevision(), page, live: turn.live, copy: turn.copy };
+  return { ok, stopped_at: stopped, calls, last, last_full: lastFull, ai_written: ok && turn.ai !== null, revision: stand.headRevision(), page, live: turn.live, copy: turn.copy };
 }
