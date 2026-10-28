@@ -39,10 +39,51 @@ export function argsSchema(c: Command): JsonSchema {
   return { type: 'object', properties: Object.fromEntries(own.map((a) => [a.name, a.schema])), required: own.filter((a) => !a.optional).map((a) => a.name), additionalProperties: false };
 }
 
-/** Команды изделия для list_commands: имя, описание ядра, параметры (каталог стенд подставляет сам). */
-export function commandList(file: CommandsFile, kind: string): { command: string; doc: string; args: JsonSchema }[] {
+/**
+ * Команды изделия для list_commands: имя, описание ядра, параметры (каталог стенд подставляет сам).
+ * filter — слова через пробел, команда подходит, если хоть одно есть в имени или описании (без регистра).
+ * detail: brief (по умолчанию) — начало описания и параметры строкой «имя?: тип», full — описание целиком и JSON-схема.
+ */
+export function commandList(
+  file: CommandsFile,
+  kind: string,
+  opts: { filter: string | null; detail: 'brief' | 'full' | null } = { filter: null, detail: 'full' },
+): { command: string; doc: string; args: JsonSchema | string }[] {
   const product = commandProduct(kind);
-  return file.commands.filter((c) => c.command.startsWith(product + '/')).map((c) => ({ command: c.command, doc: c.doc, args: argsSchema(c) }));
+  const words = (opts.filter ?? '').toLowerCase().split(/\s+/).filter(Boolean);
+  return file.commands
+    .filter((c) => c.command.startsWith(product + '/'))
+    .filter((c) => !words.length || words.some((w) => (c.command + ' ' + c.doc).toLowerCase().includes(w)))
+    .map((c) => (opts.detail === 'full' ? { command: c.command, doc: c.doc, args: argsSchema(c) } : { command: c.command, doc: docLine(c.doc), args: argsLine(c) }));
+}
+
+/** Начало описания: до первого «: », «; » или «. », не длиннее ~120 знаков; остальное — detail full. */
+export function docLine(doc: string): string {
+  const cut = doc.search(/[:;.] /);
+  const head = cut > 0 ? doc.slice(0, cut) : doc;
+  if (head.length <= 120) return head === doc ? doc : head + ' …';
+  return head.slice(0, head.lastIndexOf(' ', 120)) + ' …';
+}
+
+/** Параметры одной строкой: «section: number, execution?: internal|external»; без параметров — «». */
+export function argsLine(c: Command): string {
+  return c.args
+    .filter((a) => !a.catalog)
+    .map((a) => `${a.name}${a.optional ? '?' : ''}: ${typeLine(a.schema, 2)}`)
+    .join(', ');
+}
+
+function typeLine(s: JsonSchema, depth: number): string {
+  if (Array.isArray(s.anyOf)) return (s.anyOf as JsonSchema[]).map((x) => typeLine(x, depth)).join(' | ');
+  if ('const' in s) return JSON.stringify(s.const);
+  if (Array.isArray(s.enum)) return s.enum.map((x) => (typeof x === 'string' ? x : JSON.stringify(x))).join('|');
+  if (s.type === 'array') return `${s.items ? typeLine(s.items as JsonSchema, depth) : 'unknown'}[]`;
+  if (s.type === 'object' && s.properties) {
+    if (depth <= 0) return 'object';
+    const req = (s.required ?? []) as string[];
+    return `{${Object.entries(s.properties as Record<string, JsonSchema>).map(([k, v]) => `${k}${req.includes(k) ? '' : '?'}: ${typeLine(v, depth - 1)}`).join(', ')}}`;
+  }
+  return String(s.type ?? 'unknown');
 }
 
 /** null у необязательного параметра или поля — «не задано», как в редакторе (undefined ядра). */

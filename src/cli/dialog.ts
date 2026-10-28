@@ -10,6 +10,9 @@
 //   page                        перерисовать страницу прототипа текущего сеанса и напечатать путь к ней
 //   export <файл> [название]    записать сеанс как сценарий для npm run check
 //
+// Ответ правок (*_edits, editor_call, undo, variants) печатается кратко: вместо state — changes, изменения
+// относительно версии до вызова (src/stand/brief.ts); полный state — get_project или флаг --full.
+//
 // --session <сеанс> — вместо текущего. Папка сеансов — DIALOG_SESSIONS или sessions/ репозитория.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -29,6 +32,9 @@ if (k >= 0) {
   session = args[k + 1] ?? null;
   args.splice(k, 2);
 }
+const f = args.indexOf('--full');
+const full = f >= 0;
+if (full) args.splice(f, 1);
 const [cmd, ...rest] = args;
 const currentFile = join(root, '.current');
 
@@ -76,8 +82,8 @@ switch (cmd) {
       fail(`Ход не читается: ${e instanceof Error ? e.message : e}`);
     }
     const r = runTurn(stand, turn);
-    const { last, ...brief } = r;
-    console.log(JSON.stringify(r.ok ? brief : r, null, 2));
+    const { last, last_full, ...brief } = r;
+    console.log(JSON.stringify({ ...brief, last: full ? last_full : last }, null, 2));
     if (r.ai_written) console.log(costLine(stand.cost()));
     if (!r.ok) process.exitCode = 2;
     break;
@@ -100,8 +106,8 @@ switch (cmd) {
     } catch (e) {
       fail(`JSON не читается: ${e instanceof Error ? e.message : e}`);
     }
-    const out = stand.run(cmd, input);
-    console.log(JSON.stringify(out, null, 2));
+    const { full: out, brief } = stand.runBrief(cmd, input);
+    console.log(JSON.stringify(full ? out : brief, null, 2));
     if (out.is_error) process.exitCode = 2;
   }
 }

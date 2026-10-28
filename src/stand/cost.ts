@@ -8,6 +8,7 @@
 // (первый запрос сеанса пишет всё). Выход — JSON вызова или текст ответа плюс рассуждения (допущение).
 import { readFileSync } from 'node:fs';
 import { loadStandTools } from '../tools.ts';
+import { BRIEF_TOOLS, briefOutput } from './brief.ts';
 
 /** Цены за 1 млн токенов, USD, на 2026-10-28 (docs/SOURCES.md). */
 export const PRICING = {
@@ -89,8 +90,9 @@ export function usdOf(u: Usage): Record<ModelId, number> {
   return out;
 }
 
-/** Ответ стенда в том виде, в каком он ушёл бы модели: без путей к файлам страницы. */
-function resultText(output: Record<string, unknown>): string {
+/** Ответ стенда в том виде, в каком он ушёл бы модели: без путей к файлам страницы, у правок — кратко (brief.ts). */
+function resultText(tool: string, output: Record<string, unknown>, before: unknown): string {
+  if (BRIEF_TOOLS.includes(tool)) return JSON.stringify(briefOutput(output, before));
   const { view: _view, ...rest } = output;
   return JSON.stringify(rest);
 }
@@ -102,6 +104,7 @@ export function sessionCost(events: Event[]): SessionCost {
   let context = fixedTokens(), // токены запроса, накопленные к следующему запросу
     cached = 0; // сколько из них уже в кэше
   let cur: { u: Usage; human: string } | null = null;
+  let state: unknown; // state последнего ответа со state — от него считаются изменения краткого ответа
   const respond = (outTokens: number) => {
     // Один ответ модели: вход — весь контекст; кэш читается до записанного, остальное пишется.
     const u = cur!.u;
@@ -118,6 +121,8 @@ export function sessionCost(events: Event[]): SessionCost {
     cur = null;
   };
   for (const e of events) {
+    const before = state;
+    if (e.kind === 'call' && e.output.state !== undefined) state = e.output.state;
     if (e.kind === 'human') {
       close();
       cur = { u: zero(), human: e.text };
@@ -125,7 +130,7 @@ export function sessionCost(events: Event[]): SessionCost {
     } else if (!cur) continue;
     else if (e.kind === 'call') {
       respond(tokensOf(JSON.stringify({ name: e.tool, input: e.input })));
-      context += tokensOf(resultText(e.output)) + A.messageOverheadTokens;
+      context += tokensOf(resultText(e.tool, e.output, before)) + A.messageOverheadTokens;
     } else respond(tokensOf(e.text));
   }
   close();
