@@ -91,11 +91,21 @@ function project(stand: Stand, view: NonNullable<ReturnType<Stand['currentView']
   return { stage, details: price + facts + walls + table + variants(stand) };
 }
 
+/**
+ * Текущая цена изделия — в левом нижнем углу поля 3D (владелец 2026-10-28, AI-DEC-008): ориентир из ответа стенда
+ * или известная часть с пометкой «цена неполная». Помощник цену в тексте ответа не пишет.
+ */
+function priceBadge(p: { amount_rub?: number | null; known_amount_rub?: number | null }): string {
+  const full = p.amount_rub !== null && p.amount_rub !== undefined;
+  const text = full ? `Ориентир ${rub(p.amount_rub)}` : typeof p.known_amount_rub === 'number' ? `Известная часть ${rub(p.known_amount_rub)} · цена неполная` : 'Цена неизвестна';
+  return `<div class="v3d-price ${full ? 'ok' : 'partial'}" id="v3d-price">${esc(text)}</div>`;
+}
+
 /** 3D-вид конструктора во всё окно слева, под ним — статичное превью ядра, если нет WebGL. */
 function stage3d(stand: Stand, view: ProductView): string {
   return `<section class="card"><h2>3D</h2>${
     view.scene3d.scene.parts.length
-      ? `<div class="v3d"><div class="view3d" id="v3d"><p class="view3d-status" role="status">Загружаем 3D…</p></div>
+      ? `<div class="v3d"><div class="view3d" id="v3d"><p class="view3d-status" role="status">Загружаем 3D…</p></div>${priceBadge(view.price as any)}
     <div class="v3d-bar"><button type="button" data-act="fronts" aria-pressed="true">Фасады</button><button type="button" data-act="open">Открыть фасады</button><button type="button" data-act="neutral" aria-pressed="false">Без декоров</button><button type="button" data-act="xray" aria-pressed="false">Рентген</button><button type="button" data-act="explode" aria-pressed="false">Взрыв</button><button type="button" data-act="fit">Вписать</button></div></div>
     <p class="muted">3D-вид конструктора Modulero ${esc(stand.data.engine.sha.slice(0, 8))}: та же сцена, материалы и свет. Тяните — повернуть, колесо или два пальца — приблизить, правая кнопка — сдвинуть.</p>
     <div class="v3d-fallback" hidden>${view.previewSvg ? `<div class="preview">${view.previewSvg}</div>` : ''}</div>
@@ -289,6 +299,7 @@ h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;margin:0 0 10px}
 .facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0}.facts dt{color:var(--muted)}.facts dd{margin:0}
 .warn{color:var(--part)}.warnings{color:var(--part);margin:10px 0 0;padding-left:18px}
 .v3d{position:relative;height:460px;border-radius:8px;overflow:hidden;background:var(--v3d-bg)}.view3d{position:absolute;inset:0;overflow:hidden}.view3d canvas{display:block;width:100%;height:100%;outline:none;touch-action:none}.view3d-status{position:absolute;left:12px;bottom:10px;margin:0;color:var(--muted);font-size:13px}
+.v3d-price{position:absolute;left:10px;bottom:10px;z-index:1;padding:5px 12px;border-radius:8px;background:var(--card);border:1px solid var(--line);font-size:15px;font-weight:600;color:var(--ink)}.v3d-price.partial{border-color:var(--warn,#b45309)}
 .v3d-bar{position:absolute;top:8px;left:8px;z-index:1;display:flex;flex-wrap:wrap;gap:6px}.v3d-bar button{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:3px 10px;cursor:pointer}.v3d-bar button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
 @media (max-width:560px){.v3d{height:340px}}
 .preview svg{width:100%;height:auto;max-height:420px;display:block;background:#fff;border-radius:8px}

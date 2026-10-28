@@ -37,14 +37,21 @@ for (const url of [DIR, WARDROBE, HOME].flatMap((dir) => list(dir).map((f) => ne
   });
 }
 
-test('проверка ответа ловит выдуманную цену, скрытую неполноту и лишние вопросы', () => {
+test('проверка ответа: цены в тексте нет (AI-DEC-008), не больше трёх вопросов', () => {
   const partial = { amount_rub: null, known_amount_rub: 142017.68 };
-  assert.deepEqual(answerProblems('Ориентир около 142 тыс. ₽, цена неполная.', partial), []);
-  assert.equal(answerProblems('Ориентир около 150 тыс. ₽, цена неполная.', partial).length, 1);
-  assert.deepEqual(answerProblems('Ориентир около 142 тыс. ₽.', partial), ['цена неполная, а в ответе нет слова «неполная»']);
-  assert.equal(answerProblems('Себестоимость 98 000 ₽.', partial).length, 1);
+  assert.deepEqual(answerProblems('Добавил полку. Цена пока неполная: нет паспорта плиты.', partial), []);
+  assert.equal(answerProblems('Ориентир около 142 тыс. ₽.', partial).length, 1);
+  assert.equal(answerProblems('Это 98 000 ₽.', partial).length, 1);
   assert.equal(answerProblems('А? Б? В? Г?', null).length, 1);
-  assert.deepEqual(answerProblems('Ориентир около 200 тыс. ₽.', { amount_rub: 200140, known_amount_rub: 200140 }), []);
+});
+
+test('прежнее правило сценариев до AI-DEC-008: выдуманная цена, скрытая неполнота', () => {
+  const partial = { amount_rub: null, known_amount_rub: 142017.68 };
+  assert.deepEqual(answerProblems('Ориентир около 142 тыс. ₽, цена неполная.', partial, [], true), []);
+  assert.equal(answerProblems('Ориентир около 150 тыс. ₽, цена неполная.', partial, [], true).length, 1);
+  assert.deepEqual(answerProblems('Ориентир около 142 тыс. ₽.', partial, [], true), ['цена неполная, а в ответе нет слова «неполная»']);
+  assert.equal(answerProblems('Себестоимость 98 000 ₽.', partial, [], true).length, 1);
+  assert.deepEqual(answerProblems('Ориентир около 200 тыс. ₽.', { amount_rub: 200140, known_amount_rub: 200140 }, [], true), []);
 });
 
 test('проигрыш замечает расхождение версии и пропавший отказ', async () => {
