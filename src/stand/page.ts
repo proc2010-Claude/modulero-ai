@@ -4,6 +4,7 @@
 // вернуло ядро (3D-сцена sceneOf, previewSvg, kitchenPlan, kitchenWallElevation, сводки редактора шкафа); ничего не пересчитывает.
 import { MAIN_MODEL, PRICING, type ModelId, type SessionCost } from './cost.ts';
 import type { ProductKind, ProductView, Stand } from './stand.ts';
+import { buildSync } from 'esbuild';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { engineDir } from '../engine/pin.mjs';
@@ -95,10 +96,10 @@ function stage3d(stand: Stand, view: ProductView): string {
   return `<section class="card"><h2>3D</h2>${
     view.scene3d.scene.parts.length
       ? `<div class="v3d"><div class="view3d" id="v3d"><p class="view3d-status" role="status">Загружаем 3D…</p></div>
-    <div class="v3d-bar"><button type="button" data-act="fronts" aria-pressed="true">Фасады</button><button type="button" data-act="open">Открыть фасады</button><button type="button" data-act="neutral" aria-pressed="false">Без декоров</button><button type="button" data-act="fit">Вписать</button></div></div>
+    <div class="v3d-bar"><button type="button" data-act="fronts" aria-pressed="true">Фасады</button><button type="button" data-act="open">Открыть фасады</button><button type="button" data-act="neutral" aria-pressed="false">Без декоров</button><button type="button" data-act="xray" aria-pressed="false">Рентген</button><button type="button" data-act="explode" aria-pressed="false">Взрыв</button><button type="button" data-act="fit">Вписать</button></div></div>
     <p class="muted">3D-вид конструктора Modulero ${esc(stand.data.engine.sha.slice(0, 8))}: та же сцена, материалы и свет. Тяните — повернуть, колесо или два пальца — приблизить, правая кнопка — сдвинуть.</p>
     <div class="v3d-fallback" hidden>${view.previewSvg ? `<div class="preview">${view.previewSvg}</div>` : ''}</div>
-    <script type="application/json" id="scene3d">${json(view.scene3d)}</script><script>${view3dModule()}</script><script>${VIEWER}</script>`
+    <script type="application/json" id="scene3d">${json(view.scene3d)}</script><script>${view3dModule()}</script><script>${explodeModule()}</script><script>${VIEWER}</script>`
       : `<p class="muted">${'plan' in view ? 'Модулей' : 'Деталей'} пока нет.</p>`
   }</section>`;
 }
@@ -318,22 +319,48 @@ function view3dModule(): string {
   return module3d;
 }
 
+let moduleExplode: string | null = null;
+/**
+ * Ходы деталей «Взрыва» — функции ядра explodeOffsets и explodeLift (packages/core/src/engine/explode.ts на закреплённом
+ * SHA), как их даёт 3D-виду редактор; собираются esbuild из копии ядра без изменений.
+ */
+function explodeModule(): string {
+  moduleExplode ??= buildSync({
+    entryPoints: [join(engineDir(), 'packages/core/src/engine/explode.ts')],
+    bundle: true,
+    minify: true,
+    format: 'iife',
+    globalName: 'ModuleroExplode',
+    target: 'es2022',
+    write: false,
+    legalComments: 'none',
+    logLevel: 'silent',
+  }).outputFiles[0]!.text.replaceAll('</script', '<\\/script');
+  return moduleExplode;
+}
+
 /**
  * Запуск 3D-вида конструктора на странице, как его запускает редактор кухни (view3d-host.ts): create с видом декоров,
- * затем update сцены с показом фасадов. Без WebGL — статичное превью ядра.
+ * затем update сцены с показом фасадов. «Рентген» и «Взрыв» — режимы того же вида (display.xray, display.explode):
+ * «Взрыв», как в редакторе, — только в «Рентгене», поэтому включает и его. Без WebGL — статичное превью ядра.
  */
 const VIEWER = `(()=>{
 const D=JSON.parse(document.getElementById('scene3d').textContent),host=document.getElementById('v3d');
 const fail=t=>{host.closest('.v3d').hidden=true;const f=document.querySelector('.v3d-fallback');f.hidden=false;f.insertAdjacentHTML('afterbegin','<p class="muted">3D недоступен: '+t+'</p>');};
 try{
   const M=window.ModuleroView3D;host.replaceChildren();
-  const v=M.create(host,()=>{},{decor:id=>D.looks[id]||null});
+  const E=window.ModuleroExplode;
+  const v=M.create(host,()=>{},{decor:id=>D.looks[id]||null,explode:E?{offsets:E.explodeOffsets,lift:E.explodeLift}:undefined});
   if(v.error){fail(v.error);return;}
   let display={fronts:true,neutral:false};v.update(D.scene,display);
   const btn=a=>document.querySelector('.v3d-bar [data-act='+a+']');
   btn('fronts').onclick=e=>{display={...display,fronts:!display.fronts};e.target.setAttribute('aria-pressed',String(display.fronts));v.update(D.scene,display);};
   btn('neutral').onclick=e=>{display={...display,neutral:!display.neutral};e.target.setAttribute('aria-pressed',String(display.neutral));v.update(D.scene,display);};
   btn('open').onclick=e=>{v.toggleAll();const d=v.motion.doors();e.target.textContent=d.length&&d.every(x=>v.motion.isOpen(x.key))?'Закрыть фасады':'Открыть фасады';};
+  const press=(a,on)=>btn(a).setAttribute('aria-pressed',String(on));
+  btn('xray').onclick=()=>{const on=!display.xray;display={...display,xray:on,explode:on?display.explode||0:0};press('xray',on);press('explode',!!display.explode);v.update(D.scene,display);};
+  btn('explode').onclick=()=>{const on=!display.explode;display={...display,xray:display.xray||on,explode:on?1:0};press('xray',display.xray);press('explode',on);v.update(D.scene,display);};
+  if(!E)btn('explode').hidden=true;
   btn('fit').onclick=()=>v.fit();
   if(!v.motion.doors().length)btn('open').hidden=true;
 }catch(e){fail(String(e));}
