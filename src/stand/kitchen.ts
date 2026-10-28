@@ -1,6 +1,7 @@
 // Кухня на стенде: правки договора (EXCHANGE_SPEC.md §4.1) → функции ядра modulero-next и сводка
 // «в объёме экрана» (§5 п. 3–4). Стенд ничего не считает: размеры, состав, отказы и цена — ответы ядра.
 import type { Core } from './engine.ts';
+import { groupGeometry } from './geometry.ts';
 import { scene3dOf, type Scene3dView } from './scene3d.ts';
 
 export type KitchenProject = Record<string, unknown>;
@@ -86,7 +87,8 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
     graph = c.kitchenGraph(scene),
     out = K.kitchenOutputs(graph, scene),
     plan = K.kitchenPlan(p, HW),
-    decors = new Map<string, string>(K.kitchenDecors(HW).map((d: any) => [d.code, d.label]));
+    decors = new Map<string, string>(K.kitchenDecors(HW).map((d: any) => [d.code, d.label])),
+    scene3d = scene3dOf(c, graph);
   const decor = (code: unknown) => (code ? (decors.get(String(code)) ?? String(code)) : null);
   const facadeChoice = K.kitchenFacadeChoiceOf(p, HW);
   const modules = scene.modules.map((m: any) => {
@@ -106,6 +108,15 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
       facade: m.facadeMaterial ? decor(m.facadeMaterial) : undefined,
       // Панели «Наполнение» и «Фасады» редактора: полки с id и поля модуля — для команд editor_call.
       ...moduleFill(c, p, m.id),
+      // Высоты деталей модуля от пола — из 3D-сцены ядра (geometry.ts); id полки — тот же, что в shelves.
+      geometry: groupGeometry(scene3d.scene, {
+        own: (q) => q.assemblyId === m.id,
+        drawerOf: (q) => {
+          const d = /:drawer(?:-front)?:(\d+)/.exec(q.id);
+          return d ? `${m.id}:drawer:${d[1]}` : null;
+        },
+        idOf: (q) => q.id,
+      }),
     });
   });
   const sceneError: string | null = K.kitchenSceneError(scene);
@@ -142,7 +153,7 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
   };
   const warnings = [...K.kitchenObstacleWarnings(p, HW).map((w: any) => w.text), ...(sceneError ? [sceneError] : [])];
   const elevations = plan.walls.map((w: any) => ({ title: wallTitle(w.line, plan.room.width), ...K.kitchenWallElevation(p, HW, w.id) }));
-  return { revision: out.revision, state, price, warnings, previewSvg: c.previewSvg(graph), plan, elevations, scene3d: scene3dOf(c, graph) };
+  return { revision: out.revision, state, price, warnings, previewSvg: c.previewSvg(graph), plan, elevations, scene3d };
 }
 
 /** Полки и поля модуля из панелей редактора (kitchenModuleFill, kitchenModuleFront); у модуля без них — ничего. */

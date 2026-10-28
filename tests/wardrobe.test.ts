@@ -38,8 +38,8 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     assert.equal(a.state.sections[0].rods.length, 1);
     // Высоты деталей секции от пола — из 3D-сцены ядра: помощник берёт их из ответа, а не считает.
     const g = a.state.sections[0].geometry;
-    assert.equal(typeof g.interior_bottom_mm, 'number');
-    assert.ok(g.facades.length >= 1 && g.facades.every((f: any) => f.top_mm > f.bottom_mm));
+    assert.equal(typeof g.bottom.z[1], 'number');
+    assert.ok(g.facades.length >= 1 && g.facades.every((f: any) => f.z[1] > f.z[0] && f.t > 0));
     assert.equal(stand.data.history.length, 2);
 
     // Файл версии — проект шкафа конструктора: открывается для правки, та же версия.

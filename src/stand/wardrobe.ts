@@ -4,6 +4,7 @@
 import type { Core } from './engine.ts';
 import type { Edit, EditResult } from './kitchen.ts';
 import { TERMS } from './kitchen.ts';
+import { groupGeometry, partZ, type Geometry } from './geometry.ts';
 import { scene3dOf, type Scene3dView } from './scene3d.ts';
 
 export type WardrobeInput = Record<string, any>;
@@ -177,7 +178,7 @@ export function wardrobeView(c: Core, i: WardrobeInput): WardrobeView {
     lighting: fit.lighting === 'ALL' ? 'весь шкаф' : Array.isArray(fit.lighting) && fit.lighting.length ? fit.lighting : null,
     // mirror ядра — зеркальная раскладка створок по дорожкам (tracksOf), а не зеркало на дверях.
     sliding: doors
-      ? { doors: doors.doors, system: systems.get(doors.system) ?? doors.system, scheme: doors.scheme, mirrored_tracks: doors.mirror, insert: insert?.material ?? null, insert_decor: insert?.decorId ?? null }
+      ? { doors: doors.doors, system: systems.get(doors.system) ?? doors.system, scheme: doors.scheme, mirrored_tracks: doors.mirror, insert: insert?.material ?? null, insert_decor: insert?.decorId ?? null, leaves: leavesOf(scene3d.scene) }
       : null,
     // Корпуса, стыки, перегородки, стоевые, декоры и фурнитура — что видно в редакторе и нужно командам editor_call.
     bodies: i.state.bodies.map((b: any) => defined({ id: b.id, width_mm: exactMm(b.widthExact) ?? b.width, over: b.parent ?? undefined })),
@@ -230,31 +231,33 @@ export function wardrobeOptions(c: Core, kind: 'wardrobe' | 'sliding', topic: st
   }
 }
 
-const mm = (v: number) => Math.round(v * 10) / 10;
+/** Створки купе по высоте — вставки створок в 3D-сцене ядра (рама створки — покупная фурнитура, не деталь). */
+const leavesOf = (scene: any) => groupGeometry(scene, { own: (p) => /^SW-LEAF-\d+-/.test(p.id), drawerOf: () => null, idOf: (p) => p.id }).facades ?? [];
+
+const num = (id: string) => Number(/(?:SHELF|DRAWER)(\d+)/.exec(id)?.[1] ?? 0);
 
 /**
- * Высоты деталей секции от пола — из 3D-сцены ядра (engine.sceneOf), той же, что видит конструктор: помощник берёт
- * их из ответа, а не считает. `y_mm` полки — середина полки над дном корпуса: так её ждёт команда wardrobe/moveShelf.
+ * Геометрия секции — общая форма state (geometry.ts): дно и крыша корпуса, полки, ящики, фасады секции и полка над
+ * ящиками. `index` — номер полки и ящика для команд, `y_mm` полки — середина полки над дном корпуса: так её ждёт
+ * команда wardrobe/moveShelf.
  */
-function geometryOf(scene: any): (section: string) => unknown {
-  const parts: any[] = scene.parts,
-    z = (p: any) => ({ bottom_mm: mm(p.boxMm.min[2]), top_mm: mm(p.boxMm.max[2]) }),
-    num = (id: string, re: RegExp) => Number(re.exec(id)?.[1] ?? 0);
+function geometryOf(scene: any): (section: string) => Geometry {
   return (section) => {
     const body = section.replace(/-S\d+$/, ''),
-      bottom = parts.find((p) => p.id === `${body}-CARCASS-BOTTOM`),
-      floor = bottom ? bottom.boxMm.max[2] : null,
-      own = parts.filter((p) => p.id.startsWith(section + '-'));
-    const shelves = own
-      .filter((p) => /-SHELF\d+$/.test(p.id))
-      .sort((a, b) => num(a.id, /SHELF(\d+)$/) - num(b.id, /SHELF(\d+)$/))
-      .map((p, index) => ({ index, ...z(p), y_mm: floor === null ? null : mm((p.boxMm.min[2] + p.boxMm.max[2]) / 2 - floor) }));
-    const drawers = own
-      .filter((p) => /-DRAWER\d+-FRONT$/.test(p.id))
-      .sort((a, b) => num(a.id, /DRAWER(\d+)/) - num(b.id, /DRAWER(\d+)/))
-      .map((p, index) => ({ index, ...z(p) }));
-    const cover = own.find((p) => p.id.endsWith('-SHELF-DRAWER-COVER'));
-    const facades = parts.filter((p) => p.surface === 'FACADE' && p.assemblyId === section).map((p) => ({ id: p.id.slice(section.length + 1), ...z(p) }));
-    return { interior_bottom_mm: floor === null ? null : mm(floor), shelves, drawers, drawer_cover: cover ? z(cover) : null, facades };
+      carcass = new Set([`${body}-CARCASS-BOTTOM`, `${body}-CARCASS-TOP`]);
+    const g = groupGeometry(scene, {
+      own: (p) => carcass.has(p.id) || p.id.startsWith(section + '-') || p.assemblyId === section,
+      drawerOf: (p) => /-(DRAWER\d+)-/.exec(p.id)?.[1] ?? null,
+      idOf: (p) => p.id.slice(p.id.startsWith(section + '-') ? section.length + 1 : body.length + 1),
+      order: (a, b) => num(a.id) - num(b.id),
+    });
+    const floor = g.bottom?.z[1],
+      cover = scene.parts.find((p: any) => p.id === `${section}-SHELF-DRAWER-COVER`);
+    return {
+      ...g,
+      ...(g.shelves ? { shelves: g.shelves.map((s, index) => ({ index, ...s, y_mm: floor === undefined ? null : Math.round(((s.z[0] + s.z[1]) / 2 - floor) * 10) / 10 })) } : {}),
+      ...(g.drawers ? { drawers: g.drawers.map((d, index) => ({ index, ...d })) } : {}),
+      ...(cover ? { drawer_cover: partZ(cover) } : {}),
+    };
   };
 }
