@@ -35,9 +35,17 @@ test('editor_call: шкаф на два корпуса со стыком меж�
   try {
     const stand = new Stand(core, dir, 'c', () => new Date('2026-10-28T12:00:00Z'));
     const start: any = stand.run('start_project', { kind: 'wardrobe', template: 'start' });
-    const list: any = stand.run('list_commands', { kind: 'sliding' });
+    const list: any = stand.run('list_commands', { kind: 'sliding', filter: null, detail: 'full' });
     assert.ok(list.commands.some((c: any) => c.command === 'wardrobe/toggleBodyJoint'));
     assert.ok(list.commands.every((c: any) => !('hw' in c.args.properties)), 'каталог подставляет стенд');
+    // Кратко (по умолчанию): параметры строкой; filter сужает список; вызов без filter и detail — как прежде.
+    const brief: any = stand.run('list_commands', { kind: 'sliding', filter: null, detail: null });
+    assert.equal(brief.commands.length, list.commands.length);
+    assert.equal(brief.commands.find((c: any) => c.command === 'wardrobe/toggleBodyJoint').args, 'joint: number');
+    assert.ok(JSON.stringify(brief).length * 2 < JSON.stringify(list).length, 'краткий список вдвое меньше');
+    const joint: any = stand.run('list_commands', { kind: 'sliding', filter: 'joint', detail: null });
+    assert.ok(joint.commands.length >= 1 && joint.commands.length < 5 && joint.commands.every((c: any) => /joint/i.test(c.command + c.doc)));
+    assert.deepEqual((stand.run('list_commands', { kind: 'sliding' }) as any).commands, brief.commands);
     const call = (base: string, calls: [string, unknown][]): any =>
       stand.run('editor_call', { project_id: 'c', base_revision: base, label: 'Два корпуса', calls: calls.map(([command, args]) => ({ command, args_json: JSON.stringify(args) })) });
     const a = call(start.revision, [

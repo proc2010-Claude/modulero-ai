@@ -15,6 +15,7 @@ import { loadStandTools } from '../tools.ts';
 import { commandList, loadCommands, runCommand, type CommandsFile } from './commands.ts';
 import { sessionCost, type SessionCost } from './cost.ts';
 import type { Core } from './engine.ts';
+import { BRIEF_TOOLS, briefOutput } from './brief.ts';
 import { applyKitchenEdit, kitchenOptions, kitchenView, startKitchen, type Edit, type EditResult, type KitchenProject, type KitchenView } from './kitchen.ts';
 import { applyHomeEdit, homeOptions, homeView, startHome, type HomeProject, type HomeView } from './home.ts';
 import { renderPage } from './page.ts';
@@ -132,6 +133,16 @@ export class Stand {
     return out;
   }
 
+  /**
+   * Вызов с кратким ответом для помощника (brief.ts): у правок вместо state — изменения относительно версии до вызова.
+   * В журнал и на страницу идёт полный ответ, он же — в full.
+   */
+  runBrief(tool: string, input: unknown): { full: Output; brief: Output } {
+    const before = BRIEF_TOOLS.includes(tool) ? this.currentView()?.state : undefined;
+    const full = this.run(tool, input);
+    return { full, brief: BRIEF_TOOLS.includes(tool) ? briefOutput(full, before) : full };
+  }
+
   /** Реплика диалога в ленту страницы. */
   say(who: 'human' | 'ai', text: string): void {
     this.addLine({ at: this.clock().toISOString(), who, text });
@@ -157,6 +168,8 @@ export class Stand {
   private dispatch(tool: string, input: unknown): Output {
     const schema = this.schemas.get(tool);
     if (!schema) return error(`Нет инструмента «${tool}». Есть: ${[...this.schemas.keys()].join(', ')}.`);
+    // list_commands 0.2 без filter и detail (вызовы до их появления) — как с null.
+    if (tool === 'list_commands' && input && typeof input === 'object' && !Array.isArray(input)) input = { filter: null, detail: null, ...input };
     const problems = validate(schema, input);
     if (problems.length) return error(`Вход ${tool} не по схеме: ${problems.slice(0, 5).join('; ')}`);
     const a = input as Record<string, any>;
@@ -171,7 +184,7 @@ export class Stand {
       case 'editor_call':
         return this.edits(tool, a);
       case 'list_commands':
-        return { kind: a.kind, commands: commandList(this.commands, a.kind) };
+        return { kind: a.kind, commands: commandList(this.commands, a.kind, { filter: a.filter ?? null, detail: a.detail ?? null }) };
       case 'get_project':
         return this.withProject(a.project_id, () => this.projectAnswer());
       case 'undo':
