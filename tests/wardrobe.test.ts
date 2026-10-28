@@ -86,6 +86,8 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     assert.match(page, /data-act="explode"/);
     // Нажатие на дверь или ящик открывает его, как в конструкторе.
     assert.match(page, /toggleMotion\(m\.key\)/);
+    // Створки купе двигаются по правилам ядра slidePose и slideClears.
+    assert.match(page, /slides:E\?\{pose:E\.slidePose,clears:E\.slideClears\}/);
     assert.match(page, /ModuleroExplode/);
     // Текущая цена — в углу поля 3D (AI-DEC-008).
     assert.match(page, /id="v3d-price">Ориентир /);
