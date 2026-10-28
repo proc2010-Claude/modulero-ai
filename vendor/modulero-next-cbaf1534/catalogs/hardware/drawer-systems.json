@@ -1,0 +1,3422 @@
+{
+ "systems": [
+  {
+   "id": "BOYARD_SB18",
+   "brand": "BOYARD",
+   "article": "SB18",
+   "ref": {
+    "doc": "BOYARD-2024",
+    "sha256": "6c00dc31",
+    "page": "122"
+   },
+   "series": "СТАРТ SOFT",
+   "name": "Комплект мебельного ящика СТАРТ SOFT с прямыми боковинами, стандартной высоты, H86",
+   "extension": "FULL",
+   "softClose": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "122",
+     "note": "«Система выдвижения СТАРТ SOFT с плавным доведением», значок «Амортизация»"
+    }
+   },
+   "pushToOpen": {
+    "value": false,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "106",
+     "note": "код 18: «на базе СТАРТ SOFT»; открывание нажатием — коды 09, 28, 29, 30 (СТАРТ PUSH)"
+    }
+   },
+   "pushFrontGapMm": null,
+   "sideThicknessMm": {
+    "value": 12.8,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "122",
+     "note": "значок «12,8» — толщина боковины"
+    }
+   },
+   "sideHeightMm": {
+    "value": 86,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "122",
+     "note": "значок «86» — высота боковины"
+    }
+   },
+   "boxHeightMm": {
+    "value": 112,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "123",
+     "note": "«112» — верх боковин над низом направляющей; в наборе БАЗИС верх задней стенки на 112"
+    }
+   },
+   "minOpeningHeightMm": {
+    "value": 115,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "122",
+     "note": "значок «115» — минимальная высота проёма; габаритная рамка набора БАЗИС — 115"
+    }
+   },
+   "bottom": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "123",
+      "note": "«16» — дно из плиты; в наборе БАЗИС «ДНО Ящика» 16"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 75,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "123",
+      "note": "«LW−75»; в наборе БАЗИС дно 325 при LW 400"
+     }
+    },
+    "lengthDeductionMm": {
+     "value": 24,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "123",
+      "note": "«NL−24»; в наборе БАЗИС дно 426 при NL 450"
+     }
+    },
+    "undersideMm": {
+     "value": 26,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "123",
+      "note": "«26» — низ дна над низом направляющей; в наборе БАЗИС дно на 26…42"
+     }
+    }
+   },
+   "back": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "123",
+      "note": "«16»; в наборе БАЗИС «ЗС Ящика» 16"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 87,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "123",
+      "note": "«LW−87»; в наборе БАЗИС задняя стенка 313 при LW 400"
+     }
+    },
+    "heightMm": {
+     "value": 86,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "123",
+      "note": "«86»; в наборе БАЗИС «ЗС Ящика» 26…112"
+     }
+    },
+    "lowerEdgeMm": {
+     "value": 26,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "«ЗС Ящика» 26…112: низ задней стенки на уровне низа дна"
+     }
+    },
+    "rearDeductionMm": {
+     "value": 8,
+     "status": "DERIVED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "задняя стенка стоит за дном (NL − 24) и толщиной 16: тыльная пласть на NL − 8 от внутренней пласти фасада (в наборе NL 450 — 442)"
+     }
+    },
+    "holes": {
+     "fromEndMm": {
+      "value": 9,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+       "note": "держатели SBH60: отверстия на 9 мм от торца задней стенки (52,5 − 43,5); каталог — «9»"
+      }
+     },
+     "heightsMm": {
+      "value": [
+       60,
+       92
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+       "note": "отверстия держателей задней стенки в тыльной пласти, над низом направляющей; каталог с. 123 — шаг 32 от верха боковин (112)"
+      }
+     },
+     "diameterMm": {
+      "value": 5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+       "note": "отверстие держателя Ø5"
+      }
+     },
+     "depthMm": {
+      "value": 2,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+       "note": "глубина 2"
+      }
+     }
+    }
+   },
+   "frontHoles": {
+    "fromEndMm": {
+     "value": 15.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "«Крепление фасада СТАРТ»: ось на 15,5 мм от боковины проёма (каталог — «15,5», ось направляющей)"
+     }
+    },
+    "heightsMm": {
+     "value": [
+      47.5,
+      79.5
+     ],
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "отверстия креплений фасада во внутренней пласти фасада, над низом направляющей; каталог с. 123 — от «47,5 min» шагом 32 и 64"
+     }
+    },
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "Ø5 × 2 в наборе БАЗИС; каталог печатает под саморез фиксатора «Ø2, 4 отв. h12» — по MOD-DEC-277 взят набор (FINDINGS 1874)"
+     }
+    },
+    "depthMm": {
+     "value": 2,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "Ø5 × 2 в наборе БАЗИС; каталог — h12 (FINDINGS 1874)"
+     }
+    }
+   },
+   "carcassFixing": {
+    "heightMm": {
+     "value": 49,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "отверстия «2x1,5» направляющей DB8181 на 49 мм над низом направляющей; каталог с. 122 — ряды на 33 и 49 (33 + 16)"
+     }
+    },
+    "diameterMm": {
+     "value": 2,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "отверстие «2x1,5»"
+     }
+    },
+    "depthMm": {
+     "value": 1.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+      "note": "отверстие «2x1,5»"
+     }
+    },
+    "fastener": "саморезы комплекта (каталог с. 122); в наборе БАЗИС — разметка «2x1,5» по два отверстия на направляющую"
+   },
+   "lengths": [
+    {
+     "nominalMm": 300,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB18W.1/300",
+       "price": {
+        "rub": 2200.25,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18W.1/300",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2200,25 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB18GR.1/300",
+       "price": {
+        "rub": 2200.25,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GR.1/300",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2200,25 ₽ за комплект на ящик (серый RAL 7038)"
+       }
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB18GRPH.1/300",
+       "price": {
+        "rub": 2200.25,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GRPH.1/300",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2200,25 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 30,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "122",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 303,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "123",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 300.fr3d",
+       "note": "«2x1,5» на 37 и 261 мм от переднего края боковины; каталог с. 122 — 37 и 224"
+      }
+     }
+    },
+    {
+     "nominalMm": 350,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB18W.1/350",
+       "price": {
+        "rub": 2331.61,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18W.1/350",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2331,61 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB18GR.1/350",
+       "price": {
+        "rub": 2331.61,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GR.1/350",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2331,61 ₽ за комплект на ящик (серый RAL 7038)"
+       }
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB18GRPH.1/350",
+       "price": {
+        "rub": 2331.61,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GRPH.1/350",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2331,61 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 32.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "122",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 353,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "123",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 350.fr3d",
+       "note": "«2x1,5» на 37 и 261 мм от переднего края боковины; каталог с. 122 — 37 и 224"
+      }
+     }
+    },
+    {
+     "nominalMm": 400,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB18W.1/400",
+       "price": {
+        "rub": 2454.4,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18W.1/400",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2454,4 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB18GR.1/400",
+       "price": {
+        "rub": 2454.4,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GR.1/400",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2454,4 ₽ за комплект на ящик (серый RAL 7038)"
+       }
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB18GRPH.1/400",
+       "price": {
+        "rub": 2454.4,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GRPH.1/400",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2454,4 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 35,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "122",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 403,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "123",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 400.fr3d",
+       "note": "«2x1,5» на 37 и 261 мм от переднего края боковины; каталог с. 122 — 37 и 224"
+      }
+     }
+    },
+    {
+     "nominalMm": 450,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB18W.1/450",
+       "price": {
+        "rub": 2637.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18W.1/450",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2637,16 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB18GR.1/450",
+       "price": {
+        "rub": 2637.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GR.1/450",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2637,16 ₽ за комплект на ящик (серый RAL 7038)"
+       }
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB18GRPH.1/450",
+       "price": {
+        "rub": 2637.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GRPH.1/450",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2637,16 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 37.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "122",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 453,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "123",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 450.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 122 — 37 и 256"
+      }
+     }
+    },
+    {
+     "nominalMm": 500,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB18W.1/500",
+       "price": {
+        "rub": 2769.95,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18W.1/500",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2769,95 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB18GR.1/500",
+       "price": {
+        "rub": 2769.95,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GR.1/500",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2769,95 ₽ за комплект на ящик (серый RAL 7038)"
+       }
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB18GRPH.1/500",
+       "price": {
+        "rub": 2769.95,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GRPH.1/500",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2769,95 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "122",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 503,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "123",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 500.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 122 — 37 и 256"
+      }
+     }
+    },
+    {
+     "nominalMm": 550,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB18W.1/550",
+       "price": {
+        "rub": 2914.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18W.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2914,16 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB18GR.1/550",
+       "price": {
+        "rub": 2914.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GR.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2914,16 ₽ за комплект на ящик (серый RAL 7038)"
+       }
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB18GRPH.1/550",
+       "price": {
+        "rub": 2914.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB18GRPH.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2914,16 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "122",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 553,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "123",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB18 H86/Ящик SB18 H86, Белый, 550.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 122 — 37 и 256"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "BOYARD_SB19",
+   "brand": "BOYARD",
+   "article": "SB19",
+   "ref": {
+    "doc": "BOYARD-2024",
+    "sha256": "6c00dc31",
+    "page": "126"
+   },
+   "series": "СТАРТ SOFT",
+   "name": "Комплект мебельного ящика СТАРТ SOFT с прямыми боковинами, средней высоты, H118",
+   "extension": "FULL",
+   "softClose": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "126",
+     "note": "«Система выдвижения СТАРТ SOFT с плавным доведением», значок «Амортизация»"
+    }
+   },
+   "pushToOpen": {
+    "value": false,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "106",
+     "note": "код 19: «на базе СТАРТ SOFT»; открывание нажатием — коды 09, 28, 29, 30 (СТАРТ PUSH)"
+    }
+   },
+   "pushFrontGapMm": null,
+   "sideThicknessMm": {
+    "value": 12.8,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "126",
+     "note": "значок «12,8» — толщина боковины"
+    }
+   },
+   "sideHeightMm": {
+    "value": 118,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "126",
+     "note": "значок «118» — высота боковины"
+    }
+   },
+   "boxHeightMm": {
+    "value": 144,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "127",
+     "note": "«144» — верх боковин над низом направляющей; в наборе БАЗИС верх задней стенки на 144"
+    }
+   },
+   "minOpeningHeightMm": {
+    "value": 147,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "126",
+     "note": "значок «147» — минимальная высота проёма; габаритная рамка набора БАЗИС — 147"
+    }
+   },
+   "bottom": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "127",
+      "note": "«16» — дно из плиты; в наборе БАЗИС «ДНО Ящика» 16"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 75,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "127",
+      "note": "«LW−75»; в наборе БАЗИС дно 325 при LW 400"
+     }
+    },
+    "lengthDeductionMm": {
+     "value": 24,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "127",
+      "note": "«NL−24»; в наборе БАЗИС дно 426 при NL 450"
+     }
+    },
+    "undersideMm": {
+     "value": 26,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "127",
+      "note": "«26» — низ дна над низом направляющей; в наборе БАЗИС дно на 26…42"
+     }
+    }
+   },
+   "back": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "127",
+      "note": "«16»; в наборе БАЗИС «ЗС Ящика» 16"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 87,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "127",
+      "note": "«LW−87»; в наборе БАЗИС задняя стенка 313 при LW 400"
+     }
+    },
+    "heightMm": {
+     "value": 118,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "127",
+      "note": "«118»; в наборе БАЗИС «ЗС Ящика» 26…144"
+     }
+    },
+    "lowerEdgeMm": {
+     "value": 26,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "«ЗС Ящика» 26…144: низ задней стенки на уровне низа дна"
+     }
+    },
+    "rearDeductionMm": {
+     "value": 8,
+     "status": "DERIVED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "задняя стенка стоит за дном (NL − 24) и толщиной 16: тыльная пласть на NL − 8 от внутренней пласти фасада (в наборе NL 450 — 442)"
+     }
+    },
+    "holes": {
+     "fromEndMm": {
+      "value": 9,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+       "note": "держатели SBH60: отверстия на 9 мм от торца задней стенки (52,5 − 43,5); каталог — «9»"
+      }
+     },
+     "heightsMm": {
+      "value": [
+       63,
+       95,
+       127
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+       "note": "отверстия держателей задней стенки в тыльной пласти, над низом направляющей; каталог с. 127 — шаг 32 от верха боковин (144)"
+      }
+     },
+     "diameterMm": {
+      "value": 5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+       "note": "отверстие держателя Ø5"
+      }
+     },
+     "depthMm": {
+      "value": 2,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+       "note": "глубина 2"
+      }
+     }
+    }
+   },
+   "frontHoles": {
+    "fromEndMm": {
+     "value": 15.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "«Крепление фасада СТАРТ»: ось на 15,5 мм от боковины проёма (каталог — «15,5», ось направляющей)"
+     }
+    },
+    "heightsMm": {
+     "value": [
+      47.5,
+      79.5,
+      111.5
+     ],
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "отверстия креплений фасада во внутренней пласти фасада, над низом направляющей; каталог с. 127 — от «47,5 min» шагом 32 и 64"
+     }
+    },
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "Ø5 × 2 в наборе БАЗИС; каталог печатает под саморез фиксатора «Ø2, 4 отв. h12» — по MOD-DEC-277 взят набор (FINDINGS 1874)"
+     }
+    },
+    "depthMm": {
+     "value": 2,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "Ø5 × 2 в наборе БАЗИС; каталог — h12 (FINDINGS 1874)"
+     }
+    }
+   },
+   "carcassFixing": {
+    "heightMm": {
+     "value": 49,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "отверстия «2x1,5» направляющей DB8181 на 49 мм над низом направляющей; каталог с. 122 — ряды на 33 и 49 (33 + 16)"
+     }
+    },
+    "diameterMm": {
+     "value": 2,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "отверстие «2x1,5»"
+     }
+    },
+    "depthMm": {
+     "value": 1.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+      "note": "отверстие «2x1,5»"
+     }
+    },
+    "fastener": "саморезы комплекта (каталог с. 122); в наборе БАЗИС — разметка «2x1,5» по два отверстия на направляющую"
+   },
+   "lengths": [
+    {
+     "nominalMm": 300,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB19W.1/300"
+      },
+      {
+       "colour": "GR",
+       "article": "SB19GR.1/300"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB19GRPH.1/300"
+      }
+     ],
+     "loadKg": {
+      "value": 30,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 303,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "127",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "схема присадки «для размеров 300/350/400»: 37 от переднего края боковины и 224 от первого отверстия, то есть 261 от края (в наборе БАЗИС SB19 этой длины нет)"
+      }
+     }
+    },
+    {
+     "nominalMm": 350,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB19W.1/350"
+      },
+      {
+       "colour": "GR",
+       "article": "SB19GR.1/350"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB19GRPH.1/350"
+      }
+     ],
+     "loadKg": {
+      "value": 32.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 353,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "127",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "схема присадки «для размеров 300/350/400»: 37 от переднего края боковины и 224 от первого отверстия, то есть 261 от края (в наборе БАЗИС SB19 этой длины нет)"
+      }
+     }
+    },
+    {
+     "nominalMm": 400,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB19W.1/400"
+      },
+      {
+       "colour": "GR",
+       "article": "SB19GR.1/400"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB19GRPH.1/400"
+      }
+     ],
+     "loadKg": {
+      "value": 35,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 403,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "127",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "схема присадки «для размеров 300/350/400»: 37 от переднего края боковины и 224 от первого отверстия, то есть 261 от края (в наборе БАЗИС SB19 этой длины нет)"
+      }
+     }
+    },
+    {
+     "nominalMm": 450,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB19W.1/450",
+       "price": {
+        "rub": 3106.91,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB19W.1/450",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3106,91 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB19GR.1/450"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB19GRPH.1/450",
+       "price": {
+        "rub": 3106.91,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB19GRPH.1/450",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3106,91 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 37.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 453,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "127",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 450.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 126 — 37 и 256"
+      }
+     }
+    },
+    {
+     "nominalMm": 500,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB19W.1/500",
+       "price": {
+        "rub": 3231.13,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB19W.1/500",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3231,13 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB19GR.1/500"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB19GRPH.1/500",
+       "price": {
+        "rub": 3231.13,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB19GRPH.1/500",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3231,13 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 503,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "127",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 500.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 126 — 37 и 256"
+      }
+     }
+    },
+    {
+     "nominalMm": 550,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB19W.1/550",
+       "price": {
+        "rub": 3382.48,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB19W.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3382,48 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB19GR.1/550",
+       "price": {
+        "rub": 2591.47,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB19GR.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 2591,47 ₽ за комплект на ящик (серый RAL 7038)"
+       }
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB19GRPH.1/550",
+       "price": {
+        "rub": 3382.48,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB19GRPH.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3382,48 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "126",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 553,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "127",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB19 H118/Ящик SB19 H118, Белый, 550.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 126 — 37 и 256"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "BOYARD_SB20",
+   "brand": "BOYARD",
+   "article": "SB20",
+   "ref": {
+    "doc": "BOYARD-2024",
+    "sha256": "6c00dc31",
+    "page": "128"
+   },
+   "series": "СТАРТ SOFT",
+   "name": "Комплект мебельного ящика СТАРТ SOFT с прямыми боковинами, высокий, H167",
+   "extension": "FULL",
+   "softClose": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "128",
+     "note": "«Система выдвижения СТАРТ SOFT с плавным доведением», значок «Амортизация»"
+    }
+   },
+   "pushToOpen": {
+    "value": false,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "106",
+     "note": "код 20: «на базе СТАРТ SOFT»; открывание нажатием — коды 09, 28, 29, 30 (СТАРТ PUSH)"
+    }
+   },
+   "pushFrontGapMm": null,
+   "sideThicknessMm": {
+    "value": 12.8,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "128",
+     "note": "значок «12,8» — толщина боковины"
+    }
+   },
+   "sideHeightMm": {
+    "value": 167,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "128",
+     "note": "значок «167» — высота боковины"
+    }
+   },
+   "boxHeightMm": {
+    "value": 193,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "129",
+     "note": "«193» — верх боковин над низом направляющей; в наборе БАЗИС верх задней стенки на 193"
+    }
+   },
+   "minOpeningHeightMm": {
+    "value": 198,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BOYARD-2024",
+     "sha256": "6c00dc31",
+     "page": "128",
+     "note": "значок «198» — минимальная высота проёма; габаритная рамка набора БАЗИС — 198"
+    }
+   },
+   "bottom": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "129",
+      "note": "«16» — дно из плиты; в наборе БАЗИС «ДНО Ящика» 16"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 75,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "129",
+      "note": "«LW−75»; в наборе БАЗИС дно 325 при LW 400"
+     }
+    },
+    "lengthDeductionMm": {
+     "value": 24,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "129",
+      "note": "«NL−24»; в наборе БАЗИС дно 426 при NL 450"
+     }
+    },
+    "undersideMm": {
+     "value": 26,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "129",
+      "note": "«26» — низ дна над низом направляющей; в наборе БАЗИС дно на 26…42"
+     }
+    }
+   },
+   "back": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "129",
+      "note": "«16»; в наборе БАЗИС «ЗС Ящика» 16"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 87,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "129",
+      "note": "«LW−87»; в наборе БАЗИС задняя стенка 313 при LW 400"
+     }
+    },
+    "heightMm": {
+     "value": 167,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-2024",
+      "sha256": "6c00dc31",
+      "page": "129",
+      "note": "«167»; в наборе БАЗИС «ЗС Ящика» 26…193"
+     }
+    },
+    "lowerEdgeMm": {
+     "value": 26,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "«ЗС Ящика» 26…193: низ задней стенки на уровне низа дна"
+     }
+    },
+    "rearDeductionMm": {
+     "value": 8,
+     "status": "DERIVED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "задняя стенка стоит за дном (NL − 24) и толщиной 16: тыльная пласть на NL − 8 от внутренней пласти фасада (в наборе NL 450 — 442)"
+     }
+    },
+    "holes": {
+     "fromEndMm": {
+      "value": 9,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+       "note": "держатели SBH60: отверстия на 9 мм от торца задней стенки (52,5 − 43,5); каталог — «9»"
+      }
+     },
+     "heightsMm": {
+      "value": [
+       58,
+       90,
+       122,
+       154
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+       "note": "отверстия держателей задней стенки в тыльной пласти, над низом направляющей; каталог с. 129 — шаг 32 от верха боковин (193)"
+      }
+     },
+     "diameterMm": {
+      "value": 5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+       "note": "отверстие держателя Ø5"
+      }
+     },
+     "depthMm": {
+      "value": 2,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+       "note": "глубина 2"
+      }
+     }
+    }
+   },
+   "frontHoles": {
+    "fromEndMm": {
+     "value": 15.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "«Крепление фасада СТАРТ»: ось на 15,5 мм от боковины проёма (каталог — «15,5», ось направляющей)"
+     }
+    },
+    "heightsMm": {
+     "value": [
+      47.5,
+      79.5,
+      143.5,
+      175.5
+     ],
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "отверстия креплений фасада во внутренней пласти фасада, над низом направляющей; каталог с. 129 — от «47,5 min» шагом 32 и 64"
+     }
+    },
+    "diameterMm": {
+     "value": 5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "Ø5 × 2 в наборе БАЗИС; каталог печатает под саморез фиксатора «Ø2, 4 отв. h12» — по MOD-DEC-277 взят набор (FINDINGS 1874)"
+     }
+    },
+    "depthMm": {
+     "value": 2,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "Ø5 × 2 в наборе БАЗИС; каталог — h12 (FINDINGS 1874)"
+     }
+    }
+   },
+   "carcassFixing": {
+    "heightMm": {
+     "value": 49,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "отверстия «2x1,5» направляющей DB8181 на 49 мм над низом направляющей; каталог с. 122 — ряды на 33 и 49 (33 + 16)"
+     }
+    },
+    "diameterMm": {
+     "value": 2,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "отверстие «2x1,5»"
+     }
+    },
+    "depthMm": {
+     "value": 1.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BOYARD-BAZIS-START",
+      "sha256": "767e64a7",
+      "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+      "note": "отверстие «2x1,5»"
+     }
+    },
+    "fastener": "саморезы комплекта (каталог с. 122); в наборе БАЗИС — разметка «2x1,5» по два отверстия на направляющую"
+   },
+   "lengths": [
+    {
+     "nominalMm": 300,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB20W.1/300",
+       "price": {
+        "rub": 3056.94,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20W.1/300",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3056,94 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB20GR.1/300"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB20GRPH.1/300",
+       "price": {
+        "rub": 3056.94,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20GRPH.1/300",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3056,94 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 30,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "128",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 303,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "129",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 300.fr3d",
+       "note": "«2x1,5» на 37 и 261 мм от переднего края боковины; каталог с. 128 — 37 и 224"
+      }
+     }
+    },
+    {
+     "nominalMm": 350,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB20W.1/350",
+       "price": {
+        "rub": 3271.11,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20W.1/350",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3271,11 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB20GR.1/350"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB20GRPH.1/350",
+       "price": {
+        "rub": 3271.11,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20GRPH.1/350",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3271,11 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 32.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "128",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 353,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "129",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 350.fr3d",
+       "note": "«2x1,5» на 37 и 261 мм от переднего края боковины; каталог с. 128 — 37 и 224"
+      }
+     }
+    },
+    {
+     "nominalMm": 400,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB20W.1/400",
+       "price": {
+        "rub": 3438.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20W.1/400",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3438,16 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB20GR.1/400"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB20GRPH.1/400",
+       "price": {
+        "rub": 3438.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20GRPH.1/400",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3438,16 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 35,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "128",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 403,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "129",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 400.fr3d",
+       "note": "«2x1,5» на 37 и 261 мм от переднего края боковины; каталог с. 128 — 37 и 224"
+      }
+     }
+    },
+    {
+     "nominalMm": 450,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB20W.1/450",
+       "price": {
+        "rub": 3636.63,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20W.1/450",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3636,63 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB20GR.1/450"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB20GRPH.1/450",
+       "price": {
+        "rub": 3636.63,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20GRPH.1/450",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3636,63 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 37.5,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "128",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 453,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "129",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 450.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 128 — 37 и 256"
+      }
+     }
+    },
+    {
+     "nominalMm": 500,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB20W.1/500",
+       "price": {
+        "rub": 3785.12,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20W.1/500",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3785,12 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB20GR.1/500"
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB20GRPH.1/500",
+       "price": {
+        "rub": 3785.12,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20GRPH.1/500",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3785,12 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "128",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 503,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "129",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 500.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 128 — 37 и 256"
+      }
+     }
+    },
+    {
+     "nominalMm": 550,
+     "articles": [
+      {
+       "colour": "W",
+       "article": "SB20W.1/550",
+       "price": {
+        "rub": 3942.18,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20W.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3942,18 ₽ за комплект на ящик (белый RAL 9003)"
+       }
+      },
+      {
+       "colour": "GR",
+       "article": "SB20GR.1/550",
+       "price": {
+        "rub": 3942.18,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20GR.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3942,18 ₽ за комплект на ящик (серый RAL 7038)"
+       }
+      },
+      {
+       "colour": "GRPH",
+       "article": "SB20GRPH.1/550",
+       "price": {
+        "rub": 3942.18,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "OWNER-PRICES",
+         "page": "артикул SB20GRPH.1/550",
+         "sha256": "1f31bdc7"
+        },
+        "status": "CONFIRMED",
+        "basis": "furnimax.ru, price_list.xlsx 2026-10-23: 3942,18 ₽ за комплект на ящик (графит RAL 7012)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "128",
+       "note": "«грузоподъёмность, кг» — с учётом конструкции мебели"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 553,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BOYARD-2024",
+       "sha256": "6c00dc31",
+       "page": "129",
+       "note": "«NL+3» — глубина корпуса под ящик с накладным фасадом"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BOYARD-BAZIS-START",
+       "sha256": "767e64a7",
+       "page": "ЯЩИКИ СТАРТ/SB20 H167/Ящик SB20 H167, Белый, 550.fr3d",
+       "note": "«2x1,5» на 37 и 293 мм от переднего края боковины; каталог с. 128 — 37 и 256"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "BLUM_TANDEMBOX_ANTARO_M",
+   "brand": "Blum",
+   "article": "AM",
+   "ref": {
+    "doc": "BLUM-KA150-BOXES",
+    "sha256": "97560b06",
+    "page": "308"
+   },
+   "series": "TANDEMBOX antaro",
+   "name": "Комплект «Стандартный ящик» TANDEMBOX antaro, царга M, BLUMOTION",
+   "extension": "FULL",
+   "softClose": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "308",
+     "note": "направляющие 578.xx01M — «BLUMOTION»"
+    }
+   },
+   "pushToOpen": {
+    "value": false,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "308",
+     "note": "исполнение BLUMOTION; открывание нажатием — отдельная система TIPON BLUMOTION (с. 350)"
+    }
+   },
+   "pushFrontGapMm": null,
+   "sideThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина боковины на с. 308–309 не напечатана"
+   },
+   "sideHeightMm": {
+    "value": 83.6,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "308",
+     "note": "«Drawer side height (mm) 83.6» — боковины 378M"
+    }
+   },
+   "boxHeightMm": {
+    "value": 95.5,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "309",
+     "note": "«Space requirement in cabinet»: 95,5 — верх боковины над низом направляющей"
+    }
+   },
+   "minOpeningHeightMm": {
+    "value": 98.5,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "309",
+     "note": "шуруп направляющей на min 33 над низом проёма, над ним 65,5 до верхнего элемента: 33 + 65,5"
+    }
+   },
+   "bottom": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Cutting – 16 mm chipboard»"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 75,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Base … LW – 75 mm»"
+     }
+    },
+    "lengthDeductionMm": {
+     "value": 24,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Base, Chipboard back NL – 24 mm» (с металлической задней стенкой NL − 22)"
+     }
+    },
+    "undersideMm": {
+     "value": 9,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Installation dimensions – front»: низ дна на 9 над низом направляющей"
+     }
+    }
+   },
+   "back": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Cutting – 16 mm chipboard»"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 87,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Chipboard back 84 mm, LW – 87 mm»"
+     }
+    },
+    "heightMm": {
+     "value": 84,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Chipboard back 84 mm»"
+     }
+    },
+    "lowerEdgeMm": {
+     "value": 9,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Installation dimensions – back»: задняя стенка за дном, низ на уровне низа дна (9)"
+     }
+    },
+    "rearDeductionMm": {
+     "value": 8,
+     "status": "DERIVED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "задняя стенка стоит за дном (NL − 24) и толщиной 16: тыльная пласть на NL − 8 от внутренней пласти фасада"
+     }
+    },
+    "holes": {
+     "fromEndMm": {
+      "value": 9,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "309",
+       "note": "«Installation dimensions – back»: 9 от торца задней стенки"
+      }
+     },
+     "heightsMm": {
+      "value": [
+       41,
+       73
+      ],
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "309",
+       "note": "20 и ещё 32 вниз от верха задней стенки (9 + 84 = 93): 73 и 41 над низом направляющей"
+      }
+     },
+     "diameterMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "каталог задаёт шуруп, а не отверстие: диаметр и глубина сверления не напечатаны"
+     },
+     "depthMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "каталог задаёт шуруп, а не отверстие: диаметр и глубина сверления не напечатаны"
+     }
+    }
+   },
+   "frontHoles": {
+    "fromEndMm": {
+     "value": 15.5,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Installation dimensions – front – screw-on»: 15,5 от боковины проёма"
+     }
+    },
+    "heightsMm": {
+     "value": [
+      47.5,
+      79.5
+     ],
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«Drilling distances – front – INSERTA»: min 47,5 и ещё 32"
+     }
+    },
+    "diameterMm": {
+     "value": 10,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "INSERTA: «Ø 10 +0.2 −0.1»"
+     }
+    },
+    "depthMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "глубина отверстия под крепление фасада не напечатана: число 12 у разреза фасада — его наименьшая толщина"
+    }
+   },
+   "carcassFixing": {
+    "heightMm": {
+     "value": 33,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "309",
+      "note": "«min 33» — ось шурупа направляющей над низом проёма"
+     }
+    },
+    "diameterMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "каталог задаёт шуруп, а не отверстие: диаметр и глубина сверления не напечатаны"
+    },
+    "depthMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "каталог задаёт шуруп, а не отверстие: диаметр и глубина сверления не напечатаны"
+    },
+    "fastener": "шуруп Ø4 × 15 или евровинт Ø6 × 14,5 Blum 661.1450.HG (каталог с. 346)"
+   },
+   "lengths": [
+    {
+     "nominalMm": 270,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "AM27",
+       "price": {
+        "rub": 5459.28,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 247, AM27",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 5459,28 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 30,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "308",
+       "note": "направляющая 578.xx01M — 30 кг; другой направляющей этой длины нет"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 273,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "309",
+       "note": "«Internal cabinet depth LT min. = nominal length NL + 3 mm»"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       133
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "346",
+       "note": "направляющая 578, NL 270: евровинты (B) на 37 и 133 от переднего края боковины; шурупы только A и шуруп ** не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 350,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "AM35",
+       "price": {
+        "rub": 5459.28,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 248, AM35",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 5459,28 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 30,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "308",
+       "note": "направляющая 578.xx01M — 30 кг; другой направляющей этой длины нет"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 353,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "309",
+       "note": "«Internal cabinet depth LT min. = nominal length NL + 3 mm»"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       165
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "346",
+       "note": "направляющая 578, NL 350: евровинты (B) на 37 и 165 от переднего края боковины; шурупы только A и шуруп ** не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 400,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "AM40",
+       "price": {
+        "rub": 5227.44,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 249, AM40",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 5227,44 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 30,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "308",
+       "note": "направляющая 578.xx01M — 30 кг; другой направляющей этой длины нет"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 403,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "309",
+       "note": "«Internal cabinet depth LT min. = nominal length NL + 3 mm»"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       229
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "346",
+       "note": "направляющая 578, NL 400: евровинты (B) на 37 и 229 от переднего края боковины; шурупы только A и шуруп ** не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 450,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "AM45",
+       "price": {
+        "rub": 5264.7,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 250, AM45",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 5264,7 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 30,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "308",
+       "note": "прайс нагрузку комплекта не пишет; 30 кг — направляющая 578.xx01M «Стандартного ящика», 65 кг (576.xx01M) — отдельный заказ (FINDINGS 1878)"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 453,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "309",
+       "note": "«Internal cabinet depth LT min. = nominal length NL + 3 mm»"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "346",
+       "note": "направляющая 578, NL 450: евровинты (B) на 37 и 261 от переднего края боковины; шурупы только A и шуруп ** не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 500,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "AM50",
+       "price": {
+        "rub": 5308.86,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 251, AM50",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 5308,86 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 30,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "308",
+       "note": "прайс нагрузку комплекта не пишет; 30 кг — направляющая 578.xx01M «Стандартного ящика», 65 кг (576.xx01M) — отдельный заказ (FINDINGS 1878)"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 503,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "309",
+       "note": "«Internal cabinet depth LT min. = nominal length NL + 3 mm»"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       37,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "346",
+       "note": "направляющая 578, NL 500: евровинты (B) на 37 и 261 от переднего края боковины; шурупы только A и шуруп ** не сверлятся"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "BLUM_LEGRABOX_PURE_M",
+   "brand": "Blum",
+   "article": "LPM",
+   "ref": {
+    "doc": "BLUM-KA150-BOXES",
+    "sha256": "97560b06",
+    "page": "196"
+   },
+   "series": "LEGRABOX pure",
+   "name": "Комплект «Стандартный ящик» LEGRABOX pure, высота M, BLUMOTION S",
+   "extension": "FULL",
+   "softClose": {
+    "value": true,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "196",
+     "note": "«Includes integrated, switchable BLUMOTION S damping effect»"
+    }
+   },
+   "pushToOpen": {
+    "value": false,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "196",
+     "note": "исполнение BLUMOTION S; TIP-ON BLUMOTION — отдельный заказ (с. 244)"
+    }
+   },
+   "pushFrontGapMm": null,
+   "sideThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "толщина боковины на с. 196–197 не напечатана"
+   },
+   "sideHeightMm": {
+    "value": 90.5,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "196",
+     "note": "«Drawer side height (mm) 90.5» — боковины 770M"
+    }
+   },
+   "boxHeightMm": {
+    "value": 106,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "196",
+     "note": "«106*» — высота ящика над низом направляющей, «Incl. 2 mm tilt adjustment»"
+    }
+   },
+   "minOpeningHeightMm": {
+    "value": 106,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "BLUM-KA150-BOXES",
+     "sha256": "97560b06",
+     "page": "197",
+     "note": "шуруп направляющей на min 38 над низом проёма, над ним min 68 (с регулировкой наклона 2 мм): 38 + 68"
+    }
+   },
+   "bottom": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Cutting – 16 mm chipboard»"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 35,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Base … LW – 35 mm»"
+     }
+    },
+    "lengthDeductionMm": {
+     "value": 10,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Base, Chipboard back NL – 10 mm» (с металлической задней стенкой NL − 21)"
+     }
+    },
+    "undersideMm": {
+     "value": 23.4,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Installation dimensions – front»: низ дна на 23,4 над низом направляющей"
+     }
+    }
+   },
+   "back": {
+    "thicknessMm": {
+     "value": 16,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Cutting – 16 mm chipboard»"
+     }
+    },
+    "widthDeductionMm": {
+     "value": 38,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Chipboard back 63 mm, LW – 38 mm»"
+     }
+    },
+    "heightMm": {
+     "value": 63,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Chipboard back 63 mm»"
+     }
+    },
+    "lowerEdgeMm": {
+     "value": 39.4,
+     "status": "DERIVED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Installation dimensions – back»: задняя стенка стоит на дне — 23,4 + 16"
+     }
+    },
+    "rearDeductionMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "положение задней стенки по глубине на с. 197 не напечатано: дно NL − 10, задняя стенка стоит на нём (FINDINGS 1879)"
+    },
+    "holes": {
+     "fromEndMm": {
+      "value": 9,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "197",
+       "note": "«Installation dimensions – back»: 9 от торца задней стенки"
+      }
+     },
+     "heightsMm": {
+      "value": [
+       58.4,
+       90.4
+      ],
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "197",
+       "note": "19 и ещё 32 над верхом дна (23,4 + 16 = 39,4): 58,4 и 90,4 над низом направляющей"
+      }
+     },
+     "diameterMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "каталог задаёт шуруп, а не отверстие: диаметр и глубина сверления не напечатаны"
+     },
+     "depthMm": {
+      "value": null,
+      "status": "UNKNOWN",
+      "ref": null,
+      "reason": "каталог задаёт шуруп, а не отверстие: диаметр и глубина сверления не напечатаны"
+     }
+    }
+   },
+   "frontHoles": {
+    "fromEndMm": {
+     "value": 14,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Installation dimensions – front – screw-on»: 14 от боковины проёма"
+     }
+    },
+    "heightsMm": {
+     "value": [
+      51,
+      83
+     ],
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«Drilling distances – front – EXPANDO»: min 51* и ещё 32; * +1 мм, если направляющую ставят до сборки корпуса"
+     }
+    },
+    "diameterMm": {
+     "value": 10,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "EXPANDO: «Ø 10»"
+     }
+    },
+    "depthMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "глубина отверстия под крепление фасада не напечатана: число 12 у разреза фасада — его наименьшая толщина (min 6 для EXPANDO T)"
+    }
+   },
+   "carcassFixing": {
+    "heightMm": {
+     "value": 38,
+     "status": "CONFIRMED",
+     "ref": {
+      "doc": "BLUM-KA150-BOXES",
+      "sha256": "97560b06",
+      "page": "197",
+      "note": "«min 38*» — ось шурупа направляющей над низом проёма; * +1 мм, если направляющую ставят до сборки корпуса"
+     }
+    },
+    "diameterMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "каталог задаёт шуруп, а не отверстие: диаметр и глубина сверления не напечатаны"
+    },
+    "depthMm": {
+     "value": null,
+     "status": "UNKNOWN",
+     "ref": null,
+     "reason": "каталог задаёт шуруп, а не отверстие: диаметр и глубина сверления не напечатаны"
+    },
+    "fastener": "шуруп Ø4 × 15 или евровинт Ø6 × 14,5 Blum 661.1450.HG (каталог с. 242)"
+   },
+   "lengths": [
+    {
+     "nominalMm": 270,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "LPM27",
+       "price": {
+        "rub": 6966.24,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 504, LPM27",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 6966,24 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "направляющая 750.xx01S — 40 кг; другой направляющей этой длины нет"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 273,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "«NL + 3» — глубина корпуса под ящик"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       18,
+       37,
+       69,
+       197
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "242",
+       "note": "направляющая 750, NL 270: евровинты (B) на 18, 37, 69, 197 от переднего края боковины (на 18 — «*», можно заменить шурупом); шурупы только A не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 350,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "LPM35",
+       "price": {
+        "rub": 6966.24,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 505, LPM35",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 6966,24 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "направляющая 750.xx01S — 40 кг; другой направляющей этой длины нет"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 353,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "«NL + 3» — глубина корпуса под ящик"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       18,
+       37,
+       69,
+       261
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "242",
+       "note": "направляющая 750, NL 350: евровинты (B) на 18, 37, 69, 261 от переднего края боковины (на 18 — «*», можно заменить шурупом); шурупы только A не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 400,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "LPM40",
+       "price": {
+        "rub": 7057.32,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 506, LPM40",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 7057,32 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "направляющая 750.xx01S — 40 кг; другой направляющей этой длины нет"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 403,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "«NL + 3» — глубина корпуса под ящик"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       18,
+       37,
+       69,
+       261,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "242",
+       "note": "направляющая 750, NL 400: евровинты (B) на 18, 37, 69, 261, 293 от переднего края боковины (на 18 — «*», можно заменить шурупом); шурупы только A не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 450,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "LPM45",
+       "price": {
+        "rub": 7151.16,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 507, LPM45",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 7151,16 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "прайс пишет «70 кг» только у LPM60 и LPM65; у остальных комплектов — направляющая 750.xx01S, 40 кг (FINDINGS 1878)"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 453,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "«NL + 3» — глубина корпуса под ящик"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       18,
+       37,
+       69,
+       261,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "242",
+       "note": "направляющая 750, NL 450: евровинты (B) на 18, 37, 69, 261, 293 от переднего края боковины (на 18 — «*», можно заменить шурупом); шурупы только A не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 500,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "LPM50",
+       "price": {
+        "rub": 7245,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 508, LPM50",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 7245 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "прайс пишет «70 кг» только у LPM60 и LPM65; у остальных комплектов — направляющая 750.xx01S, 40 кг (FINDINGS 1878)"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 503,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "«NL + 3» — глубина корпуса под ящик"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       18,
+       37,
+       69,
+       261,
+       293
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "242",
+       "note": "направляющая 750, NL 500: евровинты (B) на 18, 37, 69, 261, 293 от переднего края боковины (на 18 — «*», можно заменить шурупом); шурупы только A не сверлятся"
+      }
+     }
+    },
+    {
+     "nominalMm": 550,
+     "articles": [
+      {
+       "colour": "SW",
+       "article": "LPM55",
+       "price": {
+        "rub": 8238.6,
+        "per": "kit",
+        "date": "2026-10-23",
+        "source": {
+         "doc": "BLUM-PRICE-2026-08",
+         "page": "строка 509, LPM55",
+         "sha256": "b102c7be"
+        },
+        "status": "CONFIRMED",
+        "basis": "прайс Blum для производителей мебели 08.2026, колонка «Стандарт»: 8238,6 ₽ за комплект «Стандартный ящик» на один ящик (белый шелк)"
+       }
+      }
+     ],
+     "loadKg": {
+      "value": 40,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "прайс пишет «70 кг» только у LPM60 и LPM65; у остальных комплектов — направляющая 750.xx01S, 40 кг (FINDINGS 1878)"
+      }
+     },
+     "minInsideDepthMm": {
+      "value": 553,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "196",
+       "note": "«NL + 3» — глубина корпуса под ящик"
+      }
+     },
+     "carcassHolesFromFrontMm": {
+      "value": [
+       18,
+       37,
+       69,
+       261,
+       293,
+       357
+      ],
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "BLUM-KA150-BOXES",
+       "sha256": "97560b06",
+       "page": "242",
+       "note": "направляющая 750, NL 550: евровинты (B) на 18, 37, 69, 261, 293, 357 от переднего края боковины (на 18 — «*», можно заменить шурупом); шурупы только A не сверлятся"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "documents": [
+  {
+   "id": "BOYARD-2024",
+   "path": "КАТАЛОГИ\\НОВЫЕ БД 2\\BOYARD\\Каталог функциональной фурнитуры BOYARD 2024 .pdf",
+   "sha256": "6c00dc31abacdede5d572af5a81a3206220b9a8a64fab8f35ee5ef741fdba719",
+   "title": "Каталог функциональной фурнитуры BOYARD 2024, «Направляющие SB», СТАРТ, с. 102–169"
+  },
+  {
+   "id": "BOYARD-BAZIS-START",
+   "path": "КАТАЛОГИ\\НОВЫЕ БД\\BOYARD\\БАЗИС BOYARD - СИСТЕМЫ ВЫДВИЖЕНИЯ СТАРТ (13-05-2026).zip",
+   "sha256": "767e64a789dbc625a42bab7c54208ebee65c9af10f0f9e2344c34a9c92ed3a1d",
+   "title": "Библиотека БАЗИС BOYARD «Системы выдвижения СТАРТ» (13-05-2026)"
+  },
+  {
+   "id": "BLUM-KA150-BOXES",
+   "path": "modulero-next\\reference\\sources\\blum-ka150-boxes-2026-10-27\\SHA256SUMS",
+   "sha256": "97560b0617a1f8970b06bc99a6fd50c035ec1f0e65e044b1915defa3598247e2",
+   "title": "Blum, каталог KA-150 «Catalogue 2022/2023»: TANDEMBOX antaro и LEGRABOX, ящик M, с. 196, 197, 242, 308, 309, 346 (страницы скачаны 2026-10-27, суммы файлов)"
+  },
+  {
+   "id": "BLUM-PRICE-2026-08",
+   "path": "E:\\CLAUDE\\CATALOG\\_прайсы\\2026-10-23\\Blum Прайс-лист для производителей мебели_08_2026.xlsx",
+   "sha256": "b102c7be1448c52b3fa427baa6ef15b4053d17339dd6b49a4718b72ff4b60fc5",
+   "title": "Blum, прайс-лист для производителей мебели 08.2026 (каталог владельца, прайсы 2026-10-23)"
+  },
+  {
+   "id": "OWNER-PRICES",
+   "path": "E:\\CLAUDE\\CATALOG\\PRICES.csv",
+   "sha256": "1f31bdc7532d46c1dab7a850f88bd9737f29d5b2d37e34e96320050b856cc3de",
+   "title": "Сводный прайс каталога владельца (2026-10-23)"
+  }
+ ]
+}

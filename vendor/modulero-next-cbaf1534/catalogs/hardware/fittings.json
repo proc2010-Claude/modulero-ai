@@ -1,0 +1,4324 @@
+{
+ "version": "fittings-2026-10-25.4",
+ "rods": [
+  {
+   "id": "VITRA_J08",
+   "brand": "VITRA",
+   "series": "J08",
+   "name": "Штанга-вешало овальная VITRA J08",
+   "profile": "OVAL",
+   "sectionMm": {
+    "widthMm": 15,
+    "heightMm": 30
+   },
+   "finish": "METAL",
+   "stock": [
+    {
+     "article": "J08.900",
+     "lengthMm": 900,
+     "price": {
+      "rub": 240,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул J08.900",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "VITRA: 240 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+     }
+    },
+    {
+     "article": "J08.2000",
+     "lengthMm": 2000,
+     "price": {
+      "rub": 480,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул J08.2000",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "VITRA: 480 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+     }
+    },
+    {
+     "article": "J08.3000",
+     "lengthMm": 3000,
+     "price": {
+      "rub": 720,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул J08.3000",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "VITRA: 720 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+     }
+    },
+    {
+     "article": "J08.4000",
+     "lengthMm": 4000,
+     "price": {
+      "rub": 960,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул J08.4000",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "VITRA: 960 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+     }
+    },
+    {
+     "article": "J08.6000",
+     "lengthMm": 6000,
+     "price": {
+      "rub": 1440,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул J08.6000",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "VITRA: 1440 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+     }
+    }
+   ],
+   "holder": {
+    "brand": "VITRA",
+    "article": "J09",
+    "name": "Штангодержатель для овальной штанги VITRA J09",
+    "perRod": 2,
+    "sizeMm": {
+     "alongMm": 10,
+     "acrossMm": 24,
+     "heightMm": 40
+    },
+    "endGapMm": 3,
+    "finish": "METAL",
+    "price": {
+     "rub": 50,
+     "per": "pcs",
+     "date": "2026-10-23",
+     "source": {
+      "doc": "OWNER-PRICES-2026-10-23",
+      "page": "артикул J09",
+      "sha256": "1f31bdc7"
+     },
+     "status": "CONFIRMED",
+     "basis": "VITRA: 50 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+    }
+   }
+  },
+  {
+   "id": "MDM_JOK25",
+   "brand": "MDM",
+   "series": "JOK25",
+   "name": "Труба круглая D25 мм MDM JOK25BCR-09, хром",
+   "profile": "ROUND",
+   "sectionMm": {
+    "widthMm": 25,
+    "heightMm": 25
+   },
+   "finish": "METAL",
+   "stock": [
+    {
+     "article": "JOK25BCR-09",
+     "lengthMm": 3000,
+     "price": {
+      "rub": 600,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул JOK25BCR-09",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 600 ₽; mdm-complect.ru: 600 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+     }
+    }
+   ],
+   "holder": {
+    "brand": "MDM",
+    "article": "RT04PL-WH",
+    "name": "Штангодержатель пластиковый для круглой трубы D25 мм MDM RT04PL-WH, белый",
+    "perRod": 2,
+    "sizeMm": {
+     "alongMm": 12,
+     "acrossMm": 32,
+     "heightMm": 40
+    },
+    "endGapMm": 3,
+    "finish": "WHITE",
+    "price": {
+     "rub": 20,
+     "per": "pcs",
+     "date": "2026-10-23",
+     "source": {
+      "doc": "OWNER-PRICES-2026-10-23",
+      "page": "артикул RT04PL-WH",
+      "sha256": "1f31bdc7"
+     },
+     "status": "CONFIRMED",
+     "basis": "среднее ориентиров поставщиков (furnimax.ru: 20 ₽; mdm-complect.ru: 20 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+    }
+   }
+  }
+ ],
+ "legs": [
+  {
+   "id": "MAKMART_MLS_SA_01_17",
+   "brand": "MAKMART",
+   "article": "MLS.SA.01.17.BL",
+   "name": "Ножка опорная H.17 регулируемая MAKMART, чёрная",
+   "use": "VISIBLE",
+   "heightMm": {
+    "minMm": 17,
+    "maxMm": 17
+   },
+   "footprint": {
+    "shape": "ROUND",
+    "sizeMm": 30
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 30,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул MLS.SA.01.17.BL",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 30 ₽; Прайс-лист по генеральному каталогу +новинки: 20 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  },
+  {
+   "id": "MAKMART_MLS_SA_01_27",
+   "brand": "MAKMART",
+   "article": "MLS.SA.01.27.BL",
+   "name": "Ножка опорная H.27 регулируемая MAKMART, чёрная",
+   "use": "VISIBLE",
+   "heightMm": {
+    "minMm": 27,
+    "maxMm": 27
+   },
+   "footprint": {
+    "shape": "ROUND",
+    "sizeMm": 30
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 30,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул MLS.SA.01.27.BL",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 30 ₽; Прайс-лист по генеральному каталогу +новинки: 20 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  },
+  {
+   "id": "MAKMART_MLS_SA_01_44",
+   "brand": "MAKMART",
+   "article": "MLS.SA.01.44.BL",
+   "name": "Ножка опорная H.44 регулируемая MAKMART, чёрная",
+   "use": "VISIBLE",
+   "heightMm": {
+    "minMm": 44,
+    "maxMm": 44
+   },
+   "footprint": {
+    "shape": "ROUND",
+    "sizeMm": 30
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 40,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул MLS.SA.01.44.BL",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 40 ₽; Прайс-лист по генеральному каталогу +новинки: 30 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  },
+  {
+   "id": "NS_13_50_9005",
+   "brand": "производитель не указан",
+   "article": "NS.13.50.9005",
+   "name": "Ножка декоративная Кальяри h.50, чёрный бархат",
+   "use": "VISIBLE",
+   "heightMm": {
+    "minMm": 50,
+    "maxMm": 50
+   },
+   "footprint": {
+    "shape": "SQUARE",
+    "sizeMm": 40
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 900,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул NS.13.50.9005",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 1100 ₽; Прайс-лист по генеральному каталогу +новинки: 700 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  },
+  {
+   "id": "NA27_651_10",
+   "brand": "производитель не указан",
+   "article": "NA27/651/10",
+   "name": "Ножка декоративная d.40 мм, h.100 мм, алюминий анодированный",
+   "use": "VISIBLE",
+   "heightMm": {
+    "minMm": 100,
+    "maxMm": 100
+   },
+   "footprint": {
+    "shape": "ROUND",
+    "sizeMm": 40
+   },
+   "finish": "METAL",
+   "price": {
+    "rub": 190,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул NA27/651/10",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 230 ₽; Прайс-лист по генеральному каталогу +новинки: 140 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  },
+  {
+   "id": "NS_10_100_9005",
+   "brand": "производитель не указан",
+   "article": "NS.10.100.9005",
+   "name": "Ножка декоративная Модена h.100, чёрный бархат",
+   "use": "VISIBLE",
+   "heightMm": {
+    "minMm": 100,
+    "maxMm": 100
+   },
+   "footprint": {
+    "shape": "SQUARE",
+    "sizeMm": 40
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 780,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул NS.10.100.9005",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 960 ₽; Прайс-лист по генеральному каталогу +новинки: 600 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  },
+  {
+   "id": "A080_CH",
+   "brand": "производитель не указан",
+   "article": "10\\04.A080",
+   "name": "Ножка под цоколь H.80 разборная, чёрная",
+   "use": "HIDDEN",
+   "heightMm": {
+    "minMm": 80,
+    "maxMm": 80
+   },
+   "footprint": {
+    "shape": "ROUND",
+    "sizeMm": 50
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 50,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул 10\\04.A080",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 60 ₽; Прайс-лист по генеральному каталогу +новинки: 40 ₽ (0,35 EUR)), вверх до 10 ₽ (MOD-DEC-264, 346, 483)"
+   }
+  },
+  {
+   "id": "PNC_100_CH",
+   "brand": "производитель не указан",
+   "article": "ПНЦ.100.Ч",
+   "name": "Ножка под цоколь H.100 (95–130), чёрная",
+   "use": "HIDDEN",
+   "heightMm": {
+    "minMm": 95,
+    "maxMm": 130
+   },
+   "footprint": {
+    "shape": "ROUND",
+    "sizeMm": 50
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 30,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул ПНЦ.100.Ч",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 30 ₽; Прайс-лист по генеральному каталогу +новинки: 20 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  },
+  {
+   "id": "MDM_02_A120",
+   "brand": "MDM",
+   "article": "02.A120.NR",
+   "name": "Ножка пластиковая неразборная 02.А, высота 120 мм",
+   "use": "HIDDEN",
+   "heightMm": {
+    "minMm": 120,
+    "maxMm": 120
+   },
+   "footprint": {
+    "shape": "ROUND",
+    "sizeMm": 50
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 70,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул 02.A120.NR",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 70 ₽; mdm-complect.ru: 70 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  },
+  {
+   "id": "MDM_02_A150",
+   "brand": "MDM",
+   "article": "02.A150.NR",
+   "name": "Ножка пластиковая неразборная 02.А, высота 150 мм",
+   "use": "HIDDEN",
+   "heightMm": {
+    "minMm": 150,
+    "maxMm": 150
+   },
+   "footprint": {
+    "shape": "ROUND",
+    "sizeMm": 50
+   },
+   "finish": "BLACK",
+   "price": {
+    "rub": 80,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул 02.A150.NR",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 70 ₽; mdm-complect.ru: 80 ₽), вверх до 10 ₽ (MOD-DEC-264, 346)"
+   }
+  }
+ ],
+ "handles": [
+  {
+   "id": "BOYARD_RS425BAP_128",
+   "brand": "BOYARD",
+   "article": "RS425BAP.5/128",
+   "name": "Ручка-скоба BOYARD RS425BAP.5/128",
+   "kind": "BAR",
+   "centresMm": 128,
+   "sizeMm": {
+    "lengthMm": 136,
+    "heightMm": 30,
+    "thicknessMm": 10
+   },
+   "finish": "METAL",
+   "massKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "масса в прайсе не указана"
+   },
+   "price": {
+    "rub": 90,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул RS425BAP.5/128",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "furnimax.ru: 90 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+   }
+  },
+  {
+   "id": "BOYARD_RS425BAB_96",
+   "brand": "BOYARD",
+   "article": "RS425BAB.5/96",
+   "name": "Ручка-скоба BOYARD RS425BAB.5/96",
+   "kind": "BAR",
+   "centresMm": 96,
+   "sizeMm": {
+    "lengthMm": 104,
+    "heightMm": 30,
+    "thicknessMm": 10
+   },
+   "finish": "BLACK",
+   "massKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "масса в прайсе не указана"
+   },
+   "price": {
+    "rub": 50,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул RS425BAB.5/96",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "furnimax.ru: 50 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+   }
+  },
+  {
+   "id": "BOYARD_RS308MBSG_160",
+   "brand": "BOYARD",
+   "article": "RS308MBSG.4/160",
+   "name": "Ручка BOYARD TILDA RS308MBSG.4/160",
+   "kind": "BAR",
+   "centresMm": 160,
+   "sizeMm": {
+    "lengthMm": 172,
+    "heightMm": 32,
+    "thicknessMm": 12
+   },
+   "finish": "METAL",
+   "massKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "масса в прайсе не указана"
+   },
+   "price": {
+    "rub": 870,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул RS308MBSG.4/160",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "furnimax.ru: 870 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+   }
+  },
+  {
+   "id": "BOYARD_RC282BL_4",
+   "brand": "BOYARD",
+   "article": "RC282BL.4",
+   "name": "Ручка-кнопка BOYARD POP LINE RC282BL.4",
+   "kind": "KNOB",
+   "centresMm": null,
+   "sizeMm": {
+    "lengthMm": 30,
+    "heightMm": 28,
+    "thicknessMm": 30
+   },
+   "finish": "BLACK",
+   "massKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "масса в прайсе не указана"
+   },
+   "price": {
+    "rub": 170,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул RC282BL.4",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "furnimax.ru: 170 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346)"
+   }
+  }
+ ],
+ "documents": [
+  {
+   "id": "OWNER-PRICES-2026-10-23",
+   "path": "E:\\CLAUDE\\CATALOG\\PRICES.csv",
+   "sha256": "1f31bdc7532d46c1dab7a850f88bd9737f29d5b2d37e34e96320050b856cc3de",
+   "title": "Сводный прайс каталога владельца (2026-10-23): VITRA, furnimax.ru, МДМ, прайс по генеральному каталогу, Kessebohmer"
+  },
+  {
+   "id": "BOYARD 2024",
+   "path": "КАТАЛОГИ\\НОВЫЕ БД 2\\BOYARD\\Каталог функциональной фурнитуры BOYARD 2024 .pdf",
+   "sha256": "6c00dc31abacdede5d572af5a81a3206220b9a8a64fab8f35ee5ef741fdba719",
+   "title": "Каталог функциональной фурнитуры BOYARD 2024; страницы — номера PDF (совпадают с печатными)"
+  },
+  {
+   "id": "БАЗИС Толкатель Push-to-Open скрытого монтажа AMF14_GR",
+   "path": "boyard.biz/storage/3D/БАЗИС BOYARD - АМОРТИЗАТОРЫ И ТОЛКАТЕЛИ (13-05-2026).zip → Толкатель Push-to-Open скрытого монтажа AMF14_GR.fr3d",
+   "sha256": "c8a81f9e5d0b7eb3dddd0a0d38cc4f9c9b89dffd89318a18b32d751c69bd70b0",
+   "title": "Комплект БАЗИС «Толкатель Push-to-Open скрытого монтажа AMF14/GR» из архива BOYARD (sha256 архива d3e2be10), скачан с www.boyard.biz 2026-10-25 по решению владельца; страница — «комплект»"
+  },
+  {
+   "id": "БАЗИС Толкатель Push-to-Open скрытого монтажа AMF14_W",
+   "path": "boyard.biz/storage/3D/БАЗИС BOYARD - АМОРТИЗАТОРЫ И ТОЛКАТЕЛИ (13-05-2026).zip → Толкатель Push-to-Open скрытого монтажа AMF14_W.fr3d",
+   "sha256": "31e2d96e0ad65ac48b3befba13b67363348a7ecd3560a450de733cd9008e12e7",
+   "title": "Комплект БАЗИС «Толкатель Push-to-Open скрытого монтажа AMF14/W» из архива BOYARD (sha256 архива d3e2be10), скачан с www.boyard.biz 2026-10-25 по решению владельца; страница — «комплект»"
+  },
+  {
+   "id": "TBM-BELLE-ZIP",
+   "path": "Файлы проекта Modulero (Claude): catalog-downloads/2026-10-25/TBM/BELLE.zip (в каталоге владельца — ТБМ\\Прочее\\_библиотеки\\BELLE.zip)",
+   "sha256": "6e2f7e36f31ba2cb8f215de632fc2a7eb340fd5ee979796a1e7673bb6e9c6e30",
+   "title": "Библиотека БАЗИС «BELLE» каталога ТБМ: корзины для белья и обуви, вешала для брюк; страница — комплект в архиве (рамка «Ш х В х Г», направляющие, разметка Ø3×1)"
+  },
+  {
+   "id": "TBM-PANTOGRAF-ZIP",
+   "path": "Файлы проекта Modulero (Claude): catalog-downloads/2026-10-25/TBM/pantograf.zip (в каталоге владельца — ТБМ\\Прочее\\_библиотеки\\pantograf.zip)",
+   "sha256": "6b9da01fc2cd21426cf25a17cb9fed1a50d09ceab212808d7ef167dca892c493",
+   "title": "Библиотека БАЗИС «Пантографы» каталога ТБМ (BASE, AIR, Vibo, ambos); страница — комплект в архиве (рамка «W», механизм, разметка Ø3×1)"
+  },
+  {
+   "id": "ARISTO 2026-10-09",
+   "path": "КАТАЛОГИ\\ARISTO\\Katalog_ARISTO_Rus_09.10.2026_web.pdf",
+   "sha256": "5d7222b7ed84535cf4014f6b6b6fb80347f0af41dcee487200aba71a453fb54e",
+   "title": "Основной каталог ARISTO 09.10.2026; страница — печатный номер и номер страницы файла"
+  }
+ ],
+ "plinthClips": [
+  {
+   "id": "PKC_002_CH",
+   "brand": "производитель не указан",
+   "article": "ПКЦ.002.Ч",
+   "name": "Клипса для ножки под цоколь ЛДСП, чёрная",
+   "perLeg": 1,
+   "price": {
+    "rub": 10,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул ПКЦ.002.Ч",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 10 ₽; Прайс-лист по генеральному каталогу +новинки: 10 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 483)"
+   }
+  }
+ ],
+ "pushLatches": [
+  {
+   "id": "BOYARD_AMF14_GR",
+   "brand": "BOYARD",
+   "article": "AMF14/GR",
+   "name": "Толкатель Push-to-Open скрытого монтажа BOYARD AMF14/GR, серый",
+   "hole": {
+    "value": {
+     "diameterMm": 10,
+     "depthMm": 70,
+     "frontGapMm": 2
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "БАЗИС Толкатель Push-to-Open скрытого монтажа AMF14_GR",
+     "sha256": "c8a81f9e",
+     "page": "комплект",
+     "note": "отверстие 10x70 комплекта прочитано packages/bazis (readHoles); каталог BOYARD 2024, с. 103: отверстие Ø10 глубиной 70 мм в торце плиты, зазор до фасада 2 (+0,5) мм — FINDINGS 1063"
+    }
+   },
+   "price": {
+    "rub": 130,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул AMF14/GR",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "furnimax.ru: 130 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346, 483)"
+   }
+  },
+  {
+   "id": "BOYARD_AMF14_W",
+   "brand": "BOYARD",
+   "article": "AMF14/W",
+   "name": "Толкатель Push-to-Open скрытого монтажа BOYARD AMF14/W, белый",
+   "hole": {
+    "value": {
+     "diameterMm": 10,
+     "depthMm": 70,
+     "frontGapMm": 2
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "БАЗИС Толкатель Push-to-Open скрытого монтажа AMF14_W",
+     "sha256": "31e2d96e",
+     "page": "комплект",
+     "note": "отверстие 10x70 комплекта прочитано packages/bazis (readHoles); каталог BOYARD 2024, с. 103: отверстие Ø10 глубиной 70 мм в торце плиты, зазор до фасада 2 (+0,5) мм — FINDINGS 1063"
+    }
+   },
+   "price": {
+    "rub": 130,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул AMF14/W",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "furnimax.ru: 130 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346, 483)"
+   }
+  }
+ ],
+ "lights": [
+  {
+   "id": "FUORI_IR_450",
+   "brand": "производитель не указан",
+   "article": "HW.005.079",
+   "name": "Профиль-светильник LED Фуори/Fuori-IR 450 мм, 4,9 Вт, 12 В, 3000 K, бесконтактное включение",
+   "lengthMm": 450,
+   "powerW": 4.9,
+   "voltageV": 12,
+   "colourTemperatureK": 3000,
+   "sectionMm": {
+    "widthMm": 20,
+    "heightMm": 10
+   },
+   "finish": "METAL",
+   "price": {
+    "rub": 1410,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул HW.005.079",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 1680 ₽; Прайс-лист по генеральному каталогу +новинки: 1140 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 483)"
+   }
+  },
+  {
+   "id": "FUORI_IR_600",
+   "brand": "производитель не указан",
+   "article": "HW.005.080",
+   "name": "Профиль-светильник LED Фуори/Fuori-IR 600 мм, 6,8 Вт, 12 В, 3000 K, бесконтактное включение",
+   "lengthMm": 600,
+   "powerW": 6.8,
+   "voltageV": 12,
+   "colourTemperatureK": 3000,
+   "sectionMm": {
+    "widthMm": 20,
+    "heightMm": 10
+   },
+   "finish": "METAL",
+   "price": {
+    "rub": 1570,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул HW.005.080",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 1870 ₽; Прайс-лист по генеральному каталогу +новинки: 1260 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 483)"
+   }
+  },
+  {
+   "id": "FUORI_IR_900",
+   "brand": "производитель не указан",
+   "article": "HW.005.081",
+   "name": "Профиль-светильник LED Фуори/Fuori-IR 900 мм, 10,4 Вт, 12 В, 3000 K, бесконтактное включение",
+   "lengthMm": 900,
+   "powerW": 10.4,
+   "voltageV": 12,
+   "colourTemperatureK": 3000,
+   "sectionMm": {
+    "widthMm": 20,
+    "heightMm": 10
+   },
+   "finish": "METAL",
+   "price": {
+    "rub": 2560,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул HW.005.081",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 3060 ₽; Прайс-лист по генеральному каталогу +новинки: 2060 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 483)"
+   }
+  },
+  {
+   "id": "FUORI_IR_1200",
+   "brand": "производитель не указан",
+   "article": "HW.005.082",
+   "name": "Профиль-светильник LED Фуори/Fuori-IR 1200 мм, 13,6 Вт, 12 В, 3000 K, бесконтактное включение",
+   "lengthMm": 1200,
+   "powerW": 13.6,
+   "voltageV": 12,
+   "colourTemperatureK": 3000,
+   "sectionMm": {
+    "widthMm": 20,
+    "heightMm": 10
+   },
+   "finish": "METAL",
+   "price": {
+    "rub": 3140,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул HW.005.082",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 3740 ₽; Прайс-лист по генеральному каталогу +новинки: 2530 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 483)"
+   }
+  }
+ ],
+ "powerSupplies": [
+  {
+   "id": "MM_36S_12",
+   "brand": "производитель не указан",
+   "article": "MM.36S-12",
+   "name": "Источник питания 36 Вт, 12 В, IP20",
+   "powerW": 36,
+   "voltageV": 12,
+   "sizeMm": {
+    "lengthMm": 102,
+    "widthMm": 30,
+    "heightMm": 22
+   },
+   "price": {
+    "rub": 490,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул MM.36S-12",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 600 ₽; Прайс-лист по генеральному каталогу +новинки: 380 ₽ (29,52 CNY)), вверх до 10 ₽ (MOD-DEC-264, 346, 483)"
+   }
+  },
+  {
+   "id": "MM_60U_12",
+   "brand": "производитель не указан",
+   "article": "MM.60U-12",
+   "name": "Источник питания 60 Вт, 12 В, IP20",
+   "powerW": 60,
+   "voltageV": 12,
+   "sizeMm": {
+    "lengthMm": 170,
+    "widthMm": 53,
+    "heightMm": 21
+   },
+   "price": {
+    "rub": 710,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES-2026-10-23",
+     "page": "артикул MM.60U-12",
+     "sha256": "1f31bdc7"
+    },
+    "status": "CONFIRMED",
+    "basis": "среднее ориентиров поставщиков (furnimax.ru: 860 ₽; Прайс-лист по генеральному каталогу +новинки: 550 ₽ (42,33 CNY)), вверх до 10 ₽ (MOD-DEC-264, 346, 483)"
+   }
+  }
+ ],
+ "storage": [
+  {
+   "id": "BELLE_BA_500",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 464,
+    "maxMm": 510
+   },
+   "heightMm": 244,
+   "depthMm": 480,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE50BAWH",
+     "name": "BELLE Корзина для белья, 500 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 7080,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50BAWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7040 ₽; mdm-complect.ru: 7110 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE50BAGR",
+     "name": "BELLE Корзина для белья, 500 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 7080,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50BAGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7040 ₽; mdm-complect.ru: 7110 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE50BABL",
+     "name": "BELLE Корзина для белья, 500 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 7080,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50BABL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7040 ₽; mdm-complect.ru: 7110 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья/BELLE Корзина для белья, 500 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE50BAWH.glb",
+    "sha256": "0e4400b3244c9da513d64297657e725d3f86528a92e0c435786127bbbd267af1",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья/BELLE Корзина для белья, 500 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 232,
+     "widthMm": 464
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH_500",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 464,
+    "maxMm": 510
+   },
+   "heightMm": 290,
+   "depthMm": 540,
+   "axisFromBottomMm": 118,
+   "marks": [
+    {
+     "fromFrontMm": 115,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 115,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE50SHWH",
+     "name": "BELLE Корзина для обуви, 500 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6630,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50SHWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6600 ₽; mdm-complect.ru: 6660 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE50SHGR",
+     "name": "BELLE Корзина для обуви, 500 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6630,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50SHGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6600 ₽; mdm-complect.ru: 6660 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE50SHBL",
+     "name": "BELLE Корзина для обуви, 500 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 6630,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50SHBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6600 ₽; mdm-complect.ru: 6660 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви/BELLE Корзина для обуви, 500 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE50SHWH.glb",
+    "sha256": "b6e03aa0d05cd51683d395f910227ecc50fdc74bcfbc18eefdf7860789d3d679",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви/BELLE Корзина для обуви, 500 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 232,
+     "widthMm": 464
+    }
+   }
+  },
+  {
+   "id": "BELLE_TR_500",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "TROUSER_RACK",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 456,
+    "maxMm": 510
+   },
+   "heightMm": 812,
+   "depthMm": 480,
+   "axisFromBottomMm": 720,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE50TRWH",
+     "name": "BELLE Вешало для брюк, 500 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6180,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50TRWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6150 ₽; mdm-complect.ru: 6210 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE50TRGR",
+     "name": "BELLE Вешало для брюк, 500 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6180,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50TRGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6150 ₽; mdm-complect.ru: 6210 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE50TRBL",
+     "name": "BELLE Вешало для брюк, 500 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 6180,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE50TRBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6150 ₽; mdm-complect.ru: 6210 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение брюк/BELLE Вешало брюк, 500 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE50TRWH.glb",
+    "sha256": "f0ce5d664f11b5b75a248e79665d474c149c210be390e08d11b13bc868986367",
+    "units": "mm",
+    "origin": [
+     0,
+     -720,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение брюк/BELLE Вешало брюк, 500 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 228,
+     "widthMm": 456
+    }
+   }
+  },
+  {
+   "id": "BELLE_BA_600",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 564,
+    "maxMm": 610
+   },
+   "heightMm": 244,
+   "depthMm": 480,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE60BAWH",
+     "name": "BELLE Корзина для белья, 600 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 7080,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60BAWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7040 ₽; mdm-complect.ru: 7110 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE60BAGR",
+     "name": "BELLE Корзина для белья, 600 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 7080,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60BAGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7040 ₽; mdm-complect.ru: 7110 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE60BABL",
+     "name": "BELLE Корзина для белья, 600 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 7080,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60BABL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7040 ₽; mdm-complect.ru: 7110 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья/BELLE Корзина для белья, 600 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE60BAWH.glb",
+    "sha256": "4be456dd48d6632b21720aec4e99c276017aa1993df88e2d916742500642fb86",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья/BELLE Корзина для белья, 600 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 282,
+     "widthMm": 564
+    }
+   }
+  },
+  {
+   "id": "BELLE_BA35_600",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 564,
+    "maxMm": 610
+   },
+   "heightMm": 240,
+   "depthMm": 368,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 70,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 70,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE60BA35WH",
+     "name": "BELLE Корзина для белья, 600 мм, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 5160,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60BA35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5130 ₽; mdm-complect.ru: 5180 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE60BA35GR",
+     "name": "BELLE Корзина для белья, 600 мм, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 7570,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60BA35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7530 ₽; mdm-complect.ru: 7610 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья 350/BELLE Корзина для белья, 600 мм, глуб. 350 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE60BA35WH.glb",
+    "sha256": "650700d5ab994953514e615b23372858ac55d0b0980875ebfb4aae8606899669",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья 350/BELLE Корзина для белья, 600 мм, глуб. 350 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 282,
+     "widthMm": 564
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH_600",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 564,
+    "maxMm": 610
+   },
+   "heightMm": 290,
+   "depthMm": 540,
+   "axisFromBottomMm": 118,
+   "marks": [
+    {
+     "fromFrontMm": 115,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 115,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE60SHWH",
+     "name": "BELLE Корзина для обуви, 600 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6630,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60SHWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6600 ₽; mdm-complect.ru: 6660 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE60SHGR",
+     "name": "BELLE Корзина для обуви, 600 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6630,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60SHGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6600 ₽; mdm-complect.ru: 6660 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE60SHBL",
+     "name": "BELLE Корзина для обуви, 600 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 6630,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60SHBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6600 ₽; mdm-complect.ru: 6660 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви/BELLE Корзина для обуви, 600 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE60SHWH.glb",
+    "sha256": "f372096004ce761e5e56c22af11ea29e516de92117e90d24afc7f57ce09775b2",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви/BELLE Корзина для обуви, 600 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 282,
+     "widthMm": 564
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH35_600",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 564,
+    "maxMm": 610
+   },
+   "heightMm": 290,
+   "depthMm": 368,
+   "axisFromBottomMm": 112,
+   "marks": [
+    {
+     "fromFrontMm": 70,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 70,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE60SH35WH",
+     "name": "BELLE Корзина для обуви, 600 мм, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 5240,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60SH35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5210 ₽; mdm-complect.ru: 5260 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE60SH35GR",
+     "name": "BELLE Корзина для обуви, 600 мм, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 5340,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60SH35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5310 ₽; mdm-complect.ru: 5360 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви 350/BELLE Корзина для обуви, 600 мм, глуб. 350 мм, бел., полн. выдв.fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE60SH35WH.glb",
+    "sha256": "cc257d216b8b1b47c575791dd25236629b85117e4a7d8e2a3c5903468b446b03",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви 350/BELLE Корзина для обуви, 600 мм, глуб. 350 мм, бел., полн. выдв.fr3d"
+    },
+    "stretch": {
+     "atMm": 282,
+     "widthMm": 564
+    }
+   }
+  },
+  {
+   "id": "BELLE_TR_600",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "TROUSER_RACK",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 556,
+    "maxMm": 610
+   },
+   "heightMm": 812,
+   "depthMm": 480,
+   "axisFromBottomMm": 720,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE60TRWH",
+     "name": "BELLE Вешало для брюк, 600 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6180,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60TRWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6150 ₽; mdm-complect.ru: 6210 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE60TRGR",
+     "name": "BELLE Вешало для брюк, 600 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6180,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60TRGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6150 ₽; mdm-complect.ru: 6210 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE60TRBL",
+     "name": "BELLE Вешало для брюк, 600 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 6180,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE60TRBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6150 ₽; mdm-complect.ru: 6210 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение брюк/BELLE Вешало брюк, 600 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE60TRWH.glb",
+    "sha256": "098acf3ca963fbde0cb4ba34d308f83c8a392cf5cd1af97901e401fd8fdac272",
+    "units": "mm",
+    "origin": [
+     0,
+     -720,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение брюк/BELLE Вешало брюк, 600 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 278,
+     "widthMm": 556
+    }
+   }
+  },
+  {
+   "id": "BELLE_BA_700",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 664,
+    "maxMm": 710
+   },
+   "heightMm": 244,
+   "depthMm": 480,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE70BAWH",
+     "name": "BELLE Корзина для белья, 700 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 7130,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70BAWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7090 ₽; mdm-complect.ru: 7160 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE70BAGR",
+     "name": "BELLE Корзина для белья, 700 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 7130,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70BAGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7090 ₽; mdm-complect.ru: 7160 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE70BABL",
+     "name": "BELLE Корзина для белья, 700 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 7130,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70BABL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7090 ₽; mdm-complect.ru: 7160 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья/BELLE Корзина для белья, 700 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE70BAWH.glb",
+    "sha256": "70100aa4a161ff593824517e4af28e6b2aec4ab42703c021e306f61677a44d5c",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья/BELLE Корзина для белья, 700 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 332,
+     "widthMm": 664
+    }
+   }
+  },
+  {
+   "id": "BELLE_BA35_700",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 664,
+    "maxMm": 710
+   },
+   "heightMm": 240,
+   "depthMm": 368,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 70,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 70,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE70BA35WH",
+     "name": "BELLE Корзина для белья, 700 мм, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 3390,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70BA35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 3370 ₽; mdm-complect.ru: 3400 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE70BA35GR",
+     "name": "BELLE Корзина для белья, 700 мм, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 3390,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70BA35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 3370 ₽; mdm-complect.ru: 3400 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья 350/BELLE Корзина для белья, 700 мм, глуб. 350 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE70BA35WH.glb",
+    "sha256": "1328fc8cf80c7e7a303e6e82ac484b2ac1ef24744262a6036eb0352b21ed31fb",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья 350/BELLE Корзина для белья, 700 мм, глуб. 350 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 332,
+     "widthMm": 664
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH_700",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 664,
+    "maxMm": 710
+   },
+   "heightMm": 290,
+   "depthMm": 540,
+   "axisFromBottomMm": 118,
+   "marks": [
+    {
+     "fromFrontMm": 115,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 115,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE70SHWH",
+     "name": "BELLE Корзина для обуви, 700 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6970,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70SHWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6930 ₽; mdm-complect.ru: 7000 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE70SHGR",
+     "name": "BELLE Корзина для обуви, 700 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6970,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70SHGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6930 ₽; mdm-complect.ru: 7000 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE70SHBL",
+     "name": "BELLE Корзина для обуви, 700 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 6970,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70SHBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6930 ₽; mdm-complect.ru: 7000 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви/BELLE Корзина для обуви, 700 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE70SHWH.glb",
+    "sha256": "19f9f58dff26114c7af62e393f567008b44c47c4033911bd33a6a79f60a95fbf",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви/BELLE Корзина для обуви, 700 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 332,
+     "widthMm": 664
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH35_700",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 664,
+    "maxMm": 710
+   },
+   "heightMm": 290,
+   "depthMm": 368,
+   "axisFromBottomMm": 112,
+   "marks": [
+    {
+     "fromFrontMm": 70,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 70,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE70SH35WH",
+     "name": "BELLE Корзина для обуви, 700 мм, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6120,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70SH35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6090 ₽; mdm-complect.ru: 6150 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE70SH35GR",
+     "name": "BELLE Корзина для обуви, 700 мм, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 5240,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70SH35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5210 ₽; mdm-complect.ru: 5260 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви 350/BELLE Корзина для обуви, 700 мм, глуб. 350 мм, бел., полн. выдв.fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE70SH35WH.glb",
+    "sha256": "e4fe9ef2cf04d82f51dc3918019b5a427cec78155f78145879a9aca6d994bab6",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви 350/BELLE Корзина для обуви, 700 мм, глуб. 350 мм, бел., полн. выдв.fr3d"
+    },
+    "stretch": {
+     "atMm": 332,
+     "widthMm": 664
+    }
+   }
+  },
+  {
+   "id": "BELLE_TR_700",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "TROUSER_RACK",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 656,
+    "maxMm": 710
+   },
+   "heightMm": 812,
+   "depthMm": 480,
+   "axisFromBottomMm": 720,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE70TRWH",
+     "name": "BELLE Вешало для брюк, 700 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6280,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70TRWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6250 ₽; mdm-complect.ru: 6310 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE70TRGR",
+     "name": "BELLE Вешало для брюк, 700 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6280,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70TRGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6250 ₽; mdm-complect.ru: 6310 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE70TRBL",
+     "name": "BELLE Вешало для брюк, 700 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 6280,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE70TRBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6250 ₽; mdm-complect.ru: 6310 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение брюк/BELLE Вешало брюк, 700 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE70TRWH.glb",
+    "sha256": "a2993600f723b6977287bd26d3227673c93a4a560e63bbe08a28925283ce4e23",
+    "units": "mm",
+    "origin": [
+     0,
+     -720,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение брюк/BELLE Вешало брюк, 700 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 328,
+     "widthMm": 656
+    }
+   }
+  },
+  {
+   "id": "BELLE_BA_800",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 764,
+    "maxMm": 810
+   },
+   "heightMm": 244,
+   "depthMm": 480,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE80BAWH",
+     "name": "BELLE Корзина для белья, 800 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 7780,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80BAWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7740 ₽; mdm-complect.ru: 7820 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE80BAGR",
+     "name": "BELLE Корзина для белья, 800 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 7780,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80BAGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7740 ₽; mdm-complect.ru: 7820 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE80BABL",
+     "name": "BELLE Корзина для белья, 800 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 7780,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80BABL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7740 ₽; mdm-complect.ru: 7820 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья/BELLE Корзина для белья, 800 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE80BAWH.glb",
+    "sha256": "e206e48bb93e56d71bbdd2dcc5e002abfd1e95f3bc4041dbd6ecf9a4ff045700",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья/BELLE Корзина для белья, 800 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 382,
+     "widthMm": 764
+    }
+   }
+  },
+  {
+   "id": "BELLE_BA35_800",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 764,
+    "maxMm": 810
+   },
+   "heightMm": 240,
+   "depthMm": 368,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 70,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 70,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE80BA35WH",
+     "name": "BELLE Корзина для белья, 800 мм, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 3390,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80BA35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 3370 ₽; mdm-complect.ru: 3400 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE80BA35GR",
+     "name": "BELLE Корзина для белья, 800 мм, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 9010,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80BA35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 8960 ₽; mdm-complect.ru: 9050 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья 350/BELLE Корзина для белья, 800 мм, глуб. 350 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE80BA35WH.glb",
+    "sha256": "78021525ed09df439bf904601f299c0e89e229a3178bebb319875f6befdea6a2",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья 350/BELLE Корзина для белья, 800 мм, глуб. 350 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 382,
+     "widthMm": 764
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH_800",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 764,
+    "maxMm": 810
+   },
+   "heightMm": 290,
+   "depthMm": 540,
+   "axisFromBottomMm": 118,
+   "marks": [
+    {
+     "fromFrontMm": 115,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 115,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE80SHWH",
+     "name": "BELLE Корзина для обуви, 800 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 7350,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80SHWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7310 ₽; mdm-complect.ru: 7380 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE80SHGR",
+     "name": "BELLE Корзина для обуви, 800 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 7350,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80SHGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7310 ₽; mdm-complect.ru: 7380 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE80SHBL",
+     "name": "BELLE Корзина для обуви, 800 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 7350,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80SHBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7310 ₽; mdm-complect.ru: 7380 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви/BELLE Корзина для обуви, 800 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE80SHWH.glb",
+    "sha256": "c0bbd5abb5623d56a82830551c8b760076cb175bcd28cb0071628f4be0b56866",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви/BELLE Корзина для обуви, 800 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 382,
+     "widthMm": 764
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH35_800",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 764,
+    "maxMm": 810
+   },
+   "heightMm": 290,
+   "depthMm": 368,
+   "axisFromBottomMm": 112,
+   "marks": [
+    {
+     "fromFrontMm": 70,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 70,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE80SH35WH",
+     "name": "BELLE Корзина для обуви, 800 мм, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6120,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80SH35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6090 ₽; mdm-complect.ru: 6150 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE80SH35GR",
+     "name": "BELLE Корзина для обуви, 800 мм, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6120,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80SH35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6090 ₽; mdm-complect.ru: 6150 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви 350/BELLE Корзина для обуви, 800 мм, глуб. 350 мм, бел., полн. выдв.fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE80SH35WH.glb",
+    "sha256": "1b877f37439f4d6290ea4c6c6887ecdd6897b18c28a11407c72d99d493fce720",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви 350/BELLE Корзина для обуви, 800 мм, глуб. 350 мм, бел., полн. выдв.fr3d"
+    },
+    "stretch": {
+     "atMm": 382,
+     "widthMm": 764
+    }
+   }
+  },
+  {
+   "id": "BELLE_TR_800",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "TROUSER_RACK",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 756,
+    "maxMm": 810
+   },
+   "heightMm": 812,
+   "depthMm": 480,
+   "axisFromBottomMm": 720,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE80TRWH",
+     "name": "BELLE Вешало для брюк, 800 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6880,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80TRWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6840 ₽; mdm-complect.ru: 6910 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE80TRGR",
+     "name": "BELLE Вешало для брюк, 800 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6880,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80TRGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6840 ₽; mdm-complect.ru: 6910 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE80TRBL",
+     "name": "BELLE Вешало для брюк, 800 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 6880,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE80TRBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6840 ₽; mdm-complect.ru: 6910 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение брюк/BELLE Вешало брюк, 800 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE80TRWH.glb",
+    "sha256": "760cfbfe6080f1c18378d10634c0ad7a88f93110d0836fac95d7e2d2335ed80e",
+    "units": "mm",
+    "origin": [
+     0,
+     -720,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение брюк/BELLE Вешало брюк, 800 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 378,
+     "widthMm": 756
+    }
+   }
+  },
+  {
+   "id": "BELLE_BA_900",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 864,
+    "maxMm": 910
+   },
+   "heightMm": 244,
+   "depthMm": 480,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE90BAWH",
+     "name": "BELLE Корзина для белья, 900 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 8200,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90BAWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 8160 ₽; mdm-complect.ru: 8240 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE90BAGR",
+     "name": "BELLE Корзина для белья, 900 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 8680,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90BAGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 8630 ₽; mdm-complect.ru: 8720 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE90BABL",
+     "name": "BELLE Корзина для белья, 900 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 8680,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90BABL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 8630 ₽; mdm-complect.ru: 8720 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья/BELLE Корзина для белья, 900 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE90BAWH.glb",
+    "sha256": "b3924278e783e1df18b1d207c1946b5919e1549f13c7552231d801efefd0f5aa",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья/BELLE Корзина для белья, 900 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 432,
+     "widthMm": 864
+    }
+   }
+  },
+  {
+   "id": "BELLE_BA35_900",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "LINEN_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 864,
+    "maxMm": 910
+   },
+   "heightMm": 240,
+   "depthMm": 368,
+   "axisFromBottomMm": 152,
+   "marks": [
+    {
+     "fromFrontMm": 70,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 70,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE90BA35WH",
+     "name": "BELLE Корзина для белья, 900 мм, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 3390,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90BA35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 3370 ₽; mdm-complect.ru: 3400 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE90BA35GR",
+     "name": "BELLE Корзина для белья, 900 мм, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 3390,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90BA35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 3370 ₽; mdm-complect.ru: 3400 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение белья 350/BELLE Корзина для белья, 900 мм, глуб. 350 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE90BA35WH.glb",
+    "sha256": "293ad3cad1a60e100b836ca37d4e627ed2286b6a944ff7da89eca3575654e11e",
+    "units": "mm",
+    "origin": [
+     0,
+     -152,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение белья 350/BELLE Корзина для белья, 900 мм, глуб. 350 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 432,
+     "widthMm": 864
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH_900",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 864,
+    "maxMm": 910
+   },
+   "heightMm": 290,
+   "depthMm": 540,
+   "axisFromBottomMm": 118,
+   "marks": [
+    {
+     "fromFrontMm": 115,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 115,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 355,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE90SHWH",
+     "name": "BELLE Корзина для обуви, 900 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 7800,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90SHWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7760 ₽; mdm-complect.ru: 7840 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE90SHGR",
+     "name": "BELLE Корзина для обуви, 900 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 7800,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90SHGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7760 ₽; mdm-complect.ru: 7840 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE90SHBL",
+     "name": "BELLE Корзина для обуви, 900 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 7800,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90SHBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7760 ₽; mdm-complect.ru: 7840 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви/BELLE Корзина для обуви, 900 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE90SHWH.glb",
+    "sha256": "161b90b39fa0b6be50fe4936f63bdeea4cbbb004d94304c097a0cce3bfa8cf34",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви/BELLE Корзина для обуви, 900 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 432,
+     "widthMm": 864
+    }
+   }
+  },
+  {
+   "id": "BELLE_SH35_900",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "SHOE_BASKET",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 864,
+    "maxMm": 910
+   },
+   "heightMm": 290,
+   "depthMm": 368,
+   "axisFromBottomMm": 112,
+   "marks": [
+    {
+     "fromFrontMm": 70,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 70,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 310,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE90SH35WH",
+     "name": "BELLE Корзина для обуви, 900 мм, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 2790,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90SH35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 2780 ₽; mdm-complect.ru: 2800 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE90SH35GR",
+     "name": "BELLE Корзина для обуви, 900 мм, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 6120,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90SH35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6090 ₽; mdm-complect.ru: 6150 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение обуви 350/BELLE Корзина для обуви, 900 мм, глуб. 350 мм, бел., полн. выдв.fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE90SH35WH.glb",
+    "sha256": "2fd4ceb21c8a2f7f20015f0b779cd60b1b06bcfe9fe297466ca8191245583bdd",
+    "units": "mm",
+    "origin": [
+     0,
+     0,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение обуви 350/BELLE Корзина для обуви, 900 мм, глуб. 350 мм, бел., полн. выдв.fr3d"
+    },
+    "stretch": {
+     "atMm": 432,
+     "widthMm": 864
+    }
+   }
+  },
+  {
+   "id": "BELLE_TR_900",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "TROUSER_RACK",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 856,
+    "maxMm": 910
+   },
+   "heightMm": 812,
+   "depthMm": 480,
+   "axisFromBottomMm": 720,
+   "marks": [
+    {
+     "fromFrontMm": 55,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 55,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 295,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BE90TRWH",
+     "name": "BELLE Вешало для брюк, 900 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 6200,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90TRWH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 6170 ₽; mdm-complect.ru: 6230 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BE90TRGR",
+     "name": "BELLE Вешало для брюк, 900 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 7680,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90TRGR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7640 ₽; mdm-complect.ru: 7720 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "BE90TRBL",
+     "name": "BELLE Вешало для брюк, 900 мм, черный, полн. выдв.",
+     "price": {
+      "rub": 7680,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BE90TRBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 7640 ₽; mdm-complect.ru: 7720 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение брюк/BELLE Вешало брюк, 900 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BE90TRWH.glb",
+    "sha256": "0d067143748011c1b6da991883272d921320405b6ce1cd902a9853d9b394d972",
+    "units": "mm",
+    "origin": [
+     0,
+     -720,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение брюк/BELLE Вешало брюк, 900 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": {
+     "atMm": 428,
+     "widthMm": 856
+    }
+   }
+  },
+  {
+   "id": "BELLE_TR35",
+   "brand": "BELLE",
+   "series": "BELLE",
+   "kind": "TROUSER_RACK",
+   "mounting": "TOP",
+   "clearWidthMm": {
+    "minMm": 360,
+    "maxMm": 360
+   },
+   "heightMm": 142,
+   "depthMm": 368,
+   "axisFromBottomMm": 142,
+   "marks": [
+    {
+     "fromFrontMm": 75,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 75,
+     "offsetMm": 32
+    },
+    {
+     "fromFrontMm": 315,
+     "offsetMm": -32
+    },
+    {
+     "fromFrontMm": 315,
+     "offsetMm": 32
+    }
+   ],
+   "loadKg": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "нагрузку прайс и комплект БАЗИС не дают (484)"
+   },
+   "variants": [
+    {
+     "colour": "WHITE",
+     "article": "BETR35WH",
+     "name": "BELLE Вешало для брюк, потолочного крепления, глубина 350 мм, белый, полн. выдв.",
+     "price": {
+      "rub": 2990,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BETR35WH",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 2970 ₽; mdm-complect.ru: 3000 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "BETR35GR",
+     "name": "BELLE Вешало для брюк, потолочного крепления, глубина 350 мм, графит, полн. выдв.",
+     "price": {
+      "rub": 2990,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул BETR35GR",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 2970 ₽; mdm-complect.ru: 3000 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-BELLE-ZIP",
+    "sha256": "6e2f7e36",
+    "page": "хранение брюк 350/BELLE Вешало для брюк, потолоч. крепл., глуб. 350 мм, бел., полн. выдв..fr3d"
+   },
+   "model3d": {
+    "file": "models/BELLE/BETR35WH.glb",
+    "sha256": "04180db04bcd75fedb5a1d3b953ebc56b6f27a6fc787e86763e8c88fb22fd41e",
+    "units": "mm",
+    "origin": [
+     -180,
+     -142,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-BELLE-ZIP",
+     "sha256": "6e2f7e36",
+     "page": "хранение брюк 350/BELLE Вешало для брюк, потолоч. крепл., глуб. 350 мм, бел., полн. выдв..fr3d"
+    },
+    "stretch": null
+   }
+  },
+  {
+   "id": "BASE_PU70S",
+   "brand": "BASE",
+   "series": "BASE PU70",
+   "kind": "PANTOGRAPH",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 560,
+    "maxMm": 680
+   },
+   "heightMm": 960,
+   "depthMm": null,
+   "axisFromBottomMm": 144.5,
+   "marks": [
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": -44.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 0.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 45.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 95.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 140.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 185.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": -44.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 0.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 45.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 95.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 140.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 185.5
+    }
+   ],
+   "loadKg": {
+    "value": 12,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "TBM-PANTOGRAF-ZIP",
+     "sha256": "6b9da01f",
+     "page": "BASE/BASE Пант. 560-680 мм, нагр. 12 кг, сер. метал.fr3d",
+     "note": "нагрузка в имени комплекта и в прайсе"
+    }
+   },
+   "variants": [
+    {
+     "colour": "GREY_METALLIC",
+     "article": "PU70S",
+     "name": "BASE Пантограф 560-680 мм, нагр. 12 кг, серый металлик",
+     "price": {
+      "rub": 5320,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70S",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5290 ₽; mdm-complect.ru: 5340 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "PU70SGP",
+     "name": "BASE Пантограф 560-680 мм, нагр. 12 кг, графит",
+     "price": {
+      "rub": 6020,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70SGP",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "mdm-complect.ru: 6020 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "PU70SBL",
+     "name": "BASE Пантограф 560-680 мм, нагр. 12 кг, черный",
+     "price": {
+      "rub": 5990,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70SBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5960 ₽; mdm-complect.ru: 6020 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-PANTOGRAF-ZIP",
+    "sha256": "6b9da01f",
+    "page": "BASE/BASE Пант. 560-680 мм, нагр. 12 кг, сер. метал.fr3d"
+   },
+   "model3d": {
+    "file": "models/BASE/PU70S.glb",
+    "sha256": "7aafedd19937eac48ce867c5269c2ebfe21a9cbcb9044c4c55330ec988f8ad2e",
+    "units": "mm",
+    "origin": [
+     0,
+     -144.5,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-PANTOGRAF-ZIP",
+     "sha256": "6b9da01f",
+     "page": "BASE/BASE Пант. 560-680 мм, нагр. 12 кг, сер. метал.fr3d"
+    },
+    "stretch": {
+     "atMm": 280,
+     "widthMm": 560
+    }
+   }
+  },
+  {
+   "id": "BASE_PU70M",
+   "brand": "BASE",
+   "series": "BASE PU70",
+   "kind": "PANTOGRAPH",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 660,
+    "maxMm": 880
+   },
+   "heightMm": 960,
+   "depthMm": null,
+   "axisFromBottomMm": 144.5,
+   "marks": [
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": -44.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 0.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 45.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 95.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 140.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 185.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": -44.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 0.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 45.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 95.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 140.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 185.5
+    }
+   ],
+   "loadKg": {
+    "value": 12,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "TBM-PANTOGRAF-ZIP",
+     "sha256": "6b9da01f",
+     "page": "BASE/BASE Пант. 660-880 мм, нагр. 12 кг, сер. метал.fr3d",
+     "note": "нагрузка в имени комплекта и в прайсе"
+    }
+   },
+   "variants": [
+    {
+     "colour": "GREY_METALLIC",
+     "article": "PU70M",
+     "name": "BASE Пантограф 660-880 мм, нагр. 12 кг, серый металлик",
+     "price": {
+      "rub": 5320,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70M",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5290 ₽; mdm-complect.ru: 5340 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "PU70MGP",
+     "name": "BASE Пантограф 660-880 мм, нагр. 12 кг, графит",
+     "price": {
+      "rub": 6020,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70MGP",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "mdm-complect.ru: 6020 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "PU70MBL",
+     "name": "BASE Пантограф 660-880 мм, нагр. 12 кг, черный",
+     "price": {
+      "rub": 5990,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70MBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5960 ₽; mdm-complect.ru: 6020 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-PANTOGRAF-ZIP",
+    "sha256": "6b9da01f",
+    "page": "BASE/BASE Пант. 660-880 мм, нагр. 12 кг, сер. метал.fr3d"
+   },
+   "model3d": {
+    "file": "models/BASE/PU70M.glb",
+    "sha256": "89771f43c4630e9851984c764461c36ca12690793f16dd07109ea65817b647a8",
+    "units": "mm",
+    "origin": [
+     0,
+     -144.5,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-PANTOGRAF-ZIP",
+     "sha256": "6b9da01f",
+     "page": "BASE/BASE Пант. 660-880 мм, нагр. 12 кг, сер. метал.fr3d"
+    },
+    "stretch": {
+     "atMm": 330,
+     "widthMm": 660
+    }
+   }
+  },
+  {
+   "id": "BASE_PU70L",
+   "brand": "BASE",
+   "series": "BASE PU70",
+   "kind": "PANTOGRAPH",
+   "mounting": "SIDES",
+   "clearWidthMm": {
+    "minMm": 880,
+    "maxMm": 1150
+   },
+   "heightMm": 960,
+   "depthMm": null,
+   "axisFromBottomMm": 144.5,
+   "marks": [
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": -44.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 0.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 45.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 95.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 140.5
+    },
+    {
+     "fromFrontMm": -62.5,
+     "offsetMm": 185.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": -44.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 0.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 45.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 95.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 140.5
+    },
+    {
+     "fromFrontMm": 62.5,
+     "offsetMm": 185.5
+    }
+   ],
+   "loadKg": {
+    "value": 12,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "TBM-PANTOGRAF-ZIP",
+     "sha256": "6b9da01f",
+     "page": "BASE/BASE Пант. 880-1150 мм, нагр. 12 кг, сер. метал..fr3d",
+     "note": "нагрузка в имени комплекта и в прайсе"
+    }
+   },
+   "variants": [
+    {
+     "colour": "GREY_METALLIC",
+     "article": "PU70L",
+     "name": "BASE Пантограф 880-1150 мм, нагр. 12 кг, серый металлик",
+     "price": {
+      "rub": 5320,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70L",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5290 ₽; mdm-complect.ru: 5340 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "GRAPHITE",
+     "article": "PU70LGP",
+     "name": "BASE Пантограф 880-1150 мм, нагр. 12 кг, графит",
+     "price": {
+      "rub": 5990,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70LGP",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "среднее ориентиров поставщиков (furnimax.ru: 5960 ₽; mdm-complect.ru: 6020 ₽), вверх до 10 ₽ (MOD-DEC-264, 346, 484)"
+     }
+    },
+    {
+     "colour": "BLACK",
+     "article": "PU70LBL",
+     "name": "BASE Пантограф 880-1150 мм, нагр. 12 кг, черный",
+     "price": {
+      "rub": 6020,
+      "per": "pcs",
+      "date": "2026-10-23",
+      "source": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "page": "артикул PU70LBL",
+       "sha256": "1f31bdc7"
+      },
+      "status": "CONFIRMED",
+      "basis": "mdm-complect.ru: 6020 ₽ (ориентир, вверх до 10 ₽, MOD-DEC-346, 484)"
+     }
+    }
+   ],
+   "ref": {
+    "doc": "TBM-PANTOGRAF-ZIP",
+    "sha256": "6b9da01f",
+    "page": "BASE/BASE Пант. 880-1150 мм, нагр. 12 кг, сер. метал..fr3d"
+   },
+   "model3d": {
+    "file": "models/BASE/PU70L.glb",
+    "sha256": "d056455ff2598aced5bc302e2fed4f7a98fa1e4c2d7a64615fd6b926162710d9",
+    "units": "mm",
+    "origin": [
+     0,
+     -144.5,
+     0
+    ],
+    "axes": {
+     "u": "+X",
+     "v": "-Z",
+     "n": "+Y"
+    },
+    "source": {
+     "doc": "TBM-PANTOGRAF-ZIP",
+     "sha256": "6b9da01f",
+     "page": "BASE/BASE Пант. 880-1150 мм, нагр. 12 кг, сер. метал..fr3d"
+    },
+    "stretch": {
+     "atMm": 440,
+     "widthMm": 880
+    }
+   }
+  }
+ ],
+ "slidingProfiles": [
+  {
+   "id": "ARISTO_AE0704_VP540",
+   "brand": "ARISTO",
+   "article": "AE0704.VP540",
+   "name": "Профиль вертикальный C ЭКО",
+   "sectionMm": {
+    "faceMm": 26,
+    "depthMm": 34
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "44 (с. 45 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AE0688_VP540",
+   "brand": "ARISTO",
+   "article": "AE0688.VP540",
+   "name": "Профиль рамки верхний ЭКО",
+   "sectionMm": {
+    "faceMm": 21.5,
+    "depthMm": 14.2
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "44 (с. 45 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AE0689_VP540",
+   "brand": "ARISTO",
+   "article": "AE0689.VP540",
+   "name": "Профиль рамки нижний ЭКО",
+   "sectionMm": {
+    "faceMm": 56.5,
+    "depthMm": 14.2
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "44 (с. 45 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AE0492_VP540",
+   "brand": "ARISTO",
+   "article": "AE0492.VP540",
+   "name": "Направляющая двухполозная верхняя ЭКО",
+   "sectionMm": {
+    "faceMm": 40,
+    "depthMm": null
+   },
+   "depthMmFrom": "wardrobe-sliding.ecoUpperTrackWidth",
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "44 (с. 45 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AE0488_AP540",
+   "brand": "ARISTO",
+   "article": "AE0488.AP540",
+   "name": "Направляющая двухполозная нижняя ЭКО",
+   "sectionMm": {
+    "faceMm": 7.5,
+    "depthMm": null
+   },
+   "depthMmFrom": "wardrobe-sliding.ecoLowerTrackWidth",
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "44 (с. 45 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AV0991_VP540",
+   "brand": "ARISTO",
+   "article": "AV0991.VP540",
+   "name": "Профиль вертикальный Slim Line",
+   "sectionMm": {
+    "faceMm": 14,
+    "depthMm": 34
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "52 (с. 53 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AV0588_VP540",
+   "brand": "ARISTO",
+   "article": "AV0588.VP540",
+   "name": "Профиль рамки верхний Slim Line",
+   "sectionMm": {
+    "faceMm": 11.1,
+    "depthMm": 32.2
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "52 (с. 53 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AV0589_VP540",
+   "brand": "ARISTO",
+   "article": "AV0589.VP540",
+   "name": "Профиль рамки широкий верхний Slim Line (при скрытой направляющей)",
+   "sectionMm": {
+    "faceMm": 46.1,
+    "depthMm": 32.2
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "52 (с. 53 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AV0990_VP540",
+   "brand": "ARISTO",
+   "article": "AV0990.VP540",
+   "name": "Профиль рамки нижний Slim Line",
+   "sectionMm": {
+    "faceMm": 46.1,
+    "depthMm": 32.2
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "52 (с. 53 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AS0731_BP540",
+   "brand": "ARISTO",
+   "article": "AS0731.BP540",
+   "name": "Профиль вертикальный C Стандарт",
+   "sectionMm": {
+    "faceMm": 26,
+    "depthMm": 34
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "6 (с. 7 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AS0720_VP540",
+   "brand": "ARISTO",
+   "article": "AS0720.VP540",
+   "name": "Профиль рамки верхний Стандарт",
+   "sectionMm": {
+    "faceMm": 21,
+    "depthMm": 14.5
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "6 (с. 7 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AS0721_VP540",
+   "brand": "ARISTO",
+   "article": "AS0721.VP540",
+   "name": "Профиль рамки нижний Стандарт",
+   "sectionMm": {
+    "faceMm": 56,
+    "depthMm": 14.5
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "6 (с. 7 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AS0713_VP540",
+   "brand": "ARISTO",
+   "article": "AS0713.VP540",
+   "name": "Направляющая двухполозная верхняя (Стандарт, Slim Line)",
+   "sectionMm": {
+    "faceMm": 40,
+    "depthMm": null
+   },
+   "depthMmFrom": "wardrobe-sliding.as0713Width",
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "6 (с. 7 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AS0504_VP540",
+   "brand": "ARISTO",
+   "article": "AS0504.VP540",
+   "name": "Направляющая двухполозная нижняя накладная Slim Line",
+   "sectionMm": {
+    "faceMm": 8,
+    "depthMm": null
+   },
+   "depthMmFrom": "wardrobe-sliding.as0504Width",
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "6 (с. 7 файла): габарит сечения на чертеже"
+   }
+  },
+  {
+   "id": "ARISTO_AS0690_VP540",
+   "brand": "ARISTO",
+   "article": "AS0690.VP540",
+   "name": "Направляющая нижняя врезная (Стандарт, Slim Line)",
+   "sectionMm": {
+    "faceMm": 7.9,
+    "depthMm": 20.3
+   },
+   "finish": "METAL",
+   "ref": {
+    "doc": "ARISTO 2026-10-09",
+    "sha256": "5d7222b7",
+    "page": "6 (с. 7 файла): габарит сечения на чертеже"
+   }
+  }
+ ]
+}

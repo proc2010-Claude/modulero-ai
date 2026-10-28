@@ -1,0 +1,1198 @@
+{
+ "schema": "modulero.kitchen-catalog/1",
+ "source": "reference/prototype_r1/MODULERO_UNIFIED_PROTOTYPE_r1.html: kapProfiles r1.html:76185 (модели техники, ниши, монтажные комплекты)",
+ "data": {
+  "HBS534BS0B:base": {
+   "model": "HBS534BS0B",
+   "label": "Bosch HBS534BS0B, под столешницей",
+   "family": "oven",
+   "appliance": {
+    "width": 594,
+    "height": 595,
+    "depth": 548,
+    "doorOwnership": "appliance",
+    "massKg": 34,
+    "powerW": 2990
+   },
+   "niche": {
+    "width": {
+     "min": 560,
+     "max": 568
+    },
+    "height": {
+     "min": 600,
+     "max": 604
+    },
+    "depth": {
+     "min": 550,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 720,
+    "depth": 560,
+    "nicheHeight": 602,
+    "supportTopZ": 118
+   },
+   "furnitureFronts": [],
+   "ventilation": [
+    {
+     "type": "rear support cut-out",
+     "minimum": 20,
+     "unit": "mm"
+    }
+   ],
+   "clearances": [
+    {
+     "minimum": 5,
+     "condition": "factory figure"
+    }
+   ],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "HBS534BS0B-factory-installation-set",
+     "article": "HBS534BS0B installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ],
+   "thermalRequirements": {
+    "fittedUnitHeatResistanceC": 90,
+    "adjacentFrontHeatResistanceC": 70,
+    "sourcePDF": "HBS534BS0B_9001280153_C.pdf",
+    "sourcePDFPage1Based": 3,
+    "sourceSHA256": "6df8d7de4d2d70703889b3aa67d08fc887017cb43d5c4f4bde69fab4a44dd908",
+    "sideThermalInsulationStrips": "PROHIBITED",
+    "scope": "Manufacturer fittedunit requirement; exact selectedpanel/edge/adhesive assembly applicability not qualified. Continuous exposure duration not specified by applianceclause."
+   }
+  },
+  "HBS534BS0B:tall": {
+   "model": "HBS534BS0B",
+   "label": "Bosch HBS534BS0B, колонна",
+   "family": "oven",
+   "appliance": {
+    "width": 594,
+    "height": 595,
+    "depth": 548,
+    "doorOwnership": "appliance",
+    "massKg": 34,
+    "powerW": 2990
+   },
+   "niche": {
+    "width": {
+     "min": 560,
+     "max": 568
+    },
+    "height": {
+     "min": 585,
+     "max": 595
+    },
+    "depth": {
+     "min": 550,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 2140,
+    "depth": 560,
+    "nicheHeight": 590
+   },
+   "furnitureFronts": [],
+   "ventilation": [
+    {
+     "type": "rear support cut-out",
+     "minimum": 20,
+     "unit": "mm"
+    }
+   ],
+   "clearances": [
+    {
+     "minimum": 5,
+     "condition": "factory figure"
+    }
+   ],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "HBS534BS0B-factory-installation-set",
+     "article": "HBS534BS0B installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ],
+   "thermalRequirements": {
+    "fittedUnitHeatResistanceC": 90,
+    "adjacentFrontHeatResistanceC": 70,
+    "sourcePDF": "HBS534BS0B_9001280153_C.pdf",
+    "sourcePDFPage1Based": 3,
+    "sourceSHA256": "6df8d7de4d2d70703889b3aa67d08fc887017cb43d5c4f4bde69fab4a44dd908",
+    "sideThermalInsulationStrips": "PROHIBITED",
+    "scope": "Manufacturer fittedunit requirement; exact selectedpanel/edge/adhesive assembly applicability not qualified. Continuous exposure duration not specified by applianceclause."
+   }
+  },
+  "BFL523MS0B:upper": {
+   "model": "BFL523MS0B",
+   "label": "Bosch BFL523MS0B, верхний шкаф",
+   "family": "microwave",
+   "appliance": {
+    "width": 594,
+    "height": 382,
+    "depth": 317,
+    "doorOwnership": "appliance",
+    "massKg": 15.3,
+    "powerW": 1270
+   },
+   "niche": {
+    "width": {
+     "min": 560,
+     "max": 568
+    },
+    "height": {
+     "min": 362,
+     "max": 365
+    },
+    "depth": {
+     "min": 300,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 720,
+    "depth": 320,
+    "nicheHeight": 363,
+    "supportTopZ": 16
+   },
+   "furnitureFronts": [],
+   "ventilation": [],
+   "clearances": [
+    {
+     "minimum": 3
+    },
+    {
+     "minimum": 850
+    }
+   ],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "BFL523MS0B-factory-installation-set",
+     "article": "BFL523MS0B installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ],
+   "thermalRequirements": {
+    "fittedUnitHeatResistanceC": 90,
+    "adjacentFrontHeatResistanceC": 65,
+    "sourcePDF": "BFL523MS0B_9001610915_H.pdf",
+    "sourcePDFPage1Based": 20,
+    "sourceSHA256": "ae9085302e00618e00550a954ce70cca8e6aecd0adec3c163530522ab59127a8",
+    "sideThermalInsulationStrips": null,
+    "scope": "Manufacturer fittedunit requirement; exact selectedpanel/edge/adhesive assembly applicability not qualified. Continuous exposure duration not specified by applianceclause."
+   }
+  },
+  "BFL523MS0B:tall": {
+   "model": "BFL523MS0B",
+   "label": "Bosch BFL523MS0B, колонна",
+   "family": "microwave",
+   "appliance": {
+    "width": 594,
+    "height": 382,
+    "depth": 317,
+    "doorOwnership": "appliance",
+    "massKg": 15.3,
+    "powerW": 1270
+   },
+   "niche": {
+    "width": {
+     "min": 560,
+     "max": 568
+    },
+    "height": {
+     "min": 380,
+     "max": 382
+    },
+    "depth": {
+     "min": 550,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 2140,
+    "depth": 560,
+    "nicheHeight": 381
+   },
+   "furnitureFronts": [],
+   "ventilation": [
+    {
+     "minimum": 35,
+     "unit": "mm",
+     "type": "continuous open rear channel"
+    }
+   ],
+   "clearances": [
+    {
+     "minimum": 3
+    },
+    {
+     "minimum": 850
+    }
+   ],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "BFL523MS0B-factory-installation-set",
+     "article": "BFL523MS0B installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ],
+   "thermalRequirements": {
+    "fittedUnitHeatResistanceC": 90,
+    "adjacentFrontHeatResistanceC": 65,
+    "sourcePDF": "BFL523MS0B_9001610915_H.pdf",
+    "sourcePDFPage1Based": 20,
+    "sourceSHA256": "ae9085302e00618e00550a954ce70cca8e6aecd0adec3c163530522ab59127a8",
+    "sideThermalInsulationStrips": null,
+    "scope": "Manufacturer fittedunit requirement; exact selectedpanel/edge/adhesive assembly applicability not qualified. Continuous exposure duration not specified by applianceclause."
+   }
+  },
+  "KIR81VFE0G:tall": {
+   "model": "KIR81VFE0G",
+   "label": "Bosch KIR81VFE0G, однодверный встраиваемый холодильник",
+   "family": "fridge-one",
+   "appliance": {
+    "width": 541,
+    "height": 1772,
+    "depth": 548,
+    "doorOwnership": "appliance doors plus distinct furniture front(s)",
+    "massKg": 53
+   },
+   "niche": {
+    "width": {
+     "min": 560,
+     "max": null
+    },
+    "height": {
+     "min": 1772,
+     "max": 1780
+    },
+    "depth": {
+     "min": 550,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 2140,
+    "depth": 600,
+    "nicheHeight": 1775,
+    "nicheDepth": 560,
+    "rearPlenum": 40,
+    "supportTopZ": 35
+   },
+   "furnitureFronts": [
+    {
+     "width": 596,
+     "height": 1772,
+     "thickness": 18,
+     "quantity": 1,
+     "maxMassKg": 22,
+     "gapMin": 2.5
+    }
+   ],
+   "ventilation": [
+    {
+     "minimum": 200,
+     "unit": "cm2",
+     "type": "bottom inlet"
+    },
+    {
+     "minimum": 200,
+     "unit": "cm2",
+     "type": "top outlet"
+    },
+    {
+     "minimum": 40,
+     "unit": "mm",
+     "type": "continuous back channel"
+    }
+   ],
+   "clearances": [],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "KIR81VFE0G-factory-installation-set",
+     "article": "KIR81VFE0G installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ]
+  },
+  "KIN86VSE0G:tall": {
+   "model": "KIN86VSE0G",
+   "label": "Bosch KIN86VSE0G, холодильник-морозильник",
+   "family": "fridge-two",
+   "appliance": {
+    "width": 541,
+    "height": 1772,
+    "depth": 548,
+    "doorOwnership": "appliance doors plus distinct furniture front(s)",
+    "massKg": 52.7
+   },
+   "niche": {
+    "width": {
+     "min": 560,
+     "max": null
+    },
+    "height": {
+     "min": 1772,
+     "max": 1780
+    },
+    "depth": {
+     "min": 550,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 2140,
+    "depth": 600,
+    "nicheHeight": 1775,
+    "nicheDepth": 560,
+    "rearPlenum": 40,
+    "supportTopZ": 35
+   },
+   "furnitureFronts": [
+    {
+     "role": "lower",
+     "width": 596,
+     "height": 720,
+     "thickness": 18,
+     "heightMin": 677,
+     "heightMax": 756,
+     "extensionA": 0
+    },
+    {
+     "role": "upper",
+     "width": 596,
+     "height": 1048,
+     "thickness": 18,
+     "heightMin": 1012,
+     "heightMax": 1091,
+     "extensionB": 0
+    }
+   ],
+   "frontHingeType": "separate furniture hinges + manufacturer sliding attachments",
+   "furnitureFrontGap": 4,
+   "ventilation": [
+    {
+     "minimum": 200,
+     "unit": "cm2",
+     "type": "bottom inlet"
+    },
+    {
+     "minimum": 200,
+     "unit": "cm2",
+     "type": "top outlet"
+    },
+    {
+     "minimum": 40,
+     "unit": "mm",
+     "type": "continuous back channel"
+    }
+   ],
+   "clearances": [],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "KIN86VSE0G-factory-installation-set",
+     "article": "KIN86VSE0G installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ]
+  },
+  "CTL636ES6:tall": {
+   "model": "CTL636ES6",
+   "label": "Bosch CTL636ES6, кофемашина в колонне",
+   "family": "coffee",
+   "appliance": {
+    "width": 594,
+    "height": 455,
+    "depth": 375,
+    "doorOwnership": "appliance",
+    "powerW": 1600
+   },
+   "niche": {
+    "width": {
+     "min": 560,
+     "max": 568
+    },
+    "height": {
+     "min": 450,
+     "max": 452
+    },
+    "depth": {
+     "min": 400,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 2140,
+    "depth": 560,
+    "nicheHeight": 450,
+    "nicheBottomAboveRoomFloor": 950
+   },
+   "furnitureFronts": [],
+   "ventilation": [
+    {
+     "minimum": 100,
+     "unit": "mm",
+     "type": "rear clearance"
+    },
+    {
+     "minimum": 35,
+     "unit": "mm",
+     "type": "floor rear ventilation gap"
+    },
+    {
+     "minimum": 200,
+     "unit": "cm2",
+     "condition": "only if panel directly above appliance"
+    },
+    {
+     "width": 500,
+     "height": 400,
+     "unit": "mm",
+     "type": "rear panel opening alternative",
+     "condition": "if rear panel retained"
+    }
+   ],
+   "clearances": [
+    {
+     "minimum": 350,
+     "unit": "mm",
+     "condition": "110° service-door opening; chosen baseline"
+    },
+    {
+     "value": 950,
+     "unit": "mm",
+     "condition": "manufacturer ideal installation height; advisory, not a mandatory minimum or an unverified950–1450 range"
+    }
+   ],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "machine",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 1,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "connecting cable",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 1,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "assembly bracket",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 1,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "spacers",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "silver fastening screws",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 5,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "long black screws",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 2,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "short black screws",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 2,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "black sleeve",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 1,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "white sleeves",
+     "article": "CTL636ES6 installation kit",
+     "quantity": 2,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ]
+  },
+  "DFM063W56B:upper": {
+   "model": "DFM063W56B",
+   "label": "Bosch DFM063W56B, рециркуляция",
+   "family": "hood",
+   "appliance": {
+    "width": 598,
+    "height": 203,
+    "depth": 290,
+    "doorOwnership": "appliance",
+    "openDepth": 455,
+    "massKg": 8.5,
+    "powerW": 93
+   },
+   "niche": {
+    "width": {
+     "min": 526,
+     "max": null
+    },
+    "height": {
+     "min": 162,
+     "max": null
+    },
+    "depth": {
+     "min": 290,
+     "max": null
+    },
+    "type": "hood body recess; 600-wide cabinet, open bottom; not whole-appliance outer envelope"
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 720,
+    "depth": 320,
+    "bottom": "removed",
+    "minimumCabinetHeight": 390,
+    "hobClearance": 600
+   },
+   "furnitureFronts": [],
+   "ventilation": [],
+   "clearances": [
+    {
+     "minimum": 430,
+     "unit": "mm"
+    },
+    {
+     "minimum": 650,
+     "unit": "mm"
+    }
+   ],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "DFM063W56B-factory-installation-set",
+     "article": "DFM063W56B installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "recirculation-kit",
+     "article": "DWZ1IT1I4",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": false,
+     "optional": false,
+     "description": ""
+    }
+   ],
+   "thermalRequirements": {
+    "fittedUnitHeatResistanceC": 90,
+    "adjacentFrontHeatResistanceC": null,
+    "sourcePDF": "DFM063W56B_9001527925_I.pdf",
+    "sourcePDFPage1Based": 12,
+    "sourceSHA256": "a6bab7861a5fae369a47996b26ef73f84970fbcd7544aa6d325e3251daaedea2",
+    "sideThermalInsulationStrips": null,
+    "scope": "Manufacturer fittedunit requirement; exact selectedpanel/edge/adhesive assembly applicability not qualified. Continuous exposure duration not specified by applianceclause."
+   }
+  },
+  "SPV2HKX39G:undercounter": {
+   "model": "SPV2HKX39G",
+   "label": "Bosch SPV2HKX39G, встроенная ПММ",
+   "family": "dishwasher",
+   "appliance": {
+    "width": 448,
+    "height": 815,
+    "depth": 550,
+    "doorOwnership": "appliance",
+    "openDepth": 1150,
+    "massKg": 30.2,
+    "powerW": 2400
+   },
+   "niche": {
+    "width": {
+     "min": 450,
+     "max": 450
+    },
+    "height": {
+     "min": 815,
+     "max": 875
+    },
+    "depth": {
+     "min": 550,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 450,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 820,
+    "depth": 600,
+    "construction": "appliance bay; no duplicate cabinet floor/sides",
+    "legs": false
+   },
+   "furnitureFronts": [
+    {
+     "width": 446,
+     "height": 716,
+     "thickness": 18,
+     "heightMin": 655,
+     "heightMax": 725,
+     "massMinKg": 2.5,
+     "massMaxKg": 7.5,
+     "hingeType": "integral appliance front"
+    }
+   ],
+   "ventilation": [],
+   "clearances": [],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "SPV2HKX39G-factory-installation-set",
+     "article": "SPV2HKX39G installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "vapor-protection",
+     "article": "SPV2HKX39G installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ]
+  },
+  "SMV2ITX18G:undercounter": {
+   "model": "SMV2ITX18G",
+   "label": "Bosch SMV2ITX18G, встроенная ПММ",
+   "family": "dishwasher",
+   "appliance": {
+    "width": 598,
+    "height": 815,
+    "depth": 550,
+    "doorOwnership": "appliance",
+    "openDepth": 1150,
+    "massKg": 31.5,
+    "powerW": 2400
+   },
+   "niche": {
+    "width": {
+     "min": 600,
+     "max": 600
+    },
+    "height": {
+     "min": 815,
+     "max": 875
+    },
+    "depth": {
+     "min": 550,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 820,
+    "depth": 600,
+    "construction": "appliance bay; no duplicate cabinet floor/sides",
+    "legs": false
+   },
+   "furnitureFronts": [
+    {
+     "width": 596,
+     "height": 716,
+     "thickness": 18,
+     "heightMin": 655,
+     "heightMax": 725,
+     "massMinKg": 2.5,
+     "massMaxKg": 8.5,
+     "hingeType": "integral appliance front"
+    }
+   ],
+   "ventilation": [],
+   "clearances": [],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "SMV2ITX18G-factory-installation-set",
+     "article": "SMV2ITX18G installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "vapor-protection",
+     "article": "SMV2ITX18G installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ]
+  },
+  "WIW28302GB:undercounter": {
+   "model": "WIW28302GB",
+   "label": "Bosch WIW28302GB, встроенная стиральная машина",
+   "family": "washer",
+   "appliance": {
+    "width": 596,
+    "height": 818,
+    "depth": 544,
+    "doorOwnership": "appliance",
+    "massKg": 76.1,
+    "openDepth": 956
+   },
+   "niche": {
+    "width": {
+     "min": 600,
+     "max": 600
+    },
+    "height": {
+     "min": 818,
+     "max": 830
+    },
+    "depth": {
+     "min": 574,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 820,
+    "depth": 600,
+    "construction": "floor-standing appliance bay; no duplicate cabinet floor/sides",
+    "legs": false
+   },
+   "furnitureFronts": [
+    {
+     "width": 594,
+     "height": 710,
+     "thickness": 18,
+     "quantity": 1,
+     "hingeType": "factory reversible furniture door hinges",
+     "widthMin": 592,
+     "widthMax": 595,
+     "heightMin": 632,
+     "heightMax": 712,
+     "thicknessMin": 16,
+     "thicknessMax": 21,
+     "massMaxKg": 9
+    }
+   ],
+   "ventilation": [],
+   "clearances": [],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "name": "WIW28302GB-factory-installation-set",
+     "article": "WIW28302GB installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "furniture-door-hinges",
+     "article": "WIW28302GB installation kit",
+     "quantity": 2,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "magnetic-catches-and-counterplates",
+     "article": "WIW28302GB installation kit",
+     "quantity": 2,
+     "unit": "pairs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "transport-cover-caps",
+     "article": "WIW28302GB installation kit",
+     "quantity": 4,
+     "unit": "pcs",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ]
+  },
+  "PUE611BB5B:worktop": {
+   "model": "PUE611BB5B",
+   "label": "Bosch PUE611BB5B, варочная поверхность",
+   "family": "hob",
+   "appliance": {
+    "width": 592,
+    "height": 51,
+    "depth": 522,
+    "doorOwnership": "appliance",
+    "powerW": 3700
+   },
+   "niche": {
+    "width": {
+     "min": 560,
+     "max": 562
+    },
+    "height": {
+     "min": 0,
+     "max": null
+    },
+    "depth": {
+     "min": 490,
+     "max": null
+    },
+    "type": "top worktop cut-out"
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 720,
+    "depth": 560,
+    "worktopThickness": 38,
+    "worktopDepth": 620
+   },
+   "furnitureFronts": [],
+   "ventilation": [
+    {
+     "minimum": 45,
+     "unit": "mm"
+    },
+    {
+     "minimum": 20,
+     "unit": "mm"
+    },
+    {
+     "minimum": 550,
+     "unit": "mm"
+    }
+   ],
+   "clearances": [
+    {
+     "minimum": 16,
+     "unit": "mm"
+    },
+    {
+     "minimum": 40,
+     "unit": "mm"
+    },
+    {
+     "minimum": 50,
+     "unit": "mm",
+     "condition": "chosen620 mm depth; source >600 depth row"
+    },
+    {
+     "minimum": 50,
+     "unit": "mm",
+     "condition": "chosen620 mm depth; source >600 depth row"
+    },
+    {
+     "minimum": 65,
+     "unit": "mm",
+     "condition": "drawer underneath"
+    },
+    {
+     "minimum": 30,
+     "unit": "mm",
+     "condition": "oven underneath"
+    }
+   ],
+   "cutouts": [
+    {
+     "plane": "worktop",
+     "width": 560,
+     "widthTolerance": {
+      "plus": 2,
+      "minus": 0
+     },
+     "depthMin": 490,
+     "depthMax": 500,
+     "radiusMax": 5
+    }
+   ],
+   "kitComponents": [
+    {
+     "name": "PUE611BB5B-factory-installation-set",
+     "article": "PUE611BB5B installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ]
+  },
+  "BLANCO_525873:topmount": {
+   "model": "BLANCO_525873",
+   "label": "BLANCO DALAGO 6, SILGRANIT чёрный, сверху",
+   "family": "sink",
+   "appliance": {
+    "width": 615,
+    "height": 202,
+    "depth": 510,
+    "bowlWidth": 545,
+    "bowlDepth": 350,
+    "bowlHeight": 190,
+    "doorOwnership": "none"
+   },
+   "niche": {
+    "type": "worktop cut-out",
+    "minimumCabinetWidth": 600
+   },
+   "cabinetDefaults": {
+    "width": 600,
+    "height": 720,
+    "depth": 560,
+    "sideThickness": 16,
+    "back": "service-access opening",
+    "worktopThickness": 38,
+    "worktopDepth": 620,
+    "worktopSpanWidth": 655,
+    "drawerUnderBowl": false
+   },
+   "furnitureFronts": [],
+   "clearances": [
+    {
+     "type": "no drawer interference",
+     "condition": "drain envelope measured after exact waste set layout"
+    }
+   ],
+   "cutouts": [
+    {
+     "plane": "worktop",
+     "width": 595,
+     "widthTolerance": {
+      "plus": 2,
+      "minus": 1
+     },
+     "depth": 490,
+     "depthTolerance": {
+      "plus": 2,
+      "minus": 1
+     },
+     "radius": 15
+    }
+   ],
+   "kitComponents": [
+    {
+     "name": "basket-strainer-with-remote-control",
+     "article": "BLANCO_525873 installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    },
+    {
+     "name": "waste-fitting-set",
+     "article": "217163",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": false,
+     "optional": true,
+     "description": "official applicable spare part, supply inclusion not confirmed"
+    },
+    {
+     "name": "manufacturer-mounting-kit",
+     "article": "BLANCO_525873 installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": ""
+    }
+   ]
+  },
+  "LYRA45WH:base": {
+   "model": "LYRA 45 WH",
+   "label": "KRONA LYRA 45 WH, узкий45см",
+   "manufacturer": "KRONA",
+   "family": "oven",
+   "appliance": {
+    "width": 447,
+    "height": 594,
+    "depth": 572,
+    "doorOwnership": "appliance",
+    "massKg": 23.66,
+    "powerW": 2069,
+    "frontProjectionMm": 22
+   },
+   "niche": {
+    "width": {
+     "min": 410,
+     "max": 410
+    },
+    "height": {
+     "min": 600,
+     "max": 600
+    },
+    "depth": {
+     "min": 580,
+     "max": null
+    }
+   },
+   "cabinetDefaults": {
+    "width": 450,
+    "sideThickness": 16,
+    "back": "open",
+    "height": 720,
+    "depth": 600,
+    "nicheHeight": 600,
+    "supportTopZ": 120
+   },
+   "packing": {
+    "type": "paired project side liners",
+    "finishedNicheWidth": 410,
+    "thicknessMm": 4,
+    "quantity": 2,
+    "condition": "COGEBI COGETHERM M: finished side liners4mm plus supported floor overlay4mm; measured final width410mm; raw stock thickness tolerance±7%; factory frame fixes to structural side, not mica threads; manufacturing and assembled thermal performance require qualification",
+    "materialCode": "COGETHERM_M",
+    "floorThicknessMm": 4,
+    "floorQuantity": 1
+   },
+   "furnitureFronts": [],
+   "ventilation": [
+    {
+     "type": "rear support cut-out",
+     "minimum": 45,
+     "unit": "mm"
+    }
+   ],
+   "clearances": [
+    {
+     "minimum": 30,
+     "unit": "mm",
+     "condition": "actual clear cabinet depth>=580"
+    }
+   ],
+   "cutouts": [],
+   "kitComponents": [
+    {
+     "id": "LYRA45WH-installation-set",
+     "name": "LYRA45WH-factory-installation-set",
+     "article": "LYRA 45 WH installation kit",
+     "quantity": 1,
+     "unit": "set",
+     "includedWithAppliance": true,
+     "optional": false,
+     "description": "Factory frame fastening4screws per manual; aggregate suppliedkit",
+     "includedComponents": [
+      {
+       "part": "Заводской винт крепления рамки; размер не указан",
+       "quantity": 4,
+       "unit": "piece",
+       "commercialSku": null,
+       "purchase": "included",
+       "includedWithAppliance": true
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

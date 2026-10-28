@@ -2,7 +2,9 @@
 // Заканчивается строкой «All checks passed.» или кодом ошибки.
 import { spawnSync } from 'node:child_process';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { join, relative } from 'node:path';
+import { PIN, engineDir, manifest } from '../src/engine/pin.mjs';
 
 const root = new URL('..', import.meta.url).pathname;
 const failures = [];
@@ -59,8 +61,18 @@ step('без Claude API и ключей (режим владельца 2026-10-2
   return [...hits.map((p) => `обращение к API: ${relative(root, p)}`), ...deps.map((d) => `зависимость: ${d}`)];
 });
 
+step(`копия ядра modulero-next ${PIN.sha.slice(0, 8)} не изменена (AI-DEC-003)`, () => {
+  const text = manifest(engineDir());
+  const sha = createHash('sha256').update(text).digest('hex');
+  if (sha === PIN.manifestSha256) return [];
+  const saved = readFileSync(join(engineDir(), 'MANIFEST'), 'utf8').split('\n');
+  const diff = text.split('\n').filter((l) => l && !saved.includes(l)).slice(0, 10);
+  return [`sha256 списка файлов ${sha}, ожидается ${PIN.manifestSha256} (engine.json)`, ...diff.map((l) => `изменён: ${l.slice(66)}`)];
+});
+
 step('типы (tsc)', () => run('npx', ['tsc', '--noEmit', '-p', 'tsconfig.json']));
-step('тесты (node --test)', () => run(process.execPath, ['--test', 'tests/**/*.test.ts']));
+const LOADER = ['--experimental-transform-types', '--disable-warning=ExperimentalWarning', '--import', './src/engine/register.mjs'];
+step('тесты и проигрыш сценариев (node --test)', () => run(process.execPath, [...LOADER, '--test', 'tests/**/*.test.ts']));
 
 if (failures.length) {
   console.log(`\nПроверка не пройдена: ${failures.join(', ')}.`);

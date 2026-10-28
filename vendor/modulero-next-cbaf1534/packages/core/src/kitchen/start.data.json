@@ -1,0 +1,46 @@
+{
+ "system32Policy": {
+  "version": "SYSTEM32-193-196-R10",
+  "enabled": true,
+  "provenance": "NEW_PROJECT"
+ },
+ "kitchenProjectSchemaVersion": 3,
+ "wallNaming": "ABC_CHAIN",
+ "roomConfirmed": false,
+ "typeConfirmed": false,
+ "type": "straight",
+ "orientation": "left",
+ "islandEnabled": false,
+ "room": {
+  "width": 3000,
+  "depth": 2600,
+  "height": 2500
+ },
+ "modules": [],
+ "obstacles": [],
+ "selected": null,
+ "selectedPart": null,
+ "stage": "construction",
+ "view": "plan",
+ "row": "base",
+ "wall": "A",
+ "facades": true,
+ "corpusMaterial": "W980",
+ "facadeMaterial": "W980",
+ "defaultWidth": 600,
+ "upperHeight": 720,
+ "proposed": {
+  "outerGap": 2,
+  "topFront": 30,
+  "topRear": 10
+ },
+ "nextId": 1,
+ "showFilling": true,
+ "kitchenReleaseAdapterRevision": 2,
+ "costSettings": {
+  "schema": "modulero.kitchen.rates.v1",
+  "currency": "RUB",
+  "includeAppliances": false,
+  "rates": []
+ }
+}

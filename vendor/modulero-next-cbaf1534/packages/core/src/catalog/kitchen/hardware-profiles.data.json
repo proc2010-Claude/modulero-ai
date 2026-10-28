@@ -1,0 +1,1424 @@
+{
+ "schema": "modulero.kitchen-catalog/1",
+ "source": "reference/prototype_r1/MODULERO_UNIFIED_PROTOTYPE_r1.html: khrProfiles r1.html:78214 (петли, подъёмник, механизмы наполнения, опоры кухни)",
+ "data": [
+  {
+   "profileId": "BLUM-TANDEM560H5000B-WOOD16",
+   "manufacturer": "BLUM",
+   "family": "woodenDrawer",
+   "commercialSku": "560H5000B",
+   "variant": "BLUMOTION full extension NL500 locking-device16",
+   "modelId": null,
+   "nominalLengthMm": 500,
+   "dynamicLoadKg": 30,
+   "loadBasis": "Manufacturer runner rating for pair; includes moving drawer and contents; cabinet/wooden-box strength separate",
+   "sideThicknessRangeMm": [
+    11,
+    16
+   ],
+   "cabinetClearDepthMinMm": 503,
+   "boxSideLengthFormula": "NL-10",
+   "boxInternalWidthFormula": "LW-42",
+   "boxInternalWidthToleranceMm": [
+    -1.5,
+    0
+   ],
+   "boxOuterWidthFormula": "LW-42+2*drawerSideThickness",
+   "bottomRecessRangeMm": [
+    12,
+    15
+   ],
+   "topGapMinMm": 7,
+   "verticalInstallation": {
+    "datum": "Z0 = lower runner clearance boundary in installed planning section",
+    "fixingAxisZFormula": "Z0+37",
+    "bottomUndersideZConstraint": ">=Z0+27.5",
+    "chosenBottomUndersideZFormula": "Z0+27.5",
+    "chosenSideLowerZFormula": "Z0+27.5-13",
+    "derivedFixingAxisFromBottomUndersideMm": 9.5,
+    "sideStabiliserExtraMm": 3,
+    "qualification": "Manufacturer dimension 37 and minimum27.5. Equal-boundary seating is a project layout choice and must remain labelled as derived planning, not surveyed CAD datum."
+   },
+   "cabinetFixing": {
+    "datum": "cabinet front edge, upper fixing row",
+    "xPositionsMm": [
+     37,
+     69,
+     261
+    ],
+    "holeDiameterMm": 5,
+    "fastenerSku": "661.1450.HG",
+    "fastenerDimensionMm": [
+     6,
+     14.5
+    ],
+    "countPerRail": 3
+   },
+   "rearHook": {
+    "diameterMm": 6,
+    "depthMm": 10,
+    "notchWidthMm": 33,
+    "template": "T65.1000.02",
+    "qualification": "Apply manufacturer template to finished rear geometry. Diagram includes 11 and7mm datum dimensions; manual machining must follow original p5. No auto-CNC rear pilot promise."
+   },
+   "lockingDevice": {
+    "commercialSku": "T51.1700.04",
+    "sides": [
+     "left",
+     "right"
+    ],
+    "mounting": "2 screws per lock either underside or75-degree into front; choose underside into adequately thick drawer bottom as p27 variant1a",
+    "screwSku": "609.1500",
+    "countPerLock": 2,
+    "pilotQualification": "Factory template and material-qualified tooling; no generated pilot from CAD"
+   },
+   "kit": [
+    {
+     "manufacturer": "BLUM",
+     "commercialSku": "560H5000B",
+     "quantity": 1,
+     "unit": "pair",
+     "includes": [
+      "left rail",
+      "right rail",
+      "integrated BLUMOTION"
+     ],
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "BLUM",
+     "commercialSku": "T51.1700.04",
+     "variant": "left",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "BLUM",
+     "commercialSku": "T51.1700.04",
+     "variant": "right",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "BLUM",
+     "commercialSku": "661.1450.HG",
+     "quantity": 6,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "BLUM",
+     "commercialSku": "609.1500",
+     "quantity": 4,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "Hettich",
+     "commercialSku": "9278224",
+     "quantity": 4,
+     "unit": "piece",
+     "purchase": "separate",
+     "purpose": "project rigid front fastening"
+    }
+   ],
+   "optional": [
+    {
+     "commercialSku": "295.1000",
+     "quantity": 2,
+     "applies": "adjustable furniture-front fixing for 4sided drawer; can be omitted if project chooses other justified front fixing"
+    },
+    {
+     "commercialSku": "ZST.600TV",
+     "quantity": 1,
+     "applies": "wide pull-out stabilisation; adds12 depth and3 height; Применимость стабилизатора по ширине требует отдельной проверки."
+    },
+    {
+     "commercialSku": "298.5500",
+     "quantity": 2,
+     "applies": "inset application only"
+    }
+   ],
+   "motion": {
+    "kind": "translation",
+    "fullExtension": true,
+    "distanceMm": 500,
+    "qualification": "symbolic full-extension animation from nominal travel; not a manufacturer trajectory/CAD collision proof"
+   },
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником.",
+   "frontFixing": {
+    "method": "projectRigidScrewJoint",
+    "frontThicknessMm": 18,
+    "boxFrontThicknessMm": 16,
+    "screwSku": "9278224",
+    "screwManufacturer": "Hettich",
+    "screwDimensionMm": [
+     3.5,
+     30
+    ],
+    "quantity": 4,
+    "nominalEngagementMm": 14,
+    "faceMaterialRemainingMm": 4,
+    "qualification": "Project rigid-contact design, placements outside bottom groove/lock/handle, material-qualified through and pilot tooling; not BLUM front-adjuster factory drilling or certified joint load"
+   }
+  },
+  {
+   "profileId": "HETTICH-SAH216-AHS-B16",
+   "manufacturer": "Hettich",
+   "family": "wallSuspension",
+   "commercialSkus": [
+    "9249369",
+    "9249370"
+   ],
+   "variant": "with integrated lift off guard",
+   "modelId": null,
+   "rearPanelRecessMinMm": 16,
+   "sideThicknessMinMm": 16,
+   "backThicknessRangeMm": [
+    3,
+    5
+   ],
+   "cabinetDepthMaxMm": 400,
+   "cabinetHeightCondition": "H>D",
+   "pinDrilling": {
+    "diameterMm": 10,
+    "depthMm": 12.5,
+    "countPerSide": 3,
+    "fromCabinetTopMmFormula": "roofThickness+56+[0,32,64]",
+    "fromRearMm": 5,
+    "datum": "finished side inner face; min56 below underside roof (drawing roof16). Use selected minimum56."
+   },
+   "backAccess": {
+    "diameterMm": 15,
+    "countPerSide": 2,
+    "fromSideEdgeMm": 19,
+    "fromTopMinMm": 60,
+    "secondOffsetMm": 50,
+    "datum": "back panel local top and lateral edge; choose60 within manufacturerminimum"
+   },
+   "fittingAdjustment": {
+    "heightMm": [
+     -8,
+     8
+    ],
+    "depthMaxMm": 25,
+    "sideMm": [
+     -7.5,
+     7.5
+    ],
+    "liftOffHeightMm": 7.5
+   },
+   "loadKgEach": 55,
+   "loadCondition": "EN15939 test rack A; one L/R pair per cabinet; production cabinet/wall/rail loads separately qualified",
+   "wallTypes": [
+    "solid brick",
+    "solid sand-lime brick",
+    "concrete",
+    "engineering brick"
+   ],
+   "kit": [
+    {
+     "manufacturer": "Hettich",
+     "commercialSku": "9249369",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "Hettich",
+     "commercialSku": "9249370",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "Hettich",
+     "commercialSku": "9007651",
+     "quantityFormula": "ceil(requiredRailLengthMm/3000)",
+     "unit": "stock rail3000mm",
+     "purchase": "separate",
+     "cutLengthFormula": "cabinetWidth-2*panelThickness",
+     "qualification": "project cut plan, rail wholekitchen dedup required"
+    },
+    {
+     "manufacturer": "Hettich",
+     "commercialSku": "45168",
+     "quantity": 2,
+     "unit": "piece",
+     "dimension": "3.5x20 panhead",
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "Hettich",
+     "commercialSku": "9278224",
+     "quantity": 2,
+     "unit": "piece",
+     "dimension": "3.5x30 panhead",
+     "purchase": "separate"
+    },
+    {
+     "manufacturer": "Hettich",
+     "commercialSku": "65480",
+     "quantityFormula": "4+(cabinetWidth>=900?1:0)",
+     "unit": "set",
+     "includes": [
+      "1 special screw5.5x50",
+      "1 wallplug8x40"
+     ],
+     "purchase": "separate"
+    }
+   ],
+   "railRatingKg": 130,
+   "railRatingCondition": "9007651 manufacturer page; do not transfer historical150kg of anotherrail SKU",
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "BLUM-CLIP71B3550-B16-F18",
+   "manufacturer": "BLUM",
+   "family": "concealedHinge",
+   "commercialSku": "71B3550",
+   "variant": "110 overlay screw-on nickel BLUMOTION",
+   "modelId": null,
+   "openingAngleDeg": 110,
+   "bodyThicknessMm": 16,
+   "frontThicknessMm": 18,
+   "frontRadiusMm": 1,
+   "cup": {
+    "diameterMm": 35,
+    "depthMinMm": 13,
+    "drillingDistanceTBMm": 3,
+    "centerFromEdgeMm": 20.5,
+    "qualification": "Screw-on pilot positions must follow actual screw-on hinge/template; INSERTA45/9.5 is not transferred to this variant"
+   },
+   "plate": {
+    "commercialSku": "173H7100",
+    "spacingMm": 0,
+    "fixingLineFromBodyFrontMm": 37,
+    "verticalHolePitchMm": 32,
+    "camHeightAdjustmentMm": 2
+   },
+   "overlayMm": 14,
+   "gapMinMm": 0.8,
+   "gapWithMaxSideAdjustmentMm": 1.2,
+   "projectGapMm": 2,
+   "kitPerHinge": [
+    {
+     "commercialSku": "71B3550",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "commercialSku": "173H7100",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "commercialSku": "609.1500",
+     "quantity": 4,
+     "unit": "piece",
+     "dimensionMm": [
+      3.5,
+      15
+     ],
+     "purchase": "separate"
+    }
+   ],
+   "hingeCountPolicy": "Use manufacturer height/weight chart for measured front mass and width≤600; positions maximally apart subject roof/shelf collisions. No universal two-hinge rule for tall fronts.",
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником.",
+   "hingeCountBands": [
+    {
+     "quantity": 2,
+     "frontHeightMaxMm": 750,
+     "frontWeightMaxKg": 6
+    },
+    {
+     "quantity": 3,
+     "frontHeightMaxMm": 1500,
+     "frontWeightMaxKg": 12
+    },
+    {
+     "quantity": 4,
+     "frontHeightMaxMm": 2100,
+     "frontWeightMaxKg": 17
+    },
+    {
+     "quantity": 5,
+     "frontHeightMaxMm": 2500,
+     "frontWeightMaxKg": 22
+    }
+   ],
+   "frontWidthMaxMm": 600
+  },
+  {
+   "profileId": "BLUM-AVENTOS-HKS-WOOD18",
+   "manufacturer": "BLUM",
+   "family": "stayLift",
+   "commercialSkuRule": "choose from20K2B00.06/20K2C00.06/20K2E00.06 by LF",
+   "modelId": null,
+   "cabinetHeightMaxMm": 600,
+   "openingAngleDeg": 107,
+   "powerFactorFormula": "KH_mm*(frontWeight_kg+2*handleWeight_kg)",
+   "powerFactorBands": [
+    {
+     "commercialSku": "20K2B00.06",
+     "range": [
+      220,
+      500
+     ]
+    },
+    {
+     "commercialSku": "20K2C00.06",
+     "range": [
+      400,
+      1000
+     ]
+    },
+    {
+     "commercialSku": "20K2E00.06",
+     "range": [
+      960,
+      2215
+     ]
+    }
+   ],
+   "selectionRule": "Choose more powerful mechanism in overlap; borderline trial required; out-of-band is incompatible, not nearestSKU",
+   "pegDrilling": {
+    "diameterMm": 5,
+    "depthMinMm": 5,
+    "fromCabinetFrontMm": [
+     37,
+     101
+    ],
+    "fromCabinetTopMm": 74,
+    "roofThicknessMaxMm": 22
+   },
+   "mechanismFixing": {
+    "quantityPerSide": 3,
+    "dimensionMm": [
+     4,
+     35
+    ],
+    "included": true,
+    "positions": "Fit pegs then use actual mechanism defined fixing points as officialp4; no mesh-derived pilots"
+   },
+   "frontBracket": {
+    "commercialSku": "175H3100",
+    "count": 2,
+    "fromFrontSideEdgeMmFormula": "SFA+12.5",
+    "fromFrontTopMmFormulas": [
+     "78-F",
+     "78-F+32"
+    ],
+    "screws": "609.1500",
+    "quantity": 4
+   },
+   "minimumFrontGapMm": 2,
+   "clearanceAboveFormula": "FH*0.29-15+FD",
+   "kit": [
+    {
+     "commercialSkuRule": "selected lift set",
+     "quantity": 1,
+     "unit": "set",
+     "purchase": "separate",
+     "includes": [
+      {
+       "part": "symmetric lift mechanisms",
+       "quantity": 2
+      },
+      {
+       "part": "left/right covers",
+       "quantity": 2
+      },
+      {
+       "part": "branding elements",
+       "quantity": 2
+      },
+      {
+       "part": "4x35 chipboard screws",
+       "quantity": 6
+      }
+     ]
+    },
+    {
+     "commercialSku": "175H3100",
+     "quantity": 2,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "commercialSku": "609.1500",
+     "quantity": 4,
+     "unit": "piece",
+     "purchase": "separate"
+    }
+   ],
+   "frontWeightFormula": "FH_m*FB_m*FD_m*materialDensityKgPerM3; manufacturer reference densities chipboard680/MDF760, actual chosen material density preferred",
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "MAKMART-CONFIRMAT-7X50-B16",
+   "manufacturer": "MAKMART",
+   "family": "panelConnector",
+   "commercialSku": "MB.1501.7X50.CH4.BZ",
+   "modelId": null,
+   "panelThicknessMm": 16,
+   "throughDrillDiameterMm": 8,
+   "edgePilotDiameterMm": 5,
+   "edgePilotDepthMm": 40,
+   "headDiameterMm": 10,
+   "nominalLengthMm": 50,
+   "kitPerConnection": [
+    {
+     "commercialSku": "MB.1501.7X50.CH4.BZ",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "BLUM-GLASS75T4100-B16-F6",
+   "manufacturer": "BLUM",
+   "family": "glassHinge",
+   "commercialSku": "75T4100",
+   "variant": "CLIP glass hinge94 screw-on glass fixing",
+   "openingAngleDeg": 94,
+   "bodyThicknessMm": 16,
+   "frontThicknessMm": 6,
+   "glassThicknessRangeMm": [
+    4.5,
+    7
+   ],
+   "glassDensityEstimateKgM3": 2500,
+   "cup": {
+    "diameterMm": 26,
+    "diameterToleranceMm": [
+     0,
+     0.2
+    ],
+    "throughGlass": true,
+    "drillingDistanceTBRangeMm": [
+     5.5,
+     7
+    ],
+    "chosenTBMm": 7,
+    "centerFromEdgeMm": 20
+   },
+   "plate": {
+    "commercialSku": "173H7130",
+    "spacingMm": 3,
+    "fixingLineFromBodyFrontMm": 37,
+    "verticalHolePitchMm": 32
+   },
+   "overlayMm": 14,
+   "projectGapMm": 2,
+   "kitPerHinge": [
+    {
+     "commercialSku": "75T4100",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate",
+     "includes": [
+      "glass boss fixing screws"
+     ]
+    },
+    {
+     "commercialSku": "84.4120CR",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate",
+     "purpose": "rectangular glass boss cover31x41"
+    },
+    {
+     "commercialSku": "173H7130",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "commercialSku": "609.1500",
+     "quantity": 2,
+     "unit": "piece",
+     "purchase": "separate",
+     "purpose": "wood mounting plate"
+    }
+   ],
+   "hingeCountBands": [
+    {
+     "quantity": 2,
+     "frontHeightMaxMm": 750,
+     "frontWeightMaxKg": 6
+    },
+    {
+     "quantity": 3,
+     "frontHeightMaxMm": 1500,
+     "frontWeightMaxKg": 12
+    },
+    {
+     "quantity": 4,
+     "frontHeightMaxMm": 2100,
+     "frontWeightMaxKg": 17
+    },
+    {
+     "quantity": 5,
+     "frontHeightMaxMm": 2500,
+     "frontWeightMaxKg": 22
+    }
+   ],
+   "frontWidthMaxMm": 600,
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "STARAX-S2414C-C150-LEFT",
+   "manufacturer": "STARAX",
+   "family": "bottlePullout",
+   "commercialSku": "S-2414-C",
+   "variant": "C150 left chrome wire",
+   "frontClassWidthMm": 150,
+   "bodyThicknessMm": 16,
+   "frontThicknessMm": 18,
+   "envelopeMm": [
+    108,
+    480,
+    598
+   ],
+   "minimumClearMm": [
+    108,
+    495,
+    598
+   ],
+   "loadKg": 30,
+   "massKg": 4.35,
+   "nominalExtensionMm": 428,
+   "mounting": {
+    "sideRowsFromBottomMm": [
+     40,
+     435
+    ],
+    "sideFromFrontMm": [
+     69,
+     101,
+     197,
+     293
+    ],
+    "frontRowsFromBottomMm": [
+     127,
+     147,
+     649,
+     669
+    ],
+    "frontColumnsFromLeftMm": [
+     34,
+     118
+    ],
+    "sourceFrontWidthMm": 150,
+    "sourceFrontThicknessMm": 18,
+    "pilotDiameterMm": null,
+    "pilotDepthMm": null
+   },
+   "kit": [
+    {
+     "commercialSku": "S-2414-C",
+     "quantity": 1,
+     "unit": "kit",
+     "purchase": "separate",
+     "includesStatus": "UNKNOWN",
+     "requiredAssembly": [
+      {
+       "description": "side wood screw4x16",
+       "quantity": 8,
+       "commercialSku": null
+      },
+      {
+       "description": "front wood screw4x16",
+       "quantity": 8,
+       "commercialSku": null
+      },
+      {
+       "description": "M5x12YHB",
+       "quantity": 4,
+       "commercialSku": null
+      },
+      {
+       "description": "M5 nut",
+       "quantity": 4,
+       "commercialSku": null
+      },
+      {
+       "description": "M5x7YSB",
+       "quantity": 4,
+       "commercialSku": null
+      },
+      {
+       "description": "M5x20YSB",
+       "quantity": 2,
+       "commercialSku": null
+      }
+     ]
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "DUSLAR-MATRIX10030034-C200-LEFT",
+   "manufacturer": "DUSLAR",
+   "family": "bottlePullout",
+   "commercialSku": "10030034",
+   "variant": "MATRIX200 left anthracite soft-close",
+   "frontClassWidthMm": 200,
+   "bodyThicknessRangeMm": [
+    16,
+    18
+   ],
+   "envelopeMm": [
+    154,
+    460,
+    600
+   ],
+   "minimumClearMm": [
+    160,
+    500,
+    610
+   ],
+   "loadKg": 25,
+   "loadPerBasketKg": 12.5,
+   "mounting": {
+    "sideRowsFromBottomMm": [
+     90,
+     603
+    ],
+    "sideFromFrontMm": [
+     25,
+     217
+    ],
+    "frontRowsFromBottomMm": [
+     24,
+     537
+    ],
+    "frontColumnsFromNearSideFormula": [
+     "bodyThickness+60",
+     "bodyThickness+144"
+    ],
+    "pilotDiameterMm": null,
+    "pilotDepthMm": null,
+    "qualification": "Original factory bracket slots and hole positions; side datum bottom top, front datum finishedfrontbottom. Refer original mirrored origin before manufacturing."
+   },
+   "kit": [
+    {
+     "commercialSku": "10030034",
+     "quantity": 1,
+     "unit": "kit",
+     "purchase": "separate",
+     "includesStatus": "VERIFIED_WITHIN_SCOPE",
+     "includes": [
+      {
+       "part": "frame and rails",
+       "quantity": 1
+      },
+      {
+       "part": "baskets",
+       "quantity": 2
+      },
+      {
+       "part": "front brackets",
+       "quantity": 2
+      },
+      {
+       "part": "plastic basket fixers",
+       "quantity": 4
+      },
+      {
+       "part": "wood screws factory pack",
+       "quantity": 16,
+       "commercialSku": null
+      }
+     ]
+    }
+   ],
+   "modelId": "DUSLAR-10030034-ORIGINAL-STEP",
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "DUSLAR-MATRIX10030035-C300-LEFT",
+   "manufacturer": "DUSLAR",
+   "family": "bottlePullout",
+   "commercialSku": "10030035",
+   "variant": "MATRIX300 left anthracite soft-close",
+   "frontClassWidthMm": 300,
+   "bodyThicknessRangeMm": [
+    16,
+    18
+   ],
+   "envelopeMm": [
+    254,
+    460,
+    600
+   ],
+   "minimumClearMm": [
+    260,
+    500,
+    610
+   ],
+   "loadKg": 25,
+   "loadPerBasketKg": 12.5,
+   "kit": [
+    {
+     "commercialSku": "10030035",
+     "quantity": 1,
+     "unit": "kit",
+     "purchase": "separate",
+     "includesStatus": "VERIFIED_WITHIN_SCOPE",
+     "includes": [
+      {
+       "part": "frame and rails",
+       "quantity": 1
+      },
+      {
+       "part": "baskets",
+       "quantity": 2
+      },
+      {
+       "part": "front brackets",
+       "quantity": 2
+      },
+      {
+       "part": "plastic basket fixers",
+       "quantity": 4
+      },
+      {
+       "part": "wood screws factory pack",
+       "quantity": 16,
+       "commercialSku": null
+      }
+     ]
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником.",
+   "mounting": {
+    "sideRowsFromBottomMm": [
+     90,
+     603
+    ],
+    "sideFromFrontMm": [
+     25,
+     217
+    ],
+    "frontRowsFromBottomMm": [
+     24,
+     537
+    ],
+    "frontColumnsFromNearSideFormula": [
+     "bodyThickness+60",
+     "bodyThickness+144"
+    ],
+    "pilotDiameterMm": null,
+    "pilotDepthMm": null,
+    "qualification": "Original factory bracket slots and hole positions; side datum bottom top, front datum finishedfrontbottom. Refer original mirrored origin before manufacturing."
+   }
+  },
+  {
+   "profileId": "FISSO-DUSLAR10030001-C600",
+   "manufacturer": "DUSLAR",
+   "family": "dishDryer",
+   "commercialSku": "10030001",
+   "variant": "FISSO two levels600 anthracite",
+   "cabinetWidthMm": 600,
+   "bodyThicknessRangeMm": [
+    16,
+    19
+   ],
+   "systemWidthRangeMm": [
+    562,
+    568
+   ],
+   "depthMm": 265,
+   "plateLevelHeightMm": 85,
+   "cupLevelHeightMm": 78,
+   "minimumClearDepthMm": 300,
+   "loadPerLevelKg": 10,
+   "loadTotalKg": 20,
+   "mounting": {
+    "rowsFromBottomMm": null,
+    "holeDiameterMm": null,
+    "pilotDepthMm": null,
+    "sourceHolderRailLowerHeightMm": 75,
+    "sourceLevelSpacingMm": 380,
+    "sourceTemplateRowsFromLowerPanelMm": [
+     68,
+     448
+    ],
+    "sourceClearDepthMinMm": 300,
+    "qualification": "Originaldiagram lowerholder75 and holes68 aboveinnerbottom; twolevels spacing380. Read factorydrawing for front/rear datum. Pilot diameter/depth not stated; no generated boarddrilling."
+   },
+   "kit": [
+    {
+     "commercialSku": "10030001",
+     "quantity": 1,
+     "unit": "kit",
+     "purchase": "separate",
+     "includesStatus": "VERIFIED_WITHIN_SCOPE",
+     "includes": [
+      {
+       "part": "plate rackA",
+       "quantity": 1
+      },
+      {
+       "part": "cup rackB",
+       "quantity": 1
+      },
+      {
+       "part": "traysC",
+       "quantity": 2
+      },
+      {
+       "part": "holderD",
+       "quantity": 4
+      },
+      {
+       "part": "trayholderE",
+       "quantity": 4
+      },
+      {
+       "part": "allenkeyF18x55",
+       "quantity": 1
+      },
+      {
+       "part": "fastening screwG M4x16",
+       "quantity": 16
+      }
+     ]
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником.",
+   "minimumClearHeightMm": 700,
+   "heightDatum": "Clear inside height between inner lower and upper panel faces; FISSO instruction06.11.2024 figure1",
+   "instructionRevision": "06.11.2024",
+   "instructionWidthRangeMm": [
+    562,
+    570
+   ],
+   "widthQualification": "Product562–568 versus instruction562–570; select their intersection, preserve discrepancy."
+  },
+  {
+   "profileId": "BLUM-DIAGONAL79B3558-B19-F19",
+   "manufacturer": "BLUM",
+   "family": "angledHinge",
+   "commercialSku": "79B3558",
+   "variant": "45degree angled overlay applicationNo9,110deg BLUMOTION",
+   "bodyThicknessMm": 19,
+   "frontThicknessMm": 19,
+   "openingAngleDeg": 110,
+   "cup": {
+    "diameterMm": 35,
+    "depthMinMm": 13,
+    "drillingDistanceTBMm": 5,
+    "centerFromEdgeMm": 22.5
+   },
+   "plate": {
+    "commercialSku": "173H7100",
+    "spacingMm": 0
+   },
+   "projectGapMm": 3.5,
+   "frontWidthMaxMm": 600,
+   "hingeCountBands": [
+    {
+     "quantity": 2,
+     "frontHeightMaxMm": 750,
+     "frontWeightMaxKg": 6
+    },
+    {
+     "quantity": 3,
+     "frontHeightMaxMm": 1500,
+     "frontWeightMaxKg": 12
+    },
+    {
+     "quantity": 4,
+     "frontHeightMaxMm": 2100,
+     "frontWeightMaxKg": 17
+    },
+    {
+     "quantity": 5,
+     "frontHeightMaxMm": 2500,
+     "frontWeightMaxKg": 22
+    }
+   ],
+   "kitPerHinge": [
+    {
+     "commercialSku": "79B3558",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "commercialSku": "173H7100",
+     "quantity": 1,
+     "unit": "piece",
+     "purchase": "separate"
+    },
+    {
+     "commercialSku": "609.1500",
+     "quantity": 4,
+     "unit": "piece",
+     "purchase": "separate"
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "STARAX-S2413C-C150-RIGHT",
+   "manufacturer": "STARAX",
+   "family": "bottlePullout",
+   "commercialSku": "S-2413-C",
+   "variant": "C150 right chrome wire",
+   "frontClassWidthMm": 150,
+   "bodyThicknessMm": 16,
+   "frontThicknessMm": 18,
+   "envelopeMm": [
+    108,
+    480,
+    598
+   ],
+   "minimumClearMm": [
+    108,
+    495,
+    598
+   ],
+   "loadKg": 30,
+   "massKg": 4.35,
+   "nominalExtensionMm": 428,
+   "mounting": {
+    "sideRowsFromBottomMm": [
+     40,
+     435
+    ],
+    "sideFromFrontMm": [
+     69,
+     101,
+     197,
+     293
+    ],
+    "frontRowsFromBottomMm": [
+     127,
+     147,
+     649,
+     669
+    ],
+    "frontColumnsFromLeftMm": [
+     32,
+     116
+    ],
+    "sourceFrontWidthMm": 150,
+    "sourceFrontThicknessMm": 18,
+    "pilotDiameterMm": null,
+    "pilotDepthMm": null
+   },
+   "kit": [
+    {
+     "commercialSku": "S-2413-C",
+     "quantity": 1,
+     "unit": "kit",
+     "purchase": "separate",
+     "includesStatus": "UNKNOWN",
+     "requiredAssembly": [
+      {
+       "description": "side wood screw4x16",
+       "quantity": 8,
+       "commercialSku": null
+      },
+      {
+       "description": "front wood screw4x16",
+       "quantity": 8,
+       "commercialSku": null
+      },
+      {
+       "description": "M5x12YHB",
+       "quantity": 4,
+       "commercialSku": null
+      },
+      {
+       "description": "M5 nut",
+       "quantity": 4,
+       "commercialSku": null
+      },
+      {
+       "description": "M5x7YSB",
+       "quantity": 4,
+       "commercialSku": null
+      },
+      {
+       "description": "M5x20YSB",
+       "quantity": 2,
+       "commercialSku": null
+      }
+     ]
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "BLUM-CORNER71T7550-B16-F19",
+   "manufacturer": "BLUM",
+   "family": "cornerCabinetHinge",
+   "commercialSku": "71T7550",
+   "variant": "CLIP top155 overlay screw-on spring",
+   "bodyThicknessMm": 16,
+   "frontThicknessMm": 19,
+   "openingAngleDeg": 155,
+   "cup": {
+    "diameterMm": 35,
+    "depthMinMm": 11.7,
+    "drillingDistanceTBMm": 3,
+    "centerFromEdgeMm": 20.5
+   },
+   "plate": {
+    "commercialSku": "173H7100",
+    "spacingMm": 0
+   },
+   "overlayMm": 14,
+   "projectGapMm": 2,
+   "frontWidthMaxMm": 600,
+   "hingeCountBands": [
+    {
+     "quantity": 2,
+     "frontHeightMaxMm": 750,
+     "frontWeightMaxKg": 6
+    },
+    {
+     "quantity": 3,
+     "frontHeightMaxMm": 1500,
+     "frontWeightMaxKg": 12
+    },
+    {
+     "quantity": 4,
+     "frontHeightMaxMm": 2100,
+     "frontWeightMaxKg": 17
+    },
+    {
+     "quantity": 5,
+     "frontHeightMaxMm": 2500,
+     "frontWeightMaxKg": 22
+    }
+   ],
+   "kitPerHinge": [
+    {
+     "commercialSku": "71T7550",
+     "quantity": 1
+    },
+    {
+     "commercialSku": "173H7100",
+     "quantity": 1
+    },
+    {
+     "commercialSku": "609.1500",
+     "quantity": 4
+    }
+   ],
+   "pairedWith": "BLUM-BIFOLD79T8500-F19",
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "BLUM-BIFOLD79T8500-F19",
+   "manufacturer": "BLUM",
+   "family": "bifoldHinge",
+   "commercialSku": "79T8500",
+   "variant": "CLIP top60 screw-on corner bifold spring",
+   "frontThicknessMm": 19,
+   "openingAngleDeg": 60,
+   "cup": {
+    "diameterMm": 35,
+    "depthMinMm": 11,
+    "centerFromCornerEdgeMm": 12.5,
+    "intersectsEdge": true
+   },
+   "plate": {
+    "commercialSku": "173H7100",
+    "spacingMm": 0,
+    "fixingLineFromMatingEdgeMm": 37,
+    "mechanismEnvelopeFromMatingEdgeMm": 65
+   },
+   "frontWidthMaxMm": 600,
+   "hingeCountBands": [
+    {
+     "quantity": 2,
+     "frontHeightMaxMm": 750,
+     "frontWeightMaxKg": 6
+    },
+    {
+     "quantity": 3,
+     "frontHeightMaxMm": 1500,
+     "frontWeightMaxKg": 12
+    },
+    {
+     "quantity": 4,
+     "frontHeightMaxMm": 2100,
+     "frontWeightMaxKg": 17
+    },
+    {
+     "quantity": 5,
+     "frontHeightMaxMm": 2500,
+     "frontWeightMaxKg": 22
+    }
+   ],
+   "kitPerHinge": [
+    {
+     "commercialSku": "79T8500",
+     "quantity": 1
+    },
+    {
+     "commercialSku": "173H7100",
+     "quantity": 1
+    },
+    {
+     "commercialSku": "609.1500",
+     "quantity": 4
+    }
+   ],
+   "pairedWith": "BLUM-CORNER71T7550-B16-F19",
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "HETTICH-KORREKT100",
+   "manufacturer": "Hettich",
+   "family": "levellingFoot",
+   "commercialSku": "9028286",
+   "heightMm": 100,
+   "heightRangeMm": [
+    89,
+    125
+   ],
+   "footDiameterMm": 80,
+   "loadKgPerFoot": 450,
+   "maximumGroupLoadKg": 1350,
+   "loadQualification": "Vendor hardware rating; supportpattern, boardstrength, stabilityandfloorload separate",
+   "plate": {
+    "commercialSku": "9028230",
+    "dimensionsMm": [
+     95,
+     80,
+     25
+    ],
+    "screwDimensionMm": [
+     4,
+     35
+    ],
+    "screwCount": 4,
+    "dimensionMeaning": "overall mountingblock height25 below carcass; screwseat web thickness not specified",
+    "screwSeatThicknessMm": null,
+    "screwSeatStatus": "UNKNOWN",
+    "conservativeScrewSeatBoundsMm": [
+     0,
+     25
+    ],
+    "boundBasis": "PROJECT conservative bound from overall blockheight25; actual headseat notdimensioned",
+    "projectWoodStackMm": 35,
+    "projectNominalPenetrationBoundsMm": [
+     10,
+     35
+    ]
+   },
+   "plinthClip": {
+    "commercialSku": "61855",
+    "minimumPlinthHeightMm": 70,
+    "projectScrewCount": 2,
+    "projectScrewDimensionMm": [
+     3.5,
+     15
+    ]
+   },
+   "kitPerFoot": [
+    {
+     "commercialSku": "9028286",
+     "quantity": 1
+    },
+    {
+     "commercialSku": "9028230",
+     "quantity": 1
+    },
+    {
+     "commercialSku": null,
+     "technicalSpec": "chipboard screw4x35 countersunk",
+     "quantity": 4
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "HETTICH-SEKURA6-79707",
+   "manufacturer": "Hettich",
+   "family": "shelfSupport",
+   "commercialSku": "79707",
+   "pinDiameterMm": 5,
+   "shelfUndersideFromSidePinAxisMm": 8,
+   "loadGroup": "L75",
+   "loadGroupKgPerM2": 75,
+   "quantityPerRectangularShelf": 4,
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "HETTICH-HALE9306951",
+   "manufacturer": "Hettich",
+   "family": "handle",
+   "commercialSku": "9306951",
+   "variant": "Hale128 black steel",
+   "dimensionsMm": [
+    188,
+    12,
+    35
+   ],
+   "thread": "M4",
+   "threadDepthMm": 6,
+   "projectHandleMassKg": 0.1,
+   "projectMassBasis": "reference estimate until actual weighed",
+   "kit": [
+    {
+     "commercialSku": "9306951",
+     "quantity": 1
+    },
+    {
+     "commercialSku": "71549",
+     "quantity": 2,
+     "dimensionMm": [
+      4,
+      22
+     ],
+     "applicability": "18/19front gives4/3mmthreadengagement"
+    },
+    {
+     "commercialSku": "71544",
+     "quantity": 2,
+     "dimensionMm": [
+      4,
+      12
+     ],
+     "applicability": "6mm glass plus two project protective washers1mm per screw:12-(6+1+1)=4mm nominal thread engagement; source blind thread6mm leaves2mm before bottom. Glass fabrication/material/head seating remain qualified separately."
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником.",
+   "glassFixingProject": {
+    "glassThicknessMm": 6,
+    "screwSku": "71544",
+    "screwDimensionMm": [
+     4,
+     12
+    ],
+    "screwsPerHandle": 2,
+    "washersPerScrew": 2,
+    "washerNominalThicknessMm": 1,
+    "washersPerHandle": 4,
+    "nominalThreadEngagementMm": 4,
+    "blindThreadDepthMm": 6,
+    "nominalThreadBottomClearanceMm": 2,
+    "origin": "Project dimensional stack, not manufacturer glass assembly certificate",
+    "qualification": "Glass fabricator must qualify protective washer/bush materials, holes, head seating and assembly without metal contact or prestress."
+   }
+  },
+  {
+   "profileId": "HETTICH-AVB79386-W38",
+   "manufacturer": "Hettich",
+   "family": "worktopConnector",
+   "commercialSku": "79386",
+   "lengthMm": 100,
+   "worktopThicknessMm": 38,
+   "housingDiameterMm": 35,
+   "housingDepthMinMm": 20,
+   "clampXRangeMm": [
+    48,
+    55
+   ],
+   "kit": [
+    {
+     "commercialSku": "79386",
+     "quantity": 1,
+     "includes": [
+      "two curvedclampingplates",
+      "rod/nut",
+      "two premountedclips"
+     ]
+    }
+   ],
+   "projectCountPer620Joint": 3,
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "HETTICH-VHS32-27",
+   "manufacturer": "Hettich",
+   "family": "cabinetInterconnect",
+   "commercialSku": "1054519",
+   "stackThicknessRangeMm": [
+    28,
+    36
+   ],
+   "drillingDiameterMm": 5,
+   "sleeveLengthMm": 27,
+   "screwDimensionMm": [
+    4,
+    15
+   ],
+   "kit": [
+    {
+     "commercialSku": "1054519",
+     "quantity": 1,
+     "unit": "set",
+     "includes": [
+      "threaded sleeve27",
+      "M4x15screw"
+     ]
+    }
+   ],
+   "projectCountPerContact": 4,
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником."
+  },
+  {
+   "profileId": "SUGATSUNE-SU30M",
+   "manufacturer": "Sugatsune",
+   "family": "structuralBracket",
+   "commercialSku": "120-030-065",
+   "variant": "SU-30M SUS304 mirror",
+   "material": "SUS304 stainless steel",
+   "dimensions": {
+    "heightMm": 30,
+    "widthMm": 12,
+    "thicknessMm": 2.5,
+    "armLengthMm": null
+   },
+   "sourceHoleDiametersMm": [
+    3.5,
+    6.5
+   ],
+   "sourceRecommendedScrewMm": [
+    3.1,
+    20
+   ],
+   "vendorLoadPerPiece": {
+    "kgf": 6,
+    "N": 59,
+    "qualification": "Manufacturerconditions; no transfer to wholecabinet load"
+   },
+   "projectScrewsPerBracket": 4,
+   "projectScrewStack": {
+    "panel16": "3.1x16,13.5mm nominal woodengagement; selected project fastening",
+    "panel18": "3.1x20,17.5mm nominal woodengagement",
+    "worktop38": "3.1x20,17.5mm nominal woodengagement"
+   },
+   "kit": [
+    {
+     "commercialSku": "120-030-065",
+     "quantity": 1
+    },
+    {
+     "commercialSku": null,
+     "technicalSpec": "chipboard screw3.1x16 or3.1x20 per actual boardstack",
+     "quantity": 4
+    }
+   ],
+   "manufacturingQualification": "Материал, крепление и фактические нагрузки требуют проверки изготовителем и монтажником.",
+   "suppliedScrewsStatus": "UNKNOWN",
+   "projectFastenersProcurement": "separate project selected screws; supplied vendor pack not assumed"
+  }
+ ]
+}
