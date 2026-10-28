@@ -135,6 +135,8 @@ export function wardrobeView(c: Core, i: WardrobeInput): WardrobeView {
     storageRu: Record<string, string> = W.STORAGE_KIND_RU,
     decors = W.decorChoices(HW),
     sliding = i.domain === 'sliding';
+  const scene3d = scene3dOf(c, graph),
+    geo = geometryOf(scene3d.scene);
   const handle = fit.handleId === 'NONE' ? null : (options.handles.find((h: any) => h.id === fit.handleId) ?? options.handles.find((h: any) => h.isDefault));
   const sections = i.state.sections.map((s: any, k: number) => {
     const f = W.fillPanelOf(i, HW, k),
@@ -153,6 +155,7 @@ export function wardrobeView(c: Core, i: WardrobeInput): WardrobeView {
       lit: W.litSections(i).includes(ids[k]),
       // Ряды фасада секции (id — для команд editor_call setFacadeRow, mergeFacadeRow…).
       facade_rows: !sliding && v.facade === 'rows' ? W.facadeRowsOf(i, HW, k).map((r: any) => ({ id: r.id, leaves: r.leaves, hinge_side: r.hingeSide, height_mm: r.heightMm })) : undefined,
+      geometry: geo(ids[k]),
     });
   });
   const doors = sliding ? W.slidingSummary(i) : null,
@@ -198,7 +201,7 @@ export function wardrobeView(c: Core, i: WardrobeInput): WardrobeView {
     missing,
     terms_hidden: pr.missing.length - missing.length,
   };
-  return { revision: graph.revision.projectRevisionId, state, price, warnings: [], previewSvg: c.previewSvg(graph), scene3d: scene3dOf(c, graph), graph };
+  return { revision: graph.revision.projectRevisionId, state, price, warnings: [], previewSvg: c.previewSvg(graph), scene3d, graph };
 }
 
 /** Справочники для get_options шкафа (§4): из ядра и выпуска каталога, без цен, ставок и номеров правил. */
@@ -225,4 +228,33 @@ export function wardrobeOptions(c: Core, kind: 'wardrobe' | 'sliding', topic: st
     default:
       return null;
   }
+}
+
+const mm = (v: number) => Math.round(v * 10) / 10;
+
+/**
+ * Высоты деталей секции от пола — из 3D-сцены ядра (engine.sceneOf), той же, что видит конструктор: помощник берёт
+ * их из ответа, а не считает. `y_mm` полки — середина полки над дном корпуса: так её ждёт команда wardrobe/moveShelf.
+ */
+function geometryOf(scene: any): (section: string) => unknown {
+  const parts: any[] = scene.parts,
+    z = (p: any) => ({ bottom_mm: mm(p.boxMm.min[2]), top_mm: mm(p.boxMm.max[2]) }),
+    num = (id: string, re: RegExp) => Number(re.exec(id)?.[1] ?? 0);
+  return (section) => {
+    const body = section.replace(/-S\d+$/, ''),
+      bottom = parts.find((p) => p.id === `${body}-CARCASS-BOTTOM`),
+      floor = bottom ? bottom.boxMm.max[2] : null,
+      own = parts.filter((p) => p.id.startsWith(section + '-'));
+    const shelves = own
+      .filter((p) => /-SHELF\d+$/.test(p.id))
+      .sort((a, b) => num(a.id, /SHELF(\d+)$/) - num(b.id, /SHELF(\d+)$/))
+      .map((p, index) => ({ index, ...z(p), y_mm: floor === null ? null : mm((p.boxMm.min[2] + p.boxMm.max[2]) / 2 - floor) }));
+    const drawers = own
+      .filter((p) => /-DRAWER\d+-FRONT$/.test(p.id))
+      .sort((a, b) => num(a.id, /DRAWER(\d+)/) - num(b.id, /DRAWER(\d+)/))
+      .map((p, index) => ({ index, ...z(p) }));
+    const cover = own.find((p) => p.id.endsWith('-SHELF-DRAWER-COVER'));
+    const facades = parts.filter((p) => p.surface === 'FACADE' && p.assemblyId === section).map((p) => ({ id: p.id.slice(section.length + 1), ...z(p) }));
+    return { interior_bottom_mm: floor === null ? null : mm(floor), shelves, drawers, drawer_cover: cover ? z(cover) : null, facades };
+  };
 }
