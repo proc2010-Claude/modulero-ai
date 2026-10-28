@@ -2,6 +2,8 @@
 //
 //   new <сеанс> [--out <папка>] новый сеанс и сделать его текущим; --out — папка файлов проекта для хода
 //   use <сеанс> [--out <папка>] сделать сеанс текущим
+//   ready <сеанс> [--out <папка>] начало «Режима диалога»: new или use и шпаргалка входов инструментов из схем
+//                               (src/stand/sheet.ts) — схемы целиком читать не нужно
 //   human '<текст>'             реплика человека в ленту диалога
 //   ai '<текст>'                реплика помощника в ленту диалога
 //   <инструмент> '<JSON>'       вызов инструмента (tools.claude-api.json); JSON можно дать как - (stdin) или @файл
@@ -22,6 +24,7 @@ import { fileURLToPath } from 'node:url';
 import { costLine } from '../stand/cost.ts';
 import { loadCore } from '../stand/engine.ts';
 import { exportScenario } from '../stand/scenario.ts';
+import { sheet } from '../stand/sheet.ts';
 import { Stand } from '../stand/stand.ts';
 import { outPaths, parseTurn, runTurn } from '../stand/turn.ts';
 
@@ -62,14 +65,15 @@ function readArg(a: string | undefined): string {
 if (!cmd) fail(readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).map((l) => l.slice(3)).join('\n'));
 mkdirSync(root, { recursive: true });
 
-if (cmd === 'new' || cmd === 'use') {
+if (cmd === 'new' || cmd === 'use' || cmd === 'ready') {
   const name = rest[0] ?? fail('Нужно имя сеанса.');
   if (cmd === 'use' && !existsSync(join(root, name, 'session.json'))) fail(`Нет сеанса ${name} в ${root}.`);
   if (cmd === 'new' && existsSync(join(root, name, 'session.json'))) fail(`Сеанс ${name} уже есть: npm run dialog -- use ${name}`);
   const stand = new Stand(await loadCore(), root, name);
   writeFileSync(currentFile, name + '\n');
   if (outArg !== null) writeFileSync(outFile, outArg + '\n');
-  console.log(JSON.stringify({ session: name, dir: stand.dir, page: join(stand.dir, 'prototype.html'), out: existsSync(outFile) ? readFileSync(outFile, 'utf8').trim() : null }, null, 2));
+  console.log(JSON.stringify({ session: name, page: join(stand.dir, 'prototype.html'), out: existsSync(outFile) ? readFileSync(outFile, 'utf8').trim() : null, revision: stand.headRevision() }));
+  if (cmd === 'ready') console.log(sheet());
   process.exit(0);
 }
 
@@ -94,7 +98,9 @@ switch (cmd) {
     const r = runTurn(stand, turn);
     const { last, last_full, ...brief } = r;
     // Одной строкой: ход читает модель, отступы только добавляют токенов.
-    console.log(JSON.stringify({ ...brief, last: full ? last_full : last }));
+    // state — один раз, на верхнем уровне; view (пути страницы) уже есть в page.
+    const shown = full ? last_full : last && (({ state: _s, view: _v, ...x }) => x)(last);
+    console.log(JSON.stringify({ ...brief, last: shown }));
     if (!r.ok) process.exitCode = 2;
     break;
   }
