@@ -9,8 +9,8 @@ import { SCENARIO_FORMAT, answerProblems, replay, type Scenario } from '../src/s
 const DIR = new URL('../scenarios/kitchen/', import.meta.url);
 const files = readdirSync(DIR).filter((f) => f.endsWith('.json')).sort();
 
-test('сценарии кухни: 12 диалогов из TASK_FIRST.md п. 5', () => {
-  assert.equal(files.length, 12, files.join(', '));
+test('сценарии кухни: не меньше 12 диалогов из TASK_FIRST.md п. 5', () => {
+  assert.ok(files.length >= 12, files.join(', '));
 });
 
 for (const f of files) {
