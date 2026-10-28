@@ -8,6 +8,7 @@ import { SCENARIO_FORMAT, answerProblems, replay, type Scenario } from '../src/s
 
 const DIR = new URL('../scenarios/kitchen/', import.meta.url);
 const WARDROBE = new URL('../scenarios/wardrobe/', import.meta.url);
+const HOME = new URL('../scenarios/home/', import.meta.url);
 const list = (dir: URL) => readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
 const files = list(DIR);
 
@@ -19,7 +20,11 @@ test('сценарии шкафа: не меньше 8 диалогов (EXCHANG
   assert.ok(list(WARDROBE).length >= 8, list(WARDROBE).join(', '));
 });
 
-for (const url of [...files.map((f) => new URL(f, DIR)), ...list(WARDROBE).map((f) => new URL(f, WARDROBE))]) {
+test('сценарии другой мебели (HOME): есть', () => {
+  assert.ok(list(HOME).length >= 1);
+});
+
+for (const url of [DIR, WARDROBE, HOME].flatMap((dir) => list(dir).map((f) => new URL(f, dir)))) {
   const f = url.pathname.split('/').slice(-2).join('/');
   test(`сценарий ${f}`, async () => {
     const sc: Scenario = JSON.parse(readFileSync(url, 'utf8'));

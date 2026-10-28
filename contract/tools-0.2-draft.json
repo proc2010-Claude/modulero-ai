@@ -1,0 +1,84 @@
+{
+  "format": "modulero.ai-tools-extension",
+  "formatVersion": "0.2-draft",
+  "basis": "AI-DEC-007: общий проход к командам редактора конструктора modulero-next; команды и их параметры — contract/commands-<sha>.json, снятые с типов ядра (scripts/commands.ts)",
+  "note": "Добавляется к reference/start/examples/tools.claude-api.json 0.1-draft (тот не меняется). Правки *_edits договора 0.1 остаются; editor_call даёт всё остальное, что умеет редактор.",
+  "tools": [
+    {
+      "name": "list_commands",
+      "description": "Команды редактора конструктора для изделия: имя, описание из кода конструктора и параметры (JSON-схема). Вызывай, когда нужной правки нет в *_edits: стыки и ширины корпусов, перегородки, стоевые, ряды фасадов, ручки, полки и поля модулей кухни, другая мебель (HOME) и прочее.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "kitchen",
+              "wardrobe",
+              "sliding",
+              "home"
+            ]
+          }
+        },
+        "required": [
+          "kind"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "editor_call",
+      "description": "Выполнить команды редактора конструктора по порядку, как кнопки в его окне. Первая отказанная останавливает остальные; ответ — как у *_edits: новая версия, отказ словами конструктора, состояние и цена. Имена и параметры — только из list_commands; размеры и цену не придумывай, бери из ответа.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "description": "id проекта из start_project"
+          },
+          "base_revision": {
+            "type": "string",
+            "description": "revision из последнего ответа; при несовпадении — отказ STALE_REVISION"
+          },
+          "label": {
+            "type": "string",
+            "description": "Коротко по-русски, что меняется, для истории версий"
+          },
+          "calls": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "type": "object",
+              "properties": {
+                "command": {
+                  "type": "string",
+                  "description": "Имя из list_commands, например wardrobe/toggleBodyJoint"
+                },
+                "args_json": {
+                  "type": "string",
+                  "description": "Параметры команды объектом JSON по их именам из list_commands, например {\"joint\":2}; без параметров — {}"
+                }
+              },
+              "required": [
+                "command",
+                "args_json"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "project_id",
+          "base_revision",
+          "label",
+          "calls"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

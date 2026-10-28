@@ -66,3 +66,15 @@ export function toolsProblems(file: ToolsFile): string[] {
   }
   return problems;
 }
+
+export const EXTENSION_PATH = new URL('../contract/tools-0.2-draft.json', import.meta.url);
+
+/**
+ * Инструменты стенда: договор 0.1-draft и расширение 0.2-draft (AI-DEC-007) — list_commands и editor_call,
+ * общий проход к командам редактора конструктора. Файл договора 0.1 не меняется.
+ */
+export function loadStandTools(): ToolsFile {
+  const base = loadTools();
+  const ext = JSON.parse(readFileSync(EXTENSION_PATH, 'utf8')) as { formatVersion: string; tools: ToolDefinition[] };
+  return { ...base, formatVersion: `${base.formatVersion}+${ext.formatVersion}`, tools: [...base.tools, ...ext.tools] };
+}

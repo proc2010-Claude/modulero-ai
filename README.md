@@ -28,7 +28,9 @@ npm run dialog -- ai '…'        # печатает строку расхода
 npm run dialog -- page          # путь к sessions/<сеанс>/prototype.html
 ```
 
-Шкаф — так же: `start_project '{"kind":"wardrobe","template":"start"}'` (купе — `"sliding"`), правки — `wardrobe_edits`.
+Шкаф — так же: `start_project '{"kind":"wardrobe","template":"start"}'` (купе — `"sliding"`), правки — `wardrobe_edits`; другая мебель — `start_project '{"kind":"home","template":"chest"}'`, правки — `home_edits`.
+
+Всё, что умеет редактор конструктора, сверх `*_edits` — командами ядра (AI-DEC-007): `list_commands '{"kind":"wardrobe"}'`, затем `editor_call` с `calls: [{"command":"wardrobe/toggleBodyJoint","args_json":"{\"joint\":2}"}]`. Список команд и схемы параметров снимаются с типов ядра: `npm run contract:commands` → `contract/commands-cbaf1534.json` (`npm run check` сверяет).
 
 ## Диалог в конструкторе на компьютере владельца
 

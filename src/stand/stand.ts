@@ -1,4 +1,4 @@
-// Стенд ИИ-диалога (TASK_FIRST.md п. 1–3): выполняет инструменты tools.claude-api.json функциями ядра
+// Стенд ИИ-диалога (TASK_FIRST.md п. 1–3): выполняет инструменты tools.claude-api.json и расширения 0.2 (AI-DEC-007) функциями ядра
 // modulero-next и ведёт сеанс на диске. Ответ правок — EXCHANGE_SPEC.md §5.
 //
 // sessions/<имя>/
@@ -11,13 +11,15 @@
 //   prototype.html       страница прототипа, переписывается после каждого вызова и реплики
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { loadTools } from '../tools.ts';
+import { loadStandTools } from '../tools.ts';
+import { commandList, loadCommands, runCommand, type CommandsFile } from './commands.ts';
 import { sessionCost, type SessionCost } from './cost.ts';
 import type { Core } from './engine.ts';
 import { applyKitchenEdit, kitchenOptions, kitchenView, startKitchen, type Edit, type EditResult, type KitchenProject, type KitchenView } from './kitchen.ts';
+import { applyHomeEdit, homeOptions, homeView, startHome, type HomeProject, type HomeView } from './home.ts';
 import { renderPage } from './page.ts';
 import { validate } from './validate.ts';
-import { applyWardrobeEdit, startWardrobe, wardrobeFileKind, wardrobeOptions, wardrobeView, type WardrobeInput, type WardrobeView } from './wardrobe.ts';
+import { applyWardrobeEdit, graphChecked, startWardrobe, wardrobeFileKind, wardrobeOptions, wardrobeView, type WardrobeInput, type WardrobeView } from './wardrobe.ts';
 
 export const SESSION_FORMAT = 'modulero-ai.session/1';
 export const APP_VERSION = 'modulero-ai-stand';
@@ -37,7 +39,7 @@ export interface SessionData {
   name: string;
   created: string;
   engine: { repo: string; sha: string; hardwareCatalog: string };
-  /** Изделие текущей версии: кухня, распашной шкаф или купе (купе ↔ шкаф меняет правка set_product). */
+  /** Изделие текущей версии: кухня, распашной шкаф, купе (купе ↔ шкаф меняет правка set_product) или другая мебель. */
   kind: ProductKind | null;
   /** Номер текущей версии в history (n). */
   head: number | null;
@@ -57,13 +59,17 @@ export interface DialogLine {
 }
 
 export type Output = Record<string, unknown>;
-export type ProductKind = 'kitchen' | 'wardrobe' | 'sliding';
-/** Проект версии: KitchenProject кухни или WardrobeInput шкафа. */
-export type Project = KitchenProject | WardrobeInput;
-export type ProductView = KitchenView | WardrobeView;
+export type ProductKind = 'kitchen' | 'wardrobe' | 'sliding' | 'home';
+/** Проект версии: KitchenProject кухни, WardrobeInput шкафа или HomeProject другой мебели. */
+export type Project = KitchenProject | WardrobeInput | HomeProject;
+export type ProductView = KitchenView | WardrobeView | HomeView;
 
-const NOT_YET = 'На стенде пока кухня, распашной шкаф и шкаф-купе. Другая мебель (комод, тумба, стеллаж и другое) — дальше на этапе 2.';
+const KINDS: readonly string[] = ['kitchen', 'wardrobe', 'sliding', 'home'];
 const isWardrobe = (kind: string | null) => kind === 'wardrobe' || kind === 'sliding';
+/** Редактор изделия: у распашного шкафа и купе он один. */
+const family = (kind: string | null) => (isWardrobe(kind) ? 'wardrobe' : kind);
+const EDITS_TOOL: Record<string, string> = { kitchen: 'kitchen_edits', wardrobe: 'wardrobe_edits', home: 'home_edits' };
+const PRODUCT_OF_TOOL: Record<string, string> = { kitchen_edits: 'кухня', wardrobe_edits: 'шкаф', home_edits: 'другая мебель' };
 
 /** Ошибка вызова (§5 п. 5): ИИ извиняется одним предложением и предлагает повторить. */
 const error = (text: string): Output => ({ error: text, is_error: true });
@@ -73,7 +79,8 @@ export class Stand {
   data: SessionData;
   private project: Project | null = null;
   private view: ProductView | null = null;
-  private readonly schemas = new Map(loadTools().tools.map((t) => [t.name, t.input_schema]));
+  private readonly schemas = new Map(loadStandTools().tools.map((t) => [t.name, t.input_schema]));
+  private readonly commands: CommandsFile;
 
   private readonly core: Core;
   readonly name: string;
@@ -81,6 +88,7 @@ export class Stand {
 
   constructor(core: Core, root: string, name: string, clock: () => Date = () => new Date()) {
     this.core = core;
+    this.commands = loadCommands(core.pin.sha);
     this.name = name;
     this.clock = clock;
     if (!/^[a-z0-9][a-z0-9-]{0,63}$/.test(name)) throw new Error(`Имя сеанса — латиница в нижнем регистре, цифры и «-»: ${name}`);
@@ -159,9 +167,11 @@ export class Stand {
         return this.options(a.kind, a.topic);
       case 'kitchen_edits':
       case 'wardrobe_edits':
-        return this.edits(tool, a);
       case 'home_edits':
-        return error(NOT_YET);
+      case 'editor_call':
+        return this.edits(tool, a);
+      case 'list_commands':
+        return { kind: a.kind, commands: commandList(this.commands, a.kind) };
       case 'get_project':
         return this.withProject(a.project_id, () => this.projectAnswer());
       case 'undo':
@@ -183,22 +193,40 @@ export class Stand {
   // ------------------------------------------------------------ проект и версии
 
   private start(kind: string, template: string | null): Output {
-    if (kind !== 'kitchen' && !isWardrobe(kind)) return error(NOT_YET);
     if (isWardrobe(kind) && template !== null && template !== 'start') return error(`Шаблон «${template}» — не для шкафа: у шкафа и купе один стартовый, start.`);
-    const r = kind === 'kitchen' ? startKitchen(this.core, template) : startWardrobe(this.core, kind as 'wardrobe' | 'sliding');
+    const r = kind === 'kitchen' ? startKitchen(this.core, template) : kind === 'home' ? startHome(this.core, template) : startWardrobe(this.core, kind as 'wardrobe' | 'sliding');
     if (!r.ok) return { project_id: this.projectId, refused: { problem: r.problem } };
     this.data.kind = kind as ProductKind;
     this.data.draft = null;
-    const label = kind === 'kitchen' ? (template && template !== 'empty' ? `Новая кухня: пример «${template}»` : 'Новая кухня') : kind === 'sliding' ? 'Новый шкаф-купе' : 'Новый распашной шкаф';
+    const label =
+      kind === 'kitchen'
+        ? template && template !== 'empty'
+          ? `Новая кухня: пример «${template}»`
+          : 'Новая кухня'
+        : kind === 'home'
+          ? `Новая мебель: ${(r.project as HomeProject).name}`
+          : kind === 'sliding'
+            ? 'Новый шкаф-купе'
+            : 'Новый распашной шкаф';
     const v = this.commit(r.project, label, 'start_project');
     return { project_id: this.projectId, revision: v.revision, notice: r.notice ?? null, ...this.summary() };
   }
 
   private edits(tool: string, a: Record<string, any>): Output {
     return this.withProject(a.project_id, () => {
-      const wardrobe = isWardrobe(this.data.kind);
-      if (wardrobe !== (tool === 'wardrobe_edits')) return error(wardrobe ? 'Проект — шкаф: его правки — wardrobe_edits.' : 'Проект — кухня: её правки — kitchen_edits.');
-      const apply = (p: Project, e: Edit): EditResult => (wardrobe ? applyWardrobeEdit(this.core, p, e) : applyKitchenEdit(this.core, p, e));
+      const kind = this.data.kind!,
+        own = EDITS_TOOL[family(kind)!]!;
+      if (tool !== 'editor_call' && tool !== own) return error(`Проект — ${PRODUCT_OF_TOOL[own]}, а ${tool} — правки для изделия «${PRODUCT_OF_TOOL[tool]}»: здесь ${own} или editor_call.`);
+      const wardrobe = isWardrobe(kind);
+      // editor_call: команда редактора по имени (commands.ts); у шкафа после неё, как после правки договора, строится граф.
+      const items: Edit[] = tool === 'editor_call' ? a.calls.map((c: { command: string; args_json: string }) => ({ op: c.command, args_json: c.args_json })) : a.edits;
+      const apply = (p: Project, e: Edit): EditResult => {
+        if (tool === 'editor_call') {
+          const r = runCommand(this.core, this.commands, kind, p, e.op, e.args_json as string);
+          return wardrobe ? graphChecked(this.core, r) : r;
+        }
+        return wardrobe ? applyWardrobeEdit(this.core, p, e) : kind === 'home' ? applyHomeEdit(this.core, this.commands, p, e) : applyKitchenEdit(this.core, p, e);
+      };
       const head = this.headVersion()!;
       if (a.base_revision !== head.revision)
         return {
@@ -206,13 +234,13 @@ export class Stand {
           revision: head.revision,
           applied: [],
           refused: { i: null, op: null, code: 'STALE_REVISION', problem: `Проект уже в версии ${head.revision}, правка от ${a.base_revision}. Правки не применены.` },
-          not_run: a.edits.map((_: unknown, i: number) => i),
+          not_run: items.map((_: unknown, i: number) => i),
           ...this.summary(),
         };
       let p = this.current();
       const applied: { i: number; op: string; notice: string | null }[] = [];
       let refused: { i: number; op: string; problem: string } | null = null;
-      for (const [i, e] of (a.edits as Edit[]).entries()) {
+      for (const [i, e] of items.entries()) {
         const r = apply(p, e);
         if (!r.ok) {
           refused = { i, op: e.op, problem: r.problem };
@@ -221,7 +249,7 @@ export class Stand {
         p = r.project;
         applied.push({ i, op: e.op, notice: r.notice ?? null });
       }
-      const notRun = refused ? (a.edits as Edit[]).map((_, i) => i).filter((i) => i > refused!.i) : [];
+      const notRun = refused ? items.map((_, i) => i).filter((i) => i > refused!.i) : [];
       const before = head.revision;
       if (applied.length) this.commit(p, a.label, tool);
       const now = this.headVersion()!;
@@ -235,19 +263,24 @@ export class Stand {
     const before = this.headVersion()!.revision;
     const { kind, project: p } = this.readVersion(v);
     // Версия могла быть другим изделием (новый start_project в том же сеансе): возврат — к ней целиком.
-    if (isWardrobe(kind) !== isWardrobe(this.data.kind)) this.data.draft = null;
+    if (family(kind) !== family(this.data.kind)) this.data.draft = null;
     this.data.kind = kind;
     const now = this.commit(p, `Возврат к версии ${v.n} «${v.label}»`, 'undo');
     return { project_id: this.projectId, revision: now.revision, previous_revision: before, version: now.n, ...this.summary() };
   }
 
-  /** Черновик ядра с вариантами — у кухни свой (kitchen/draft.ts), у шкафа свой (wardrobe/draft.ts). */
+  /** Черновик ядра с вариантами — у каждого изделия свой: kitchen/draft.ts, wardrobe/draft.ts, home/draft.ts. */
   private get drafts(): any {
-    return isWardrobe(this.data.kind) ? this.core.WD : this.core.K.draft;
+    const { core } = this;
+    if (isWardrobe(this.data.kind)) return core.WD;
+    if (this.data.kind !== 'home') return core.K.draft;
+    // У HOME чтение черновика проверяет проекты вариантов каталогом выпуска.
+    return { ...core.H.draft, readDraft: (text: string | null) => core.H.draft.readDraft(text, core.HW) };
   }
 
   private viewOf(p: Project): ProductView {
-    return isWardrobe(this.data.kind) ? wardrobeView(this.core, p) : kitchenView(this.core, p);
+    const kind = this.data.kind;
+    return isWardrobe(kind) ? wardrobeView(this.core, p) : kind === 'home' ? homeView(this.core, p) : kitchenView(this.core, p);
   }
 
   private variants(action: 'save' | 'list' | 'switch', name: string | null): Output {
@@ -319,8 +352,8 @@ export class Stand {
   /** Проект версии читается из её файла (readProjectFile ядра): так проверяется, что файл открывается в конструкторе. */
   private readVersion(v: Version): { kind: ProductKind; project: Project } {
     const opened = this.core.readProjectFile(readFileSync(join(this.dir, v.file), 'utf8'), this.core.HW);
-    if (!['kitchen', 'wardrobe', 'sliding'].includes(opened.kind) || !opened.editable) throw new Error(`Файл ${v.file} не открывается для правки: ${opened.kind}.`);
-    return { kind: opened.kind, project: isWardrobe(opened.kind) ? (opened.project.input as WardrobeInput) : (opened.project as KitchenProject) };
+    if (!KINDS.includes(opened.kind) || !opened.editable) throw new Error(`Файл ${v.file} не открывается для правки: ${opened.kind}.`);
+    return { kind: opened.kind, project: isWardrobe(opened.kind) ? (opened.project.input as WardrobeInput) : (opened.project as KitchenProject | HomeProject) };
   }
 
   current(): Project {
@@ -354,9 +387,8 @@ export class Stand {
   }
 
   private options(kind: string, topic: string): Output {
-    if (kind !== 'kitchen' && !isWardrobe(kind)) return error(NOT_YET);
-    const values = kind === 'kitchen' ? kitchenOptions(this.core, topic) : wardrobeOptions(this.core, kind as 'wardrobe' | 'sliding', topic);
-    const what = kind === 'kitchen' ? 'к кухне' : kind === 'sliding' ? 'к шкафу-купе' : 'к распашному шкафу';
+    const values = kind === 'kitchen' ? kitchenOptions(this.core, topic) : kind === 'home' ? homeOptions(this.core, topic) : wardrobeOptions(this.core, kind as 'wardrobe' | 'sliding', topic);
+    const what = kind === 'kitchen' ? 'к кухне' : kind === 'home' ? 'к другой мебели' : kind === 'sliding' ? 'к шкафу-купе' : 'к распашному шкафу';
     return values === null ? error(`Тема «${topic}» ${what} не относится или на стенде её пока нет.`) : { kind, topic, values };
   }
 

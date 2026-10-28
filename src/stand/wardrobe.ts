@@ -15,7 +15,11 @@ const result = (r: { ok: true; input: WardrobeInput; notice?: string } | { ok: f
 
 /** Одна правка шкафа — функция редактора ядра (§4.2); принятая правка проверяется построением графа. */
 export function applyWardrobeEdit(c: Core, i: WardrobeInput, e: Edit): EditResult {
-  const r = editOf(c, i, e);
+  return graphChecked(c, editOf(c, i, e));
+}
+
+/** Принятая редактором правка шкафа (из договора или команды editor_call) годится, только если по ней строится граф. */
+export function graphChecked(c: Core, r: EditResult): EditResult {
   if (!r.ok) return r;
   // Редактор принял правку, а граф по ней не строится: такой проект не записать в файл и не показать.
   // Правка не применяется, причина — словами ядра (задача MOD-AI-18).
@@ -147,6 +151,8 @@ export function wardrobeView(c: Core, i: WardrobeInput): WardrobeView {
       drawers: f.drawers.map((d: any) => ({ execution: d.execution === 'external' ? 'наружный' : 'внутренний', box_height_mm: d.boxHeightMm })),
       storage: (fit.storage ?? []).filter((x: any) => x.sectionId === ids[k]).map((x: any) => storageRu[x.kind] ?? x.kind),
       lit: W.litSections(i).includes(ids[k]),
+      // Ряды фасада секции (id — для команд editor_call setFacadeRow, mergeFacadeRow…).
+      facade_rows: !sliding && v.facade === 'rows' ? W.facadeRowsOf(i, HW, k).map((r: any) => ({ id: r.id, leaves: r.leaves, hinge_side: r.hingeSide, height_mm: r.heightMm })) : undefined,
     });
   });
   const doors = sliding ? W.slidingSummary(i) : null,
@@ -170,6 +176,15 @@ export function wardrobeView(c: Core, i: WardrobeInput): WardrobeView {
     sliding: doors
       ? { doors: doors.doors, system: systems.get(doors.system) ?? doors.system, scheme: doors.scheme, mirrored_tracks: doors.mirror, insert: insert?.material ?? null, insert_decor: insert?.decorId ?? null }
       : null,
+    // Корпуса, стыки, перегородки, стоевые, декоры и фурнитура — что видно в редакторе и нужно командам editor_call.
+    bodies: i.state.bodies.map((b: any) => defined({ id: b.id, width_mm: exactMm(b.widthExact) ?? b.width, over: b.parent ?? undefined })),
+    body_joints: W.bodyJoints(i),
+    partitions_left_of_sections: W.innerPartitions(i),
+    uprights: W.uprights(i).map((u: any) => ({ id: u.id, section: u.section, x_mm: u.xMm, height_mm: u.heightMm })),
+    facade_material: W.facadeChoiceOf(i),
+    side_decor: { left: W.sideDecorChoice(i, 'left'), right: W.sideDecorChoice(i, 'right') },
+    edge_decor: W.edgeDecorChoice(i),
+    fittings: defined({ handle_id: fit.handleId, rod_series_id: fit.rodSeriesId, leg_id: fit.legId, storage_colour: fit.storageColour, drawer_system: fit.drawerSystem, drawer_runner: fit.drawerRunner }),
     parts: graph.parts.length,
   };
   // Полоса цены конструктора (MOD-DEC-247, 497): сумма, известная часть, статус, чего не хватает. Без себестоимости и ставок.
