@@ -1,0 +1,1252 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "k-2026-10-28-a",
+  "title": "Сеанс владельца: угловая кухня по стенам",
+  "kind": "kitchen",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Настоящий диалог владельца 2026-10-28: угловая кухня по описанию стен (основная 2–2,5 м, левая 1,53 м), перестановки модулей между стенами, щели, доборы, два цвета фасадов, вопросы про столешницу и ручки.",
+  "criteria": [
+    "каждое число и цена — из ответа стенда, неполная цена названа неполной",
+    "после отказа — не больше одного исправления по смыслу отказа, причина не обходится",
+    "чего нет в конструкторе (столешница, ручки, добор на второй стене, декор фасада вытяжки) — честно сказано, без обещаний за мебельщика",
+    "неоднозначная просьба («правая стена» в Г-кухне) — уточняется до правок"
+  ],
+  "expected_refusals": [
+    "Геометрическое пересечение с «Ниша под п",
+    "Геометрическое пересечение с «Шкаф с суш",
+    "Геометрическое пересечение с «Шкаф углов",
+    "Деталь «Боковина левая» модуля preview п",
+    "На стене A нет свободного места для «Шка",
+    "У этого модуля нет рассчитанного фасада.",
+    "Угловой корпус привязан к выбранному угл"
+  ],
+  "turns": [
+    {
+      "human": "хочу кухню",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "kitchen",
+            "template": "straight"
+          },
+          "expect": {
+            "revision": "KPR2-af6c0f5505e21cc3",
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 141557.79
+            },
+            "modules": 10,
+            "parts": 84
+          }
+        },
+        {
+          "tool": "offer_choices",
+          "input": {
+            "options": [
+              "Вдоль одной стены",
+              "Угловая",
+              "П-образная",
+              "С островом"
+            ],
+            "allow_free_text": true
+          },
+          "expect": {
+            "shown": [
+              "Вдоль одной стены",
+              "Угловая",
+              "П-образная",
+              "С островом"
+            ]
+          }
+        }
+      ],
+      "ai": "Поставил для начала прямую кухню 3 м вдоль одной стены: мойка, посудомойка, духовка, ящики и полки, сверху шкафы с сушкой и вытяжкой, всё белое. Известная часть около 142 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев; техника в цену не входит.\n\nКакая форма кухни нужна, какой длины стены и высота потолка? И какую технику встраиваем?",
+      "choices": [
+        "Вдоль одной стены",
+        "Угловая",
+        "П-образная",
+        "С островом"
+      ]
+    },
+    {
+      "human": "Мне нужна угловая, левая стена 153 см, а основная 2-2,5 м",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Угловая кухня: основная стена 2,5 м, левая 1,53 м",
+            "edits": [
+              {
+                "op": "remove_module",
+                "id": "m5"
+              },
+              {
+                "op": "remove_module",
+                "id": "m10"
+              },
+              {
+                "op": "set_room",
+                "key": "width",
+                "value": 2500
+              },
+              {
+                "op": "set_room",
+                "key": "depth",
+                "value": 1530
+              },
+              {
+                "op": "set_type",
+                "type": "l"
+              },
+              {
+                "op": "set_orientation",
+                "orientation": "left"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-df9bed51ccbccd63",
+            "applied": [
+              "remove_module",
+              "remove_module",
+              "set_room",
+              "set_room",
+              "set_type",
+              "set_orientation"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 116331.08
+            },
+            "modules": 8,
+            "parts": 68
+          }
+        }
+      ],
+      "ai": "Сделал угловую кухню: основная стена 2,5 м, слева 1,53 м. На основной стене поместились ящики, мойка, посудомойка и духовка, сверху четыре шкафа с сушкой и вытяжкой. Два крайних шкафа с полками убрал, они не помещались. Левая стена пока пустая. Известная часть около 116 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев.\n\nОсновную стену я взял по максимуму, 2,5 м. Какая она точно? И что ставим на левую стену: холодильник, шкафы, угловой шкаф?"
+    },
+    {
+      "human": "Так, на левой стене: плита и духовка, потом шкаф с ящиками",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Плита с духовкой и шкаф с ящиками на левой стене",
+            "edits": [
+              {
+                "op": "add_module",
+                "card": "lower-oven",
+                "wall": "B",
+                "pos": null,
+                "width": null
+              },
+              {
+                "op": "add_module",
+                "card": "lower-drawers",
+                "wall": "B",
+                "pos": null,
+                "width": null
+              },
+              {
+                "op": "add_module",
+                "card": "upper-hood",
+                "wall": "B",
+                "pos": null,
+                "width": null
+              },
+              {
+                "op": "remove_module",
+                "id": "m4"
+              },
+              {
+                "op": "remove_module",
+                "id": "m9"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-a4cf1607e35b5acd",
+            "applied": [
+              "add_module"
+            ],
+            "refused": {
+              "i": 1,
+              "op": "add_module",
+              "problem": "На стене A нет свободного места для «Шкаф с ящиками» шириной 600 мм: Геометрическое пересечение с «Шкаф под духовку». Сосед остаётся на месте."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 130585.65
+            },
+            "modules": 9,
+            "parts": 75
+          }
+        },
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "kitchen",
+            "topic": "kitchen_cards"
+          },
+          "expect": {
+            "values": 6
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Вытяжка над плитой слева, узкий шкаф с ящиками",
+            "edits": [
+              {
+                "op": "remove_module",
+                "id": "m4"
+              },
+              {
+                "op": "remove_module",
+                "id": "m9"
+              },
+              {
+                "op": "add_module",
+                "card": "upper-hood",
+                "wall": "B",
+                "pos": null,
+                "width": null
+              },
+              {
+                "op": "add_module",
+                "card": "lower-drawers",
+                "wall": "B",
+                "pos": null,
+                "width": 300
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-ce1368abb104ba1d",
+            "applied": [
+              "remove_module",
+              "remove_module",
+              "add_module",
+              "add_module"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 145957.58
+            },
+            "modules": 9,
+            "parts": 96
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Вытяжка точно над плитой",
+            "edits": [
+              {
+                "op": "update_module",
+                "id": "m12",
+                "wall": "B",
+                "pos": 930,
+                "width": null,
+                "depth": null,
+                "height": null,
+                "floor": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-ae4fd96cc177e602",
+            "applied": [
+              "update_module"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 145957.58
+            },
+            "modules": 9,
+            "parts": 96
+          }
+        }
+      ],
+      "ai": "Поставил на левую стену шкаф под духовку с варочной панелью, над ним вытяжку. Шкаф с ящиками шириной 60 см туда не поместился: конструктор не нашёл для него места рядом с духовкой. Поставил узкий, 30 см, между углом и духовкой. Духовка стоит в дальнем от угла конце стены. На основной стене, где раньше была духовка, освободилось место.\n\nИзвестная часть около 146 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев. Техника в цену не входит.\n\nУзкие ящики оставляем или поставить ящики 60 см на освободившееся место основной стены? И какой точно длины основная стена?"
+    },
+    {
+      "human": "по правой стене: угловой шкаф с мойкой, посудомойка и шкаф-пенал для холодильника",
+      "calls": [
+        {
+          "tool": "offer_choices",
+          "input": {
+            "options": [
+              "Это основная стена",
+              "Добавить третью стену справа (П-образная)"
+            ],
+            "allow_free_text": true
+          },
+          "expect": {
+            "shown": [
+              "Это основная стена",
+              "Добавить третью стену справа (П-образная)"
+            ]
+          }
+        }
+      ],
+      "ai": "Уточню, чтобы не переставить лишнего. Сейчас кухня угловая: основная стена и стена слева, справа стены нет. Правая — это основная стена, если стоять лицом к левой? Или нужна третья стена справа, то есть П-образная кухня, и тогда какой она длины?\n\nИ важно: отдельного углового шкафа под мойку в каталоге конструктора нет. Могу поставить в угол угловой шкаф, а мойку сразу рядом с ним. Подойдёт так?",
+      "choices": [
+        "Это основная стена",
+        "Добавить третью стену справа (П-образная)"
+      ]
+    },
+    {
+      "human": "правая - я имел ввиду основную стену. Мойку можно врезать и в угловой шкаф без проблем",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Основная стена: угловой шкаф под мойку, посудомойка, пенал под холодильник",
+            "edits": [
+              {
+                "op": "remove_module",
+                "id": "m1"
+              },
+              {
+                "op": "remove_module",
+                "id": "m2"
+              },
+              {
+                "op": "add_module",
+                "card": "lower-corner-direct",
+                "wall": "A",
+                "pos": 0,
+                "width": null
+              },
+              {
+                "op": "add_module",
+                "card": "tall-fridge-one",
+                "wall": "A",
+                "pos": null,
+                "width": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-e5497d297fa5f37f",
+            "applied": [
+              "remove_module",
+              "remove_module"
+            ],
+            "refused": {
+              "i": 2,
+              "op": "add_module",
+              "problem": "Геометрическое пересечение с «Ниша под посудомоечную машину». Сосед остаётся на месте."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 103466
+            },
+            "modules": 7,
+            "parts": 64
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Угловой шкаф под мойку, за ним посудомойка и пенал под холодильник",
+            "edits": [
+              {
+                "op": "remove_module",
+                "id": "m3"
+              },
+              {
+                "op": "add_module",
+                "card": "lower-corner-direct",
+                "wall": "A",
+                "pos": 0,
+                "width": null
+              },
+              {
+                "op": "add_module",
+                "card": "dishwasher",
+                "wall": "A",
+                "pos": null,
+                "width": null
+              },
+              {
+                "op": "add_module",
+                "card": "tall-fridge-one",
+                "wall": "A",
+                "pos": null,
+                "width": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-31ff69013ac8ce1f",
+            "applied": [
+              "remove_module",
+              "add_module",
+              "add_module",
+              "add_module"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 144851.76
+            },
+            "modules": 9,
+            "parts": 83
+          }
+        }
+      ],
+      "ai": "Сделал основную стену: от угла угловой шкаф 123 см под мойку, потом посудомойка и пенал под встроенный холодильник. Вывод воды как раз попадает на угловой шкаф. Саму врезку мойки конструктор отдельно не отмечает, её размечает мебельщик. Сверху остались три шкафа, среди них сушка для посуды.\n\nИзвестная часть около 145 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев. Техника в цену не входит.\n\nОсновная стена у меня сейчас 2,5 м, пенал стоит почти у её конца. Какой она длины точно?"
+    },
+    {
+      "human": "а зачем ты оставил пространство на левой стене в верхнем ряду?",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Навесной шкаф на левой стене рядом с вытяжкой",
+            "edits": [
+              {
+                "op": "add_module",
+                "card": "upper-shelves",
+                "wall": "B",
+                "pos": null,
+                "width": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-31ff69013ac8ce1f",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "add_module",
+              "problem": "На стене A нет свободного места для «Шкаф с полками» шириной 600 мм: Геометрическое пересечение с «Шкаф со встроенной вытяжкой». Сосед остаётся на месте."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 144851.76
+            },
+            "modules": 9,
+            "parts": 83
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Навесной шкаф на левой стене между углом и вытяжкой",
+            "edits": [
+              {
+                "op": "add_module",
+                "card": "upper-shelves",
+                "wall": "B",
+                "pos": 330,
+                "width": 600
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-31ff69013ac8ce1f",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "add_module",
+              "problem": "Деталь «Боковина левая» модуля preview пересекает деталь «Фасад» модуля m6. Сосед остаётся на месте."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 144851.76
+            },
+            "modules": 9,
+            "parts": 83
+          }
+        },
+        {
+          "tool": "offer_choices",
+          "input": {
+            "options": [
+              "Узкий навесной шкаф",
+              "Угловой навесной шкаф в угол",
+              "Оставить как есть"
+            ],
+            "allow_free_text": true
+          },
+          "expect": {
+            "shown": [
+              "Узкий навесной шкаф",
+              "Угловой навесной шкаф в угол",
+              "Оставить как есть"
+            ]
+          }
+        }
+      ],
+      "ai": "Это моя недоработка: когда переносил вытяжку на левую стену, навесные шкафы рядом с ней я не добавил. Сейчас попробовал поставить туда шкаф с полками 60 см, но конструктор отказал. Без точного места он не нашёл, куда его поставить. А у самой вытяжки шкаф задевает фасад крайнего навесного шкафа основной стены у угла.\n\nЕсть два пути: поставить туда шкаф уже, или закрыть угол угловым навесным шкафом вместо крайнего шкафа основной стены. Как сделать?",
+      "choices": [
+        "Узкий навесной шкаф",
+        "Угловой навесной шкаф в угол",
+        "Оставить как есть"
+      ]
+    },
+    {
+      "human": "В угол - угловой шкаф, конечно",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Угловой навесной шкаф в угол",
+            "edits": [
+              {
+                "op": "remove_module",
+                "id": "m6"
+              },
+              {
+                "op": "add_module",
+                "card": "upper-corner-direct",
+                "wall": "A",
+                "pos": 0,
+                "width": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-e4e47c38905e94c2",
+            "applied": [
+              "remove_module"
+            ],
+            "refused": {
+              "i": 1,
+              "op": "add_module",
+              "problem": "Геометрическое пересечение с «Шкаф с сушкой для посуды». Сосед остаётся на месте."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 134272.21
+            },
+            "modules": 8,
+            "parts": 75
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Угловой навесной шкаф в угол вдоль левой стены",
+            "edits": [
+              {
+                "op": "add_module",
+                "card": "upper-corner-direct",
+                "wall": "B",
+                "pos": 0,
+                "width": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-a0ffb8c8d967e4a6",
+            "applied": [
+              "add_module"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 142228.05
+            },
+            "modules": 9,
+            "parts": 83
+          }
+        }
+      ],
+      "ai": "Поставил угловой навесной шкаф 90 см в угол. Вдоль основной стены он не встал: широкий, задевает сушку для посуды. Поэтому он идёт вдоль левой стены от угла до вытяжки, и левая стена сверху теперь закрыта. Крайний шкаф с полками основной стены я убрал, на его месте у угла осталась узкая щель над угловым шкафом под мойку.\n\nИзвестная часть около 142 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев.\n\nЗакрыть щель у угла на основной стене узким шкафом или оставить так?"
+    },
+    {
+      "human": "конечно закрой узким шкафом. И щель между навесными шкафами и холодильником убери",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Узкий навесной шкаф у угла, навесные вплотную к пеналу",
+            "edits": [
+              {
+                "op": "update_module",
+                "id": "m8",
+                "wall": "A",
+                "pos": 1200,
+                "width": 648,
+                "depth": null,
+                "height": null,
+                "floor": null
+              },
+              {
+                "op": "add_module",
+                "card": "upper-shelves",
+                "wall": "A",
+                "pos": 320,
+                "width": 280
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-31875234185d0e6a",
+            "applied": [
+              "update_module"
+            ],
+            "refused": {
+              "i": 1,
+              "op": "add_module",
+              "problem": "Геометрическое пересечение с «Шкаф угловой прямой». Сосед остаётся на месте."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 144235.31
+            },
+            "modules": 9,
+            "parts": 84
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Узкий навесной шкаф у угла",
+            "edits": [
+              {
+                "op": "add_module",
+                "card": "upper-shelves",
+                "wall": "A",
+                "pos": 350,
+                "width": 250
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-f83f483498bde662",
+            "applied": [
+              "add_module"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 159168.4
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        }
+      ],
+      "ai": "Сделал. Шкаф с полками у пенала расширил до 64,8 см, теперь навесные стоят вплотную к холодильнику. У угла поставил узкий шкаф с полками 25 см. Шире не получилось: 28 см конструктор не принял, задевает угловой навесной шкаф.\n\nИзвестная часть около 159 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев. Техника в цену не входит.\n\nПосмотрите 3D: всё ли так? Дальше можно выбрать цвет фасадов и столешницы."
+    },
+    {
+      "human": "а что за щели по левой стене?",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Левая стена без щелей: ящики и угловой навесной вплотную",
+            "edits": [
+              {
+                "op": "update_module",
+                "id": "m17",
+                "wall": "B",
+                "pos": 0,
+                "width": 930,
+                "depth": null,
+                "height": null,
+                "floor": null
+              },
+              {
+                "op": "update_module",
+                "id": "m13",
+                "wall": "B",
+                "pos": 560,
+                "width": 370,
+                "depth": null,
+                "height": null,
+                "floor": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-f83f483498bde662",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "update_module",
+              "problem": "Угловой корпус привязан к выбранному углу; положение и глухая сторона выводятся из него."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 159168.4
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Левая стена без щелей: ящики и угловой навесной вплотную",
+            "edits": [
+              {
+                "op": "update_module",
+                "id": "m13",
+                "wall": "B",
+                "pos": 560,
+                "width": 370,
+                "depth": null,
+                "height": null,
+                "floor": null
+              },
+              {
+                "op": "update_module",
+                "id": "m17",
+                "wall": null,
+                "pos": null,
+                "width": 930,
+                "depth": null,
+                "height": null,
+                "floor": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-f83f483498bde662",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "update_module",
+              "problem": "Геометрическое пересечение с «Шкаф угловой прямой». Сосед остаётся на месте. Исходные значения сохранены."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 159168.4
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Угловой навесной шкаф вплотную к вытяжке",
+            "edits": [
+              {
+                "op": "update_module",
+                "id": "m17",
+                "wall": null,
+                "pos": null,
+                "width": 930,
+                "depth": null,
+                "height": null,
+                "floor": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-349e4061695d62ef",
+            "applied": [
+              "update_module"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 158560.2
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        }
+      ],
+      "ai": "Сверху щель убрал: угловой навесной шкаф расширил до 93 см, теперь он стоит вплотную к вытяжке.\n\nВнизу щель между угловым шкафом и ящиками убрать не получилось. Конструктор не дал сдвинуть ящики к углу: так они пересекаются с угловым шкафом под мойку. \n\nИзвестная часть около 159 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев.\n\nОставляем так или попробовать другой угловой шкаф внизу?"
+    },
+    {
+      "human": "добор между нижними шкафами (угловым и с ящиками) сделать нельзя?",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Добор нижнего углового шкафа 70 мм",
+            "edits": [
+              {
+                "op": "set_option",
+                "key": "lowerFillerMm",
+                "value": 70
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-fcfb913fd1fd3ed1",
+            "applied": [
+              "set_option"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 158557.44
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        }
+      ],
+      "ai": "Можно, в конструкторе это настройка углового шкафа. Добор нижнего углового шкафа был 50 мм, поставил 70 мм, и конструктор принял. Добор должен закрыть промежуток до шкафа с ящиками, проверьте на 3D.\n\nИзвестная часть около 159 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев.\n\nПереходим к цвету фасадов и столешницы?"
+    },
+    {
+      "human": "Добора нет",
+      "calls": [
+        {
+          "tool": "undo",
+          "input": {
+            "project_id": "$project",
+            "to_revision": "KPR2-349e4061695d62ef"
+          },
+          "expect": {
+            "revision": "KPR2-349e4061695d62ef",
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 158560.2
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        }
+      ],
+      "ai": "Вы правы, я ошибся. Настройка «Добор нижнего углового шкафа» ставит добор в линию фасадов основной стены, между глухой частью и дверью углового шкафа, а не между ним и ящиками на левой стене. Поэтому изменение вернул, добор снова 50 мм.\n\nУзкий промежуток между шкафом с ящиками и фасадом углового шкафа остаётся. Добор туда в этом прототипе поставить нельзя, а придвинуть ящики к углу конструктор не даёт. Я записал это как задачу для конструктора Modulero.\n\nИзвестная часть около 159 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев.\n\nПереходим к цвету фасадов и столешницы?"
+    },
+    {
+      "human": "какие цвета фасадов предложишь? мне нравятся нежные теплые цвета",
+      "calls": [
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "kitchen",
+            "topic": "decors"
+          },
+          "expect": {
+            "values": 41
+          }
+        },
+        {
+          "tool": "offer_choices",
+          "input": {
+            "options": [
+              "Коттон бежевый (EGGER U113)",
+              "Крем Вайсс (UVADREV U2236/М)",
+              "Беж Камео (UVADREV U2264/М)",
+              "Алебастр белый (EGGER U104)",
+              "Бежевый низ, светлый дуб сверху"
+            ],
+            "allow_free_text": true
+          },
+          "expect": {
+            "shown": [
+              "Коттон бежевый (EGGER U113)",
+              "Крем Вайсс (UVADREV U2236/М)",
+              "Беж Камео (UVADREV U2264/М)",
+              "Алебастр белый (EGGER U104)",
+              "Бежевый низ, светлый дуб сверху"
+            ]
+          }
+        }
+      ],
+      "ai": "Из декоров конструктора к нежным тёплым ближе всего подходят:\n- Коттон бежевый (EGGER U113), спокойный светлый беж;\n- Крем Вайсс (UVADREV U2236/М), сливочный;\n- Беж Камео (UVADREV U2264/М), чуть насыщеннее, тёплый;\n- Алебастр белый (EGGER U104), тёплый белый.\n\nМожно и сочетание: бежевый низ, а сверху светлое дерево, например Дуб Сонома светлый (UVADREV U2123). Какой поставить? Сразу покажу на 3D и с ценой.",
+      "choices": [
+        "Коттон бежевый (EGGER U113)",
+        "Крем Вайсс (UVADREV U2236/М)",
+        "Беж Камео (UVADREV U2264/М)",
+        "Алебастр белый (EGGER U104)",
+        "Бежевый низ, светлый дуб сверху"
+      ]
+    },
+    {
+      "human": "давай бежевый низ и светлое дерево сверху",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Фасады: низ Коттон бежевый, верх Дуб Сонома светлый",
+            "edits": [
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": null
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U2123",
+                "module_id": "m7"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U2123",
+                "module_id": "m8"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U2123",
+                "module_id": "m12"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U2123",
+                "module_id": "m17"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U2123",
+                "module_id": "m18"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-81d8ca97bea4d0e9",
+            "applied": [
+              "set_material",
+              "set_material",
+              "set_material"
+            ],
+            "refused": {
+              "i": 3,
+              "op": "set_material",
+              "problem": "У этого модуля нет рассчитанного фасада. Проект не изменён."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 166012.1
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Светлое дерево на остальных навесных",
+            "edits": [
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U2123",
+                "module_id": "m17"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U2123",
+                "module_id": "m18"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-8b67c911de8394bf",
+            "applied": [
+              "set_material",
+              "set_material"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 165932.81
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        }
+      ],
+      "ai": "Поставил: нижние фасады и пенал холодильника в Коттон бежевый, навесные в Дуб Сонома светлый. Шкаф с вытяжкой остался бежевым: отдельный декор на его фасад конструктор не ставит, отвечает, что у этого модуля нет рассчитанного фасада.\n\nИзвестная часть около 166 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев. Техника в цену не входит.\n\nКак вам на 3D? Дальше можно выбрать столешницу."
+    },
+    {
+      "human": "Давай столешницу из темного дерева",
+      "calls": [],
+      "ai": "Столешницу из тёмного дерева в этом прототипе выбрать нельзя. В конструкторе пока одна столешница толщиной 38 мм без выбора декора, и правки для неё в моём списке нет. Я записал это как задачу для конструктора Modulero.\n\nЦена не изменилась: известная часть около 166 тыс. ₽, цена неполная.\n\nЧто ещё поменяем? Можно, например, сохранить этот вариант и сравнить с другим цветом фасадов."
+    },
+    {
+      "human": "а ручки какие можно?",
+      "calls": [
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "kitchen",
+            "topic": "handles"
+          },
+          "expect": {
+            "error": "Тема «handles» к кухне не относится или на стенде её пока нет."
+          }
+        }
+      ],
+      "ai": "Ручки для кухни в этом прототипе выбрать нельзя. Конструктор ставит на фасады одну стандартную ручку и уже учитывает её в составе. Выбора модели для кухни в нём пока нет, и правки для этого в моём списке тоже нет. Записал как задачу для конструктора Modulero.\n\nЦена та же: известная часть около 166 тыс. ₽, цена неполная.\n\nСохранить этот вариант, чтобы сравнить с другим цветом фасадов, или открыть проект в конструкторе и доработать руками?"
+    },
+    {
+      "human": "а почему цвет фасада верхнего шкафа под вытяжку бежевый?",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Общий декор фасадов — дуб, низ и пенал — бежевый",
+            "edits": [
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U2123",
+                "module_id": null
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m11"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m13"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m14"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m16"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m15"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-505dfbf699388bac",
+            "applied": [
+              "set_material"
+            ],
+            "refused": {
+              "i": 1,
+              "op": "set_material",
+              "problem": "У этого модуля нет рассчитанного фасада. Проект не изменён."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 159649.87
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Нижние фасады и пенал — Коттон бежевый",
+            "edits": [
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m13"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m14"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m16"
+              },
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m15"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-4c2f9234aaf3d47e",
+            "applied": [
+              "set_material",
+              "set_material"
+            ],
+            "refused": {
+              "i": 2,
+              "op": "set_material",
+              "problem": "У этого модуля нет рассчитанного фасада. Проект не изменён."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 166094.61
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Фасад посудомойки — Коттон бежевый",
+            "edits": [
+              {
+                "op": "set_material",
+                "role": "facade",
+                "code": "U113",
+                "module_id": "m15"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-4c2f9234aaf3d47e",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "set_material",
+              "problem": "У этого модуля нет рассчитанного фасада. Проект не изменён."
+            },
+            "price": {
+              "status": "PARTIAL",
+              "amount_rub": null,
+              "known_amount_rub": 166094.61
+            },
+            "modules": 10,
+            "parts": 92
+          }
+        },
+        {
+          "tool": "offer_choices",
+          "input": {
+            "options": [
+              "Оставить так",
+              "Вернуть как было"
+            ],
+            "allow_free_text": true
+          },
+          "expect": {
+            "shown": [
+              "Оставить так",
+              "Вернуть как было"
+            ]
+          }
+        }
+      ],
+      "ai": "Это ограничение конструктора. Фасад шкафа с вытяжкой он рисует, но поменять его цвет отдельно от остальных не даёт, отвечает: «нет рассчитанного фасада». То же у ниши посудомойки, пенала холодильника и шкафа под духовку.\n\nЯ попробовал обойти это наоборот: сделал общим цветом фасадов дуб, а бежевый поставил на модули, где это можно. Теперь вытяжка в дубе, но вместе с ней в дубе стали фасад посудомойки и пенал холодильника. В бежевом остались угловой шкаф и шкаф с ящиками.\n\nИзвестная часть около 166 тыс. ₽, цена неполная. Записал это как задачу для конструктора Modulero.\n\nОставить так или вернуть как было, с бежевой вытяжкой?",
+      "choices": [
+        "Оставить так",
+        "Вернуть как было"
+      ]
+    },
+    {
+      "human": "ок, фиксируем. Много ошибок и недоработок",
+      "calls": [
+        {
+          "tool": "variants",
+          "input": {
+            "project_id": "$project",
+            "action": "save",
+            "name": "Угловая, бежевый низ, дуб сверху"
+          },
+          "expect": {
+            "variants": [
+              "Угловая, бежевый низ, дуб сверху",
+              "Вариант 2"
+            ]
+          }
+        },
+        {
+          "tool": "open_in_editor",
+          "input": {
+            "project_id": "$project"
+          },
+          "expect": {
+            "revision": "KPR2-4c2f9234aaf3d47e"
+          }
+        }
+      ],
+      "ai": "Зафиксировал: сохранил вариант «Угловая, бежевый низ, дуб сверху». Известная часть около 166 тыс. ₽, цена неполная: для духовки и вытяжки нужно подтвердить, что корпус выдержит нагрев. Техника в цену не входит. Файл проекта можно открыть в конструкторе и доработать руками."
+    }
+  ],
+  "review": "Много ошибок ИИ и недоработок (оценка владельца). Ошибки ИИ: удалял модули до добавления новых, и при отказе оставались промежуточные версии (ходы 5, 7; правило: сначала добавить, потом удалить); не поставил навесные шкафы рядом с перенесённой вытяжкой (ход 6); пообещал, что lowerFillerMm закроет щель на второй стене, не проверив, где ставится добор (ход 10–11); размеры шкафов подбирал по числам ответа стенда сам (28 → 25 см, 64,8 см). Недоработки ядра и договора: без pos модули ставятся не туда или не находят места (MOD-AI-9: духовка в дальний конец стены, вытяжка не над духовкой); отказы называют стену A вместо левой (MOD-AI-3); нет добора между угловым шкафом и соседом на второй стене (MOD-AI-14); нет выбора декора столешницы (MOD-AI-15) и ручек кухни (MOD-AI-16); декор фасада отдельно не меняется у вытяжки, посудомойки, пенала и духовки (MOD-AI-17); нет углового шкафа под мойку как карточки; цена выросла на 15 тыс. ₽ за узкий навесной шкаф 25 см — стоит проверить. Расход через Claude API по оценке AI-DEC-006: 17 ходов, около $1,00 на Opus 5.5."
+}

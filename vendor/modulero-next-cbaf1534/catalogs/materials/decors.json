@@ -1,0 +1,5043 @@
+{
+ "source": {
+  "prototype": "reference/prototype_r1/MODULERO_UNIFIED_PROTOTYPE_r1.html",
+  "sha256": "c840be56e2286039f2cdc1ab1e21a1b52c4d979678255f401be0a9aed382945c",
+  "MF_DATA": "r1.html:6736",
+  "LAMARTY_DATA": "r1.html:9895",
+  "generator": "scripts/gen-materials.mjs"
+ },
+ "MF_DATA": {
+  "schema": "MODULERO_MATERIALS_FACADE_INTEGRATION_PREP/r1",
+  "decors": [
+   {
+    "decorId": "DEC-EGG-W980-ST7",
+    "brand": "EGGER",
+    "code": "W980",
+    "baseCode": "W980",
+    "name": "Белый платиновый (Platinum White)",
+    "group": "Нейтральный",
+    "finish": "ST7",
+    "image": {
+     "texture": "web/assets/EGGER_W980_texture.webp",
+     "swatch": "web/assets/EGGER_W980_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-W980",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_W980_texture.webp",
+       "sha256": "2d185c01bd8d2ecaefde1d9f64e6be6ced3c9f516c33bd083d7e310231ab6f4d",
+       "width": 475,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_W980_swatch.webp",
+       "sha256": "b5f737a9edb7e5a514d41066a147b2f9d9524a4ab7a3d99a08fcfbd0650d60f8",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "W980_ST7_NOT_LISTED; do not substitute ST2/SM"
+   },
+   {
+    "decorId": "DEC-EGG-W1000-ST19",
+    "brand": "EGGER",
+    "code": "W1000",
+    "baseCode": "W1000",
+    "name": "Белый Премиум",
+    "group": "Нейтральный",
+    "finish": "ST19",
+    "image": {
+     "texture": "web/assets/EGGER_W1000_texture.webp",
+     "swatch": "web/assets/EGGER_W1000_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-W1000",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_W1000_texture.webp",
+       "sha256": "96186c6139c5e2738ae0ea969ddd0d57b5e1d9dd0efaa54afb3cb9232f14bdfa",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_W1000_swatch.webp",
+       "sha256": "91094a63b6251b90a2fbad4fab53d7ab26b2175e3fe92b4eab6d0e02e4277eb0",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-W1000-ST19|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 2,
+      "primary": true,
+      "priceRub": 5756,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (СКМ, ТД Сервер, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-W1000-ST19|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 2,
+      "primary": false,
+      "priceRub": 6025,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «EGGER ЛДСП 18» 1039,59 ₽/м² × лист 2800 × 2070 мм, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-W1000-ST19|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 2,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-W1000-ST19|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 2,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U104-ST9",
+    "brand": "EGGER",
+    "code": "U104",
+    "baseCode": "U104",
+    "name": "Алебастр белый",
+    "group": "Нейтральный",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U104_texture.webp",
+     "swatch": "web/assets/EGGER_U104_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U104",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U104_texture.webp",
+       "sha256": "7102553b67e6f715f1a730e94fc857c0e19882106e40297d05c1d501f14a1beb",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U104_swatch.webp",
+       "sha256": "6cac33a926b67e5411cdb38c8ec7a64cc6a28150568762e9f4ee1faebabf99b6",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U104-ST9|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 2,
+      "primary": true,
+      "priceRub": 5297,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U104-ST9|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 2,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U104-ST9|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 2,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U113-ST9",
+    "brand": "EGGER",
+    "code": "U113",
+    "baseCode": "U113",
+    "name": "Коттон бежевый",
+    "group": "Нейтральный",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U113_texture.webp",
+     "swatch": "web/assets/EGGER_U113_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U113",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U113_texture.webp",
+       "sha256": "b0f665c19e91268362450802cee0d4074ca8121e76f3e3dd83f05ccbf091f308",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U113_swatch.webp",
+       "sha256": "366ac0412c31066d67f8c726d54cfe9cb288f593534916271f6981815b92d011",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U113-ST9|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 2,
+      "primary": true,
+      "priceRub": 5463,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U113-ST9|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 2,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U113-ST9|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 2,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U702",
+    "brand": "EGGER",
+    "code": "U702",
+    "baseCode": "U702",
+    "name": "Кашемир серый",
+    "group": "Нейтральный",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U702_texture.webp",
+     "swatch": "web/assets/EGGER_U702_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U702",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U702_texture.webp",
+       "sha256": "72fd70a9557c2ee9ff410597bfd80601bc4f724e6fb062001f4ab2a32af8819c",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U702_swatch.webp",
+       "sha256": "7aa343d5d2429d2401ef57e42042b17732fc16d368781920f81d89fef75fec20",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U702|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": true,
+      "priceRub": 5286,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 4 дилеров (ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-U702|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": false,
+      "priceRub": 5898,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (ТД Сервер, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U702|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U702|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U708",
+    "brand": "EGGER",
+    "code": "U708",
+    "baseCode": "U708",
+    "name": "Светло-серый",
+    "group": "Нейтральный",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U708_texture.webp",
+     "swatch": "web/assets/EGGER_U708_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U708",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U708_texture.webp",
+       "sha256": "20f101ddf8155f141c79bf3526cc61bfa3800b9568d7781a45ec3b279932b591",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U708_swatch.webp",
+       "sha256": "d5f3634f2a37c9d05b5aa9940db09477c494f0102aecf0a99670a302bb45a7c6",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U708|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": true,
+      "priceRub": 5297,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-U708|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": false,
+      "priceRub": 5733,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (ТД Сервер, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U708|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U708|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U727-ST9",
+    "brand": "EGGER",
+    "code": "U727",
+    "baseCode": "U727",
+    "name": "Серый камень",
+    "group": "Нейтральный",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U727_texture.webp",
+     "swatch": "web/assets/EGGER_U727_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U727",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U727_texture.webp",
+       "sha256": "26ec142b99f49332461d056b655a652c32a9d3f1eef170748610d614a797bb52",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U727_swatch.webp",
+       "sha256": "1ba9074e58346ac4ba79368c4604a74fb4b348a6f639a2a2200311ae7c7095ff",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U727-ST9|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": true,
+      "priceRub": 5442,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 4 дилеров (ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-U727-ST9|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": false,
+      "priceRub": 6063,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (ТД Сервер, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U727-ST9|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U727-ST9|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U732-ST9",
+    "brand": "EGGER",
+    "code": "U732",
+    "baseCode": "U732",
+    "name": "Серый асфальт",
+    "group": "Нейтральный",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U732_texture.webp",
+     "swatch": "web/assets/EGGER_U732_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U732",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U732_texture.webp",
+       "sha256": "28dcbfaa2b2c23827c72022302d68f63161cd6fbf4a4133fe9bedf219c7fc90b",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U732_swatch.webp",
+       "sha256": "b253f801fdbc0cd21790e99d3d523c7006d1b2a1deffb8d5f7bf3024b93ec984",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U732-ST9|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": true,
+      "priceRub": 5460,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-U732-ST9|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": false,
+      "priceRub": 5898,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (ТД Сервер, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U732-ST9|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U732-ST9|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U963-ST9",
+    "brand": "EGGER",
+    "code": "U963",
+    "baseCode": "U963",
+    "name": "Диамант серый",
+    "group": "Нейтральный",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U963_texture.webp",
+     "swatch": "web/assets/EGGER_U963_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U963",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U963_texture.webp",
+       "sha256": "8b2849734e15a3df151e5090b783dc76c557437cd6602b4158a9b5afa14bcf70",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U963_swatch.webp",
+       "sha256": "8980249324c311ebfeb004655ac63d2c2ac89c8f1a28f351cd3555571bf32c1b",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U963-ST9|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 4,
+      "primary": true,
+      "priceRub": 5463,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-U963-ST9|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 4,
+      "primary": false,
+      "priceRub": 5898,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (ТД Сервер, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U963-ST9|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 4,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U963-ST9|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 4,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U999-ST19",
+    "brand": "EGGER",
+    "code": "U999",
+    "baseCode": "U999",
+    "name": "Чёрный",
+    "group": "Нейтральный",
+    "finish": "ST19",
+    "image": {
+     "texture": "web/assets/EGGER_U999_texture.webp",
+     "swatch": "web/assets/EGGER_U999_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U999",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U999_texture.webp",
+       "sha256": "bbc89e7105eb722e3c21015c31e8dcbfef67a86f83922b9de250a14fac951b5e",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U999_swatch.webp",
+       "sha256": "de61cbdb7753aa7c644198d761d8f38b59f5ba795a40c62efae9792e2d36e3d4",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U999-ST19|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 4,
+      "primary": true,
+      "priceRub": 5756,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (СКМ, ТД Сервер, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-U999-ST19|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 4,
+      "primary": false,
+      "priceRub": 6025,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «EGGER ЛДСП 18» 1039,59 ₽/м² × лист 2800 × 2070 мм, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U999-ST19|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 4,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U999-ST19|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 4,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-H1145-ST10",
+    "brand": "EGGER",
+    "code": "H1145",
+    "baseCode": "H1145",
+    "name": "Дуб Бардолино натуральный",
+    "group": "Древесный",
+    "finish": "ST10",
+    "image": {
+     "texture": "web/assets/EGGER_H1145_texture.webp",
+     "swatch": "web/assets/EGGER_H1145_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-H1145",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_H1145_texture.webp",
+       "sha256": "1a62f786c05c45dd78535322cd116feba618911dad053aa9e1a69bd4c8cb5854",
+       "width": 757,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_H1145_swatch.webp",
+       "sha256": "08bc7e09aa5911f0b4a1c3ec35f6b7ee106c7200edd2a501df94ace84a40a0fd",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-H1145-ST10|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 4,
+      "primary": true,
+      "priceRub": 5297,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-H1145-ST10|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 4,
+      "primary": false,
+      "priceRub": 5733,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (ТД Сервер, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-H1145-ST10|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 4,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-H1145-ST10|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 4,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-H3157-ST12",
+    "brand": "EGGER",
+    "code": "H3157",
+    "baseCode": "H3157",
+    "name": "Дуб Виченца",
+    "group": "Древесный",
+    "finish": "ST12",
+    "image": {
+     "texture": "web/assets/EGGER_H3157_texture.webp",
+     "swatch": "web/assets/EGGER_H3157_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-H3157",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_H3157_texture.webp",
+       "sha256": "8caaf3885be24262c377484eefd905c89dcbbc656ca6815110904c9d490c3089",
+       "width": 757,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_H3157_swatch.webp",
+       "sha256": "e10e1e28235b45646967a5f40650815f07beaa27f036214e357f8d259b7e5b45",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-H3157-ST12|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 7,
+      "primary": true,
+      "priceRub": 5623,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-H3157-ST12|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 7,
+      "primary": false,
+      "priceRub": 6025,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «EGGER ЛДСП 18» 1039,59 ₽/м² × лист 2800 × 2070 мм, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-H3157-ST12|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 7,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-H3157-ST12|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 7,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-H3303-ST10",
+    "brand": "EGGER",
+    "code": "H3303",
+    "baseCode": "H3303",
+    "name": "Дуб Гамильтон натуральный",
+    "group": "Древесный",
+    "finish": "ST10",
+    "image": {
+     "texture": "web/assets/EGGER_H3303_texture.webp",
+     "swatch": "web/assets/EGGER_H3303_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-H3303",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_H3303_texture.webp",
+       "sha256": "a00ff5c7a946d9760d2597ee663eef2db155ad72ef1dacdfc1034b3cc65d4b26",
+       "width": 757,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_H3303_swatch.webp",
+       "sha256": "1615eaf388ba2bf9ab454229f75fe66a996498e8d048d768183068d5969b8d0f",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-H3303-ST10|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 7,
+      "primary": true,
+      "priceRub": 5982,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (ТД Сервер, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-H3303-ST10|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 7,
+      "primary": false,
+      "priceRub": 6025,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «EGGER ЛДСП 18» 1039,59 ₽/м² × лист 2800 × 2070 мм, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-H3303-ST10|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 7,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-H3303-ST10|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 7,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-H3395-ST12",
+    "brand": "EGGER",
+    "code": "H3395",
+    "baseCode": "H3395",
+    "name": "Дуб Корбридж натуральный",
+    "group": "Древесный",
+    "finish": "ST12",
+    "image": {
+     "texture": "web/assets/EGGER_H3395_texture.webp",
+     "swatch": "web/assets/EGGER_H3395_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-H3395",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_H3395_texture.webp",
+       "sha256": "3848b841222fac565eec3ace949d843d9076a1d3f01e5ebbedf7b1f1f39f711c",
+       "width": 757,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_H3395_swatch.webp",
+       "sha256": "aac8e0b2dfb01f96808601e30623064cec2c163f5c3ae8779e10d03ef61b4f14",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-H3395-ST12|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 7,
+      "primary": true,
+      "priceRub": 5463,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-H3395-ST12|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 7,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-H3395-ST12|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 7,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-H1180-ST37",
+    "brand": "EGGER",
+    "code": "H1180",
+    "baseCode": "H1180",
+    "name": "Дуб Галифакс натуральный",
+    "group": "Древесный",
+    "finish": "ST37",
+    "image": {
+     "texture": "web/assets/EGGER_H1180_texture.webp",
+     "swatch": "web/assets/EGGER_H1180_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-H1180",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_H1180_texture.webp",
+       "sha256": "caedbbc5c1f2e1822750cc20bb258146e599219173e66285aa17fa9f866e84e6",
+       "width": 757,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_H1180_swatch.webp",
+       "sha256": "13672030bd58e4413a848f79f252114329afb769f8fa96d432ccebfd170f4818",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-H1180-ST37|MDF_FEELWOOD_16_18|16",
+      "product": "ЛМДФ Филвуд E1",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 4,
+      "primary": true,
+      "priceRub": 8946,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-H1180-ST37|MDF_FEELWOOD_16_18|18",
+      "product": "ЛМДФ Филвуд E1",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 4,
+      "primary": false,
+      "priceRub": 9420,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (ТД Сервер, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-H1180-ST37|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 4,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-H1180-ST37|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 4,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-H1330",
+    "brand": "EGGER",
+    "code": "H1330",
+    "baseCode": "H1330",
+    "name": "Дуб Санта-Фе винтаж",
+    "group": "Древесный",
+    "finish": "ST10",
+    "image": {
+     "texture": "web/assets/EGGER_H1330_texture.webp",
+     "swatch": "web/assets/EGGER_H1330_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-H1330",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_H1330_texture.webp",
+       "sha256": "050a280b03bcd4bece0602d9889ab6a7cb3c0c0c15a13d7697d3e9c6c8b10e78",
+       "width": 757,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_H1330_swatch.webp",
+       "sha256": "a42dcb55042b814b04590dbc81338e613e1f94556d248d04c6bece8dc7a87173",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-H1330|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 5,
+      "primary": true,
+      "priceRub": 5988,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 4 дилеров (ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-H1330|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 5,
+      "primary": false,
+      "priceRub": 6025,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «EGGER ЛДСП 18» 1039,59 ₽/м² × лист 2800 × 2070 мм, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-H1330|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 5,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-H1330|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 5,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-H3730",
+    "brand": "EGGER",
+    "code": "H3730",
+    "baseCode": "H3730",
+    "name": "Гикори натуральный",
+    "group": "Древесный",
+    "finish": "ST10",
+    "image": {
+     "texture": "web/assets/EGGER_H3730_texture.webp",
+     "swatch": "web/assets/EGGER_H3730_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-H3730",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_H3730_texture.webp",
+       "sha256": "15ad5f5a794f4da29b32485026c4b6a5c1c7fac7b8d6d734be166249f1ceb911",
+       "width": 757,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_H3730_swatch.webp",
+       "sha256": "16e9a9e8497fefcdf0bfaf60777155c46a9f3306f28b59deb608ddd756b0292c",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-H3730|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 8,
+      "primary": true,
+      "priceRub": 5868,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-H3730|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 8,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-H3730|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 8,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-H3700-ST10",
+    "brand": "EGGER",
+    "code": "H3700",
+    "baseCode": "H3700",
+    "name": "Орех Пацифик натуральный",
+    "group": "Древесный",
+    "finish": "ST10",
+    "image": {
+     "texture": "web/assets/EGGER_H3700_texture.webp",
+     "swatch": "web/assets/EGGER_H3700_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-H3700",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_H3700_texture.webp",
+       "sha256": "4bc116dda3566e0a38471de0071355c66599e5f00f08af2cf1ae746503d77e78",
+       "width": 757,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_H3700_swatch.webp",
+       "sha256": "788c4367eb0b1109d5363adf454b363d0bbc9593fc358a0342a463e38526deb0",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-H3700-ST10|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 8,
+      "primary": true,
+      "priceRub": 5868,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     },
+     {
+      "variantId": "DEC-EGG-H3700-ST10|MFC_P2_18|18",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 18,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 8,
+      "primary": false,
+      "priceRub": 6025,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «EGGER ЛДСП 18» 1039,59 ₽/м² × лист 2800 × 2070 мм, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-H3700-ST10|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 8,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-H3700-ST10|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 8,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U636-ST9",
+    "brand": "EGGER",
+    "code": "U636",
+    "baseCode": "U636",
+    "name": "Фьёрд зелёный",
+    "group": "Цветной акцент",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U636_texture.webp",
+     "swatch": "web/assets/EGGER_U636_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U636",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U636_texture.webp",
+       "sha256": "5c0a7b9c1ec001a6d83f778fea38f1057ef0a4c7abfe9e681042661a728c5a70",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U636_swatch.webp",
+       "sha256": "8b01c876db551be36f15176249f8b16c6ab673e02383b6ffeb79041967981a1e",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U636-ST9|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": true,
+      "priceRub": 6190,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U636-ST9|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U636-ST9|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-EGG-U504-ST9",
+    "brand": "EGGER",
+    "code": "U504",
+    "baseCode": "U504",
+    "name": "Альпийское озеро",
+    "group": "Цветной акцент",
+    "finish": "ST9",
+    "image": {
+     "texture": "web/assets/EGGER_U504_texture.webp",
+     "swatch": "web/assets/EGGER_U504_swatch.webp",
+     "assetId": "PALETTE-ASSET-EGGER-U504",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/EGGER_U504_texture.webp",
+       "sha256": "34eb70abd181ac3863ed50a2ca152af39ef6cf7fdeda46e444a39d9a2a79c417",
+       "width": 100,
+       "height": 100,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/EGGER_U504_swatch.webp",
+       "sha256": "1826295816bcd30a817e0255f32a338ba77d687f12c408624269464a9dc6c22d",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [
+     {
+      "variantId": "DEC-EGG-U504-ST9|MFC_P2_16|16",
+      "product": "ЛДСП E1 P2",
+      "thicknessMm": 16,
+      "formatMm": [
+       2800,
+       2070
+      ],
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "dealerStock": "NOT_CHECKED",
+      "manufacturerSku": null,
+      "basis": "EGGER_RF_26_PROGRAMME",
+      "pdfPage": 3,
+      "primary": true,
+      "priceRub": 5867,
+      "mechanicalProperties": "Resolve for exact material; do not copy LDSP values into MDF",
+      "priceDate": "2026-10-27",
+      "priceSource": {
+       "doc": "FINDINGS 1830",
+       "file": "docs/product/prices/boards-2026-10-27.json"
+      },
+      "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 5 дилеров (СКМ, ТД Сервер, ТЕХНОПЛИТ, Татхим-Инвест, Экспо-Торг) на 2026-10-27, до рубля"
+     }
+    ],
+    "edgeVariantsForImplementation": [
+     {
+      "edgeVariantId": "DEC-EGG-U504-ST9|ABS_19_0.8",
+      "material": "ABS",
+      "widthMm": 19,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     },
+     {
+      "edgeVariantId": "DEC-EGG-U504-ST9|ABS_23_0.8",
+      "material": "ABS",
+      "widthMm": 23,
+      "thicknessMm": 0.8,
+      "rollLengthM": 75,
+      "supplyProgram": "EGGER_WAREHOUSE_PROGRAM",
+      "pdfPage": 3,
+      "meaning": "ASSORTMENT_MATCH; not automatic process/edge-intent approval",
+      "priceRub": null
+     }
+    ],
+    "availabilityScope": "VISUAL_PLUS_SOURCED_BOARD_EDGE_TUPLES",
+    "technicalGap": null
+   },
+   {
+    "decorId": "DEC-UVA-U1605-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U1605/P/M",
+    "baseCode": "U1605",
+    "name": "Белый Экспо",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U1605_texture.webp",
+     "swatch": "web/assets/UVADREV_U1605_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U1605",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U1605_texture.webp",
+       "sha256": "488fd7ca2792069c61d13a827a87b5301f4cdafe70dcc33ec1a17173ce8979f8",
+       "width": 400,
+       "height": 400,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U1605_swatch.webp",
+       "sha256": "28128fca8ea426ddecce7927c8decaa9097bb45b24ab28ee06fd5f8e004b3a08",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U7211-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U7211",
+    "baseCode": "U7211",
+    "name": "Белое Сияние",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U7211_texture.webp",
+     "swatch": "web/assets/UVADREV_U7211_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U7211",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U7211_texture.webp",
+       "sha256": "244002117f9c62a77b77b44647d053cad5833fc070566c49c53b50aab6740f15",
+       "width": 1000,
+       "height": 1000,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U7211_swatch.webp",
+       "sha256": "b1b50ff13962f948ce48822a741cde02a7b6cc53b7eea253625374505b01b772",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U2236-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U2236/М",
+    "baseCode": "U2236",
+    "name": "Крем Вайсс",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U2236_texture.webp",
+     "swatch": "web/assets/UVADREV_U2236_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U2236",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U2236_texture.webp",
+       "sha256": "99b5a82917c5ecfb72bb153875bb05b0ca66eca479a566f98bd7e953386381ee",
+       "width": 400,
+       "height": 400,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U2236_swatch.webp",
+       "sha256": "e5cd08bf5cd26ef7d6263a516cce5975d320217ad0b4e5228799c08972207763",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U2264-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U2264/М",
+    "baseCode": "U2264",
+    "name": "Беж Камео",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U2264_texture.webp",
+     "swatch": "web/assets/UVADREV_U2264_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U2264",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U2264_texture.webp",
+       "sha256": "2a5e343c123495e1039e4f9b5f280d20da297537cb8b77d54a0ab63e0f227b44",
+       "width": 725,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U2264_swatch.webp",
+       "sha256": "8c2b0ba484af16934b12af7ca1be6ee28e70641bd4cc973fac0d2e68a11f484c",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U1503-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U1503",
+    "baseCode": "U1503",
+    "name": "Тефия",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U1503_texture.webp",
+     "swatch": "web/assets/UVADREV_U1503_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U1503",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U1503_texture.webp",
+       "sha256": "e6d4b6a705f1b160afdf0dc092c6470743f8cb34aa84da1113bc7bedd79cd046",
+       "width": 473,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U1503_swatch.webp",
+       "sha256": "a12322c5272373e5854dd65212caddf8b18fe6925a291178d21eb26773856b7d",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U1507-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U1507",
+    "baseCode": "U1507",
+    "name": "Трюфель",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U1507_texture.webp",
+     "swatch": "web/assets/UVADREV_U1507_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U1507",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U1507_texture.webp",
+       "sha256": "763f8ed4a8db9bcca6a6c089d3671f8f7721b3a49c681f8a499b0e52bce0195a",
+       "width": 681,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U1507_swatch.webp",
+       "sha256": "f5ba5a20134269f59dcd630733d71e69057cfd9578b7636c01eda8146fe8c594",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U9201-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U9201/M",
+    "baseCode": "U9201",
+    "name": "Серый",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U9201_texture.webp",
+     "swatch": "web/assets/UVADREV_U9201_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U9201",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U9201_texture.webp",
+       "sha256": "f24676e99d373abd255a4d8a2b6a58e11d405ef899dc565057d2c8464d3e7546",
+       "width": 1024,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U9201_swatch.webp",
+       "sha256": "edabffff1006bc9dbbb31c6b85ff70ce67e1c9a5dcf173f83890c3f3db49f8a8",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U3509-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U3509",
+    "baseCode": "U3509",
+    "name": "Дымчато-Серый",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U3509_texture.webp",
+     "swatch": "web/assets/UVADREV_U3509_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U3509",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U3509_texture.webp",
+       "sha256": "23bc2efd2bdc41ffc9baa3b100f29115b587540c44455b9a88206fc84461e14b",
+       "width": 477,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U3509_swatch.webp",
+       "sha256": "6eb4cf83a39b3de24fa5d9578809f866c88405751f14d90eea47f803bd6f95ed",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U3612-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U3612",
+    "baseCode": "U3612",
+    "name": "Графит",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U3612_texture.webp",
+     "swatch": "web/assets/UVADREV_U3612_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U3612",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U3612_texture.webp",
+       "sha256": "a0b4cbae71ba89049fa8b5decdfa7e80478e5df3f1ddd0a979bf04b8d8d3350c",
+       "width": 1024,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U3612_swatch.webp",
+       "sha256": "d7f5c5944439b73ac645156f25e312af821e1198f3bbd9535045578d22096483",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U0080-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U0080/К",
+    "baseCode": "U0080",
+    "name": "Черный",
+    "group": "Нейтральный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U0080_texture.webp",
+     "swatch": "web/assets/UVADREV_U0080_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U0080",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U0080_texture.webp",
+       "sha256": "01b4c5bfc43aa052c11ecb195ebb2556c564b4d5f719783668a9c945a691db20",
+       "width": 400,
+       "height": 400,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U0080_swatch.webp",
+       "sha256": "4501f50366c35e6b0a5289eaa571f51cc2b86f47fc447337c8a3add71f502165",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U2123-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U2123",
+    "baseCode": "U2123",
+    "name": "Дуб Сонома Светлый",
+    "group": "Древесный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U2123_texture.webp",
+     "swatch": "web/assets/UVADREV_U2123_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U2123",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U2123_texture.webp",
+       "sha256": "1d50470919827a189d997a9925de24054520fed5dd7f99c9ddf96de69b3eeab1",
+       "width": 770,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U2123_swatch.webp",
+       "sha256": "f4116108ee1014485965332e39c154e8c973409157c9a76c2179a2e9de54c144",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U1158-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U1158",
+    "baseCode": "U1158",
+    "name": "Дуб Альпийский",
+    "group": "Древесный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U1158_texture.webp",
+     "swatch": "web/assets/UVADREV_U1158_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U1158",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U1158_texture.webp",
+       "sha256": "db938cc7dc0002353d5f5584f7b28a1ed9f1c7a48362e30742e23800d9c53b52",
+       "width": 473,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U1158_swatch.webp",
+       "sha256": "c6553ebc3e032711645843f091d57685874e182a50f3aeda4a41c17c4ea1e248",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U2167-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U2167",
+    "baseCode": "U2167",
+    "name": "Дуб Вотан",
+    "group": "Древесный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U2167_texture.webp",
+     "swatch": "web/assets/UVADREV_U2167_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U2167",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U2167_texture.webp",
+       "sha256": "29beef3262f9afbd2cdca28157f580c12881f2bf01fa8e0d10060c8f66df2381",
+       "width": 689,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U2167_swatch.webp",
+       "sha256": "2e4961a877e4524977a13beda7e7be4b26ce7e746b258ee28e40adcb2041bcf6",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U1147-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U1147",
+    "baseCode": "U1147",
+    "name": "Дуб Табачный",
+    "group": "Древесный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U1147_texture.webp",
+     "swatch": "web/assets/UVADREV_U1147_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U1147",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U1147_texture.webp",
+       "sha256": "c310bba3d8995ee7047855733b055e1fb1e73191b6c4744dd8828f9e6c536b3a",
+       "width": 1024,
+       "height": 733,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U1147_swatch.webp",
+       "sha256": "0354ee0180636568068ea84997bcbb0051ea253d1e67d6a14303ceb0a8e8dcb9",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U1114-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U1114",
+    "baseCode": "U1114",
+    "name": "Вяз Швейцарский",
+    "group": "Древесный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U1114_texture.webp",
+     "swatch": "web/assets/UVADREV_U1114_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U1114",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U1114_texture.webp",
+       "sha256": "c44f38c882945cb7fe71d468caf4c969188e5c82bcb0a9a5c850d267fa55b6b7",
+       "width": 731,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U1114_swatch.webp",
+       "sha256": "d333cedf923a076abc691b7bbb669c159c6deb0a19cac2b4035baeda6b298096",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U11116-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U11116",
+    "baseCode": "U11116",
+    "name": "Орех Элеганс",
+    "group": "Древесный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U11116_texture.webp",
+     "swatch": "web/assets/UVADREV_U11116_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U11116",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U11116_texture.webp",
+       "sha256": "02dd8a02bb518a79ff3ed7e32509584d7a8f40b40af5116cad203b1bd244ef64",
+       "width": 473,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U11116_swatch.webp",
+       "sha256": "c2288bf7b93d8ee8e16116a39304815fae28f257c8a487b1cae5b1bd14c143e1",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U9510-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U9510",
+    "baseCode": "U9510",
+    "name": "Бук Натур",
+    "group": "Древесный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U9510_texture.webp",
+     "swatch": "web/assets/UVADREV_U9510_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U9510",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U9510_texture.webp",
+       "sha256": "e89473eecfc5893e66037661d76d89475fbb2eedaa3b36621fe439c6a8efb5cb",
+       "width": 731,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U9510_swatch.webp",
+       "sha256": "68a595755a0d04dc90aa44782a7a5e783a9498a8f6d37fdff5ebe7b289e07c61",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U2108-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U2108",
+    "baseCode": "U2108",
+    "name": "Венге Цаво",
+    "group": "Древесный",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U2108_texture.webp",
+     "swatch": "web/assets/UVADREV_U2108_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U2108",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U2108_texture.webp",
+       "sha256": "5ff62d0b05b5a237e4ef2627eed70b33596810df6ccdcf159fb9c31aff2c910e",
+       "width": 731,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U2108_swatch.webp",
+       "sha256": "d31b386cdee90de6f16e69de758e9b95b045cf0806d680861173c9ebeecca3f0",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U1508-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U1508",
+    "baseCode": "U1508",
+    "name": "Шалфей",
+    "group": "Цветной акцент",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U1508_texture.webp",
+     "swatch": "web/assets/UVADREV_U1508_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U1508",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U1508_texture.webp",
+       "sha256": "67b3e2c3787c93d310e41480780e08c70699516e438c966346e54d5722f9066c",
+       "width": 473,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U1508_swatch.webp",
+       "sha256": "5c396a8a428289e5ef9b372dfdc0a57020b62ace9ffb0917c471e376cde5d074",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   },
+   {
+    "decorId": "DEC-UVA-U1600-UNKNOWN",
+    "brand": "UVADREV",
+    "code": "U1600/С",
+    "baseCode": "U1600",
+    "name": "Нави",
+    "group": "Цветной акцент",
+    "finish": "UNKNOWN",
+    "image": {
+     "texture": "web/assets/UVADREV_U1600_texture.webp",
+     "swatch": "web/assets/UVADREV_U1600_swatch.webp",
+     "assetId": "PALETTE-ASSET-UVADREV-U1600",
+     "embossingRendered": false
+    },
+    "physicalImageScaleMm": "UNKNOWN",
+    "repeatMm": "UNKNOWN",
+    "grainDirection": "UNKNOWN",
+    "imageOrientation": "SOURCE_PIXEL_AXES_PRESERVED_NO_ROTATION",
+    "rights": "INTERNAL_PREVIEW_PUBLIC_PERMISSION_UNRESOLVED",
+    "productionReady": false,
+    "boardPrice": null,
+    "priceStatus": "NO_NEW_RATE; reuse only an exact applicable existing rate",
+    "assets": {
+     "archiveSHA256": "d10d259a526a026924f5860ee5efef2d61d237cd436d6bba387afe9d2860a50f",
+     "derivatives": [
+      {
+       "kind": "texture",
+       "path": "web/assets/UVADREV_U1600_texture.webp",
+       "sha256": "214b7690fffa69db5cf98648e8d20d91b01d7e3647a5910b93339341d05909ca",
+       "width": 473,
+       "height": 1024,
+       "operation": "ASPECT_PRESERVING_DOWNSCALE",
+       "quality": 88,
+       "method": 6
+      },
+      {
+       "kind": "swatch",
+       "path": "web/assets/UVADREV_U1600_swatch.webp",
+       "sha256": "53a3c89a7fbcfb2b20b91be8139d4ebde1fc0d29c724cc08ecdc98e975e05ca4",
+       "width": 256,
+       "height": 256,
+       "operation": "CENTER_CROP_RESIZE",
+       "quality": 88,
+       "method": 6
+      }
+     ]
+    },
+    "boardVariantsForImplementation": [],
+    "edgeVariantsForImplementation": [],
+    "availabilityScope": "VISUAL_ONLY_PENDING_EXACT_TUPLE",
+    "technicalGap": "Exact finish/board thickness/format/edge not established; general manufacturer range not per-decor proof"
+   }
+  ],
+  "facadePrice": {
+   "source": {
+    "file_name": "HOLZCOM_Price_2026-09-20 (1)(1).pdf",
+    "supplier": "HOLZCOM",
+    "printed_site": "fasad.holzcom-mebel.ru",
+    "date_on_document": "2026-09-21",
+    "region": "Москва и МО",
+    "pages": 2
+   },
+   "currency": "RUB",
+   "unit": "m2",
+   "rows": [
+    {
+     "id": "HOLZCOM-FACADE-01",
+     "source_label": "Эмаль мат 16 мм",
+     "source_group": "Эмаль",
+     "page": 1,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 6500,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-02",
+     "source_label": "Эмаль мат 19 мм",
+     "source_group": "Эмаль",
+     "page": 1,
+     "thickness_mm": 19,
+     "rate_rub_per_m2": 7020,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-03",
+     "source_label": "Эмаль глянец 16 мм (high gloss)",
+     "source_group": "Эмаль",
+     "page": 1,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 7800,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-04",
+     "source_label": "Эмаль глянец 19 мм",
+     "source_group": "Эмаль",
+     "page": 1,
+     "thickness_mm": 19,
+     "rate_rub_per_m2": 8424,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-05",
+     "source_label": "Эмаль 2 стороны 16 мм",
+     "source_group": "Эмаль",
+     "page": 1,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 8450,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-06",
+     "source_label": "Плёнка 16 мм",
+     "source_group": "Плёнка ПВХ",
+     "page": 1,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 4900,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-07",
+     "source_label": "Плёнка 18 мм",
+     "source_group": "Плёнка ПВХ",
+     "page": 1,
+     "thickness_mm": 18,
+     "rate_rub_per_m2": 5145,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-08",
+     "source_label": "Плёнка 22 мм",
+     "source_group": "Плёнка ПВХ",
+     "page": 1,
+     "thickness_mm": 22,
+     "rate_rub_per_m2": 5635,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-09",
+     "source_label": "Плёнка с фрезеровкой 18 мм (+ фрезеровка)",
+     "source_group": "Плёнка ПВХ",
+     "page": 1,
+     "thickness_mm": 18,
+     "rate_rub_per_m2": 6045,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-10",
+     "source_label": "Шпон мат 16 мм",
+     "source_group": "Шпон",
+     "page": 1,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 11000,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-11",
+     "source_label": "Шпон мат 19 мм",
+     "source_group": "Шпон",
+     "page": 1,
+     "thickness_mm": 19,
+     "rate_rub_per_m2": 11880,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-12",
+     "source_label": "Шпон глянец 16 мм",
+     "source_group": "Шпон",
+     "page": 1,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 12650,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-13",
+     "source_label": "Шпон 2 стороны 16 мм (premium)",
+     "source_group": "Шпон",
+     "page": 1,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 14850,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-14",
+     "source_label": "Фрезеровка мат 16 мм",
+     "source_group": "Фрезеровки",
+     "page": 2,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 7800,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-15",
+     "source_label": "Фрезеровка мат 18 мм",
+     "source_group": "Фрезеровки",
+     "page": 2,
+     "thickness_mm": 18,
+     "rate_rub_per_m2": 8190,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-16",
+     "source_label": "Фрезеровка глянец 16 мм",
+     "source_group": "Фрезеровки",
+     "page": 2,
+     "thickness_mm": 16,
+     "rate_rub_per_m2": 8580,
+     "kind": "LISTED_RATE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "INDICATIVE_FINISHED_FACADE_RATE",
+     "activateAutomatically": false
+    },
+    {
+     "id": "HOLZCOM-FACADE-17",
+     "source_label": "Доплата за фрезу (к базовой цене)",
+     "source_group": "Фрезеровки",
+     "page": 2,
+     "thickness_mm": null,
+     "rate_rub_per_m2": 1800,
+     "kind": "SURCHARGE",
+     "substrate": "NOT_EXPLICIT_IN_PDF",
+     "market_average": false,
+     "integrationMode": "REFERENCE_ONLY_UNRESOLVED_SUPPLEMENT",
+     "activateAutomatically": false
+    }
+   ],
+   "supplierConditions": {
+    "minimum_order_rub": 15000,
+    "interpretation": "Минимум заказа поставщику; не минимальная цена отдельного фасада и не автоматическая доплата.",
+    "exact_quote": "По размерам проекта"
+   },
+   "usage": {
+    "formula": "sum(height_mm*width_mm/1000000*quantity*selected_rate_rub_per_m2)",
+    "area_basis": "Площадь одной проекции фасада; тариф на две стороны не удваивает площадь.",
+    "estimateLimit": "Цена готового фасада ориентировочная: основание, покрытие и обработка кромок повторно не начисляются. Полный состав работ, НДС, доставка и применимость доплаты за фрезеровку требуют уточнения; тариф не подтверждает возможность изготовления.",
+    "milling": "Доплата 1800 ₽ не добавляется автоматически к тарифам с фрезеровкой; её применимость требует уточнения.",
+    "unknowns": [
+     "НДС",
+     "доставка",
+     "основание и отделка обратной стороны",
+     "предельные размеры и технические ограничения",
+     "применимость доплаты за фрезеровку"
+    ],
+    "egger_relation": "Тариф готового фасада не задаёт цену плит и покрытий других производителей."
+   },
+   "example": {
+    "height_mm": 2400,
+    "width_mm": 600,
+    "qty": 1,
+    "area_m2": 1.44,
+    "not_manufacturability_confirmation": true,
+    "rates_and_subtotals": [
+     {
+      "finish": "Плёнка 16 мм",
+      "rate_rub_per_m2": 4900,
+      "subtotal_rub": 7056
+     },
+     {
+      "finish": "Эмаль мат 16 мм",
+      "rate_rub_per_m2": 6500,
+      "subtotal_rub": 9360
+     },
+     {
+      "finish": "Шпон мат 16 мм",
+      "rate_rub_per_m2": 11000,
+      "subtotal_rub": 15840
+     }
+    ]
+   }
+  }
+ },
+ "LAMARTY_DATA": {
+  "schema": "MODULERO_LAMARTY_INTEGRATION_INPUT/1",
+  "sourceVersion": "CAT-MATERIALS-01/r2",
+  "entries": [
+   {
+    "workingVariantId": "MAT-LAM-SNOW-WHITE-16-L",
+    "decorId": "DEC-LAM-SNOW-WHITE",
+    "assetId": "ASSET-DEC-LAM-SNOW-WHITE",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Белоснежный",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/snow_white.html",
+    "textureCode": "L",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Белые и молочные",
+    "webPath": "assets/web/snow_white_web.webp",
+    "thumbPath": "assets/web/snow_white_thumb.webp",
+    "catalogueChainConfirmed": true,
+    "edgeId": "EDGE-DEC-LAM-SNOW-WHITE",
+    "observedEdgeId": "EDGE-DEC-LAM-SNOW-WHITE",
+    "edgeMatchStatus": "SAME_FINISH_OBSERVATION",
+    "edgeFinishStatus": "SAME_CODE_OBSERVED",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4074,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-004",
+     "MAT-SRC-005",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 4 дилеров (Донплит, Плитстройторг, СКМ, Сфераплит) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-WHITE-16-O",
+    "decorId": "DEC-LAM-WHITE",
+    "assetId": "ASSET-DEC-LAM-WHITE",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Белый",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/white.html",
+    "textureCode": "O",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Белые и молочные",
+    "webPath": "assets/web/white_web.webp",
+    "thumbPath": "assets/web/white_thumb.webp",
+    "catalogueChainConfirmed": true,
+    "edgeId": "EDGE-DEC-LAM-WHITE",
+    "observedEdgeId": "EDGE-DEC-LAM-WHITE",
+    "edgeMatchStatus": "SAME_FINISH_OBSERVATION",
+    "edgeFinishStatus": "SAME_CODE_OBSERVED",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": true,
+    "pricePerSheetRub": 3805,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-011",
+     "MAT-SRC-012",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 4 дилеров (Донплит, Плитстройторг, СКМ, Сфераплит) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-CREAM-16-P",
+    "decorId": "DEC-LAM-CREAM",
+    "assetId": "ASSET-DEC-LAM-CREAM",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Кремовый",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/cream.html",
+    "textureCode": "P",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Белые и молочные",
+    "webPath": "assets/web/cream_web.webp",
+    "thumbPath": "assets/web/cream_thumb.webp",
+    "catalogueChainConfirmed": false,
+    "edgeId": null,
+    "observedEdgeId": "EDGE-DEC-LAM-CREAM",
+    "edgeMatchStatus": "UNKNOWN",
+    "edgeFinishStatus": "SURFACE_CODE_MISMATCH",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": true,
+    "pricePerSheetRub": 4391,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-017",
+     "MAT-SRC-018",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (Плитстройторг, СКМ, Сфераплит) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-TEFFY-16-L",
+    "decorId": "DEC-LAM-TEFFY",
+    "assetId": "ASSET-DEC-LAM-TEFFY",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Тэффи",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/teffy.html",
+    "textureCode": "L",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Нейтральные",
+    "webPath": "assets/web/teffy_web.webp",
+    "thumbPath": "assets/web/teffy_thumb.webp",
+    "catalogueChainConfirmed": true,
+    "edgeId": "EDGE-DEC-LAM-TEFFY",
+    "observedEdgeId": "EDGE-DEC-LAM-TEFFY",
+    "edgeMatchStatus": "SAME_FINISH_OBSERVATION",
+    "edgeFinishStatus": "SAME_CODE_OBSERVED",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4293,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-020",
+     "MAT-SRC-021",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (Донплит, Плитстройторг, СКМ) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-GREY-STONE-16-P",
+    "decorId": "DEC-LAM-GREY-STONE",
+    "assetId": "ASSET-DEC-LAM-GREY-STONE",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Серый камень",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/grey_stone.html",
+    "textureCode": "P",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Нейтральные",
+    "webPath": "assets/web/grey_stone_web.webp",
+    "thumbPath": "assets/web/grey_stone_thumb.webp",
+    "catalogueChainConfirmed": false,
+    "edgeId": null,
+    "observedEdgeId": "EDGE-DEC-LAM-GREY-STONE",
+    "edgeMatchStatus": "UNKNOWN",
+    "edgeFinishStatus": "SURFACE_CODE_MISMATCH",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4316,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-024",
+     "MAT-SRC-025",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «Lamarty ЛДСП 16» 857,62 ₽/м² × лист 2750 × 1830 мм, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-VOLCANIC-GREY-16-K",
+    "decorId": "DEC-LAM-VOLCANIC-GREY",
+    "assetId": "ASSET-DEC-LAM-VOLCANIC-GREY",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Вулканический серый",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/volcanic_grey.html",
+    "textureCode": "K",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Нейтральные",
+    "webPath": "assets/web/volcanic_grey_web.webp",
+    "thumbPath": "assets/web/volcanic_grey_thumb.webp",
+    "catalogueChainConfirmed": false,
+    "edgeId": null,
+    "observedEdgeId": "EDGE-DEC-LAM-VOLCANIC-GREY",
+    "edgeMatchStatus": "UNKNOWN",
+    "edgeFinishStatus": "SURFACE_CODE_MISMATCH",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4322,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-028",
+     "MAT-SRC-029",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 4 дилеров (Донплит, Плитстройторг, СКМ, Сфераплит) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-GRAPHITE-16-K",
+    "decorId": "DEC-LAM-GRAPHITE",
+    "assetId": "ASSET-DEC-LAM-GRAPHITE",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Графит",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/graphite.html",
+    "textureCode": "K",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Нейтральные",
+    "webPath": "assets/web/graphite_web.webp",
+    "thumbPath": "assets/web/graphite_thumb.webp",
+    "catalogueChainConfirmed": false,
+    "edgeId": null,
+    "observedEdgeId": "EDGE-DEC-LAM-GRAPHITE",
+    "edgeMatchStatus": "UNKNOWN",
+    "edgeFinishStatus": "SURFACE_CODE_MISMATCH",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": true,
+    "pricePerSheetRub": 4182,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-031",
+     "MAT-SRC-032",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 4 дилеров (Донплит, Плитстройторг, СКМ, Сфераплит) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-PHANTOM-16-K",
+    "decorId": "DEC-LAM-PHANTOM",
+    "assetId": "ASSET-DEC-LAM-PHANTOM",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Фантом",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/phantom.html",
+    "textureCode": "K",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Нейтральные",
+    "webPath": "assets/web/phantom_web.webp",
+    "thumbPath": "assets/web/phantom_thumb.webp",
+    "catalogueChainConfirmed": false,
+    "edgeId": null,
+    "observedEdgeId": "EDGE-DEC-LAM-PHANTOM",
+    "edgeMatchStatus": "UNKNOWN",
+    "edgeFinishStatus": "SURFACE_CODE_MISMATCH",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4294,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-034",
+     "MAT-SRC-035",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (Плитстройторг, СКМ, Сфераплит) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-SONOMA-EICHE-16-R",
+    "decorId": "DEC-LAM-SONOMA-EICHE",
+    "assetId": "ASSET-DEC-LAM-SONOMA-EICHE",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Дуб Сонома",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/sonoma_eiche.html",
+    "textureCode": "R",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Светлое и среднее дерево",
+    "webPath": "assets/web/sonoma_eiche_web.webp",
+    "thumbPath": "assets/web/sonoma_eiche_thumb.webp",
+    "catalogueChainConfirmed": true,
+    "edgeId": "EDGE-DEC-LAM-SONOMA-EICHE",
+    "observedEdgeId": "EDGE-DEC-LAM-SONOMA-EICHE",
+    "edgeMatchStatus": "SAME_FINISH_OBSERVATION",
+    "edgeFinishStatus": "SAME_CODE_OBSERVED",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4316,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-037",
+     "MAT-SRC-038",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 1 — меньше трёх; средняя ставка «Lamarty ЛДСП 16» 857,62 ₽/м² × лист 2750 × 1830 мм, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-WOTAN-OAK-16-R",
+    "decorId": "DEC-LAM-WOTAN-OAK",
+    "assetId": "ASSET-DEC-LAM-WOTAN-OAK",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Дуб Вотан",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/wotan_oak.html",
+    "textureCode": "R",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Светлое и среднее дерево",
+    "webPath": "assets/web/wotan_oak_web_srgb_r2.webp",
+    "thumbPath": "assets/web/wotan_oak_thumb_srgb_r2.webp",
+    "catalogueChainConfirmed": true,
+    "edgeId": "EDGE-DEC-LAM-WOTAN-OAK",
+    "observedEdgeId": "EDGE-DEC-LAM-WOTAN-OAK",
+    "edgeMatchStatus": "SAME_FINISH_OBSERVATION",
+    "edgeFinishStatus": "SAME_CODE_OBSERVED",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4316,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-040",
+     "MAT-SRC-041",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «Lamarty ЛДСП 16» 857,62 ₽/м² × лист 2750 × 1830 мм, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-SCANDI-16-R",
+    "decorId": "DEC-LAM-SCANDI",
+    "assetId": "ASSET-DEC-LAM-SCANDI",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Сканди",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/scandi.html",
+    "textureCode": "R",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Светлое и среднее дерево",
+    "webPath": "assets/web/scandi_web.webp",
+    "thumbPath": "assets/web/scandi_thumb.webp",
+    "catalogueChainConfirmed": true,
+    "edgeId": "EDGE-DEC-LAM-SCANDI",
+    "observedEdgeId": "EDGE-DEC-LAM-SCANDI",
+    "edgeMatchStatus": "SAME_FINISH_OBSERVATION",
+    "edgeFinishStatus": "SAME_CODE_OBSERVED",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": true,
+    "pricePerSheetRub": 4580,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-045",
+     "MAT-SRC-046",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (Донплит, Плитстройторг, СКМ) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-SANTORINI-PINE-16-W",
+    "decorId": "DEC-LAM-SANTORINI-PINE",
+    "assetId": "ASSET-DEC-LAM-SANTORINI-PINE",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Сосна Санторини",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/santorini_pine.html",
+    "textureCode": "W",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Тёмное дерево",
+    "webPath": "assets/web/santorini_pine_web.webp",
+    "thumbPath": "assets/web/santorini_pine_thumb.webp",
+    "catalogueChainConfirmed": false,
+    "edgeId": null,
+    "observedEdgeId": "EDGE-DEC-LAM-SANTORINI-PINE",
+    "edgeMatchStatus": "UNKNOWN",
+    "edgeFinishStatus": "SURFACE_CODE_MISMATCH",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4316,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-049",
+     "MAT-SRC-050",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «Lamarty ЛДСП 16» 857,62 ₽/м² × лист 2750 × 1830 мм, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-CAPPUCCINO-16-R",
+    "decorId": "DEC-LAM-CAPPUCCINO",
+    "assetId": "ASSET-DEC-LAM-CAPPUCCINO",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Капучино",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/cappuccino.html",
+    "textureCode": "R",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Тёмное дерево",
+    "webPath": "assets/web/cappuccino_web_srgb_r2.webp",
+    "thumbPath": "assets/web/cappuccino_thumb_srgb_r2.webp",
+    "catalogueChainConfirmed": true,
+    "edgeId": "EDGE-DEC-LAM-CAPPUCCINO",
+    "observedEdgeId": "EDGE-DEC-LAM-CAPPUCCINO",
+    "edgeMatchStatus": "SAME_FINISH_OBSERVATION",
+    "edgeFinishStatus": "SAME_CODE_OBSERVED",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": false,
+    "pricePerSheetRub": 4316,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-053",
+     "MAT-SRC-054",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «Lamarty ЛДСП 16» 857,62 ₽/м² × лист 2750 × 1830 мм, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-SWISS-ELM-16-R",
+    "decorId": "DEC-LAM-SWISS-ELM",
+    "assetId": "ASSET-DEC-LAM-SWISS-ELM",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Вяз Швейцарский",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/swiss_elm.html",
+    "textureCode": "R",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Тёмное дерево",
+    "webPath": "assets/web/swiss_elm_web_srgb_r2.webp",
+    "thumbPath": "assets/web/swiss_elm_thumb_srgb_r2.webp",
+    "catalogueChainConfirmed": true,
+    "edgeId": "EDGE-DEC-LAM-SWISS-ELM",
+    "observedEdgeId": "EDGE-DEC-LAM-SWISS-ELM",
+    "edgeMatchStatus": "SAME_FINISH_OBSERVATION",
+    "edgeFinishStatus": "SAME_CODE_OBSERVED",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": true,
+    "pricePerSheetRub": 4374,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-056",
+     "MAT-SRC-057",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (Донплит, Плитстройторг, СКМ) на 2026-10-27, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-NAMIBIA-16-R",
+    "decorId": "DEC-LAM-NAMIBIA",
+    "assetId": "ASSET-DEC-LAM-NAMIBIA",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Намибия",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/namibia.html",
+    "textureCode": "R",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Тёмное дерево",
+    "webPath": "assets/web/namibia_web_srgb_r2.webp",
+    "thumbPath": "assets/web/namibia_thumb_srgb_r2.webp",
+    "catalogueChainConfirmed": false,
+    "edgeId": null,
+    "observedEdgeId": "EDGE-DEC-LAM-NAMIBIA",
+    "edgeMatchStatus": "UNKNOWN_SOURCE_URL_TITLE_CONFLICT",
+    "edgeFinishStatus": "UNKNOWN_R1_TITLE_R_URL_D_CONFLICT",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": true,
+    "pricePerSheetRub": 4316,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-060",
+     "MAT-SRC-061",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): цен дилеров 2 — меньше трёх; средняя ставка «Lamarty ЛДСП 16» 857,62 ₽/м² × лист 2750 × 1830 мм, до рубля"
+   },
+   {
+    "workingVariantId": "MAT-LAM-BRUNO-WALNUT-16-D",
+    "decorId": "DEC-LAM-BRUNO-WALNUT",
+    "assetId": "ASSET-DEC-LAM-BRUNO-WALNUT",
+    "manufacturer": "ООО Сыктывкарский фанерный завод",
+    "brand": "Lamarty",
+    "decorName": "Орех Бруно",
+    "decorCode": null,
+    "decorCodeStatus": "NOT_EXPOSED_IN_CHECKED_MANUFACTURER_PAGES",
+    "manufacturerSkuId": null,
+    "officialDecorKey": "https://www.lamarty.ru/lamarty/decors/bruno_walnut.html",
+    "textureCode": "D",
+    "usage": [
+     "carcass",
+     "facades"
+    ],
+    "materialType": "MFC",
+    "boardType": "P2",
+    "thicknessMm": 16,
+    "sheetDimensionsMm": {
+     "length": 2750,
+     "width": 1830
+    },
+    "group": "Тёмное дерево",
+    "webPath": "assets/web/bruno_walnut_web.webp",
+    "thumbPath": "assets/web/bruno_walnut_thumb.webp",
+    "catalogueChainConfirmed": false,
+    "edgeId": null,
+    "observedEdgeId": "EDGE-DEC-LAM-BRUNO-WALNUT",
+    "edgeMatchStatus": "UNKNOWN",
+    "edgeFinishStatus": "EDGE_GAP",
+    "edgeAssignmentPolicy": "REFERENCE_ONLY_KEEP_PROJECT_PHYSICAL_BANDING",
+    "legacyIdentityResolved": true,
+    "pricePerSheetRub": 4965,
+    "pricePerM2Rub": null,
+    "priceStatus": "PROJECT_AVERAGE_PRICE",
+    "runtimeScope": "LOCAL_VISUAL_DRAFT",
+    "manufacturingStatus": "NOT_APPROVED",
+    "publicUseRights": "NEEDS_PERMISSION",
+    "scaleStatus": "UNKNOWN",
+    "repeatWidthMm": null,
+    "repeatLengthMm": null,
+    "grainAxis": "UNKNOWN",
+    "colorAccuracy": "NOT_CALIBRATED_SCREEN_PREVIEW",
+    "sourceIds": [
+     "MAT-SRC-064",
+     "MAT-SRC-065",
+     "MAT-SRC-001"
+    ],
+    "sourceCheckedAt": "2026-09-18",
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя цена 3 дилеров (Донплит, Плитстройторг, Сфераплит) на 2026-10-27, до рубля"
+   }
+  ],
+  "edges": [
+   {
+    "edgeId": "EDGE-DEC-LAM-SNOW-WHITE",
+    "candidateId": "MAT-LAM-SNOW-WHITE-16-L",
+    "decorId": "DEC-LAM-SNOW-WHITE",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Белоснежный L",
+    "manufacturerSkuCode": null,
+    "decorName": "Белоснежный",
+    "textureCode": "L",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-004",
+    "dimensionSourceId": "MAT-SRC-010",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SAME_CODE_OBSERVED",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101010U",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-WHITE",
+    "candidateId": "MAT-LAM-WHITE-16-O",
+    "decorId": "DEC-LAM-WHITE",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Белый О",
+    "manufacturerSkuCode": null,
+    "decorName": "Белый",
+    "textureCode": "O",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-011",
+    "dimensionSourceId": "MAT-SRC-016",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SAME_CODE_OBSERVED",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101013U",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-CREAM",
+    "candidateId": "MAT-LAM-CREAM-16-P",
+    "decorId": "DEC-LAM-CREAM",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Кремовый К",
+    "manufacturerSkuCode": null,
+    "decorName": "Кремовый",
+    "textureCode": "K",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-017",
+    "dimensionSourceId": "MAT-SRC-019",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SURFACE_CODE_MISMATCH",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101064U",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-TEFFY",
+    "candidateId": "MAT-LAM-TEFFY-16-L",
+    "decorId": "DEC-LAM-TEFFY",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Тэффи L",
+    "manufacturerSkuCode": null,
+    "decorName": "Тэффи",
+    "textureCode": "L",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-020",
+    "dimensionSourceId": "MAT-SRC-023",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SAME_CODE_OBSERVED",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101111U",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-GREY-STONE",
+    "candidateId": "MAT-LAM-GREY-STONE-16-P",
+    "decorId": "DEC-LAM-GREY-STONE",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Серый камень К",
+    "manufacturerSkuCode": null,
+    "decorName": "Серый камень",
+    "textureCode": "K",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-024",
+    "dimensionSourceId": "MAT-SRC-027",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SURFACE_CODE_MISMATCH",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101099U",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-VOLCANIC-GREY",
+    "candidateId": "MAT-LAM-VOLCANIC-GREY-16-K",
+    "decorId": "DEC-LAM-VOLCANIC-GREY",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Вулканический серый L",
+    "manufacturerSkuCode": null,
+    "decorName": "Вулканический серый",
+    "textureCode": "L",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-028",
+    "dimensionSourceId": "MAT-SRC-030",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SURFACE_CODE_MISMATCH",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101031U",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-GRAPHITE",
+    "candidateId": "MAT-LAM-GRAPHITE-16-K",
+    "decorId": "DEC-LAM-GRAPHITE",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Графит О",
+    "manufacturerSkuCode": null,
+    "decorName": "Графит",
+    "textureCode": "O",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-031",
+    "dimensionSourceId": "MAT-SRC-033",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SURFACE_CODE_MISMATCH",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101036U",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-PHANTOM",
+    "candidateId": "MAT-LAM-PHANTOM-16-K",
+    "decorId": "DEC-LAM-PHANTOM",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Фантом L",
+    "manufacturerSkuCode": null,
+    "decorName": "Фантом",
+    "textureCode": "L",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-034",
+    "dimensionSourceId": "MAT-SRC-036",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SURFACE_CODE_MISMATCH",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101135U",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-SONOMA-EICHE",
+    "candidateId": "MAT-LAM-SONOMA-EICHE-16-R",
+    "decorId": "DEC-LAM-SONOMA-EICHE",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Дуб Сонома R",
+    "manufacturerSkuCode": null,
+    "decorName": "Дуб Сонома",
+    "textureCode": "R",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-037",
+    "dimensionSourceId": "MAT-SRC-039",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SAME_CODE_OBSERVED",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101047W",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-WOTAN-OAK",
+    "candidateId": "MAT-LAM-WOTAN-OAK-16-R",
+    "decorId": "DEC-LAM-WOTAN-OAK",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Дуб Вотан R",
+    "manufacturerSkuCode": null,
+    "decorName": "Дуб Вотан",
+    "textureCode": "R",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-040",
+    "dimensionSourceId": "MAT-SRC-044",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SAME_CODE_OBSERVED",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101039W",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-SCANDI",
+    "candidateId": "MAT-LAM-SCANDI-16-R",
+    "decorId": "DEC-LAM-SCANDI",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Сканди R",
+    "manufacturerSkuCode": null,
+    "decorName": "Сканди",
+    "textureCode": "R",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-045",
+    "dimensionSourceId": "MAT-SRC-048",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SAME_CODE_OBSERVED",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101103W",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-SANTORINI-PINE",
+    "candidateId": "MAT-LAM-SANTORINI-PINE-16-W",
+    "decorId": "DEC-LAM-SANTORINI-PINE",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Сосна Санторини R",
+    "manufacturerSkuCode": null,
+    "decorName": "Сосна Санторини",
+    "textureCode": "R",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-049",
+    "dimensionSourceId": "MAT-SRC-052",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SURFACE_CODE_MISMATCH",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101107W",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-CAPPUCCINO",
+    "candidateId": "MAT-LAM-CAPPUCCINO-16-R",
+    "decorId": "DEC-LAM-CAPPUCCINO",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Капучино R",
+    "manufacturerSkuCode": null,
+    "decorName": "Капучино",
+    "textureCode": "R",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-053",
+    "dimensionSourceId": "MAT-SRC-055",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SAME_CODE_OBSERVED",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101059W",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-SWISS-ELM",
+    "candidateId": "MAT-LAM-SWISS-ELM-16-R",
+    "decorId": "DEC-LAM-SWISS-ELM",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Вяз швейцарский R",
+    "manufacturerSkuCode": null,
+    "decorName": "Вяз Швейцарский",
+    "textureCode": "R",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-056",
+    "dimensionSourceId": "MAT-SRC-059",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "SAME_CODE_OBSERVED",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101033W",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-NAMIBIA",
+    "candidateId": "MAT-LAM-NAMIBIA-16-R",
+    "decorId": "DEC-LAM-NAMIBIA",
+    "brand": "Lamarty",
+    "supplierItemTitle": "Lamarty кромка ПВХ 19*0,4 Намибия R",
+    "manufacturerSkuCode": null,
+    "decorName": "Намибия",
+    "textureCode": "R",
+    "material": "PVC",
+    "widthMm": 19,
+    "thicknessMm": 0.4,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "GEOMETRY_19_GT_16_ONLY_NOT_TECHNOLOGY_APPROVAL",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": "MAT-SRC-003",
+    "decorSourceId": "MAT-SRC-060",
+    "dimensionSourceId": "MAT-SRC-063",
+    "matchStatus": "MANUFACTURER_NAMED_DECOR_MATCH",
+    "finishStatus": "UNKNOWN_R1_TITLE_R_URL_D_CONFLICT",
+    "technicalStatus": "NEEDS_PROCESS_CONFIRMATION",
+    "recommendedRehauDecorCode": "101074W",
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   },
+   {
+    "edgeId": "EDGE-DEC-LAM-BRUNO-WALNUT",
+    "candidateId": "MAT-LAM-BRUNO-WALNUT-16-D",
+    "decorId": "DEC-LAM-BRUNO-WALNUT",
+    "brand": null,
+    "supplierItemTitle": null,
+    "manufacturerSkuCode": null,
+    "decorName": "Орех Бруно",
+    "textureCode": null,
+    "material": null,
+    "widthMm": null,
+    "thicknessMm": null,
+    "unit": "mm",
+    "targetPanelThicknessMm": 16,
+    "thicknessLinkStatus": "UNKNOWN",
+    "requiredTrimAllowanceMm": null,
+    "matchingSourceId": null,
+    "decorSourceId": "MAT-SRC-064",
+    "dimensionSourceId": null,
+    "matchStatus": "EDGE_GAP",
+    "finishStatus": "EDGE_GAP",
+    "technicalStatus": "EDGE_GAP",
+    "recommendedRehauDecorCode": null,
+    "rehauDimensionStatus": "UNVERIFIED_NOT_SUBSTITUTED",
+    "checkedAt": "2026-09-13",
+    "isService": false,
+    "extensionStatus": "WORKING_EXTENSION"
+   }
+  ],
+  "limitations": [
+   "Prior catalogue qualification is not manufacturing approval",
+   "No public publication permission"
+  ]
+ },
+ "RELEASE_BOARDS": {
+  "schema": "MODULERO_RELEASE_BOARDS/1",
+  "boards": [
+   {
+    "id": "HDF-3-2745x1700",
+    "family": "HDF",
+    "product": "ХДФ",
+    "thicknessMm": 3,
+    "formatMm": [
+     2745,
+     1700
+    ],
+    "priceRub": 1017,
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя ставка «ХДФ 3» 217,92 ₽/м² × лист 2745 × 1700 мм, до рубля"
+   },
+   {
+    "id": "HDF-3-2440x1220",
+    "family": "HDF",
+    "product": "ХДФ",
+    "thicknessMm": 3,
+    "formatMm": [
+     2440,
+     1220
+    ],
+    "priceRub": 649,
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя ставка «ХДФ 3» 217,92 ₽/м² × лист 2440 × 1220 мм, до рубля"
+   },
+   {
+    "id": "HDF-4-2745x1700",
+    "family": "HDF",
+    "product": "ХДФ",
+    "thicknessMm": 4,
+    "formatMm": [
+     2745,
+     1700
+    ],
+    "priceRub": 1184,
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя ставка «ХДФ 4» 253,62 ₽/м² × лист 2745 × 1700 мм, до рубля"
+   },
+   {
+    "id": "HDF-4-2440x1220",
+    "family": "HDF",
+    "product": "ХДФ",
+    "thicknessMm": 4,
+    "formatMm": [
+     2440,
+     1220
+    ],
+    "priceRub": 755,
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя ставка «ХДФ 4» 253,62 ₽/м² × лист 2440 × 1220 мм, до рубля"
+   },
+   {
+    "id": "LDSP-10-2800x2070",
+    "family": "LDSP",
+    "product": "ЛДСП 10 мм вставок купе",
+    "thicknessMm": 10,
+    "formatMm": [
+     2800,
+     2070
+    ],
+    "priceRub": 4766,
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя ставка «Lamarty ЛДСП 10» 822,33 ₽/м² × лист 2800 × 2070 мм, до рубля"
+   },
+   {
+    "id": "LDSP-10-2750x1830",
+    "family": "LDSP",
+    "product": "ЛДСП 10 мм вставок купе",
+    "thicknessMm": 10,
+    "formatMm": [
+     2750,
+     1830
+    ],
+    "priceRub": 4138,
+    "priceDate": "2026-10-27",
+    "priceSource": {
+     "doc": "FINDINGS 1830",
+     "file": "docs/product/prices/boards-2026-10-27.json"
+    },
+    "priceBasis": "усреднённая цена проекта (MOD-DEC-569): средняя ставка «Lamarty ЛДСП 10» 822,33 ₽/м² × лист 2750 × 1830 мм, до рубля"
+   }
+  ]
+ }
+}

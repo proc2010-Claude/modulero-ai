@@ -1,0 +1,1243 @@
+{
+  "RASTEX16_DU325": {
+    "edgeThickness": [
+      16
+    ],
+    "anchorThicknessExamples": [
+      16,
+      18,
+      19,
+      22
+    ],
+    "kit": {
+      "25062": 1,
+      "47458": 1
+    },
+    "axisFromLower": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H750"
+    },
+    "cupDiameter": {
+      "value": 15,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H750"
+    },
+    "cupDepth": {
+      "value": 12.7,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H750"
+    },
+    "b": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "r2 b=33.7..34.5"
+    },
+    "edgeDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H750"
+    },
+    "edgeCylinderDepth": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "D-EDGE-01"
+    },
+    "anchorDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H751"
+    },
+    "anchorDepth": {
+      "value": 11,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H751"
+    },
+    "profileId": "RASTEX16_DU325",
+    "productionRelease": false,
+    "materialScope": "nominal wood-panel calculation; LDSP/MDF material suitability preserved from r2, not certification"
+  },
+  "RASTEX18_DU325": {
+    "edgeThickness": [
+      18
+    ],
+    "anchorThicknessExamples": [
+      16,
+      18,
+      19,
+      22
+    ],
+    "kit": {
+      "13957": 1,
+      "47458": 1
+    },
+    "axisFromLower": {
+      "value": 9,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H750"
+    },
+    "cupDiameter": {
+      "value": 15,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H750"
+    },
+    "cupDepth": {
+      "value": 13.4,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H750"
+    },
+    "b": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "r2 b=33.7..34.5"
+    },
+    "edgeDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H750"
+    },
+    "edgeCylinderDepth": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "D-EDGE-01"
+    },
+    "anchorDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H751"
+    },
+    "anchorDepth": {
+      "value": 11,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H751"
+    },
+    "profileId": "RASTEX18_DU325",
+    "productionRelease": false,
+    "materialScope": "nominal wood-panel calculation; LDSP/MDF material suitability preserved from r2, not certification"
+  },
+  "RASTEX19_DU325": {
+    "edgeThickness": [
+      19
+    ],
+    "anchorThicknessExamples": [
+      16,
+      18,
+      19,
+      22
+    ],
+    "kit": {
+      "73457": 1,
+      "47458": 1
+    },
+    "axisFromLower": {
+      "value": 9.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71950_2d.dxf (MOD-DEC-380)"
+    },
+    "cupDiameter": {
+      "value": 15,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71950_2d.dxf (MOD-DEC-380)"
+    },
+    "cupDepth": {
+      "value": 13.7,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71950_2d.dxf (MOD-DEC-380)"
+    },
+    "b": {
+      "value": 34,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71950_2d.dxf (MOD-DEC-380)"
+    },
+    "edgeDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71950_2d.dxf (MOD-DEC-380)"
+    },
+    "edgeCylinderDepth": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "D-EDGE-01"
+    },
+    "anchorDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H751"
+    },
+    "anchorDepth": {
+      "value": 11,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H751"
+    },
+    "profileId": "RASTEX19_DU325",
+    "productionRelease": false,
+    "materialScope": "nominal wood-panel calculation; LDSP/MDF material suitability preserved from r2, not certification"
+  },
+  "RASTEX22_DU325": {
+    "edgeThickness": [
+      22
+    ],
+    "anchorThicknessExamples": [
+      16,
+      18,
+      19,
+      22
+    ],
+    "kit": {
+      "25066": 1,
+      "47458": 1
+    },
+    "axisFromLower": {
+      "value": 11,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71952_2d.dxf (MOD-DEC-380)"
+    },
+    "cupDiameter": {
+      "value": 15,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71952_2d.dxf (MOD-DEC-380)"
+    },
+    "cupDepth": {
+      "value": 15.7,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71952_2d.dxf (MOD-DEC-380)"
+    },
+    "b": {
+      "value": 34,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71952_2d.dxf (MOD-DEC-380)"
+    },
+    "edgeDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Hettich 71952_2d.dxf (MOD-DEC-380)"
+    },
+    "edgeCylinderDepth": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "D-EDGE-01"
+    },
+    "anchorDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H751"
+    },
+    "anchorDepth": {
+      "value": 11,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H751"
+    },
+    "profileId": "RASTEX22_DU325",
+    "productionRelease": false,
+    "materialScope": "nominal wood-panel calculation; LDSP/MDF material suitability preserved from r2, not certification"
+  },
+  "MINIFIX16_M6": {
+    "edgeThickness": [
+      16
+    ],
+    "kit": {
+      "262.26.533": 1,
+      "262.28.642": 1,
+      "039.00.267": 1
+    },
+    "axisFromLower": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.20"
+    },
+    "cupDiameter": {
+      "value": 15,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.20"
+    },
+    "cupDepth": {
+      "value": 12.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.20"
+    },
+    "cupDepthPlusTolerance": {
+      "value": 0.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.20"
+    },
+    "b": {
+      "value": 34,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "edgeDiameter": {
+      "value": 8,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "head7+chosen clearance1; verify selected machining map"
+    },
+    "edgeCylinderDepth": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "straight channel to cup axis; no drill tip"
+    },
+    "anchorDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "anchorDepth": {
+      "value": 11,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "HA12.21 insert9+2"
+    },
+    "insertLength": {
+      "value": 9,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "boltThread": {
+      "value": "M6",
+      "status": "PRIMARY_CONFIRMED",
+      "unit": null,
+      "source": "HA12.21"
+    },
+    "boltThreadLength": {
+      "value": 7.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "sleeveGlue": false,
+    "profileId": "MINIFIX16_M6",
+    "productionRelease": false,
+    "materialScope": "nominal wood-panel calculation; LDSP/MDF material suitability preserved from r2, not certification"
+  },
+  "MINIFIX19_M6": {
+    "edgeThickness": [
+      19
+    ],
+    "kit": {
+      "262.26.535": 1,
+      "262.28.642": 1,
+      "039.00.267": 1
+    },
+    "axisFromLower": {
+      "value": 9.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.20"
+    },
+    "cupDiameter": {
+      "value": 15,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.20"
+    },
+    "cupDepth": {
+      "value": 14,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.20"
+    },
+    "cupDepthPlusTolerance": {
+      "value": 0.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.20"
+    },
+    "b": {
+      "value": 34,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "edgeDiameter": {
+      "value": 8,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "head7+chosen clearance1"
+    },
+    "edgeCylinderDepth": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "straight nominal channel"
+    },
+    "anchorDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "anchorDepth": {
+      "value": 11,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "HA12.21 insert9+2"
+    },
+    "profileId": "MINIFIX19_M6",
+    "productionRelease": false,
+    "materialScope": "nominal wood-panel calculation; LDSP/MDF material suitability preserved from r2, not certification"
+  },
+  "MINIFIX18": {
+    "edgeThickness": [
+      18
+    ],
+    "kit": {
+      "262.26.534": 1,
+      "262.28.642": 1,
+      "039.00.267": 1
+    },
+    "axisFromLower": {
+      "value": 9,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "OHA2026 originalPDF6 / excerpt1"
+    },
+    "cupDiameter": {
+      "value": 15,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "OHA2026 originalPDF6 / excerpt1"
+    },
+    "cupDepth": {
+      "value": 13.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "OHA2026 originalPDF6 / excerpt1"
+    },
+    "cupDepthPlusTolerance": {
+      "value": 0.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "OHA2026 originalPDF6 / excerpt1"
+    },
+    "b": {
+      "value": 34,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "edgeDiameter": {
+      "value": 8,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "head7+chosen clearance1; verify selected machining map"
+    },
+    "edgeCylinderDepth": {
+      "value": 34,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "straight channel to cup axis; no drill tip"
+    },
+    "anchorDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "anchorDepth": {
+      "value": 11,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "HA12.21 insert9+2"
+    },
+    "insertLength": {
+      "value": 9,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "boltThread": {
+      "value": "M6",
+      "status": "PRIMARY_CONFIRMED",
+      "unit": null,
+      "source": "HA12.21"
+    },
+    "boltThreadLength": {
+      "value": 7.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "HA12.21"
+    },
+    "sleeveGlue": false,
+    "profileId": "MINIFIX18",
+    "productionRelease": false,
+    "materialScope": "nominal wood-panel calculation; LDSP/MDF material suitability preserved from r2, not certification",
+    "status": "NOMINAL_KIT_READY",
+    "missing": [
+      "specific642EdgeBoreFit",
+      "boardMaterialGradeQualification",
+      "selectedToolTravel"
+    ]
+  },
+  "DU868_PARTITION16": {
+    "centreThickness": [
+      16
+    ],
+    "shelfThicknessExamples": [
+      16,
+      18
+    ],
+    "kitPerStation": {
+      "79602": 1,
+      "circlip_included": 1,
+      "25062_or_13957_matching_each_shelf": 2
+    },
+    "throughDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H753"
+    },
+    "length": {
+      "value": 76,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H753"
+    },
+    "bEachSide": {
+      "value": 34,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H753"
+    },
+    "ringPlane": "one centre-panel mating face, not middle of panel",
+    "ringOffsetFromLongTip": {
+      "value": 46,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H753"
+    },
+    "twoBlindDU325": false,
+    "profileId": "DU868_PARTITION16",
+    "productionRelease": false
+  },
+  "DU853_PARTITION19": {
+    "centreThickness": [
+      19
+    ],
+    "shelfThicknessExamples": [
+      16,
+      18
+    ],
+    "kitPerStation": {
+      "79568": 1,
+      "circlip_included": 1,
+      "25062_or_13957_matching_each_shelf": 2
+    },
+    "throughDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H753"
+    },
+    "length": {
+      "value": 79,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H753"
+    },
+    "bEachSide": {
+      "value": 34,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H753"
+    },
+    "ringPlane": "one centre-panel mating face",
+    "ringOffsetFromLongTip": {
+      "value": 49,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H753"
+    },
+    "profileId": "DU853_PARTITION19",
+    "productionRelease": false
+  },
+  "DOUBLE_DOWEL_PARTITION18": {
+    "centreThickness": [
+      18
+    ],
+    "kit": null,
+    "status": "UNKNOWN",
+    "missing": [
+      "exactDoubleBoltSKU",
+      "length",
+      "stopRingPosition"
+    ],
+    "fallback": "Номинальное смещение DU325; требуется полная проверка пересечений деревянных деталей.",
+    "profileId": "DOUBLE_DOWEL_PARTITION18",
+    "productionRelease": false
+  },
+  "MAKMART_S16": {
+    "kit": {
+      "MB.1501.7X50.CH4.BZ": 1
+    },
+    "firstPanelThickness": [
+      16
+    ],
+    "edgePanelThickness": [
+      16
+    ],
+    "throughDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm"
+    },
+    "throughDepth": {
+      "value": 16,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm"
+    },
+    "edgeDiameter": {
+      "value": 5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm"
+    },
+    "edgeDepth": {
+      "value": 40,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm"
+    },
+    "edgeAxis": {
+      "value": 8,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "t/2"
+    },
+    "headSeatDiameter": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-CONFIRMAT-HEAD"
+    },
+    "headSeatDepth": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-CONFIRMAT-HEAD"
+    },
+    "legacy35": "superseded only for exact S16 profile",
+    "profileId": "MAKMART_S16",
+    "productionRelease": false,
+    "actualHeadDiameter": {
+      "value": 10,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог Makmart, страница 2"
+    },
+    "driveHex": {
+      "value": 4,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог Makmart, страница 2"
+    },
+    "headDiameterIsSeatDiameter": false,
+    "screw": "7x50"
+  },
+  "MAKMART_S19": {
+    "kit": {
+      "MB.1501.7X50.CH4.BZ": 1
+    },
+    "screw": "7x50",
+    "firstPanelThickness": [
+      19
+    ],
+    "edgePanelThickness": [
+      19
+    ],
+    "throughDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467)"
+    },
+    "throughDepth": {
+      "value": 19,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "толщина детали со сквозным отверстием, S"
+    },
+    "edgeDiameter": {
+      "value": 5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467)"
+    },
+    "edgeDepth": {
+      "value": 40,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467): G 40 мм (строка S = 16 мм)"
+    },
+    "edgeAxis": {
+      "value": 9.5,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "t/2"
+    },
+    "headSeatDiameter": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-CONFIRMAT-HEAD"
+    },
+    "headSeatDepth": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-CONFIRMAT-HEAD"
+    },
+    "profileId": "MAKMART_S19",
+    "productionRelease": false,
+    "actualHeadDiameter": {
+      "value": 10,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467)"
+    },
+    "driveHex": {
+      "value": 4,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467): CH4"
+    },
+    "headDiameterIsSeatDiameter": false,
+    "decision": "MOD-DEC-467"
+  },
+  "MAKMART_S22": {
+    "kit": {
+      "MB.1501.7x70.CH4.BZ": 1
+    },
+    "screw": "7x70",
+    "firstPanelThickness": [
+      22
+    ],
+    "edgePanelThickness": [
+      22
+    ],
+    "throughDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467)"
+    },
+    "throughDepth": {
+      "value": 22,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "толщина детали со сквозным отверстием, S"
+    },
+    "edgeDiameter": {
+      "value": 5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467)"
+    },
+    "edgeDepth": {
+      "value": 60,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467): G 60 мм (строка S = 16 мм)"
+    },
+    "edgeAxis": {
+      "value": 11,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "t/2"
+    },
+    "headSeatDiameter": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-CONFIRMAT-HEAD"
+    },
+    "headSeatDepth": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-CONFIRMAT-HEAD"
+    },
+    "profileId": "MAKMART_S22",
+    "productionRelease": false,
+    "actualHeadDiameter": {
+      "value": 10,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467)"
+    },
+    "driveHex": {
+      "value": 4,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "Каталог MAKMART «Стяжки конфирмат 5x50 7x50 7x70», таблица присадки (MOD-DEC-467): CH4"
+    },
+    "headDiameterIsSeatDiameter": false,
+    "decision": "MOD-DEC-467"
+  },
+  "CONFIRMAT18": {
+    "kit": null,
+    "status": "UNKNOWN",
+    "firstPanelThickness": [
+      18
+    ],
+    "missing": [
+      "exactSKU",
+      "firstPanelBore",
+      "matingEdgeBoreDepth",
+      "headSeat"
+    ],
+    "doNotCopy": "MAKMART_S16",
+    "profileId": "CONFIRMAT18",
+    "productionRelease": false
+  },
+  "SEKURA6": {
+    "kitPerShelf": {
+      "79707": 4
+    },
+    "materialScope": {
+      "value": "chipboard",
+      "status": "PRIMARY_CONFIRMED",
+      "unit": null,
+      "source": "H79707"
+    },
+    "shelfThicknessExamples": [
+      16,
+      18
+    ],
+    "thicknessScope": "nominal containment derived, no manufacturer load qualification for these exact panels",
+    "axisFromLower": {
+      "value": -8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H-SEKURA6"
+    },
+    "sidePinDiameter": {
+      "value": 5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H-SEKURA6"
+    },
+    "sidePinLength": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H-SEKURA6"
+    },
+    "verticalPinDiameter": {
+      "value": 5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H-SEKURA6"
+    },
+    "verticalPinHeight": {
+      "value": 12.5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H-SEKURA6"
+    },
+    "pinAxisFromSideContact": {
+      "value": 12,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H-SEKURA6"
+    },
+    "sideDrillDepth": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-SEKURA-FIT"
+    },
+    "shelfDrillDepth": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-SEKURA-FIT"
+    },
+    "drillDepthExample": [
+      9,
+      13.5
+    ],
+    "exampleStatus": "DERIVED:1mm illustrative end allowance, not primary machining prescription",
+    "sideClearanceExampleEach": {
+      "value": 1,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "explicit fixture, not universal default"
+    },
+    "horizontalRetention": "4 locating pins in underside bores; nominal opposing side/end restraint",
+    "removal": "unload, lift vertically > actual pin engagement + clearance, then tilt/extract through clear opening",
+    "separateMatingPart": "shelf underside bore; no separate fitting or screw",
+    "glue": false,
+    "upliftLockRequired": false,
+    "profileId": "SEKURA6",
+    "productionRelease": false,
+    "sideNominalBoreDiameter": {
+      "value": 5,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H79707"
+    },
+    "publishedLoadGroup": {
+      "value": {
+        "group": "L75",
+        "kgPerM2": 75
+      },
+      "status": "PRIMARY_CONFIRMED",
+      "unit": null,
+      "source": "H79707"
+    },
+    "loadQualifiedFor16or18": false,
+    "calculationAPI": "engineering_r6.sekura_access"
+  },
+  "WOOD_8x35": {
+    "kit": {
+      "9223927": 1
+    },
+    "material": {
+      "value": "beech",
+      "status": "PRIMARY_CONFIRMED",
+      "unit": null,
+      "source": "H-WOOD43"
+    },
+    "diameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H-WOOD43"
+    },
+    "length": {
+      "value": 35,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H-WOOD43"
+    },
+    "surface": "fluted as pictured; catalogue geometry is nominal",
+    "faceInsertion": {
+      "value": 10,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "proposed stop-set assembly"
+    },
+    "edgeInsertion": {
+      "value": 25,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "35-10"
+    },
+    "faceDepth": {
+      "value": 11,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "10+1"
+    },
+    "edgeDepth": {
+      "value": 26,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "25+1"
+    },
+    "nominalHoleDiameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "H9223927 technical capture; bore nominal only"
+    },
+    "minimumWeb": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-WOOD-FIT"
+    },
+    "diameterFitTolerance": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "Q-WOOD-FIT"
+    },
+    "toolTravel": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "PROJECT_TOOL"
+    },
+    "unitPriceRub": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "RUB/piece",
+      "source": "QUOTE"
+    },
+    "glueDefault": false,
+    "dryFit": "engineering proposal preserving demountability; not a strength claim or compulsory glue change",
+    "profileId": "WOOD_8x35",
+    "productionRelease": false,
+    "calculationAPI": "engineering_r6.ordinary_wood",
+    "approvedProductionDepths": null
+  },
+  "WOOD_SHARED_THROUGH_PROPOSAL": {
+    "kit": {
+      "9223927": 1
+    },
+    "centreThicknessExamples": [
+      16,
+      18,
+      19
+    ],
+    "partitionBore": {
+      "value": 8,
+      "status": "DERIVED",
+      "unit": "mm",
+      "source": "new explicit through construction, never auto-merge"
+    },
+    "embedEach": "(35-centreThickness)/2",
+    "edgeDepthEach": "embedEach+1",
+    "newProfileExplicitSelectionRequired": true,
+    "automaticDefault": false,
+    "production": "UNKNOWN embed/web/fit strength; Q-WOOD-OPPOSED",
+    "jointFacesCovered": 2,
+    "profileId": "WOOD_SHARED_THROUGH_PROPOSAL",
+    "productionRelease": false,
+    "alternatives": [
+      "WOOD_8x40_ALTERNATIVE",
+      "WOOD_8x50_ALTERNATIVE"
+    ],
+    "recommendedBeforeShared": "independent35, stagger16 example if actual metals/wood/access fit; not a default"
+  },
+  "WOOD_8x40_ALTERNATIVE": {
+    "profileId": "WOOD_8x40_ALTERNATIVE",
+    "kit": {
+      "006.93.274": 1
+    },
+    "diameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "UK7.82"
+    },
+    "length": {
+      "value": 40,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "UK7.82"
+    },
+    "diameterTolerance": {
+      "value": 0.1,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "UK7.82 ±0.1"
+    },
+    "lengthTolerance": {
+      "value": 0.2,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "UK7.82 ±0.2"
+    },
+    "dryFit": null,
+    "minEmbed": null,
+    "automaticDefault": false,
+    "explicitSelectionRequired": true,
+    "productionRelease": false
+  },
+  "WOOD_8x50_ALTERNATIVE": {
+    "profileId": "WOOD_8x50_ALTERNATIVE",
+    "kit": {
+      "006.93.292": 1
+    },
+    "diameter": {
+      "value": 8,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "UK7.82"
+    },
+    "length": {
+      "value": 50,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "UK7.82"
+    },
+    "diameterTolerance": {
+      "value": 0.1,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "UK7.82 ±0.1"
+    },
+    "lengthTolerance": {
+      "value": 0.2,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "UK7.82 ±0.2"
+    },
+    "dryFit": null,
+    "minEmbed": null,
+    "automaticDefault": false,
+    "explicitSelectionRequired": true,
+    "productionRelease": false
+  },
+  "DB8781Zn/500": {
+    "profileId": "DB8781Zn/500",
+    "kit": {
+      "railLeft": 1,
+      "railRight": 1,
+      "clipLeft": 1,
+      "clipRight": 1
+    },
+    "source": "BOYARD supplied instruction",
+    "rowPitch": {
+      "value": 12,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "bottomUndersideFromLowerReference": {
+      "value": 27,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "bottomReveal": {
+      "value": [
+        10,
+        11
+      ],
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "hookAxisAboveBottomUnderside": {
+      "value": 11,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "hookBore": {
+      "value": {
+        "diameter": 6,
+        "cylinderDepth": 10
+      },
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "rear view"
+    },
+    "topClearanceMin": {
+      "value": 6,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "upperRowFromReference": {
+      "value": null,
+      "status": "UNKNOWN",
+      "unit": "mm",
+      "source": "36.5 shown / min37 footnote; exact datums question"
+    },
+    "clipFastenerCount": 6,
+    "cabinetScrewsIncluded": false,
+    "clipScrewDimensions": null,
+    "clipPenetration": null,
+    "exactStroke": null,
+    "calculationAPI": "engineering_r6.runner_datums",
+    "productionRelease": false
+  },
+  "DB8881Zn/450": {
+    "profileId": "DB8881Zn/450",
+    "kit": {
+      "railLeft": 1,
+      "railRight": 1,
+      "clipLeft": 1,
+      "clipRight": 1
+    },
+    "source": "BOYARD supplied instruction",
+    "rowPitch": {
+      "value": 12,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "bottomUndersideFromLowerReference": {
+      "value": 27,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "bottomReveal": {
+      "value": [
+        10,
+        11
+      ],
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "hookAxisAboveBottomUnderside": {
+      "value": 11,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "hookBore": {
+      "value": {
+        "diameter": 6,
+        "cylinderDepth": 10
+      },
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "rear view"
+    },
+    "topClearanceMin": {
+      "value": 6,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "cross-section"
+    },
+    "upperRowFromReference": {
+      "value": 37,
+      "status": "PRIMARY_CONFIRMED",
+      "unit": "mm",
+      "source": "DB8881 PDF2"
+    },
+    "clipFastenerCount": null,
+    "cabinetScrewsIncluded": null,
+    "clipScrewDimensions": null,
+    "clipPenetration": null,
+    "exactStroke": null,
+    "calculationAPI": "engineering_r6.runner_datums",
+    "productionRelease": false
+  }
+}

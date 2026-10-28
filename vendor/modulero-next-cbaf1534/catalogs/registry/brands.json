@@ -1,0 +1,101 @@
+{
+  "format": "modulero.registry-brands/1",
+  "brands": [
+    {
+      "id": "BOYARD",
+      "name": "BOYARD",
+      "synonyms": ["Boyard", "Боярд"],
+      "article": {
+        "same": [
+          { "pattern": "_(\\d{3,4})$", "with": "/$1", "why": "H102B02_0112 и H102B02/0112, DB8781Zn_250 и DB8781Zn/250: в именах файлов косая черта заменена подчёркиванием; номер после черты — исполнение (планка, длина), он остаётся частью артикула" },
+          { "pattern": "^([A-Z0-9]+)_(\\d{3,4})_([A-Z]{1,3})$", "with": "$1/$2/$3", "why": "H301A02_0910_BN и H301A02/0910/BN: то же подчёркивание вместо косой черты, когда после исполнения стоит покрытие (BN — чёрный никель)" },
+          { "pattern": "^([A-Z0-9]+)_([A-Z]{1,3})_(\\d{1,4})$", "with": "$1/$2/$3", "why": "HS001_Ni_2 и HS001/Ni/2: покрытие, затем число в комплекте" },
+          { "pattern": "^([A-Z0-9]+)_([A-Z]{1,3})$", "with": "$1/$2", "why": "HG001_GP и HG001/GP, H813A_BN и H813A/BN: покрытие после косой черты" }
+        ],
+        "find": [
+          { "pattern": "BOYARD\\s+([A-Z][A-Z0-9]{3,}(?:[_/][A-Z][a-z](?![a-z])|[._/][A-Z0-9]+)*)", "why": "«Петля … BOYARD H102A02_0112.fr3d», «… BOYARD HG001_Bl»: в моделях библиотеки BOYARD артикул стоит после имени производителя; покрытие пишется и строчными (Bl, Ni)" },
+          { "pattern": "\\s(H(?:\\d{4,5}(?:BN)?|\\d{3}[A-Z]\\d{0,2})(?:_[A-Z0-9]{2,4})*)(?=\\s|$)", "why": "«Петля EVO FRAME S H813A 90°, 93° h=0», «Планка EVO BASE S H8010BN h=0», «Петля H301A02_0910_BN»: артикул петли или планки H… стоит в середине названия, после серии" },
+          { "pattern": "\\s([A-Z]{1,3}\\d{3,4}[A-Z]{0,3}\\d{0,2}(?:[._/]\\d{1,4})?)$", "why": "«Ответная планка SECRET Z601BL.5», «Монтажная планка CHH01»: артикул — последнее слово названия" }
+        ],
+        "not": [
+          { "pattern": "\\d{3}", "why": "208–216 — коды старой базы boyard.dbf («Петля для накладной двери»), не артикулы BOYARD: такая строка — черновик, пока у неё нет артикула" }
+        ]
+      }
+    },
+    {
+      "id": "BLUM",
+      "name": "Blum",
+      "synonyms": ["BLUM", "Блюм"],
+      "article": {
+        "similar": [
+          { "pattern": "\\.TL$", "with": "", "why": "70T3550.TL и 70T3550: в базе Blum суффикс .TL стоит у петель без пружины; что это то же изделие, не подтверждено — в отчёт «похоже на», без склейки" }
+        ]
+      },
+      "series": ["CLIP top", "Blumotion", "AVENTOS"]
+    },
+    { "id": "HETTICH", "name": "Hettich", "synonyms": ["Хеттих", "Hettich (библиотека AKS)"], "series": ["Sensys", "Veosys", "Intermat", "WingLine"] },
+    { "id": "GRASS", "name": "Grass", "synonyms": ["GRASS", "Грасс"], "series": ["Tiomos", "Nexis", "Kinvaro"] },
+    { "id": "GTV", "name": "GTV", "synonyms": ["ГТВ", "GTV Poland"] },
+    {
+      "id": "SAMET",
+      "name": "SAMET",
+      "synonyms": ["Samet", "Самет"],
+      "article": {
+        "same": [
+          { "pattern": "^(\\d{6,})Y$", "with": "$1", "why": "101732Y и 101732, 1011304111Y и 1011304111: в прайсах магазинов (intalika.ru) код SAMET кончается буквой Y, в библиотеке model_Samet — без неё; названия те же («Петля SAMET Star 15°» — «Петля STAR 15°, 48AX»)" }
+        ]
+      }
+    },
+    { "id": "SALICE", "name": "Salice", "synonyms": ["SALICE", "Саличе"], "series": ["Silentia"] },
+    { "id": "FIRMAX", "name": "Firmax", "synonyms": ["FIRMAX", "Фирмакс"] },
+    { "id": "ARISTO", "name": "ARISTO", "synonyms": ["Аристо"] },
+    { "id": "DTC", "name": "DTC", "synonyms": [] },
+    {
+      "id": "MDM",
+      "name": "MDM",
+      "synonyms": ["МДМ", "МДМ-Комплект", "MDM-Complect", "Pulse", "Пульс"],
+      "series": ["HARMONY", "ХАРМОНИ"],
+      "article": {
+        "others": [
+          { "pattern": "HP90.*", "maker": "MAIBO", "why": "HELIOS HP90… в базах МДМ-Комплект — петли Maibo (прайс intalika.ru 27.10.2026): МДМ продаёт их под своим именем (Д Директора 28.10.2026, FINDINGS 1948)" },
+          { "pattern": "CEL.*", "maker": "SALICE", "why": "AIR CEL… в базе МДМ-Комплект petliAIR — петли Salice Air (прайс intalika.ru 27.10.2026)" },
+          { "pattern": "3005.*", "maker": "ARMSTRONG", "why": "комплект петель для стеклянной двери 3005 в базе МДМ-Комплект — Armstrong (прайс intalika.ru 27.10.2026)" }
+        ]
+      }
+    },
+    { "id": "BELLE", "name": "BELLE", "synonyms": [] },
+    { "id": "BASE", "name": "BASE", "synonyms": [], "inNames": false },
+    { "id": "ITALIANA_FERRAMENTA", "name": "Italiana Ferramenta", "synonyms": ["Italiana", "IF"] },
+    { "id": "MAKMART", "name": "MAKMART", "synonyms": ["MakMart", "МakMart"] },
+    { "id": "PERMO", "name": "PERMO", "synonyms": [] },
+    { "id": "SUGATSUNE", "name": "Sugatsune", "synonyms": [] },
+    { "id": "DUSLAR", "name": "DUSLAR", "synonyms": [] },
+    { "id": "VITRA", "name": "VITRA", "synonyms": [] },
+    { "id": "FISCHER", "name": "fischer", "synonyms": [] },
+    { "id": "STARAX", "name": "STARAX", "synonyms": [] },
+    { "id": "AKS", "name": "AKS", "synonyms": [] },
+    { "id": "AQ", "name": "AQ", "synonyms": [] },
+    { "id": "EVA", "name": "EVA", "synonyms": [] },
+    { "id": "GELONY", "name": "Gelony", "synonyms": ["GELONY"] },
+    { "id": "KESSEBOHMER", "name": "Kesseböhmer", "synonyms": ["KESSEBOHMER", "Kessebohmer", "Kesseboehmer", "Кессебёмер"] },
+    { "id": "MODUS", "name": "MODUS", "synonyms": [] },
+    { "id": "PREMIAL", "name": "PREMIAL", "synonyms": [] },
+    { "id": "SENZA", "name": "SENZA", "synonyms": [] },
+    { "id": "HAFELE", "name": "Häfele", "synonyms": ["HAFELE", "Hafele", "Хефеле"] },
+    { "id": "TALISMAN", "name": "TALISMAN", "synonyms": [] },
+    { "id": "YOHANDLE", "name": "YOHANDLE", "synonyms": [] },
+    { "id": "HARDI", "name": "HARDI", "synonyms": [] },
+    { "id": "SLOROS", "name": "Слорос", "synonyms": ["СЛОРОС", "Sloros"] },
+    { "id": "KOMANDOR", "name": "Командор", "synonyms": ["КОМАНДОР"] },
+    { "id": "NAIDI", "name": "НАЙДИ", "synonyms": ["Найди"] },
+    { "id": "ELIMET", "name": "ЭЛИМЕТ", "synonyms": ["Элимет"] },
+    { "id": "ETERNO", "name": "ЭТЕРНО", "synonyms": ["Этерно"] },
+    { "id": "SAMSUNG", "name": "Samsung", "synonyms": ["SAMSUNG", "Samsung-Irex", "Самсунг"] },
+    { "id": "UNIHOPPER", "name": "UNIHOPPER", "synonyms": ["Unihopper", "Юнихоппер"] },
+    { "id": "ALPHALUX", "name": "Alphalux", "synonyms": ["ALPHALUX", "Альфалюкс"] },
+    { "id": "MAIBO", "name": "Maibo", "synonyms": ["MAIBO", "Майбо"] },
+    { "id": "ARMSTRONG", "name": "Armstrong", "synonyms": ["ARMSTRONG", "Армстронг"] },
+    { "id": "GIUSTI", "name": "Giusti", "synonyms": ["GIUSTI", "Джусти"] }
+  ],
+  "unknown": ["производитель не указан", "UNKNOWN", "неизвестно"]
+}

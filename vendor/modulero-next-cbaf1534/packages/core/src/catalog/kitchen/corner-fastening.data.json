@@ -1,0 +1,204 @@
+{
+ "schema": "modulero.kitchen-catalog/1",
+ "source": "reference/prototype_r1/MODULERO_UNIFIED_PROTOTYPE_r1.html: k5Tech r1.html:70697 (крепление углового корпуса на планках CORNER_FASTENING_R5)",
+ "data": {
+  "corner": {
+   "kitId": "NK-K04-FACES-R5",
+   "cleatThicknessMm": 16,
+   "cleatDepthMm": 64,
+   "minimumFillerMm": 27,
+   "blindMarginMm": 130,
+   "railEndMarginMm": 30,
+   "camEndMarginMm": 35,
+   "datum": {
+    "bodyFrontYmm": 0,
+    "C01mm": 2,
+    "faceRearYmm": -2,
+    "blindVisibleYmm": -20,
+    "fillerVisibleYmm": -18,
+    "faceSeam": "independent tangential x gap; never treated as y-C01",
+    "contact": "face rear y=−2 touches cleat front y=−2; roof/side screw engagement into cleat occurs y=55 at body-supported span 0…62"
+   },
+   "drilling": {
+    "faceAnchor": {
+     "partIds": [
+      "C.BLIND_FACE",
+      "C.FILLER"
+     ],
+     "countPerExample": 6,
+     "entrySurface": "rear face installed y=−2",
+     "direction": "−y to visible face",
+     "diameterMm": 8,
+     "depthMm": 11,
+     "residualMm": {
+      "blind18": 7,
+      "filler16": 5
+     }
+    },
+    "camPocket": {
+     "partIds": [
+      "CORNER_BLIND_CLEAT_LOW/HIGH",
+      "CORNER_FILLER_CLEAT_LOW/HIGH"
+     ],
+     "countPerExample": 6,
+     "entrySurface": "low cleat top z=t+16, high cleat bottom z=H−t−16",
+     "direction": "low −z, high +z",
+     "diameterMm": 15,
+     "depthMm": 12.7,
+     "residualMm": 3.3,
+     "boardThicknessMm": 16,
+     "article": "25062"
+    },
+    "edgeChannel": {
+     "partIds": [
+      "CORNER_BLIND_CLEAT_LOW/HIGH",
+      "CORNER_FILLER_CLEAT_LOW/HIGH"
+     ],
+     "countPerExample": 6,
+     "entrySurface": "front edge installed y=−2",
+     "direction": "+y",
+     "diameterMm": 8,
+     "nominalAxisToCamCenterMm": 34,
+     "sourceAllowedSetbackMm": [
+      33.7,
+      34.5
+     ],
+     "cylindricalDepthMm": 34,
+     "totalToolStrokeMm": null,
+     "totalToolStrokeUnknownReason": "Полный ход инструмента неизвестен: геометрия фрезы и конического наконечника не задана номинальной осью канала."
+    },
+    "bodyClearance": {
+     "partIds": [
+      "C.BODY roof/floor/side"
+     ],
+     "countPerExample": 6,
+     "entrySurface": "roof exterior z=H, floor exterior z=0, side interior x=W−t or x=t",
+     "direction": "toward corresponding cleat",
+     "diameterMm": 4,
+     "depthMm": "through body thickness t"
+    },
+    "cleatPilot": {
+     "partIds": [
+      "CORNER_BLIND_CLEAT_LOW/HIGH",
+      "CORNER_FILLER_CLEAT_LOW/HIGH"
+     ],
+     "countPerExample": 6,
+     "entrySurface": "roof/floor/side facing interface",
+     "direction": "screw axis into cleat",
+     "diameterMm": 2,
+     "depthMm": 10
+    }
+   },
+   "productIdentity": {
+    "cam16": {
+     "article": "25062",
+     "execution": "Rastex 15 without rim nickel, panel t16 cleat",
+     "count": "2 rails x (2 blind + 1 filler) = 6"
+    },
+    "dowel": {
+     "article": "47458",
+     "execution": "Rapid S DU325 metal pin with included blue expanding Ø8 anchor",
+     "count": "1 per cam = 6"
+    },
+    "bodyScrew": {
+     "article": null,
+     "execution": "Предлагаемый размер Ø3,5×30 мм; головка, резьба, точный артикул и совместимость с выбранной плитой не подтверждены.",
+     "count": "2×2 blind rail roof/floor + 2×1 filler rail side = 6",
+     "buying": "Шуруп выбирается для проекта отдельно; наличие в комплекте эксцентрика не подтверждено."
+    }
+   },
+   "rule": {
+    "C01mm": 2,
+    "frontContactYmm": -2,
+    "camYmm": 32,
+    "bodyScrewYmm": 55,
+    "kitId": "NK-K04-FACES-R5",
+    "oneBody": true,
+    "cutGeometryChanged": false,
+    "fasteners": {
+     "25062": 6,
+     "47458": 6,
+     "screw_3.5x30_article_null": 6
+    },
+    "qPhysicalRNotPart": true
+   }
+  },
+  "worktop": {
+   "value": {
+    "subject": "38 mm worktop on continuous support top panel, NOT Rastex corpus joints",
+    "datum": "floor z=0; leg underside of body bottom z=100; body H=720; top panel upper surface/worktop underside z=820; worktop upper surface z=858",
+    "dimensionsMm": {
+     "leg": 100,
+     "body": 720,
+     "worktop": 38,
+     "supportPanelThickness": null,
+     "selectedFixingStack": null,
+     "screwLength": null,
+     "screwHeadSeat": null,
+     "worktopMinTopWeb": null
+    },
+    "penetrationFormulaMm": "p=L_screw−T_support−S_fitting−H_seat; every term from screw tip direction along z; p enters worktop from its underside",
+    "layerDefinitionsMm": {
+     "L_screw": "effective axial distance from actual under-head bearing plane to tip of selected screw, per its manufacturer",
+     "T_support": "actual support/roof thickness traversed in +z",
+     "S_fitting": "actual added bracket or other intermediate fitting thickness along axis; zero only when expressly no fitting",
+     "H_seat": "signed change of path from under-head bearing plane relative to nominal inner supporting face: positive for added washer/standoff, negative for a verified recessed seat; zero only for illustrative flush head",
+     "R_top_required": "required residual thickness from screw tip to visible surface of selected 38 mm worktop, exact manufacturer/material figure unknown"
+    },
+    "limitFormulaMm": "0<p≤38−R_top_required; R_top_required comes from selected top/screw maker; selected material and fastener may also set lower/other limits",
+    "demonstrations": [
+     {
+      "scenario": "illustration only, direct through 16 mm roof, no fitting and no sunk head, L30",
+      "L": 30,
+      "T_support": 16,
+      "S_fitting": 0,
+      "H_seat": 0,
+      "penetration": 14,
+      "remainingTopWeb": 24,
+      "isQualifiedFixing": false
+     },
+     {
+      "scenario": "illustration only, direct through 18 mm roof, no fitting and no sunk head, L30",
+      "L": 30,
+      "T_support": 18,
+      "S_fitting": 0,
+      "H_seat": 0,
+      "penetration": 12,
+      "remainingTopWeb": 26,
+      "isQualifiedFixing": false
+     },
+     {
+      "scenario": "selected bracket thickness unknown; cannot compute depth",
+      "L": 30,
+      "T_support": 16,
+      "S_fitting": null,
+      "H_seat": 0,
+      "penetration": null,
+      "remainingTopWeb": null,
+      "isQualifiedFixing": false
+     }
+    ],
+    "projectMaker": [
+     "actual worktop material/laminate/underlayer and support scheme",
+     "screw/bracket and fixing locations/count/pitch avoiding corner roof screws",
+     "uplift/load and edge distances"
+    ],
+    "manufacturerConditional": [
+     "selected screw/bracket exact article and head seat",
+     "permitted screw penetration/residual top web for chosen 38 mm material",
+     "pilot and approved fixing application"
+    ],
+    "screenAndParts": "top height, nominal top outline and cabinet design available with project fixing unknown; no universal hole pattern"
+   },
+   "status": "MIXED_KNOWN_AND_PROJECT",
+   "unit": "mm",
+   "scope": "K01/K03/K04/K05 selected worktop joint only",
+   "allowedUse": [
+    "reference",
+    "nominal_parts",
+    "schematic_3d"
+   ],
+   "productionRelease": false
+  }
+ }
+}

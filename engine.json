@@ -1,0 +1,25 @@
+{
+  "repo": "proc2010-Claude/modulero-next",
+  "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+  "hardwareCatalog": "hw-2026-10-27.8",
+  "paths": [
+    "packages/core/src",
+    "packages/bazis/src",
+    "catalogs/index.ts",
+    "catalogs/RELEASE.json",
+    "catalogs/hardware/articles.json",
+    "catalogs/hardware/drawer-slides.json",
+    "catalogs/hardware/drawer-systems.json",
+    "catalogs/hardware/fittings.json",
+    "catalogs/hardware/hinges.json",
+    "catalogs/hardware/lifts.json",
+    "catalogs/hardware/shelf-supports.json",
+    "catalogs/materials",
+    "catalogs/registry/brands.json",
+    "apps/web/src/view3d",
+    "apps/web/public/decors"
+  ],
+  "decision": "AI-DEC-003",
+  "dir": "vendor/modulero-next-cbaf1534",
+  "manifestSha256": "2889c7649eae94458f674fdcd5b2d88bcb6ac88fbdcc12092ca4b2b8b0796687"
+}

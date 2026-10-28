@@ -1,0 +1,1292 @@
+{
+ "items": [
+  {
+   "id": "HETTICH_RASTEX15_16",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "25062",
+   "name": "Hettich Rastex 15 · 16 мм",
+   "price": {
+    "rub": 20,
+    "per": "pcs",
+    "date": "2026-10-16",
+    "source": {
+     "doc": "MOD-DEC-293"
+    },
+    "status": "CONFIRMED",
+    "basis": "корпус эксцентрика Rastex 15 — 20 ₽ (MOD-DEC-293)"
+   }
+  },
+  {
+   "id": "HETTICH_RASTEX15_18",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "13957",
+   "name": "Hettich Rastex 15 · 18 мм",
+   "price": {
+    "rub": 20,
+    "per": "pcs",
+    "date": "2026-10-16",
+    "source": {
+     "doc": "MOD-DEC-293"
+    },
+    "status": "CONFIRMED",
+    "basis": "корпус эксцентрика Rastex 15 — 20 ₽ (MOD-DEC-293)"
+   }
+  },
+  {
+   "id": "HETTICH_RASTEX15_19",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "73457",
+   "name": "Hettich Rastex 15 · 19 мм",
+   "price": {
+    "rub": 20,
+    "per": "pcs",
+    "date": "2026-10-16",
+    "source": {
+     "doc": "MOD-DEC-293"
+    },
+    "status": "CONFIRMED",
+    "basis": "корпус эксцентрика Rastex 15 — 20 ₽ (MOD-DEC-293)"
+   }
+  },
+  {
+   "id": "HETTICH_RASTEX15_22",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "25066",
+   "name": "Hettich Rastex 15 · 22 мм",
+   "price": {
+    "rub": 20,
+    "per": "pcs",
+    "date": "2026-10-16",
+    "source": {
+     "doc": "MOD-DEC-293"
+    },
+    "status": "CONFIRMED",
+    "basis": "корпус эксцентрика Rastex 15 — 20 ₽ (MOD-DEC-293)"
+   }
+  },
+  {
+   "id": "HETTICH_DU325",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "47458",
+   "name": "Hettich DU325",
+   "price": {
+    "rub": 15,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): ориентир: шток DU325 в прайсах не найден, прежняя цена по аналогам (FINDINGS 523)"
+   }
+  },
+  {
+   "id": "HETTICH_DOWEL_8X35",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "9223927",
+   "name": "Hettich шкант 8×35",
+   "price": {
+    "rub": 0.77,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу шканта 8 × 30 каталога цен владельца (furnimax.ru: буковый ~0,93 ₽/шт, упаковка 5000 шт. ~0,60 ₽/шт)"
+   }
+  },
+  {
+   "id": "CONFIRMAT_7X50",
+   "family": "FASTENER",
+   "brand": null,
+   "article": "MB.1501.7X50.CH4.BZ",
+   "name": "Конфирмат · профиль только 16 мм",
+   "price": {
+    "rub": 1.73,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «Стяжка конфирмат 7х50 под ключ, отделка цинк (упаковка 2500 штук)» MB.1501.7x50.CH4.BZ — 4312,35 ₽ за 2500 шт."
+   }
+  },
+  {
+   "id": "BOYARD_P101ZN56",
+   "family": "SHELF_SUPPORT",
+   "brand": "BOYARD",
+   "article": "P101Zn.56",
+   "name": "BOYARD полкодержатель",
+   "price": {
+    "rub": 1.71,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «Полкодержатель P101ZN.56» — furnimax.ru 1,71 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_KIT150",
+   "family": "FLOOR_PAD",
+   "brand": "Hettich",
+   "article": "9258193",
+   "name": "Hettich KIT150: лист и готовые накладки",
+   "price": {
+    "rub": 120,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): ориентир по рынку за лист накладок (самоклеящиеся подпятники — от 4,73 ₽ за штуку, furnimax.ru)"
+   }
+  },
+  {
+   "id": "HETTICH_PAD_14X50X5",
+   "family": "FLOOR_PAD",
+   "brand": "Hettich",
+   "article": "9247599",
+   "name": "Hettich подпятник 14×50×5",
+   "price": {
+    "rub": 28.42,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу furnimax.ru «Подпятник с шурупом d.20мм», 28,42 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SCREW_71925_PAD",
+   "family": "SCREW",
+   "brand": "Hettich",
+   "article": "71925",
+   "name": "Hettich винт 3.5×16 для подпятника",
+   "price": {
+    "rub": 0.85,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо «Шуруп по дереву и ДСП 3,5*16 ТМР», 0,85 ₽"
+   }
+  },
+  {
+   "id": "ITALIANA_SH7",
+   "family": "RESTRAINT",
+   "brand": "Italiana",
+   "article": "63423010ZN",
+   "name": "Italiana SH7",
+   "price": {
+    "rub": 370.37,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «SH7 Кронштейн для предотвращения опрокидывания (63423010ZN)» — furnimax.ru 367,59 ₽, mdm-complect.ru 371,30 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "ITALIANA_SH_PLATE",
+   "family": "RESTRAINT",
+   "brand": "Italiana",
+   "article": "63423200ZN",
+   "name": "Italiana SH-планка",
+   "price": {
+    "rub": 185.19,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «SH Планка для кронштейна против опрокидывания (63423200ZN)» — furnimax.ru 183,79 ₽, mdm-complect.ru 185,65 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "SH7_SCREW_18",
+   "family": "SCREW",
+   "brand": null,
+   "article": "71925",
+   "name": "Винты крепления SH7 к боковине",
+   "price": {
+    "rub": 0.85,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо «Шуруп по дереву и ДСП 3,5*16 ТМР», 0,85 ₽"
+   }
+  },
+  {
+   "id": "SH7_SCREW_16",
+   "family": "SCREW",
+   "brand": null,
+   "article": "48296",
+   "name": "Винты крепления SH7 к боковине",
+   "price": {
+    "rub": 0.85,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо «Шуруп по дереву и ДСП 3,5*16 ТМР», 0,85 ₽"
+   }
+  },
+  {
+   "id": "FISCHER_DUOPOWER_6X30",
+   "family": "ANCHOR",
+   "brand": "fischer",
+   "article": "545838",
+   "name": "fischer DuoPower 6×30 + 4.5×40 TX20",
+   "price": {
+    "rub": 10,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): ориентир по рынку за дюбель с шурупом"
+   }
+  },
+  {
+   "id": "BOYARD_H301A02_H0910",
+   "family": "HINGE",
+   "brand": "BOYARD",
+   "article": "H301A02/0910",
+   "name": "BOYARD петля с комплектной H0910 H0",
+   "includedPlate": "H0910",
+   "dimensions": {
+    "cupDiameterMm": 35,
+    "cupDepthMm": 12
+   },
+   "price": {
+    "rub": 109.94,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «Мебельная петля H301A02/0910» — furnimax.ru 109,94 ₽"
+   }
+  },
+  {
+   "id": "HINGE_SCREW_4X16",
+   "family": "SCREW",
+   "brand": null,
+   "article": null,
+   "name": "Саморез 4×16 для петли и планки",
+   "dimensions": {
+    "diameterMm": 4,
+    "lengthMm": 16
+   },
+   "price": {
+    "rub": 0.6,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо «Шуруп по дереву и ДСП 4*16 ТМР», 0,6 ₽"
+   }
+  },
+  {
+   "id": "BOYARD_DB4501_PAIR",
+   "family": "DRAWER_SLIDE",
+   "brand": "BOYARD",
+   "article": null,
+   "name": "BOYARD направляющие полного выдвижения"
+  },
+  {
+   "id": "HETTICH_SCREW_45167",
+   "family": "SCREW",
+   "brand": "Hettich",
+   "article": "45167",
+   "name": "Hettich винт 3.5×12",
+   "dimensions": {
+    "diameterMm": 3.5,
+    "lengthMm": 12
+   },
+   "price": {
+    "rub": 0.85,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо «Шуруп по дереву и ДСП 3,5*16 ТМР», 0,85 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SCREW_9278224",
+   "family": "SCREW",
+   "brand": "Hettich",
+   "article": "9278224",
+   "name": "Hettich винт 3.5×30",
+   "price": {
+    "rub": 1.25,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Шуруп по дереву и ДСП 3,5*30 ТМР», 1.25 ₽"
+   }
+  },
+  {
+   "id": "BOYARD_RC282BL4",
+   "family": "HANDLE",
+   "brand": "BOYARD",
+   "article": "RC282BL.4",
+   "name": "BOYARD ручка-кнопка с винтом"
+  },
+  {
+   "id": "BLUM_71B3550",
+   "family": "HINGE",
+   "brand": "BLUM",
+   "article": "71B3550",
+   "name": "Blum 71B3550 CLIP top BLUMOTION 110°, накладная",
+   "price": {
+    "rub": 461.27,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «71B3550 MB V250 NI, CLIP top BLUMOTION 110°, накладная» — прайс-лист Blum для производителей мебели 08.2026 364,32 ₽, furnimax.ru 558,21 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "BLUM_71T7550",
+   "family": "HINGE",
+   "brand": "BLUM",
+   "article": "71T7550",
+   "name": "Blum 71T7550 CLIP top 155°, нулевое вхождение",
+   "price": {
+    "rub": 972.97,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «71T7550 MB V125 NI, CLIP top 155°, нулевое вхождение» — furnimax.ru 972,97 ₽"
+   }
+  },
+  {
+   "id": "BLUM_79B3558",
+   "family": "HINGE",
+   "brand": "BLUM",
+   "article": "79B3558",
+   "name": "Blum 79B3558 угловая +45°",
+   "price": {
+    "rub": 859.95,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «79B3558 MB 45+ V50 NI, угловая +45°» — прайс-лист Blum для производителей мебели 08.2026 747,96 ₽, furnimax.ru 971,93 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "BLUM_79T8500",
+   "family": "HINGE",
+   "brand": "BLUM",
+   "article": "79T8500",
+   "name": "Blum 79T8500 для складной двери 60°",
+   "price": {
+    "rub": 754.45,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «79T8500 MB V25 NI, для складной двери 60°» — прайс-лист Blum для производителей мебели 08.2026 663,78 ₽, furnimax.ru 845,11 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "BLUM_75T4100",
+   "family": "HINGE",
+   "brand": "BLUM",
+   "article": "75T4100",
+   "name": "Blum 75T4100 для стеклянной двери",
+   "price": {
+    "rub": 538.5,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «75T4100 GT MB V50S NI, для стеклянной двери» — прайс-лист Blum для производителей мебели 08.2026 459,54 ₽, furnimax.ru 617,46 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "BLUM_84_4120CR",
+   "family": "HINGE_CAP",
+   "brand": "BLUM",
+   "article": "84.4120CR",
+   "name": "Blum 84.4120CR заглушка чашки петли",
+   "price": {
+    "rub": 36.65,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «9091822 Заглушка для чашки петли Sensys Hettich», 36.65 ₽"
+   }
+  },
+  {
+   "id": "BLUM_173H7100",
+   "family": "HINGE_PLATE",
+   "brand": "BLUM",
+   "article": "173H7100",
+   "name": "Blum 173H7100 планка крестообразная",
+   "price": {
+    "rub": 92.53,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «173H7100 MPL V500 NI, планка крестообразная» — прайс-лист Blum для производителей мебели 08.2026 75,90 ₽, furnimax.ru 109,15 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "BLUM_173H7130",
+   "family": "HINGE_PLATE",
+   "brand": "BLUM",
+   "article": "173H7130",
+   "name": "Blum 173H7130 планка крестообразная, подъём 3 мм",
+   "price": {
+    "rub": 105.15,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «173H7130 MPL V50 NI, планка крестообразная, подъём 3 мм» — прайс-лист Blum для производителей мебели 08.2026 85,56 ₽, furnimax.ru 124,74 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "BLUM_175H3100",
+   "family": "HINGE_PLATE",
+   "brand": "BLUM",
+   "article": "175H3100",
+   "name": "Blum 175H3100 планка прямая",
+   "price": {
+    "rub": 87.34,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «175H3100 MPL V500 NI, планка прямая» — прайс-лист Blum для производителей мебели 08.2026 71,76 ₽, furnimax.ru 102,91 ₽ (среднее)"
+   }
+  },
+  {
+   "id": "BLUM_20K2E00_06",
+   "family": "LIFT",
+   "brand": "BLUM",
+   "article": "20K2E00.06",
+   "name": "Blum AVENTOS HK-S 20K2E00.06, комплект",
+   "price": {
+    "rub": 3595.94,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу каталога цен владельца: прайс Blum, AVENTOS HK-S 01–04 «Белый шелк» 3363,06–3673,56 ₽, среднее"
+   }
+  },
+  {
+   "id": "BLUM_560H5000B",
+   "family": "DRAWER_SLIDE",
+   "brand": "BLUM",
+   "article": "560H5000B",
+   "name": "Blum TANDEM 560H5000B, пара",
+   "price": {
+    "rub": 3895.74,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу каталога цен владельца: прайс Blum, TNB50 «TANDEM направляющая скрытая п/в 30кг с замками 500мм с BLUMOTION»"
+   }
+  },
+  {
+   "id": "BLUM_T51_1700_04",
+   "family": "DRAWER_SLIDE",
+   "brand": "BLUM",
+   "article": "T51.1700.04",
+   "name": "Blum T51.1700.04 замок направляющих TANDEM",
+   "price": {
+    "rub": 176.72,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «T51.1700.04, замок направляющих TANDEM (левый и правый — по одной цене)» — furnimax.ru 176,72 ₽"
+   }
+  },
+  {
+   "id": "BLUM_609_1500",
+   "family": "SCREW",
+   "brand": "BLUM",
+   "article": "609.1500",
+   "name": "Blum 609.1500 саморез 3,5 × 15",
+   "price": {
+    "rub": 12.47,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «609.1500, саморез Ø 3,5 × 15 мм» — furnimax.ru 12,47 ₽"
+   }
+  },
+  {
+   "id": "BLUM_661_1450_HG",
+   "family": "SCREW",
+   "brand": "BLUM",
+   "article": "661.1450.HG",
+   "name": "Blum 661.1450.HG евровинт 6,0 × 14,5",
+   "price": {
+    "rub": 8.32,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "OWNER-PRICES",
+     "sha256": "1f31bdc7",
+     "page": "PRICES.csv, 23.10.2026"
+    },
+    "status": "CONFIRMED",
+    "basis": "каталог цен владельца (PRICES.csv), 23.10.2026: «661.1450.HG, евровинт Ø 6,0 × 14,5 мм» — furnimax.ru 8,32 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_1054519",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "1054519",
+   "name": "Hettich 1054519 стяжка межсекционная",
+   "price": {
+    "rub": 22.4,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Стяжка межсекционная d8 М6х30 мм», 22.4 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_19556",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "19556",
+   "name": "Hettich 19556 заглушка Rastex 15",
+   "price": {
+    "rub": 2,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Заглушка для Rastex 15 Hettich», 2 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SCREW_45168",
+   "family": "SCREW",
+   "brand": "Hettich",
+   "article": "45168",
+   "name": "Hettich 45168 шуруп",
+   "price": {
+    "rub": 1.1,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Шуруп по дереву и ДСП 4*20 мм», 1.1 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_61855",
+   "family": "PLINTH",
+   "brand": "Hettich",
+   "article": "61855",
+   "name": "Hettich 61855 клипса крепления цоколя",
+   "price": {
+    "rub": 30.05,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Заглушка для цоколя 95мм (ПП), крепление цоколя», 30.05 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_65480",
+   "family": "ANCHOR",
+   "brand": "Hettich",
+   "article": "65480",
+   "name": "Hettich 65480 комплект крепления к стене",
+   "price": {
+    "rub": 21.8,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Стяжка (Гайка бочонок под шлиц с винтом) М6*50 цинк, к-т», 21.8 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SCREW_71544",
+   "family": "SCREW",
+   "brand": "Hettich",
+   "article": "71544",
+   "name": "Hettich 71544 винт",
+   "price": {
+    "rub": 3.65,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «013.14.920 Евровинт VARIANTA 5/13,5мм», 3.65 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SCREW_71549",
+   "family": "SCREW",
+   "brand": "Hettich",
+   "article": "71549",
+   "name": "Hettich 71549 винт",
+   "price": {
+    "rub": 3.65,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «013.14.920 Евровинт VARIANTA 5/13,5мм», 3.65 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_79386",
+   "family": "FASTENER",
+   "brand": "Hettich",
+   "article": "79386",
+   "name": "Hettich 79386 стяжка столешницы",
+   "price": {
+    "rub": 28.9,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Стяжка Бочонок под шлиц с винтом М6*50, к-т», 28.9 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SEKURA_79707",
+   "family": "SHELF_SUPPORT",
+   "brand": "Hettich",
+   "article": "79707",
+   "name": "Hettich Sekura 79707 полкодержатель",
+   "price": {
+    "rub": 13.23,
+    "per": "pcs",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "МДМ (mdm-complect.ru) и Рондо (rondo-perm.ru), 23.10.2026",
+     "url": "https://rondo-perm.ru/catalog/furnitura_/?display=table"
+    },
+    "status": "CONFIRMED",
+    "basis": "полкодержатель — среднее цен 2574 21: МДМ 10,61 ₽ (каталог, MOD-DEC-344) и Рондо (rondo-perm.ru), 23.10.2026 15,85 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_9007651",
+   "family": "HANGER",
+   "brand": "Hettich",
+   "article": "9007651",
+   "name": "Hettich 9007651 монтажная шина 3 м",
+   "price": {
+    "rub": 848.5,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Отбортовка «Танго» L = 3,05 м, алюминий — металлический профиль 3 м», 848.5 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_9028230",
+   "family": "LEG",
+   "brand": "Hettich",
+   "article": "9028230",
+   "name": "Hettich 9028230 муфта ножки",
+   "price": {
+    "rub": 26.5,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Муфта ответная для регулируемой ножки R-12М/J12», 26.5 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_47654",
+   "family": "LEG",
+   "brand": "Hettich",
+   "article": "47654",
+   "name": "Hettich 47654 площадка опоры Korrekt на 4 шкантах",
+   "price": {
+    "rub": 26.5,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1271"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Муфта ответная для регулируемой ножки R-12М/J12», 26.5 ₽ — как у площадки 9028230 (FINDINGS 1271)"
+   }
+  },
+  {
+   "id": "HETTICH_9028286",
+   "family": "LEG",
+   "brand": "Hettich",
+   "article": "9028286",
+   "name": "Hettich 9028286 опора регулируемая",
+   "price": {
+    "rub": 229,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Опора регулир. для шкафа LEGA Н39-55, нагрузка 105 кг», 229 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SAH216_9249369",
+   "family": "HANGER",
+   "brand": "Hettich",
+   "article": "9249369",
+   "name": "Hettich SAH 216 9249369 подвес левый",
+   "price": {
+    "rub": 442,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Подвес для шкафа SAH 216, левый Hettich (артикул 1069642 — без защиты от снятия)», 442 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SAH216_9249370",
+   "family": "HANGER",
+   "brand": "Hettich",
+   "article": "9249370",
+   "name": "Hettich SAH 216 9249370 подвес правый",
+   "price": {
+    "rub": 442,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Подвес для шкафа SAH 216, правый Hettich (артикул 1069642 — без защиты от снятия)», 442 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_9306951",
+   "family": "HANDLE",
+   "brand": "Hettich",
+   "article": "9306951",
+   "name": "Hettich 9306951 ручка-скоба 128 мм",
+   "price": {
+    "rub": 252.5,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «18748 Ручка-скоба 128мм, черный (Гратис)», 252.5 ₽"
+   }
+  },
+  {
+   "id": "HETTICH_SCREW_4X35",
+   "family": "SCREW",
+   "brand": "Hettich",
+   "article": "chipboard screw4x35 countersunk",
+   "name": "Hettich шуруп 4 × 35 потай",
+   "price": {
+    "rub": 1.35,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Шуруп по дереву и ДСП 4*35 мм», 1.35 ₽"
+   }
+  },
+  {
+   "id": "WASHER_M4",
+   "family": "FASTENER",
+   "brand": null,
+   "article": "protective polymer washer M4 1mm",
+   "name": "Шайба защитная полимерная M4, 1 мм",
+   "price": {
+    "rub": 3.65,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «013.14.920 Евровинт VARIANTA 5/13,5мм», 3.65 ₽"
+   }
+  },
+  {
+   "id": "NUT_M5",
+   "family": "FASTENER",
+   "brand": null,
+   "article": "M5 nut",
+   "name": "Гайка M5",
+   "price": {
+    "rub": 3.65,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «013.14.920 Евровинт VARIANTA 5/13,5мм», 3.65 ₽"
+   }
+  },
+  {
+   "id": "SCREW_M5X12YHB",
+   "family": "SCREW",
+   "brand": null,
+   "article": "M5x12YHB",
+   "name": "Винт M5 × 12 YHB",
+   "price": {
+    "rub": 3.65,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «013.14.920 Евровинт VARIANTA 5/13,5мм», 3.65 ₽"
+   }
+  },
+  {
+   "id": "SCREW_M5X20YSB",
+   "family": "SCREW",
+   "brand": null,
+   "article": "M5x20YSB",
+   "name": "Винт M5 × 20 YSB",
+   "price": {
+    "rub": 3.65,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «013.14.920 Евровинт VARIANTA 5/13,5мм», 3.65 ₽"
+   }
+  },
+  {
+   "id": "SCREW_M5X7YSB",
+   "family": "SCREW",
+   "brand": null,
+   "article": "M5x7YSB",
+   "name": "Винт M5 × 7 YSB",
+   "price": {
+    "rub": 3.65,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «013.14.920 Евровинт VARIANTA 5/13,5мм», 3.65 ₽"
+   }
+  },
+  {
+   "id": "SCREW_3_1X16",
+   "family": "SCREW",
+   "brand": null,
+   "article": "chipboard screw3.1x16",
+   "name": "Шуруп 3,1 × 16",
+   "price": {
+    "rub": 0.85,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Шуруп по дереву и ДСП 3,5*16 ТМР», 0.85 ₽"
+   }
+  },
+  {
+   "id": "SCREW_3_1X20",
+   "family": "SCREW",
+   "brand": null,
+   "article": "chipboard screw3.1x20",
+   "name": "Шуруп 3,1 × 20",
+   "price": {
+    "rub": 1.1,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Шуруп по дереву и ДСП 4*20 мм», 1.1 ₽"
+   }
+  },
+  {
+   "id": "SCREW_FRONT_4X16",
+   "family": "SCREW",
+   "brand": null,
+   "article": "front wood screw4x16",
+   "name": "Шуруп фасада 4 × 16",
+   "price": {
+    "rub": 0.6,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Шуруп по дереву и ДСП 4*16 ТМР», 0.6 ₽"
+   }
+  },
+  {
+   "id": "SCREW_SIDE_4X16",
+   "family": "SCREW",
+   "brand": null,
+   "article": "side wood screw4x16",
+   "name": "Шуруп боковины 4 × 16",
+   "price": {
+    "rub": 0.6,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Шуруп по дереву и ДСП 4*16 ТМР», 0.6 ₽"
+   }
+  },
+  {
+   "id": "ANCHOR_SUBSTRATE_SET",
+   "family": "ANCHOR",
+   "brand": null,
+   "article": "substrate specific anchor/screw set",
+   "name": "Анкер или шуруп по основанию стены, комплект",
+   "price": {
+    "rub": 21.8,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Стяжка (Гайка бочонок под шлиц с винтом) М6*50 цинк, к-т», 21.8 ₽"
+   }
+  },
+  {
+   "id": "SUGATSUNE_120_030_065",
+   "family": "FASTENER",
+   "brand": "Sugatsune",
+   "article": "120-030-065",
+   "name": "Sugatsune 120-030-065 кронштейн",
+   "price": {
+    "rub": 18.05,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Кронштейн МК (уголок) 60*60 цинк», 18.05 ₽"
+   }
+  },
+  {
+   "id": "SUGATSUNE_SU30M120_030_065",
+   "family": "FASTENER",
+   "brand": "Sugatsune",
+   "article": "SU30M120-030-065",
+   "name": "Sugatsune SU30M120-030-065 кронштейн",
+   "price": {
+    "rub": 18.05,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Кронштейн МК (уголок) 60*60 цинк», 18.05 ₽"
+   }
+  },
+  {
+   "id": "DUSLAR_10030001",
+   "family": "FILLING",
+   "brand": "DUSLAR",
+   "article": "10030001",
+   "name": "DUSLAR 10030001 посудосушитель 600 мм",
+   "price": {
+    "rub": 5045,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Посудосушитель EVOLUTION с рамой в корпус 600 мм», 5045 ₽"
+   }
+  },
+  {
+   "id": "DUSLAR_10030035",
+   "family": "FILLING",
+   "brand": "DUSLAR",
+   "article": "10030035",
+   "name": "DUSLAR 10030035 бутылочница 300 мм",
+   "price": {
+    "rub": 5250,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Бутылочница 2 уровня 300 мм, скрытый монтаж/доводчик», 5250 ₽"
+   }
+  },
+  {
+   "id": "STARAX_S_2414_C",
+   "family": "FILLING",
+   "brand": "STARAX",
+   "article": "S-2414-C",
+   "name": "STARAX S-2414-C бутылочница 150 мм",
+   "price": {
+    "rub": 2345,
+    "per": "kit",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): по аналогу Рондо (rondo-perm.ru), 23.10.2026: аналог «Бутылочница 2 уровня 150 мм, скрытый монтаж/доводчик ЛЕВАЯ (ТМР)», 2345 ₽"
+   }
+  },
+  {
+   "id": "DOWEL_8X30",
+   "family": "FASTENER",
+   "brand": null,
+   "article": null,
+   "name": "Шкант 8×30",
+   "price": {
+    "rub": 0.77,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): каталог цен владельца, furnimax.ru: «Шкант 8х30мм буковый (в 1 кг ~ 1000 штук)» 925,07 ₽ и «Шкант 8х30мм (упаковка 5000 штук)» 3009,60 ₽ — среднее за штуку"
+   }
+  },
+  {
+   "id": "PROTOTYPE_SHELF_PIN",
+   "family": "SHELF_SUPPORT",
+   "brand": null,
+   "article": null,
+   "name": "Полкодержатель (прототип, без артикула)",
+   "price": {
+    "rub": 10.61,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): как полкодержатель FLIPPER 2574 21 (МДМ, 10,61 ₽)"
+   }
+  },
+  {
+   "id": "PROTOTYPE_HANDLE",
+   "family": "HANDLE",
+   "brand": null,
+   "article": null,
+   "name": "Ручка (прототип, без артикула)",
+   "price": {
+    "rub": 90,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): как ручка BOYARD RS425BAP.5/128 каталога (90 ₽)"
+   }
+  },
+  {
+   "id": "PROTOTYPE_ROD",
+   "family": "ROD",
+   "brand": null,
+   "article": null,
+   "name": "Штанга (прототип, без артикула)",
+   "price": {
+    "rub": 480,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): как штанга VITRA J08.2000 каталога (480 ₽)"
+   }
+  },
+  {
+   "id": "PROTOTYPE_ROD_SUPPORT",
+   "family": "ROD",
+   "brand": null,
+   "article": null,
+   "name": "Опора штанги (прототип, без артикула)",
+   "price": {
+    "rub": 50,
+    "per": "pcs",
+    "date": "2026-10-26",
+    "source": {
+     "doc": "FINDINGS 1210"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): как держатель J09 штанги VITRA J08 каталога (50 ₽)"
+   }
+  }
+ ],
+ "kits": [
+  {
+   "id": "HETTICH_RASTEX15_16_DU325",
+   "brand": "Hettich",
+   "article": "25062 + 47458 (комплект)",
+   "name": "Rastex 15 · 16 мм со штоком DU325",
+   "components": [
+    {
+     "brand": "Hettich",
+     "article": "25062",
+     "qty": 1
+    },
+    {
+     "brand": "Hettich",
+     "article": "47458",
+     "qty": 1
+    }
+   ]
+  }
+ ],
+ "documents": []
+}
