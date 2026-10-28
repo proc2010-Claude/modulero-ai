@@ -7,3 +7,4 @@
 | `typescript` | 5.9.3 | devDependencies | Проверка типов (та же версия, что в modulero-next) |
 | `@types/node` | 24.19.2 | devDependencies | Типы Node 24 |
 | Node.js | 24 | `.nvmrc`, `engines` | Среда проверки |
+| Цены Claude API (`platform.claude.com/docs/en/about-claude/pricing`) | 2026-10-28 | `src/stand/cost.ts` (`PRICING`) | Оценка расхода диалога через API (AI-DEC-006); запросов к API нет |

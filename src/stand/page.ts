@@ -1,6 +1,7 @@
 // Страница прототипа сеанса (TASK_FIRST.md п. 3): превью версии, план, стены, состав, цена «полная / неполная»,
 // история версий и лента диалога. Одна самодостаточная HTML-страница без внешних файлов. Рисует то, что
 // вернуло ядро (previewSvg, kitchenPlan, kitchenWallElevation); ничего не пересчитывает.
+import { MAIN_MODEL, PRICING, type ModelId, type SessionCost } from './cost.ts';
 import type { Stand } from './stand.ts';
 
 const esc = (s: unknown) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
@@ -9,7 +10,7 @@ const mm = (v: unknown) => (typeof v === 'number' ? v.toLocaleString('ru-RU') : 
 
 const KIND_RU: Record<string, string> = { base: 'нижний', niche: 'ниша', upper: 'навесной', tall: 'пенал', mezz: 'антресоль', island: 'остров' };
 
-export function renderPage(stand: Stand): string {
+export function renderPage(stand: Stand, cost: SessionCost): string {
   const view = stand.currentView();
   const head = stand.data.history.find((v) => v.n === stand.data.head);
   const body = view && head ? project(stand, view, head) : '<section class="card"><p class="muted">Проекта ещё нет: помощник создаст его первым вызовом start_project.</p></section>';
@@ -30,7 +31,7 @@ export function renderPage(stand: Stand): string {
 </header>
 <main class="grid">
   <div class="col">${body}</div>
-  <aside class="col">${feed(stand)}${history(stand)}</aside>
+  <aside class="col">${feed(stand)}${costCard(cost)}${history(stand)}</aside>
 </main>
 <footer class="muted">Стенд без Claude API и без публикации: размеры, состав, отказы и цена — ответы ядра Modulero. Цена — ориентир, не предложение.</footer>
 </body>
@@ -128,6 +129,24 @@ function variants(stand: Stand): string {
   return `<section class="card"><h2>Варианты</h2><ul class="plain">${d.variants.map((v: any) => `<li>${v.id === d.active ? '● ' : '○ '}${esc(v.name)}</li>`).join('')}</ul></section>`;
 }
 
+const usd = (v: number) => '$' + v.toFixed(3);
+const tk = (v: number) => v.toLocaleString('ru-RU');
+const MODEL_RU: Record<ModelId, string> = { 'claude-opus-5-5': 'Opus 5.5', 'claude-sonnet-5-5': 'Sonnet 5.5', 'claude-haiku-5-5': 'Haiku 5.5' };
+
+/** Расход Claude API, если бы этот диалог шёл через API (AI-DEC-006): оценка, не счёт. */
+function costCard(c: SessionCost): string {
+  if (!c.turns.length) return '';
+  const T = c.total;
+  return `<section class="card"><h2>Расход через Claude API (оценка)</h2>
+    <div class="sum2">${usd(T.usd[MAIN_MODEL])} <span class="muted">за ${c.turns.length} ход., ${MODEL_RU[MAIN_MODEL]}</span></div>
+    <p class="muted">Sonnet 5.5 — ${usd(T.usd['claude-sonnet-5-5'])}, Haiku 5.5 — ${usd(T.usd['claude-haiku-5-5'])}. Токены: кэш запись ${tk(T.cache_write)}, чтение ${tk(T.cache_read)}, выход ${tk(T.output)}; запросов ${T.requests}.</p>
+    <table><thead><tr><th>Ход</th><th>Запр.</th><th>Вход, ток.</th><th>Выход</th><th>${MODEL_RU[MAIN_MODEL]}</th></tr></thead><tbody>${c.turns
+      .map((t) => `<tr><td title="${esc(t.human)}">${t.turn}</td><td>${t.requests}</td><td>${tk(t.input + t.cache_write + t.cache_read)}</td><td>${tk(t.output)}</td><td>${usd(t.usd[MAIN_MODEL])}</td></tr>`)
+      .join('')}</tbody></table>
+    <p class="muted">Без запросов к API: токены по длине текста (${c.assumptions.asciiCharsPerToken} знака латиницы или ${c.assumptions.otherCharsPerToken} кириллицы на токен), рассуждения — ${c.assumptions.thinkingTokensPerResponse} ток. на ответ, кэш 5 мин; постоянная часть запроса (инструменты и правила помощника) ≈ ${tk(c.fixed_tokens)} ток. Цены — страница цен Anthropic на ${PRICING.date}. Точность ±30–50 %, уточняется замером после подключения API.</p>
+  </section>`;
+}
+
 function history(stand: Stand): string {
   const rows = [...stand.historyList()].reverse();
   return `<section class="card"><h2>История версий</h2><ol class="hist" reversed>${rows
@@ -142,6 +161,9 @@ function history(stand: Stand): string {
 
 function feed(stand: Stand): string {
   const lines = stand.dialog();
+  // Кнопки показываются под ответом помощника, даже если offer_choices вызван до текста ответа.
+  for (let i = 0; i + 1 < lines.length; i++)
+    if (lines[i]!.who === 'choices' && lines[i + 1]!.who === 'ai') [lines[i], lines[i + 1]] = [lines[i + 1]!, lines[i]!];
   if (!lines.length) return '<section class="card"><h2>Диалог</h2><p class="muted">Реплик пока нет.</p></section>';
   return `<section class="card"><h2>Диалог</h2><div class="feed">${lines
     .map((l) =>
@@ -170,7 +192,7 @@ h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;margin:0 0 10px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
 .price .badge{display:inline-block;font-weight:600;font-size:13px;padding:2px 10px;border-radius:99px}
 .price.ok .badge{background:var(--okbg);color:var(--ok)}.price.partial .badge{background:var(--partbg);color:var(--part)}
-.price .sum{font-size:24px;font-weight:650;margin:6px 0 2px}
+.price .sum{font-size:24px;font-weight:650;margin:6px 0 2px}.sum2{font-size:20px;font-weight:650;margin:0 0 4px}
 .price ul{margin:6px 0 0;padding-left:18px;font-size:13px}
 .facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0}.facts dt{color:var(--muted)}.facts dd{margin:0}
 .warn{color:var(--part)}.warnings{color:var(--part);margin:10px 0 0;padding-left:18px}

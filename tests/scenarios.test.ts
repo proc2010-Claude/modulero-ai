@@ -34,3 +34,12 @@ test('проверка ответа ловит выдуманную цену, с
   assert.equal(answerProblems('А? Б? В? Г?', null).length, 1);
   assert.deepEqual(answerProblems('Ориентир около 200 тыс. ₽.', { amount_rub: 200140, known_amount_rub: 200140 }), []);
 });
+
+test('проигрыш замечает расхождение версии и пропавший отказ', async () => {
+  const sc: Scenario = JSON.parse(readFileSync(new URL('k01-straight.json', DIR), 'utf8'));
+  const call = sc.turns[1]!.calls[0]!;
+  call.expect.revision = 'KPR2-0000000000000000';
+  sc.expected_refusals.push('такого отказа нет');
+  const r = replay(await loadCore(), sc);
+  assert.equal(r.problems.length, 2, r.problems.join('\n'));
+});

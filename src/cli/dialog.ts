@@ -12,6 +12,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { MAIN_MODEL, type SessionCost } from '../stand/cost.ts';
 import { loadCore } from '../stand/engine.ts';
 import { exportScenario } from '../stand/scenario.ts';
 import { Stand } from '../stand/stand.ts';
@@ -62,6 +63,7 @@ switch (cmd) {
   case 'ai':
     stand.say(cmd, readArg(rest.join(' ') || undefined));
     console.log(JSON.stringify({ session, page: join(stand.dir, 'prototype.html') }));
+    if (cmd === 'ai') console.log(costLine(stand.cost()));
     break;
   case 'page':
     console.log(join(stand.dir, 'prototype.html'));
@@ -84,4 +86,13 @@ switch (cmd) {
     console.log(JSON.stringify(out, null, 2));
     if (out.is_error) process.exitCode = 2;
   }
+}
+
+/** Строка для треда после ответа помощника: расход хода и сеанса через Claude API (оценка). */
+function costLine(c: SessionCost): string {
+  const t = c.turns.at(-1);
+  if (!t) return '';
+  const tok = (u: { input: number; cache_write: number; cache_read: number; output: number }) => (u.input + u.cache_write + u.cache_read + u.output).toLocaleString('ru-RU');
+  const usd = (v: number) => '$' + v.toFixed(3);
+  return `Расход через Claude API (оценка, ${MAIN_MODEL}): ход ${t.turn} — ${t.requests} запр., ${tok(t)} ток. (кэш: запись ${t.cache_write.toLocaleString('ru-RU')}, чтение ${t.cache_read.toLocaleString('ru-RU')}; выход ${t.output.toLocaleString('ru-RU')}), ${usd(t.usd[MAIN_MODEL])}; за сеанс ${c.turns.length} ход., ${usd(c.total.usd[MAIN_MODEL])}.`;
 }

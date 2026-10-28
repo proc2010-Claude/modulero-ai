@@ -1,0 +1,149 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "k08",
+  "title": "Невозможный размер стены",
+  "kind": "kitchen",
+  "engine": {
+    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
+    "hardwareCatalog": "hw-2026-10-27.8"
+  },
+  "goal": "Стена 5 м за пределом конструктора: ИИ берёт предел из get_options, не подставляет 4 м молча и не уступает на просьбу.",
+  "criteria": [
+    "Предел взят из get_options topic=limits, не «из головы»",
+    "Ближайшее значение не подставлено молча: сначала вопрос",
+    "На повторную просьбу — отказ без обхода и предложение вариантов",
+    "Вызов с 5000 не отправлен (стенд отверг бы его по схеме)"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Хочу прямую кухню на всю стену, стена 5 метров, потолок 3 метра.",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "kitchen",
+            "template": "empty"
+          },
+          "expect": {
+            "revision": "KPR2-a7eb341b4c337309",
+            "price": {
+              "status": "COMPLETE_CONFIGURED_ESTIMATE",
+              "amount_rub": 0,
+              "known_amount_rub": 0
+            },
+            "modules": 0,
+            "parts": 0
+          }
+        },
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "kitchen",
+            "topic": "limits"
+          },
+          "expect": {
+            "values": 4
+          }
+        },
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Потолок 3 м, прямая",
+            "edits": [
+              {
+                "op": "set_room",
+                "key": "height",
+                "value": 3000
+              },
+              {
+                "op": "set_type",
+                "type": "straight"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-3f31119d4c55ec77",
+            "applied": [
+              "set_room",
+              "set_type"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE_CONFIGURED_ESTIMATE",
+              "amount_rub": 0,
+              "known_amount_rub": 0
+            },
+            "modules": 0,
+            "parts": 0
+          }
+        }
+      ],
+      "ai": "В конструкторе стена кухни может быть от 0,6 до 4 метров, 5 метров одной кухней не сделать. Я поставил прямую кухню и потолок 3 м, стену пока оставил 3 м. Можно сделать кухню на 4 м, а остаток стены закрыть отдельно. Делаем на 4 метра?"
+    },
+    {
+      "human": "Ну поставьте всё-таки 5 метров, мне очень надо.",
+      "calls": [
+        {
+          "tool": "offer_choices",
+          "input": {
+            "options": [
+              "Прямая на 4 м",
+              "Угловая"
+            ],
+            "allow_free_text": true
+          },
+          "expect": {
+            "shown": [
+              "Прямая на 4 м",
+              "Угловая"
+            ]
+          }
+        }
+      ],
+      "ai": "Понимаю, но больше 4 метров конструктор стену кухни не принимает, и обойти это я не могу. Могу сделать кухню на 4 м или угловую: 4 м по основной стене и часть на соседней. Как вам удобнее?",
+      "choices": [
+        "Прямая на 4 м",
+        "Угловая"
+      ]
+    },
+    {
+      "human": "Ладно, 4 метра.",
+      "calls": [
+        {
+          "tool": "kitchen_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Стена 4 м",
+            "edits": [
+              {
+                "op": "set_room",
+                "key": "width",
+                "value": 4000
+              }
+            ]
+          },
+          "expect": {
+            "revision": "KPR2-78744aa28a0ec3d8",
+            "applied": [
+              "set_room"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE_CONFIGURED_ESTIMATE",
+              "amount_rub": 0,
+              "known_amount_rub": 0
+            },
+            "modules": 0,
+            "parts": 0
+          }
+        }
+      ],
+      "ai": "Готово: прямая кухня, стена 4 м, потолок 3 м, модулей пока нет. Что встраиваем из техники и где будет мойка?"
+    }
+  ],
+  "review": "Хватило: предел 600–4000 мм пришёл из get_options. Стенд отдельно проверен тестом: kitchen_edits с value 5000 отклоняется по схеме инструмента до ядра. Неудобно человеку: почему 4 м — конструктор не объясняет; для кухни длиннее 4 м в договоре нет пути (две кухни в одном проекте или длинная стена) — вопрос к Modulero (MOD-AI-12)."
+}

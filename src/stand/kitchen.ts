@@ -73,6 +73,9 @@ export interface KitchenView {
   elevations: any[];
 }
 
+/** Условия мебельщика в словах цены: проценты сборки, наценка (MOD-DEC-497). */
+const TERMS = /наценк|\d\s*%/i;
+
 /** Граф, версия, сводка, цена и замечания проекта — всё из ядра. */
 export function kitchenView(c: Core, p: KitchenProject): KitchenView {
   const { K, HW } = c;
@@ -120,12 +123,15 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
   };
   // Полоса цены конструктора (MOD-DEC-247, 497): сумма, известная часть, статус, чего не хватает. Без себестоимости и ставок.
   const pr = out.price;
+  const missing = (pr.missing as string[]).filter((m) => !TERMS.test(m));
   const price = {
     status: pr.status,
     amount_rub: pr.amount,
     known_amount_rub: pr.knownAmount,
     currency: pr.currency,
-    missing: pr.missing,
+    missing,
+    // Строки «чего не хватает» с процентами сборки и наценки мебельщика — условия мебельщика, не экран человека (MOD-DEC-497, (Д)).
+    terms_hidden: pr.missing.length - missing.length,
     unpriced_rows: pr.unpriced,
     appliances_included: !!K.kitchenOptionsView(p, HW).appliances?.include,
   };

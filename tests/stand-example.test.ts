@@ -90,7 +90,7 @@ test('стенд: STALE_REVISION, вход не по схеме, изделие 
     assert.match(bad.error, /не больше 4000/);
     assert.equal((stand.run('start_project', { kind: 'wardrobe', template: null }) as any).is_error, true);
     // Цена — только поля полосы цены конструктора: без себестоимости и ставок (MOD-DEC-497).
-    assert.deepEqual(Object.keys(start.price).sort(), ['amount_rub', 'appliances_included', 'currency', 'known_amount_rub', 'missing', 'status', 'unpriced_rows']);
+    assert.deepEqual(Object.keys(start.price).sort(), ['amount_rub', 'appliances_included', 'currency', 'known_amount_rub', 'missing', 'status', 'terms_hidden', 'unpriced_rows']);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

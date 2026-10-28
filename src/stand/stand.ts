@@ -7,10 +7,12 @@
 //   versions/NNN.svg      превью версии (previewSvg ядра)
 //   calls.jsonl          журнал вызовов и ответов
 //   dialog.jsonl         текст диалога: реплики человека и ИИ, кнопки
+//   usage.json           оценка расхода Claude API по ходам (cost.ts, AI-DEC-006)
 //   prototype.html       страница прототипа, переписывается после каждого вызова и реплики
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadTools } from '../tools.ts';
+import { sessionCost, type SessionCost } from './cost.ts';
 import type { Core } from './engine.ts';
 import { applyKitchenEdit, kitchenOptions, kitchenView, startKitchen, type Edit, type KitchenProject, type KitchenView } from './kitchen.ts';
 import { renderPage } from './page.ts';
@@ -341,8 +343,19 @@ export class Stand {
     return existsSync(f) ? readFileSync(f, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l)) : [];
   }
 
+  /** Оценка расхода Claude API, если бы этот диалог шёл через API (AI-DEC-006). */
+  cost(): SessionCost {
+    const events = [
+      ...this.dialog().filter((d) => d.who !== 'choices').map((d) => ({ seq: d.seq ?? 0, e: { kind: d.who as 'human' | 'ai', text: d.text } })),
+      ...this.calls().map((c) => ({ seq: c.seq, e: { kind: 'call' as const, tool: c.tool, input: c.input, output: c.output } })),
+    ].sort((a, b) => a.seq - b.seq);
+    return sessionCost(events.map((x) => x.e));
+  }
+
   private renderPage() {
-    writeFileSync(join(this.dir, 'prototype.html'), renderPage(this));
+    const cost = this.cost();
+    writeFileSync(join(this.dir, 'usage.json'), JSON.stringify(cost, null, 2) + '\n');
+    writeFileSync(join(this.dir, 'prototype.html'), renderPage(this, cost));
   }
 }
 
