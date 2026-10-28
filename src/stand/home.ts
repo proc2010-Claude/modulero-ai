@@ -5,6 +5,7 @@ import { homeIds, runCommand, type CommandsFile } from './commands.ts';
 import type { Core } from './engine.ts';
 import type { Edit, EditResult } from './kitchen.ts';
 import { TERMS } from './kitchen.ts';
+import { groupGeometry, type Geometry } from './geometry.ts';
 import { scene3dOf, type Scene3dView } from './scene3d.ts';
 
 export type HomeProject = Record<string, any>;
@@ -69,7 +70,8 @@ export function homeView(c: Core, p: HomeProject): HomeView {
     pr = H.price(p, HW),
     names: Record<string, string> = H.rateNamesOf(p),
     handle = H.homeHandle(p, HW),
-    material = H.materials.find((m: any) => m.id === p.material);
+    material = H.materials.find((m: any) => m.id === p.material),
+    scene3d = scene3dOf(c, graph);
   const bodies = p.bodies.map((b: any) => ({
     id: b.id,
     kind: b.kind === 'desk' ? 'стол' : 'корпус',
@@ -84,6 +86,8 @@ export function homeView(c: Core, p: HomeProject): HomeView {
     shelves: b.shelves.map((s: any) => ({ id: s.id, lo: s.lo, hi: s.hi, y: s.y, fixed: !!s.fixed })),
     doors: b.doors.map((d: any) => ({ id: d.id, lo: d.lo, hi: d.hi, y: d.y, h: d.h, hinge: d.hinge })),
     drawers: b.drawers.map((d: any) => ({ id: d.id, lo: d.lo, hi: d.hi, y: d.y, h: d.h })),
+    // Высоты деталей корпуса от пола — из 3D-сцены ядра (geometry.ts); id — элемента редактора (полка, дверь, ящик).
+    geometry: homeGeometry(scene3d.scene, b),
   }));
   const state = {
     kind: 'home',
@@ -109,7 +113,17 @@ export function homeView(c: Core, p: HomeProject): HomeView {
     terms_hidden: missingAll.length - missing.length,
   };
   const warnings: string[] = [...new Set<string>(H.issues(p, HW).map((x: any) => x.text))];
-  return { revision: graph.revision.projectRevisionId, state, price, warnings, previewSvg: c.previewSvg(graph), scene3d: scene3dOf(c, graph) };
+  return { revision: graph.revision.projectRevisionId, state, price, warnings, previewSvg: c.previewSvg(graph), scene3d };
+}
+
+/** Геометрия корпуса HOME: детали корпуса и его отсеков; ящик — по id ящика редактора (inputRef детали). */
+function homeGeometry(scene: any, b: any): Geometry {
+  const drawers = new Set<string>(b.drawers.map((d: any) => d.id));
+  return groupGeometry(scene, {
+    own: (p) => p.assemblyId === b.id || p.assemblyId.startsWith(b.id + ':'),
+    drawerOf: (p) => (drawers.has(p.inputRef) ? p.inputRef : null),
+    idOf: (p) => p.inputRef ?? p.id.slice(b.id.length + 1),
+  });
 }
 
 /** Справочники get_options другой мебели: заготовки, материалы, ручки, уровни комплектации — без цен. */
