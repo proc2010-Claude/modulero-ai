@@ -1,8 +1,9 @@
 // npm run engine:setup — копия ядра modulero-next на закреплённом SHA (engine.json, AI-DEC-003) в .engine/<sha>/.
 // Источник — локальный клон modulero-next (MODULERO_NEXT_REPO или ../modulero-next): git archive нужных папок,
-// без npm ci и без сети, если коммит уже есть в клоне. Клон не меняется. В копию пишется MANIFEST (sha256 файлов),
+// без npm ci и без сети, если коммит уже есть в клоне; 3D-вид собирается esbuild с three из devDependencies. Клон не меняется. В копию пишется MANIFEST (sha256 файлов),
 // по нему npm run check убеждается, что копию никто не правил.
 import { spawnSync } from 'node:child_process';
+import { build } from 'esbuild';
 import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { PIN, ROOT, engineDir, manifest } from '../src/engine/pin.mjs';
@@ -31,6 +32,20 @@ if (tar.status !== 0) {
   console.error(String(tar.stderr));
   process.exit(1);
 }
+// 3D-вид конструктора (apps/web/src/view3d) — отдельной сборкой, как его собирает modulero-next (scripts/build.mjs):
+// IIFE с three той же версии; страница прототипа кладёт её в себя текстом.
+await build({
+  entryPoints: [join(dir, 'apps/web/src/view3d/index.ts')],
+  bundle: true,
+  minify: true,
+  format: 'iife',
+  target: 'es2022',
+  outfile: join(dir, 'view3d.js'),
+  legalComments: 'none',
+  define: { 'process.env.NODE_ENV': '"production"' },
+  nodePaths: [join(ROOT, 'node_modules')],
+  logLevel: 'warning',
+});
 writeFileSync(join(dir, 'MANIFEST'), manifest(dir));
 console.log(`Ядро ${PIN.repo}@${PIN.sha.slice(0, 8)} (${PIN.paths.join(', ')}) → ${relative(ROOT, dir) || dir}`);
 

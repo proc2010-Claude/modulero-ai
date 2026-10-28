@@ -71,29 +71,14 @@ export interface KitchenView {
   previewSvg: string | null;
   plan: any;
   elevations: any[];
-  /** Детали 3D-сцены ядра (sceneOf графа) для вида на странице: размещение и размеры как в конструкторе. */
+  /** 3D-сцена ядра для вида на странице — та же, что у конструктора. */
   scene3d: Scene3dView;
 }
 
-/** Деталь сцены: начало, оси u, v, n, размер вдоль них, контур в плоскости u, v, поверхность, стекло, роль. */
-export interface Scene3dPart {
-  o: number[];
-  u: number[];
-  v: number[];
-  n: number[];
-  s: number[];
-  c: number[][] | null;
-  f: string;
-  g?: 1;
-  r: string;
-  name: string;
-}
-
+/** 3D-сцена ядра (engine.sceneOf) и вид её декоров — то, что конструктор отдаёт своему 3D-виду. */
 export interface Scene3dView {
-  room: { width: number; depth: number; height: number };
-  /** Стены плана [x1, y1, x2, y2] в осях сцены. */
-  walls: number[][];
-  parts: Scene3dPart[];
+  scene: any;
+  looks: Record<string, { color: number; texture?: string } | null>;
 }
 
 /** Условия мебельщика в словах цены: проценты сборки, наценка (MOD-DEC-497). */
@@ -160,7 +145,7 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
   };
   const warnings = [...K.kitchenObstacleWarnings(p, HW).map((w: any) => w.text), ...(sceneError ? [sceneError] : [])];
   const elevations = plan.walls.map((w: any) => ({ title: wallTitle(w.line, plan.room.width), ...K.kitchenWallElevation(p, HW, w.id) }));
-  return { revision: out.revision, state, price, warnings, previewSvg: c.previewSvg(graph), plan, elevations, scene3d: scene3dOf(c, graph, plan) };
+  return { revision: out.revision, state, price, warnings, previewSvg: c.previewSvg(graph), plan, elevations, scene3d: scene3dOf(c, graph) };
 }
 
 /** Справочники для get_options (§4): из ядра и выпуска каталога, без цен, ставок и номеров правил. */
@@ -199,29 +184,15 @@ export function kitchenOptions(c: Core, topic: string): unknown {
   }
 }
 
-const r1 = (x: number) => Math.round(x * 10) / 10;
-
-/**
- * 3D-сцена ядра в компактном виде для страницы: только размещение деталей (sceneOf), без пересчёта.
- * План кухни отсчитывает y от основной стены, а сцена — от передней кромки комнаты: y сцены = глубина − y плана.
- */
-function scene3dOf(c: Core, graph: any, plan: any): Scene3dView {
-  const sc = c.sceneOf(graph),
-    D = plan.room.depth;
-  return {
-    room: { width: plan.room.width, depth: D, height: plan.room.height },
-    walls: plan.walls.map((w: any) => [w.line[0], D - w.line[1], w.line[2], D - w.line[3]]),
-    parts: sc.parts.map((p: any) => ({
-      o: p.originMm.map(r1),
-      u: p.uAxis,
-      v: p.vAxis,
-      n: p.nAxis,
-      s: p.sizeMm.map(r1),
-      c: p.contourMm ? p.contourMm.map((q: number[]) => q.map(r1)) : null,
-      f: p.decorId?.startsWith('WORKTOP') ? 'WORKTOP' : p.surface,
-      ...(p.glass ? { g: 1 as const } : {}),
-      r: p.role,
-      name: p.name,
-    })),
-  };
+/** Сцена для 3D-вида страницы: та же, что строит конструктор (engine.sceneOf графа), и вид каждого её декора. */
+function scene3dOf(c: Core, graph: any): Scene3dView {
+  const scene = c.sceneOf(graph),
+    ids = new Set<string>();
+  for (const p of scene.parts) {
+    ids.add(p.decorId);
+    if (p.edgeDecor) ids.add(p.edgeDecor.decorId);
+  }
+  // Отверстия нужны только «Рентгену» конструктора; на странице его нет.
+  const { holes: _holes, ...rest } = scene;
+  return { scene: rest, looks: Object.fromEntries([...ids].map((id) => [id, c.decorLook(id)])) };
 }

@@ -15,9 +15,11 @@
     "catalogs/hardware/lifts.json",
     "catalogs/hardware/shelf-supports.json",
     "catalogs/materials",
-    "catalogs/registry/brands.json"
+    "catalogs/registry/brands.json",
+    "apps/web/src/view3d",
+    "apps/web/public/decors"
   ],
   "decision": "AI-DEC-003",
   "dir": "vendor/modulero-next-cbaf1534",
-  "manifestSha256": "0a917774c6907ddfb268f0b8b5c30c51bff552ff0964bbdc34f9b5940a8fe361"
+  "manifestSha256": "2889c7649eae94458f674fdcd5b2d88bcb6ac88fbdcc12092ca4b2b8b0796687"
 }
