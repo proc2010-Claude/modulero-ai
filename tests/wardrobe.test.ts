@@ -84,6 +84,8 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     // «Рентген» и «Взрыв» — режимы 3D-вида конструктора; ходы «Взрыва» — функции ядра explodeOffsets, explodeLift.
     assert.match(page, /data-act="xray"/);
     assert.match(page, /data-act="explode"/);
+    // Нажатие на дверь или ящик открывает его, как в конструкторе.
+    assert.match(page, /toggleMotion\(m\.key\)/);
     assert.match(page, /ModuleroExplode/);
     // Текущая цена — в углу поля 3D (AI-DEC-008).
     assert.match(page, /id="v3d-price">Ориентир /);
