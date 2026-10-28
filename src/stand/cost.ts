@@ -138,11 +138,16 @@ export function sessionCost(events: Event[]): SessionCost {
   return { model: MAIN_MODEL, turns, total: { ...total, usd: usdOf(total) }, fixed_tokens: fixedTokens(), assumptions: A, pricing: { source: PRICING.source, date: PRICING.date } };
 }
 
-/** Строка для треда после ответа помощника: расход хода и сеанса через Claude API (оценка). */
+/**
+ * Строка для треда после ответа помощника: расход хода и сеанса, если бы диалог шёл через Claude API.
+ * Это оценка для API, а не расход модели треда: токены те же, цена — для каждой модели PRICING.
+ */
 export function costLine(c: SessionCost): string {
   const t = c.turns.at(-1);
   if (!t) return '';
-  const tok = (u: { input: number; cache_write: number; cache_read: number; output: number }) => (u.input + u.cache_write + u.cache_read + u.output).toLocaleString('ru-RU');
-  const usd = (v: number) => '$' + v.toFixed(3);
-  return `Расход через Claude API (оценка, ${MAIN_MODEL}): ход ${t.turn} — ${t.requests} запр., ${tok(t)} ток. (кэш: запись ${t.cache_write.toLocaleString('ru-RU')}, чтение ${t.cache_read.toLocaleString('ru-RU')}; выход ${t.output.toLocaleString('ru-RU')}), ${usd(t.usd[MAIN_MODEL])}; за сеанс ${c.turns.length} ход., ${usd(c.total.usd[MAIN_MODEL])}.`;
+  const n = (v: number) => v.toLocaleString('ru-RU');
+  const usd = (v: number) => '$' + (v < 0.01 ? v.toFixed(4) : v.toFixed(3));
+  const name = (m: ModelId) => m.replace(/^claude-/, '').replace(/-(\d+)-(\d+)$/, ' $1.$2').replace(/^./, (x) => x.toUpperCase());
+  const by = (u: Record<ModelId, number>) => (Object.keys(PRICING.models) as ModelId[]).map((m) => `${name(m)} ${usd(u[m])}`).join(', ');
+  return `Расход через Claude API (оценка для API, не модель треда): ход ${t.turn} — ${t.requests} запр., ${n(t.input + t.cache_write + t.cache_read + t.output)} ток. (кэш: запись ${n(t.cache_write)}, чтение ${n(t.cache_read)}; выход ${n(t.output)}); ${by(t.usd)}; за сеанс ${c.turns.length} ход.: ${by(c.total.usd)}.`;
 }
