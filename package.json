@@ -12,7 +12,8 @@
     "dialog": "node --experimental-transform-types --disable-warning=ExperimentalWarning --import ./src/engine/register.mjs src/cli/dialog.ts",
     "engine:setup": "node scripts/engine-setup.mjs",
     "test": "node --experimental-transform-types --disable-warning=ExperimentalWarning --import ./src/engine/register.mjs --test \"tests/**/*.test.ts\"",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "live": "node src/live/cli.ts"
   },
   "devDependencies": {
     "@types/node": "24.19.2",

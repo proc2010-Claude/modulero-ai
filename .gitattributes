@@ -2,3 +2,4 @@
 reference/** -text
 *.png binary
 vendor/** -text
+vendor/**/*.html -diff

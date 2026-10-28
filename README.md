@@ -27,3 +27,14 @@ npm run dialog -- start_project '{"kind":"kitchen","template":"straight"}'
 npm run dialog -- ai '…'        # печатает строку расхода через Claude API (оценка)
 npm run dialog -- page          # путь к sessions/<сеанс>/prototype.html
 ```
+
+## Диалог в конструкторе на компьютере владельца
+
+`dist/modulero-live.html` — один офлайн-файл: слева лента диалога из треда, справа настоящий конструктор modulero-next (сборка `cbaf1534` без изменений, `vendor/modulero-next-cbaf1534-web/`, сверяется по `BUILD.json`). Страница следит за папкой с файлами `<сеанс>.json` и после каждого хода сама открывает текущую версию кухни кнопкой конструктора «Открыть проект»; в первый раз включает 3D. Писать помощнику — по-прежнему в треде, без Claude API.
+
+```
+npm run live -- page                 # → dist/modulero-live.html
+npm run live -- <сеанс> [файл]       # live.json сеанса sessions/<сеанс>/ (формат modulero-ai.live/1)
+```
+
+Файл сеанса доходит до компьютера владельца копией в папку `E:\CLAUDE\modulero-live\`. Страница открывается в Chrome, Edge или Яндекс Браузере (нужен выбор папки — File System Access); в других браузерах файл можно открыть или перетащить вручную.
