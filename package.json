@@ -9,8 +9,9 @@
   },
   "scripts": {
     "check": "node scripts/check.mjs",
+    "dialog": "node --experimental-transform-types --disable-warning=ExperimentalWarning --import ./src/engine/register.mjs src/cli/dialog.ts",
     "engine:setup": "node scripts/engine-setup.mjs",
-    "test": "node --test \"tests/**/*.test.ts\"",
+    "test": "node --experimental-transform-types --disable-warning=ExperimentalWarning --import ./src/engine/register.mjs --test \"tests/**/*.test.ts\"",
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "devDependencies": {

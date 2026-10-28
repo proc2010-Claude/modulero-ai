@@ -71,7 +71,8 @@ step(`копия ядра modulero-next ${PIN.sha.slice(0, 8)} не измене
 });
 
 step('типы (tsc)', () => run('npx', ['tsc', '--noEmit', '-p', 'tsconfig.json']));
-step('тесты (node --test)', () => run(process.execPath, ['--test', 'tests/**/*.test.ts']));
+const LOADER = ['--experimental-transform-types', '--disable-warning=ExperimentalWarning', '--import', './src/engine/register.mjs'];
+step('тесты и проигрыш сценариев (node --test)', () => run(process.execPath, [...LOADER, '--test', 'tests/**/*.test.ts']));
 
 if (failures.length) {
   console.log(`\nПроверка не пройдена: ${failures.join(', ')}.`);
