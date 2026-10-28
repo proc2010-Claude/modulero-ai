@@ -5,6 +5,8 @@
 //   human '<текст>'             реплика человека в ленту диалога
 //   ai '<текст>'                реплика помощника в ленту диалога
 //   <инструмент> '<JSON>'       вызов инструмента (tools.claude-api.json); JSON можно дать как - (stdin) или @файл
+//   turn '<JSON>'               ход одной командой: {human, calls: [{tool, input}], ai, live, copy} — см. src/stand/turn.ts;
+//                               ответ пишется, только если все вызовы прошли; base_revision "head" — текущая версия
 //   page                        перерисовать страницу прототипа текущего сеанса и напечатать путь к ней
 //   export <файл> [название]    записать сеанс как сценарий для npm run check
 //
@@ -16,6 +18,7 @@ import { MAIN_MODEL, type SessionCost } from '../stand/cost.ts';
 import { loadCore } from '../stand/engine.ts';
 import { exportScenario } from '../stand/scenario.ts';
 import { Stand } from '../stand/stand.ts';
+import { parseTurn, runTurn } from '../stand/turn.ts';
 
 const repo = fileURLToPath(new URL('../..', import.meta.url));
 const root = resolve(process.env.DIALOG_SESSIONS || join(repo, 'sessions'));
@@ -65,6 +68,20 @@ switch (cmd) {
     console.log(JSON.stringify({ session, page: join(stand.dir, 'prototype.html') }));
     if (cmd === 'ai') console.log(costLine(stand.cost()));
     break;
+  case 'turn': {
+    let turn;
+    try {
+      turn = parseTurn(JSON.parse(readArg(rest[0])));
+    } catch (e) {
+      fail(`Ход не читается: ${e instanceof Error ? e.message : e}`);
+    }
+    const r = runTurn(stand, turn);
+    const { last, ...brief } = r;
+    console.log(JSON.stringify(r.ok ? brief : r, null, 2));
+    if (r.ai_written) console.log(costLine(stand.cost()));
+    if (!r.ok) process.exitCode = 2;
+    break;
+  }
   case 'page':
     stand.renderPage();
     console.log(join(stand.dir, 'prototype.html'));
