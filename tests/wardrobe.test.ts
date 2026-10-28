@@ -36,6 +36,10 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     assert.match(a.refused.problem, /Корзина для обуви не подходит/);
     assert.deepEqual(a.not_run, [4]);
     assert.equal(a.state.sections[0].rods.length, 1);
+    // Высоты деталей секции от пола — из 3D-сцены ядра: помощник берёт их из ответа, а не считает.
+    const g = a.state.sections[0].geometry;
+    assert.equal(typeof g.interior_bottom_mm, 'number');
+    assert.ok(g.facades.length >= 1 && g.facades.every((f: any) => f.top_mm > f.bottom_mm));
     assert.equal(stand.data.history.length, 2);
 
     // Файл версии — проект шкафа конструктора: открывается для правки, та же версия.
