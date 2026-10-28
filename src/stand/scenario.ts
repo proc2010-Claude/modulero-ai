@@ -36,6 +36,11 @@ export interface Scenario {
   turns: Turn[];
   /** Разбор после прогона в треде (п. 7). */
   review: string;
+  /**
+   * Сценарий записан по правилу, когда помощник называл цену в тексте (до AI-DEC-008): суммы сверяются с ответом стенда.
+   * Без поля — правило AI-DEC-008: цена видна на прототипе, в тексте ответа её нет.
+   */
+  price_in_answer?: true;
 }
 
 /** Что сверяется в ответе инструмента: версия, принятые и отказанная правки, цена, размер состава. */
@@ -142,7 +147,7 @@ export function replay(core: Core, sc: Scenario): ReplayResult {
       });
       if (t.ai) {
         stand.say('ai', t.ai);
-        problems.push(...answerProblems(t.ai, price, variantPrices).map((p) => `ход ${ti + 1}, ответ помощника: ${p}`));
+        problems.push(...answerProblems(t.ai, price, variantPrices, sc.price_in_answer === true).map((p) => `ход ${ti + 1}, ответ помощника: ${p}`));
       }
     });
     for (const want of sc.expected_refusals) if (!refusals.some((r) => r.includes(want))) problems.push(`нет ожидаемого отказа движка: «${want}»`);
@@ -153,12 +158,20 @@ export function replay(core: Core, sc: Scenario): ReplayResult {
 }
 
 /**
- * Проверки реплики помощника по последней цене стенда (SYSTEM_PROMPT_DRAFT.md «После правки»):
- * каждая сумма в тыс. ₽ — это сумма или известная часть из ответа (округление до тысяч) или цена варианта из ответа variants;
- * при неполной цене названная сумма сопровождается словом «неполная»; не больше трёх вопросов.
+ * Проверки реплики помощника (SYSTEM_PROMPT_DRAFT.md «После правки»): не больше трёх вопросов; цены в тексте нет —
+ * она в углу 3D на прототипе (AI-DEC-008). У сценариев, записанных раньше (priceInText), — прежнее правило: каждая сумма
+ * в тыс. ₽ — сумма или известная часть из ответа (округление до тысяч) или цена варианта из ответа variants, при неполной
+ * цене названная сумма сопровождается словом «неполная».
  */
-export function answerProblems(text: string, price: Record<string, unknown> | null, variants: Record<string, unknown>[] = []): string[] {
+export function answerProblems(text: string, price: Record<string, unknown> | null, variants: Record<string, unknown>[] = [], priceInText = false): string[] {
   const problems: string[] = [];
+  const questions = (text.match(/\?/g) ?? []).length;
+  if (questions > 3) problems.push(`вопросов ${questions}, больше трёх`);
+  if (!priceInText) {
+    const named = text.match(/\d[\d\s ]*(?:[.,]\d+)?\s*(?:тыс\.?\s*)?(?:₽|руб)/g);
+    if (named) problems.push(`цена в тексте ответа (${named.join(', ')}): она видна на прототипе в углу 3D (AI-DEC-008)`);
+    return problems;
+  }
   const amounts = [...text.matchAll(/(\d[\d\s ]*(?:[.,]\d+)?)\s*тыс\.?\s*₽/g)].map((m) => Number(m[1]!.replace(/[\s ]/g, '').replace(',', '.')));
   const rubles = [...text.matchAll(/(\d[\d\s ]{2,}(?:[.,]\d+)?)\s*₽/g)].filter((m) => !/тыс/.test(m[0]));
   if (rubles.length) problems.push(`сумма в рублях без «тыс.»: ${rubles.map((m) => m[0]).join(', ')} — говорить ориентир в тысячах`);
@@ -170,7 +183,5 @@ export function answerProblems(text: string, price: Record<string, unknown> | nu
       if (price.amount_rub === null && !/неполн/i.test(text)) problems.push('цена неполная, а в ответе нет слова «неполная»');
     }
   }
-  const questions = (text.match(/\?/g) ?? []).length;
-  if (questions > 3) problems.push(`вопросов ${questions}, больше трёх`);
   return problems;
 }

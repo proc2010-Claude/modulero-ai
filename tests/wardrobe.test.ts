@@ -81,6 +81,8 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     assert.match(page, /data-act="xray"/);
     assert.match(page, /data-act="explode"/);
     assert.match(page, /ModuleroExplode/);
+    // Текущая цена — в углу поля 3D (AI-DEC-008).
+    assert.match(page, /id="v3d-price">Ориентир /);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
