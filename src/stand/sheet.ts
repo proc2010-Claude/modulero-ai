@@ -25,12 +25,15 @@ export function typeOf(s: unknown): string {
   return t;
 }
 
-/** Поля объекта: `{a: T, b: T}`, поле op — опущено (оно в имени операции); notes — с описанием поля в скобках. */
-function fields(s: JsonSchema, notes = false): string {
+/**
+ * Поля объекта: `{a: T, b: T}`, поле op — опущено (оно в имени операции); notes — описание поля в скобках, если оно
+ * не длиннее notes знаков (у операций правок — только короткие: точка отсчёта, единицы, откуда id).
+ */
+function fields(s: JsonSchema, notes = 0): string {
   const props = s.properties as Record<string, unknown>;
   const note = (v: unknown) => {
     const d = isObj(v) ? (v.description ?? (Array.isArray(v.anyOf) ? v.anyOf.map((x) => (isObj(x) ? x.description : '')).find(Boolean) : '')) : '';
-    return notes && typeof d === 'string' && d && d.length < 160 ? ` (${d})` : '';
+    return typeof d === 'string' && d && d.length < notes ? ` (${d})` : '';
   };
   return '{' + Object.entries(props).filter(([k]) => k !== 'op').map(([k, v]) => `${k}: ${typeOf(v)}${note(v)}`).join(', ') + '}';
 }
@@ -41,6 +44,9 @@ function hint(s: JsonSchema): string {
   return d.split(/(?<=\.)\s/)[0]!.replace(/\.$/, '');
 }
 
+/** Самое длинное описание поля операции правки в шпаргалке, знаков. */
+const NOTE_OPS = 60;
+
 /** Шпаргалка: инструмент — поля; у *_edits — по строке на операцию `op {поля} — подсказка`. */
 export function sheet(): string {
   const out: string[] = [];
@@ -48,14 +54,14 @@ export function sheet(): string {
     const props = (t.input_schema.properties ?? {}) as Record<string, JsonSchema>;
     const edits = props.edits;
     if (!edits || !isObj(edits.items) || !Array.isArray(edits.items.anyOf)) {
-      out.push(`${t.name} ${fields(t.input_schema, true)}`);
+      out.push(`${t.name} ${fields(t.input_schema, 160)}`);
       continue;
     }
     const { edits: _e, ...rest } = props;
     out.push(`${t.name} ${fields({ properties: rest })}, edits: [op…]`);
     for (const op of edits.items.anyOf as JsonSchema[]) {
       const name = (op.properties as Record<string, JsonSchema>).op?.const;
-      out.push(`  ${name} ${fields(op)}${hint(op) ? ' — ' + hint(op) : ''}`);
+      out.push(`  ${name} ${fields(op, NOTE_OPS)}${hint(op) ? ' — ' + hint(op) : ''}`);
     }
   }
   return out.join('\n');

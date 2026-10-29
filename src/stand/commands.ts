@@ -41,7 +41,8 @@ export function argsSchema(c: Command): JsonSchema {
 
 /**
  * Команды изделия для list_commands: имя, описание ядра, параметры (каталог стенд подставляет сам).
- * filter — слова через пробел, команда подходит, если хоть одно есть в имени или описании (без регистра).
+ * filter — слова через пробел, команда подходит, если хоть одно есть в имени или описании (без регистра);
+ * выше — команды, где совпало больше слов, при равенстве — порядок файла команд.
  * detail: brief (по умолчанию) — начало описания и параметры строкой «имя?: тип», full — описание целиком и JSON-схема.
  */
 export function commandList(
@@ -51,9 +52,13 @@ export function commandList(
 ): { command: string; doc: string; args: JsonSchema | string }[] {
   const product = commandProduct(kind);
   const words = (opts.filter ?? '').toLowerCase().split(/\s+/).filter(Boolean);
+  const hits = (c: Command) => words.filter((w) => (c.command + ' ' + c.doc).toLowerCase().includes(w)).length;
   return file.commands
     .filter((c) => c.command.startsWith(product + '/'))
-    .filter((c) => !words.length || words.some((w) => (c.command + ' ' + c.doc).toLowerCase().includes(w)))
+    .map((c, i) => ({ c, i, n: hits(c) }))
+    .filter((x) => !words.length || x.n > 0)
+    .sort((a, b) => b.n - a.n || a.i - b.i)
+    .map(({ c }) => c)
     .map((c) => (opts.detail === 'full' ? { command: c.command, doc: c.doc, args: argsSchema(c) } : { command: c.command, doc: docLine(c.doc), args: argsLine(c) }));
 }
 

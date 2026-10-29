@@ -28,7 +28,7 @@ npm run dialog -- ai '…'        # печатает строку расхода
 npm run dialog -- page          # путь к sessions/<сеанс>/prototype.html
 ```
 
-В треде ход делается одной командой: `scripts/dialog.sh ready <сеанс> --out /mnt/project-files` (Node 24, зависимости, сеанс и шпаргалка входов инструментов), затем на каждую реплику `scripts/dialog.sh turn -` с `{"human", "calls", "ai"}` в stdin. Она записывает реплики и правки, live-файл и копию страницы в файлы проекта и печатает одной строкой `reply` (ответ со строкой расхода), `notify` («ход <сеанс>»), `state` после хода и краткий ответ последнего вызова (`src/stand/turn.ts`, CLAUDE.md «Режим диалога»).
+В треде ход делается одной командой: `scripts/dialog.sh ready <сеанс> --out /mnt/project-files` (Node 24, зависимости, сеанс и шпаргалка входов инструментов), затем на каждую реплику `scripts/dialog.sh turn --session <сеанс> -` с `{"human", "calls", "ai"}` в stdin. Она записывает реплики и правки, live-файл и копию страницы в файлы проекта и печатает одной строкой `reply` (ответ со строкой расхода), `notify` («ход <сеанс>»), `state` после хода, краткий ответ вызова, на котором ход остановился (иначе последнего), и ответы остальных вызовов (`src/stand/turn.ts`, CLAUDE.md «Режим диалога»).
 
 Шкаф — так же: `start_project '{"kind":"wardrobe","template":"start"}'` (купе — `"sliding"`), правки — `wardrobe_edits`; другая мебель — `start_project '{"kind":"home","template":"chest"}'`, правки — `home_edits`.
 

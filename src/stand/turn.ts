@@ -29,14 +29,24 @@ export interface TurnCall {
   revision: string | null;
   refused: unknown;
   error: string | null;
+  /** Краткий ответ вызова (brief.ts, без state и путей страницы) — у всех, кроме того, что в last. */
+  answer?: Record<string, unknown>;
+  /** Вызов не выполнялся: ход остановился раньше на отказе или ошибке, а вызов меняет проект. */
+  skipped?: true;
 }
 
+/** Справочные вызовы проект не меняют и выполняются и после отказа правки в том же ходе. */
+export const READ_TOOLS: readonly string[] = ['get_options', 'list_commands', 'get_project'];
+
 export interface TurnResult {
+  /** Сеанс, в который записан ход: при нескольких сеансах в одной папке видно, что ход ушёл куда нужно. */
+  session: string;
   ok: boolean;
   /** Номер вызова, на котором ход остановился (отказ или ошибка), иначе null. */
   stopped_at: number | null;
+  /** Вызовы хода: у каждого, кроме показанного в last, — answer; после остановки правки не выполняются (skipped). */
   calls: TurnCall[];
-  /** Краткий ответ последнего выполненного вызова (brief.ts) — для пересказа отказа или изменений. */
+  /** Краткий ответ вызова, на котором ход остановился, иначе последнего (brief.ts) — для пересказа отказа или изменений. */
   last: Record<string, unknown> | null;
   /** Полный ответ последнего вызова (с state); CLI печатает его вместо last с флагом --full. */
   last_full: Record<string, unknown> | null;
@@ -72,24 +82,34 @@ export function parseTurn(raw: unknown, defaults: { live: string | null; copy: s
 }
 
 export function runTurn(stand: Stand, turn: TurnInput): TurnResult {
-  if (turn.human !== null) stand.say('human', turn.human);
+  // Повтор хода после отказа или ошибки с той же репликой не пишет её второй раз.
+  const prev = stand.dialog().filter((l) => l.who !== 'choices').at(-1);
+  if (turn.human !== null && !(prev?.who === 'human' && prev.text === turn.human)) stand.say('human', turn.human);
   const calls: TurnCall[] = [];
-  let last: Record<string, unknown> | null = null,
+  const answers: Record<string, unknown>[] = [];
+  let shown: number | null = null,
     lastFull: Record<string, unknown> | null = null;
   let stopped: number | null = null;
   for (const [i, c] of turn.calls.entries()) {
+    if (stopped !== null && !READ_TOOLS.includes(c.tool)) {
+      calls.push({ tool: c.tool, revision: null, refused: null, error: null, skipped: true });
+      continue;
+    }
     const input = c.input.base_revision === 'head' ? { ...c.input, base_revision: stand.headRevision() } : c.input;
     const { full: out, brief } = stand.runBrief(c.tool, input);
-    last = brief;
-    lastFull = out;
+    answers[i] = brief;
     const refused = out.refused ?? null;
     const error = out.is_error ? String(out.error ?? 'ошибка') : null;
     calls.push({ tool: c.tool, revision: (out.revision as string | undefined) ?? null, refused, error });
-    if (refused !== null || error !== null) {
-      stopped = i;
-      break;
+    if (stopped === null) {
+      shown = i;
+      lastFull = out;
+      if (refused !== null || error !== null) stopped = i;
     }
   }
+  // state — один раз, на верхнем уровне ответа хода; пути страницы — в page.
+  for (const [i, a] of answers.entries()) if (a && i !== shown) calls[i]!.answer = (({ state: _s, view: _v, ...x }) => x)(a);
+  const last = shown === null ? null : answers[shown]!;
   const ok = stopped === null;
   if (ok && turn.ai !== null) stand.say('ai', turn.ai);
   const page = join(stand.dir, 'prototype.html');
@@ -103,6 +123,7 @@ export function runTurn(stand: Stand, turn: TurnInput): TurnResult {
   }
   const written = ok && turn.ai !== null;
   return {
+    session: stand.name,
     ok,
     stopped_at: stopped,
     calls,
