@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
+import { PIN } from '../src/engine/pin.mjs';
 import { sha256, verifyShaSums } from '../src/reference.ts';
 
 const START = fileURLToPath(new URL('../reference/start', import.meta.url));
@@ -11,6 +12,12 @@ const START = fileURLToPath(new URL('../reference/start', import.meta.url));
 test('пакет старта в reference/start совпадает с SHA256SUMS', () => {
   const { checked, mismatches } = verifyShaSums(START);
   assert.equal(checked, 11);
+  assert.deepEqual(mismatches, []);
+});
+
+test('пример «Хочу кухню» на ядре engine.json (reference/engine-<sha>) совпадает с SHA256SUMS', () => {
+  const { checked, mismatches } = verifyShaSums(fileURLToPath(new URL(`../reference/engine-${PIN.sha.slice(0, 8)}`, import.meta.url)));
+  assert.equal(checked, 9);
   assert.deepEqual(mismatches, []);
 });
 

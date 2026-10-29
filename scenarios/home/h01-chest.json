@@ -4,8 +4,8 @@
   "title": "Комод",
   "kind": "home",
   "engine": {
-    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
-    "hardwareCatalog": "hw-2026-10-27.8"
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
   },
   "goal": "Другая мебель (HOME) на стенде: комод из заготовки, правки home_edits 0.1 и команды редактора, которых нет в договоре 0.1: пол и копирование корпуса.",
   "criteria": [
@@ -28,7 +28,7 @@
             "revision": "MWD-7d6ebc04da3b65a8",
             "price": {
               "status": "COMPLETE",
-              "amount_rub": 38433.07,
+              "amount_rub": 38597.87,
               "known_amount_rub": null
             },
             "bodies": 1,
@@ -69,7 +69,7 @@
             "refused": null,
             "price": {
               "status": "COMPLETE",
-              "amount_rub": 39330.54,
+              "amount_rub": 39517.31,
               "known_amount_rub": null
             },
             "bodies": 1,
@@ -108,7 +108,7 @@
             "refused": null,
             "price": {
               "status": "COMPLETE",
-              "amount_rub": 63033.45,
+              "amount_rub": 63406.98,
               "known_amount_rub": null
             },
             "bodies": 2,
@@ -119,5 +119,5 @@
       "ai": "Учёл ковёр, конструктор поменял опоры под мягкий пол. Рядом поставил второй такой же корпус."
     }
   ],
-  "review": "HOME раньше отвечал «дальше на этапе 2». Теперь start_project kind=home ставит заготовку редактора createHomeEditor, home_edits и editor_call выполняют его методы с проверкой validate, файл версии открывается в конструкторе. Id новых элементов стенд даёт по порядку (h1, h2…), чтобы проигрыш давал те же версии."
+  "review": "HOME раньше отвечал «дальше на этапе 2». Теперь start_project kind=home ставит заготовку редактора createHomeEditor, home_edits и editor_call выполняют его методы с проверкой validate, файл версии открывается в конструкторе. Id новых элементов стенд даёт по порядку (h1, h2…), чтобы проигрыш давал те же версии.\n\nПерезапись на 1582b93e (AI-DEC-009): другие суммы и версии, ответы те же."
 }

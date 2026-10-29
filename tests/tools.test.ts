@@ -7,7 +7,7 @@ const EXPECTED_TOOLS = [
   'get_project', 'undo', 'variants', 'offer_choices', 'open_in_editor',
 ];
 
-test('файл инструментов: договор 0.1-draft на закреплённой основе', () => {
+test('файл инструментов: договор 0.1-draft на основе пакета старта (cbaf1534, исторический документ)', () => {
   const file = loadTools();
   assert.equal(file.format, 'modulero.ai-tools');
   assert.equal(file.formatVersion, '0.1-draft');

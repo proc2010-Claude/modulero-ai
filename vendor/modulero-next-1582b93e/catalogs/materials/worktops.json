@@ -1,0 +1,2053 @@
+{
+ "version": "1",
+ "defaultId": "WORKTOP_38",
+ "documents": [
+  {
+   "id": "RONDO-WORKTOPS",
+   "path": "https://rondo-perm.ru/catalog/stoleshnitsy_i_mebelnye_shchity_/stoleshnitsy/?display=table",
+   "sha256": "",
+   "title": "Рондо (Пермь), столешницы СКИФ: цены и снимки декоров",
+   "retrievedOn": "2026-10-29"
+  }
+ ],
+ "worktops": [
+  {
+   "id": "WORKTOP_38",
+   "brand": null,
+   "code": null,
+   "name": "Столешница 38 мм без декора",
+   "decorId": null,
+   "colorHex": null,
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-23",
+    "source": {
+     "doc": "MOD-DEC-569"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569): среднее 11 цен столешниц 3000 × 600 × 38 мм — 10 строк furnimax.ru каталога цен владельца (PRICES.csv, 23.10.2026; 8734,44–19 511,40 ₽) и Рондо (rondo-perm.ru, 23.10.2026) 5740 ₽; ставка 6021,24 ₽/м² карты цены кухни"
+   }
+  },
+  {
+   "id": "WORKTOP_38_4200",
+   "brand": null,
+   "code": null,
+   "name": "Столешница 38 мм без декора",
+   "decorId": null,
+   "colorHex": null,
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_1_26_3000",
+   "brand": "СКИФ",
+   "code": "1",
+   "name": "Столешница СКИФ №1 «Венге», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#2d2a22",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/c22/nl1h7715nhdeti9yhkhgwbulcesxo0mu.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_1_38_3000",
+   "brand": "СКИФ",
+   "code": "1",
+   "name": "Столешница СКИФ №1 «Венге», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#2d2a22",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/c22/nl1h7715nhdeti9yhkhgwbulcesxo0mu.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_10_26_3000",
+   "brand": "СКИФ",
+   "code": "10",
+   "name": "Столешница СКИФ №10 «Белый», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#e9ebe8",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/b2c/sqs10z5hd97g0ytvxcilpgpi0p101fwd.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_10_38_3000",
+   "brand": "СКИФ",
+   "code": "10",
+   "name": "Столешница СКИФ №10 «Белый», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#e9ebe8",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/b2c/sqs10z5hd97g0ytvxcilpgpi0p101fwd.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_26_26_3000",
+   "brand": "СКИФ",
+   "code": "26",
+   "name": "Столешница СКИФ №26 «Гранит черный», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#282c2b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/414/2ezdtwl7iep3nfz2lycb2skjxpjd57is.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_26_38_3000",
+   "brand": "СКИФ",
+   "code": "26",
+   "name": "Столешница СКИФ №26 «Гранит черный», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#282c2b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/414/2ezdtwl7iep3nfz2lycb2skjxpjd57is.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_30P_26_3000",
+   "brand": "СКИФ",
+   "code": "30П",
+   "name": "Столешница СКИФ №30П «Дуб Ниагара», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#ab988b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/497/qe6yua67017dm2dpupx25l53i25jw3h7.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_30P_38_3000",
+   "brand": "СКИФ",
+   "code": "30П",
+   "name": "Столешница СКИФ №30П «Дуб Ниагара», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#ab988b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/497/qe6yua67017dm2dpupx25l53i25jw3h7.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_30P_38_4200",
+   "brand": "СКИФ",
+   "code": "30П",
+   "name": "Столешница СКИФ №30П «Дуб Ниагара», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#ab988b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/497/qe6yua67017dm2dpupx25l53i25jw3h7.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_35G_26_3000",
+   "brand": "СКИФ",
+   "code": "35Г",
+   "name": "Столешница СКИФ №35Г «Мрамор Саламанка», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#ebeed8",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/c4c/ntztc1y0x0386ilioxjq16jdzfal7bsy.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_35G_38_3000",
+   "brand": "СКИФ",
+   "code": "35Г",
+   "name": "Столешница СКИФ №35Г «Мрамор Саламанка», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#ebeed8",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/c4c/ntztc1y0x0386ilioxjq16jdzfal7bsy.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_38_26_3000",
+   "brand": "СКИФ",
+   "code": "38",
+   "name": "Столешница СКИФ №38 «Белый перламутр», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#ccc9c5",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/5b2/k0fw2oe8tm803tqwacamahqupe3y00l5.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_38_38_3000",
+   "brand": "СКИФ",
+   "code": "38",
+   "name": "Столешница СКИФ №38 «Белый перламутр», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#ccc9c5",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/5b2/k0fw2oe8tm803tqwacamahqupe3y00l5.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_42A_26_3000",
+   "brand": "СКИФ",
+   "code": "42А",
+   "name": "Столешница СКИФ №42А «Алюминий», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#b8bdb7",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/f22/2jn4ivl96avo2gs29tuambvjv3a7setn.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_42A_38_3000",
+   "brand": "СКИФ",
+   "code": "42А",
+   "name": "Столешница СКИФ №42А «Алюминий», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#b8bdb7",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/f22/2jn4ivl96avo2gs29tuambvjv3a7setn.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_44_26_3000",
+   "brand": "СКИФ",
+   "code": "44",
+   "name": "Столешница СКИФ №44 «Аргус темный», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#35332f",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/39b/dpzrma8dvwnqqr7w522h0swigz8172uz.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_44_38_3000",
+   "brand": "СКИФ",
+   "code": "44",
+   "name": "Столешница СКИФ №44 «Аргус темный», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#35332f",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/39b/dpzrma8dvwnqqr7w522h0swigz8172uz.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_46T_26_3000",
+   "brand": "СКИФ",
+   "code": "46Т",
+   "name": "Столешница СКИФ №46Т «Кастилло темный», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#b5b3b2",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/276/nb87rbcgngumd4ki86e49z61qzqlhhkv.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_46T_38_3000",
+   "brand": "СКИФ",
+   "code": "46Т",
+   "name": "Столешница СКИФ №46Т «Кастилло темный», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#b5b3b2",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/276/nb87rbcgngumd4ki86e49z61qzqlhhkv.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_46T_38_4200",
+   "brand": "СКИФ",
+   "code": "46Т",
+   "name": "Столешница СКИФ №46Т «Кастилло темный», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#b5b3b2",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/276/nb87rbcgngumd4ki86e49z61qzqlhhkv.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_51_26_3000",
+   "brand": "СКИФ",
+   "code": "51",
+   "name": "Столешница СКИФ №51 «Оникс коричневый», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#887e71",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/91d/91dc74dd6e87ca575a391b1934def9d1.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_51_38_3000",
+   "brand": "СКИФ",
+   "code": "51",
+   "name": "Столешница СКИФ №51 «Оникс коричневый», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#887e71",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/91d/91dc74dd6e87ca575a391b1934def9d1.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_60_26_3000",
+   "brand": "СКИФ",
+   "code": "60",
+   "name": "Столешница СКИФ №60 «Мрамор Итальянский, глянец», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#e2e3e5",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/60c/60cd72a2c2c587ff6676dce4350f3e0c.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_60_38_3000",
+   "brand": "СКИФ",
+   "code": "60",
+   "name": "Столешница СКИФ №60 «Мрамор Итальянский, глянец», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#e2e3e5",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/60c/60cd72a2c2c587ff6676dce4350f3e0c.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_60_38_4200",
+   "brand": "СКИФ",
+   "code": "60",
+   "name": "Столешница СКИФ №60 «Мрамор Итальянский, глянец», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#e2e3e5",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/60c/60cd72a2c2c587ff6676dce4350f3e0c.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_62_26_3000",
+   "brand": "СКИФ",
+   "code": "62",
+   "name": "Столешница СКИФ №62 «Черный королевский жемчуг», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#2b2b2e",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/aef/aef55914b2e821ae13b0c0176c690d08.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_62_38_3000",
+   "brand": "СКИФ",
+   "code": "62",
+   "name": "Столешница СКИФ №62 «Черный королевский жемчуг», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#2b2b2e",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/aef/aef55914b2e821ae13b0c0176c690d08.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_63_26_3000",
+   "brand": "СКИФ",
+   "code": "63",
+   "name": "Столешница СКИФ №63 «Белый королевский жемчуг», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#c9d2df",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/aba/abae8a998d1777c1bc91be1c4557f43c.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_63_38_3000",
+   "brand": "СКИФ",
+   "code": "63",
+   "name": "Столешница СКИФ №63 «Белый королевский жемчуг», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#c9d2df",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/aba/abae8a998d1777c1bc91be1c4557f43c.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_75_26_3000",
+   "brand": "СКИФ",
+   "code": "75",
+   "name": "Столешница СКИФ №75 «Бронзовый каспий», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#665f56",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/526/d1n1xaogjfljf6a5s6x0bhi95oganqm4.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_75_38_3000",
+   "brand": "СКИФ",
+   "code": "75",
+   "name": "Столешница СКИФ №75 «Бронзовый каспий», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#665f56",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/526/d1n1xaogjfljf6a5s6x0bhi95oganqm4.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_87F_26_3000",
+   "brand": "СКИФ",
+   "code": "87Ф",
+   "name": "Столешница СКИФ №87Ф «Дуб Флагстаф», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#a28c72",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/8a7/k8l7e039ho2wnny58t9na576agre20ca.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_87F_38_3000",
+   "brand": "СКИФ",
+   "code": "87Ф",
+   "name": "Столешница СКИФ №87Ф «Дуб Флагстаф», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#a28c72",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/8a7/k8l7e039ho2wnny58t9na576agre20ca.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_98_26_3000",
+   "brand": "СКИФ",
+   "code": "98",
+   "name": "Столешница СКИФ №98 «Золотистый дуб», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#7f5f3e",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/9ab/9abc0fd048c905475abaf5e37bd65693.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_98_38_3000",
+   "brand": "СКИФ",
+   "code": "98",
+   "name": "Столешница СКИФ №98 «Золотистый дуб», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#7f5f3e",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/9ab/9abc0fd048c905475abaf5e37bd65693.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_100SH_26_3000",
+   "brand": "СКИФ",
+   "code": "100Ш",
+   "name": "Столешница СКИФ №100Ш «Дуб бунратти», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#c29e6b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/175/17548d66d2d37a9dafe3e897c2eacd3c.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_100SH_38_3000",
+   "brand": "СКИФ",
+   "code": "100Ш",
+   "name": "Столешница СКИФ №100Ш «Дуб бунратти», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#c29e6b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/175/17548d66d2d37a9dafe3e897c2eacd3c.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_100SH_38_4200",
+   "brand": "СКИФ",
+   "code": "100Ш",
+   "name": "Столешница СКИФ №100Ш «Дуб бунратти», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#c29e6b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/175/17548d66d2d37a9dafe3e897c2eacd3c.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_111R_26_3000",
+   "brand": "СКИФ",
+   "code": "111Р",
+   "name": "Столешница СКИФ №111Р «Дуб Вотан», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#91775b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/dde/lt9ngp2q56wznlzgb47w11bou1fksc5b.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_111R_38_3000",
+   "brand": "СКИФ",
+   "code": "111Р",
+   "name": "Столешница СКИФ №111Р «Дуб Вотан», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#91775b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/dde/lt9ngp2q56wznlzgb47w11bou1fksc5b.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_111R_38_4200",
+   "brand": "СКИФ",
+   "code": "111Р",
+   "name": "Столешница СКИФ №111Р «Дуб Вотан», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#91775b",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/dde/lt9ngp2q56wznlzgb47w11bou1fksc5b.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_112_26_3000",
+   "brand": "СКИФ",
+   "code": "112",
+   "name": "Столешница СКИФ №112 «Дуб светлый», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#988f7f",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/507/lthkb0ul5qbz2sf9h5ujjfjely4jhlzb.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_112_38_3000",
+   "brand": "СКИФ",
+   "code": "112",
+   "name": "Столешница СКИФ №112 «Дуб светлый», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#988f7f",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/507/lthkb0ul5qbz2sf9h5ujjfjely4jhlzb.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_113_26_3000",
+   "brand": "СКИФ",
+   "code": "113",
+   "name": "Столешница СКИФ №113 «Мрамор золотой», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#e9e5df",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/9c7/3hw0cwkldpwsbedcf40947ka21d7nryh.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_113_38_3000",
+   "brand": "СКИФ",
+   "code": "113",
+   "name": "Столешница СКИФ №113 «Мрамор золотой», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#e9e5df",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/9c7/3hw0cwkldpwsbedcf40947ka21d7nryh.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_120G_26_3000",
+   "brand": "СКИФ",
+   "code": "120Г",
+   "name": "Столешница СКИФ №120Г «Олива жемчужная», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#dddcd9",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/abc/axbde6ad67kczafyxgtuaqqxbbjd2mzj.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_120G_38_3000",
+   "brand": "СКИФ",
+   "code": "120Г",
+   "name": "Столешница СКИФ №120Г «Олива жемчужная», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#dddcd9",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/abc/axbde6ad67kczafyxgtuaqqxbbjd2mzj.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_120G_38_4200",
+   "brand": "СКИФ",
+   "code": "120Г",
+   "name": "Столешница СКИФ №120Г «Олива жемчужная», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#dddcd9",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/abc/axbde6ad67kczafyxgtuaqqxbbjd2mzj.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_138_26_3000",
+   "brand": "СКИФ",
+   "code": "138",
+   "name": "Столешница СКИФ №138 «Калипсо светлый», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#9f9085",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/251/zome6f66raklmq2mgpuxa0pug4pnx91h.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_138_38_3000",
+   "brand": "СКИФ",
+   "code": "138",
+   "name": "Столешница СКИФ №138 «Калипсо светлый», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#9f9085",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/251/zome6f66raklmq2mgpuxa0pug4pnx91h.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_155_26_3000",
+   "brand": "СКИФ",
+   "code": "155",
+   "name": "Столешница СКИФ №155 «Берилл, тиснение», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#c8c9c7",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/131/13128e25fe61014dbccd82a1202c2a19.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_155_38_3000",
+   "brand": "СКИФ",
+   "code": "155",
+   "name": "Столешница СКИФ №155 «Берилл, тиснение», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#c8c9c7",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/131/13128e25fe61014dbccd82a1202c2a19.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_174_26_3000",
+   "brand": "СКИФ",
+   "code": "174",
+   "name": "Столешница СКИФ №174 «Марсель», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#a7a498",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/dc5/yk5p80tlbg0svtuebll9m5k2vywcf6gk.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_174_38_3000",
+   "brand": "СКИФ",
+   "code": "174",
+   "name": "Столешница СКИФ №174 «Марсель», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#a7a498",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/dc5/yk5p80tlbg0svtuebll9m5k2vywcf6gk.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_182O_26_3000",
+   "brand": "СКИФ",
+   "code": "182О",
+   "name": "Столешница СКИФ №182О «Королевский опал светлый», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#e5e3de",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/c22/zgooif3icjjimoqqqm25rkajmqw9d2d6.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_182O_38_3000",
+   "brand": "СКИФ",
+   "code": "182О",
+   "name": "Столешница СКИФ №182О «Королевский опал светлый», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#e5e3de",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/c22/zgooif3icjjimoqqqm25rkajmqw9d2d6.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_183O_26_3000",
+   "brand": "СКИФ",
+   "code": "183О",
+   "name": "Столешница СКИФ №183О «Королевский опал тёмный», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#6e6458",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/4e3/rm6l1i5b5r1clkw2tho03lss00pljw28.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_183O_38_3000",
+   "brand": "СКИФ",
+   "code": "183О",
+   "name": "Столешница СКИФ №183О «Королевский опал тёмный», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#6e6458",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/4e3/rm6l1i5b5r1clkw2tho03lss00pljw28.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_189_26_3000",
+   "brand": "СКИФ",
+   "code": "189",
+   "name": "Столешница СКИФ №189 «Альберика, глянец», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#b3b1b0",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/6d4/6d4703437ce4a2ccc90d3c7e65fc66c0.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_189_38_3000",
+   "brand": "СКИФ",
+   "code": "189",
+   "name": "Столешница СКИФ №189 «Альберика, глянец», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#b3b1b0",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/6d4/6d4703437ce4a2ccc90d3c7e65fc66c0.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_189_38_4200",
+   "brand": "СКИФ",
+   "code": "189",
+   "name": "Столешница СКИФ №189 «Альберика, глянец», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#b3b1b0",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/6d4/6d4703437ce4a2ccc90d3c7e65fc66c0.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_190BT_26_3000",
+   "brand": "СКИФ",
+   "code": "190БТ",
+   "name": "Столешница СКИФ №190БТ «Версаль», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#bfaea0",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/605/6050c4ae7a841782aab6bc068e99756a.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_190BT_38_3000",
+   "brand": "СКИФ",
+   "code": "190БТ",
+   "name": "Столешница СКИФ №190БТ «Версаль», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#bfaea0",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/605/6050c4ae7a841782aab6bc068e99756a.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_232P_26_3000",
+   "brand": "СКИФ",
+   "code": "232П",
+   "name": "Столешница СКИФ №232П «Дуб Корсика светлый», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#ac8261",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/994/6hlgll471jpgtlk0iknfnmn1gu8rw94b.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_232P_38_3000",
+   "brand": "СКИФ",
+   "code": "232П",
+   "name": "Столешница СКИФ №232П «Дуб Корсика светлый», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#ac8261",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/994/6hlgll471jpgtlk0iknfnmn1gu8rw94b.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_233_26_3000",
+   "brand": "СКИФ",
+   "code": "233",
+   "name": "Столешница СКИФ №233 «Дуб Корсика тёмный», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#6e543f",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/fab/ks3wltzbwc2vsd7x6ek8rp48fc4t8hv0.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_233_38_3000",
+   "brand": "СКИФ",
+   "code": "233",
+   "name": "Столешница СКИФ №233 «Дуб Корсика тёмный», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#6e543f",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/fab/ks3wltzbwc2vsd7x6ek8rp48fc4t8hv0.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_247_26_3000",
+   "brand": "СКИФ",
+   "code": "247",
+   "name": "Столешница СКИФ №247 «Кантри», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#8e8879",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/e70/r8zqz5tzmyzrn95eawr6053eprqwldog.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_247_38_3000",
+   "brand": "СКИФ",
+   "code": "247",
+   "name": "Столешница СКИФ №247 «Кантри», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#8e8879",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/e70/r8zqz5tzmyzrn95eawr6053eprqwldog.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_293L_26_3000",
+   "brand": "СКИФ",
+   "code": "293Л",
+   "name": "Столешница СКИФ №293Л «Этория», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#c5c6c4",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/5f3/5f3e77832aa4b490ac8290d13a65641f.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_293L_38_3000",
+   "brand": "СКИФ",
+   "code": "293Л",
+   "name": "Столешница СКИФ №293Л «Этория», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#c5c6c4",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/5f3/5f3e77832aa4b490ac8290d13a65641f.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_323P_26_3000",
+   "brand": "СКИФ",
+   "code": "323П",
+   "name": "Столешница СКИФ №323П «Канадский дуб», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#b09c8a",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/b95/exwi9mp7dqp1oz1la585jj9k8xk4woqi.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_323P_38_3000",
+   "brand": "СКИФ",
+   "code": "323П",
+   "name": "Столешница СКИФ №323П «Канадский дуб», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#b09c8a",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/b95/exwi9mp7dqp1oz1la585jj9k8xk4woqi.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_323P_38_4200",
+   "brand": "СКИФ",
+   "code": "323П",
+   "name": "Столешница СКИФ №323П «Канадский дуб», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#b09c8a",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/b95/exwi9mp7dqp1oz1la585jj9k8xk4woqi.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_325_26_3000",
+   "brand": "СКИФ",
+   "code": "325",
+   "name": "Столешница СКИФ №325 «Северная пальмира», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#d2cdc8",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/967/967c03fff2b2e6ab6576c9f96f72e1ab.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_325_38_3000",
+   "brand": "СКИФ",
+   "code": "325",
+   "name": "Столешница СКИФ №325 «Северная пальмира», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#d2cdc8",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/967/967c03fff2b2e6ab6576c9f96f72e1ab.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_327_26_3000",
+   "brand": "СКИФ",
+   "code": "327",
+   "name": "Столешница СКИФ №327 «Гранит белый, глянец», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#e6e6e6",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/827/2qu0407el1zwejc6pvsw3sayddwm04n6.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_327_38_3000",
+   "brand": "СКИФ",
+   "code": "327",
+   "name": "Столешница СКИФ №327 «Гранит белый, глянец», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#e6e6e6",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/827/2qu0407el1zwejc6pvsw3sayddwm04n6.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_327_38_4200",
+   "brand": "СКИФ",
+   "code": "327",
+   "name": "Столешница СКИФ №327 «Гранит белый, глянец», 4200 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#e6e6e6",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/827/2qu0407el1zwejc6pvsw3sayddwm04n6.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 4200,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 15777.26,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 8634,55 / 5931,52 — отношение средних цен СКИФ 38 мм 4200 и 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_400B_26_3000",
+   "brand": "СКИФ",
+   "code": "400Б",
+   "name": "Столешница СКИФ №400Б «Бриллиант белый», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#dadbd3",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/055/dw20e59s7k96lkd226dxzszmmckw9848.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_400B_38_3000",
+   "brand": "СКИФ",
+   "code": "400Б",
+   "name": "Столешница СКИФ №400Б «Бриллиант белый», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#dadbd3",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/055/dw20e59s7k96lkd226dxzszmmckw9848.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_433B_26_3000",
+   "brand": "СКИФ",
+   "code": "433Б",
+   "name": "Столешница СКИФ №433Б «Диамант», 3000 × 600 × 26 мм",
+   "decorId": null,
+   "colorHex": "#f5f1e5",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/a87/2q6xo69z2j9m2zvosn4prclaoatqn8sy.jpg (FINDINGS 2764)",
+   "thicknessMm": 26,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 7402.51,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): 10 838,23 ₽ × 4051,23 / 5931,52 — отношение средних цен СКИФ 26 и 38 мм 3000 × 600 у Рондо (FINDINGS 2763)"
+   }
+  },
+  {
+   "id": "SKIF_433B_38_3000",
+   "brand": "СКИФ",
+   "code": "433Б",
+   "name": "Столешница СКИФ №433Б «Диамант», 3000 × 600 × 38 мм",
+   "decorId": null,
+   "colorHex": "#f5f1e5",
+   "colorBasis": "средний цвет снимка декора у Рондо: https://rondo-perm.ru/upload/iblock/a87/2q6xo69z2j9m2zvosn4prclaoatqn8sy.jpg (FINDINGS 2764)",
+   "thicknessMm": 38,
+   "sheet": {
+    "lengthMm": 3000,
+    "depthMm": 600
+   },
+   "price": {
+    "rub": 10838.23,
+    "per": "sheet",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "FINDINGS 2763"
+    },
+    "status": "CONFIRMED",
+    "basis": "усреднённая цена проекта (MOD-DEC-569, 724): цена листа 3000 × 600 × 38 мм без декора — 10 838,23 ₽ (FINDINGS 2763)"
+   }
+  }
+ ]
+}

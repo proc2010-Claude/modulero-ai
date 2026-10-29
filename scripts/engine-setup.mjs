@@ -1,4 +1,4 @@
-// npm run engine:setup — копия ядра modulero-next на закреплённом SHA (engine.json, AI-DEC-003) в .engine/<sha>/.
+// npm run engine:setup — копия ядра modulero-next на закреплённом SHA (engine.json, AI-DEC-009) в .engine/<sha>/.
 // Источник — локальный клон modulero-next (MODULERO_NEXT_REPO или ../modulero-next): git archive нужных папок,
 // без npm ci и без сети, если коммит уже есть в клоне; 3D-вид собирается esbuild с three из devDependencies. Клон не меняется. В копию пишется MANIFEST (sha256 файлов),
 // по нему npm run check убеждается, что копию никто не правил.
