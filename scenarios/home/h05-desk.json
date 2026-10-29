@@ -1,0 +1,204 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "h05",
+  "title": "Письменный стол: тумба справа, бортик, декор",
+  "kind": "home",
+  "engine": {
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
+  },
+  "goal": "Письменный стол: set_desk_pedestal, set_rim, отказ бортика менее 50 мм, отказ декора 16 мм под ХДФ.",
+  "criteria": [
+    "set_desk_pedestal right переносит тумбу",
+    "set_rim 30 отказан (допустимо 50–200), 50 принят",
+    "set_decor Корбридж (16 мм) отказан, Гамильтон 18 мм принят",
+    "отказ пересказан без обхода"
+  ],
+  "expected_refusals": [
+    "Высота бортика — от 50 до 200 мм.",
+    "Крепёж заходит в четверть задней стенки из ХДФ."
+  ],
+  "turns": [
+    {
+      "human": "И письменный стол",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "home",
+            "template": "desk"
+          },
+          "expect": {
+            "revision": "MWD-fd3694c970eb7453",
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 29092.04,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 19
+          }
+        }
+      ],
+      "ai": "Поставил письменный стол: 1200 мм шириной, 750 высотой, 600 глубиной. Тумба пока слева, в ней полка и один ящик. Тумбу нужно справа, бортик сзади нужен?"
+    },
+    {
+      "human": "Тумбу справа. И сзади бортик на крышке, небольшой, 30 мм",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Тумба справа, бортик 30 мм сзади",
+            "edits": [
+              {
+                "op": "set_desk_pedestal",
+                "body_id": "h2",
+                "side": "right"
+              },
+              {
+                "op": "set_rim",
+                "body_id": "h2",
+                "height": 30,
+                "sides": [
+                  "back"
+                ]
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-352e7a70d9cb57a2",
+            "applied": [
+              "set_desk_pedestal"
+            ],
+            "refused": {
+              "i": 1,
+              "op": "set_rim",
+              "problem": "Высота бортика — от 50 до 200 мм. Проект не изменён."
+            },
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 29092.04,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 19
+          }
+        }
+      ],
+      "ai": "Тумбу перенёс вправо. Бортик конструктор не принял: высота бортика допустима от 50 до 200 мм. Поставить минимальный, 50 мм?"
+    },
+    {
+      "human": "Ладно, 50",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Бортик сзади 50 мм",
+            "edits": [
+              {
+                "op": "set_rim",
+                "body_id": "h2",
+                "height": 50,
+                "sides": [
+                  "back"
+                ]
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-2e8e1a3d29ad9954",
+            "applied": [
+              "set_rim"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 29820.56,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 20
+          }
+        }
+      ],
+      "ai": "Бортик сзади на крышке, 50 мм, поставлен. Хотите ещё стол под бетон или дерево из каталога?"
+    },
+    {
+      "human": "Да, дуб Корбридж",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Декор EGGER Дуб Корбридж",
+            "edits": [
+              {
+                "op": "set_decor",
+                "decor_id": "DEC-EGG-H3395-ST12",
+                "thickness": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-2e8e1a3d29ad9954",
+            "applied": [],
+            "refused": {
+              "i": 0,
+              "op": "set_decor",
+              "problem": "Крепёж заходит в четверть задней стенки из ХДФ. Выберите несущую стенку из ЛДСП или плиту 18 мм либо сдвиньте элемент. Где: крышка. Проект не изменён."
+            },
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 29820.56,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 20
+          }
+        }
+      ],
+      "ai": "Поправка: «Дуб Корбридж» конструктор не принял, декор не поставлен, стол остался прежним. Причина: для этой плиты (16 мм) крепёж заходит в четверть ХДФ-задника на крышке, нужна плита 18 мм или несущая стенка. «Дуб Гамильтон» бывает 16 или 18 мм, попробовать его?"
+    },
+    {
+      "human": "Давай Гамильтон",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Декор EGGER Дуб Гамильтон",
+            "edits": [
+              {
+                "op": "set_decor",
+                "decor_id": "DEC-EGG-H3303-ST10",
+                "thickness": 18
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-992279c406394aa5",
+            "applied": [
+              "set_decor"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 34254.65,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 20
+          }
+        }
+      ],
+      "ai": "Готово: стол в декоре EGGER «Дуб Гамильтон натуральный», плита 18 мм, цена внизу слева на 3D. Что ещё?"
+    }
+  ],
+  "review": "Ошибка помощника: после отказа set_decor Корбридж ответ сначала был написан как успех (ai писался с расчётом на успех при ai:null не по порядку); поправка внесена следующей репликой, в сценарии первое предложение убрано. Похожее на ошибку конструктора: при отказе второй правки пакета первая применена (revision новый, version 2), а текст отказа говорит «Проект не изменён». Также id bay остался «h2:bay:left:h3» после переноса тумбы вправо при lo=h3 hi=right."
+}

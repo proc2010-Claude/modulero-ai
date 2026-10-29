@@ -1,0 +1,206 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "h04",
+  "title": "Обувница: откидные фасады на подъёмнике",
+  "kind": "home",
+  "engine": {
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
+  },
+  "goal": "Обувница: add_door до set_door_lift, предупреждение о подъёмнике, move_front высоты 500, декор.",
+  "criteria": [
+    "У заготовки shoe нет дверей: add_door на оба отсека",
+    "set_door_lift ставит lift true, в warnings: подъёмника для фасада 508 мм нет",
+    "move_front h=500 снимает замечание",
+    "set_decor Гамильтон применяется"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Теперь обувница в прихожую",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "home",
+            "template": "shoe"
+          },
+          "expect": {
+            "revision": "MWD-99b4b970270da8d9",
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 19225.28,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 12
+          }
+        }
+      ],
+      "ai": "Поставил обувницу: 800 мм шириной, 600 высотой, 320 глубиной, два отсека с двумя полками каждый, пока без дверей. Вы хотели откидной фасад на подъёмнике. Сначала нужна дверца, поставлю её на левый отсек и сделаю откидной, на правый тоже?"
+    },
+    {
+      "human": "Да, на оба отсека, откидные",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Дверцы на оба отсека",
+            "edits": [
+              {
+                "op": "add_door",
+                "body_id": "h2",
+                "lo": "left",
+                "hi": "h3",
+                "hinge": null
+              },
+              {
+                "op": "add_door",
+                "body_id": "h2",
+                "lo": "h3",
+                "hi": "right",
+                "hinge": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-b7671f64f18bb7bc",
+            "applied": [
+              "add_door",
+              "add_door"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 22251.94,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 14
+          }
+        },
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Откидные фасады на подъёмнике",
+            "edits": [
+              {
+                "op": "set_door_lift",
+                "body_id": "h2",
+                "door_id": "h8",
+                "on": true
+              },
+              {
+                "op": "set_door_lift",
+                "body_id": "h2",
+                "door_id": "h9",
+                "on": true
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-c450898c3a51f113",
+            "applied": [
+              "set_door_lift",
+              "set_door_lift"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 26670.21,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 14
+          }
+        }
+      ],
+      "ai": "Оба фасада теперь откидные на подъёмнике. Замечание конструктора: подходящего подъёмника для такого фасада в каталоге нет, стоит ближайший временно. Он рассчитан на высоту фасада 250–500 мм, а у вас 508. Можно уменьшить высоту фасадов до 500 мм, сделать так?"
+    },
+    {
+      "human": "Да, сделай 500",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Высота фасадов 500 мм",
+            "edits": [
+              {
+                "op": "move_front",
+                "body_id": "h2",
+                "front_id": "h8",
+                "y": 72,
+                "h": 500
+              },
+              {
+                "op": "move_front",
+                "body_id": "h2",
+                "front_id": "h9",
+                "y": 72,
+                "h": 500
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-24610fdc80e53cdb",
+            "applied": [
+              "move_front",
+              "move_front"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 26660.99,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 14
+          }
+        }
+      ],
+      "ai": "Высоту обоих фасадов сделал 500 мм, замечание про подъёмник пропало. Остальные замечания общие: проверка соединений, установки и защита от опрокидывания. Цвет менять будем?"
+    },
+    {
+      "human": "Да, дерево из каталога, дуб Гамильтон",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Декор EGGER Дуб Гамильтон",
+            "edits": [
+              {
+                "op": "set_decor",
+                "decor_id": "DEC-EGG-H3303-ST10",
+                "thickness": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-c73a7215bddb03e6",
+            "applied": [
+              "set_decor"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 28798.49,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 14
+          }
+        }
+      ],
+      "ai": "Готово: обувница в декоре EGGER «Дуб Гамильтон натуральный». Переходим к письменному столу?"
+    }
+  ],
+  "review": "Сработало: помощник по шагам довёл до чистого результата. Находка договора: замечание о подъёмнике приходит как warning, а не отказ, и не подсказывает команду; высоту нужно было угадать из текста (250…500 мм)."
+}
