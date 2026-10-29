@@ -1,0 +1,167 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "h06-wall-lift",
+  "title": "Подвесной шкафчик с подъёмным фасадом",
+  "kind": "home",
+  "engine": {
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
+  },
+  "goal": "Подъёмный фасад на высоко висящем шкафу (AI-DEC-012, перечень F1, F2, M6): навесной шкафчик HOME над вешалкой — подвесной корпус с задней стенкой ХДФ, дверца на подъёмнике, вопрос о стене и предупреждение о креплении к гипсокартону.",
+  "criteria": [
+    "start_project home own и одним home_edits: размеры, задняя стенка hdf до set_base wall, подвесной корпус на 1800 мм от пола, дверца",
+    "set_door_lift — отдельной правкой, id дверцы — тот, что ядро дало в add_door",
+    "Положение шкафчика — из geometry ответа (низ и верх от пола); ход подъёма не оценивается помощником: «показан условно», проверка — мебельщик",
+    "Вопрос, из чего стена; на гипсокартон — закладные или усиление, крепёж подбирает мебельщик (M6)",
+    "Цены в тексте нет (AI-DEC-008)"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Над вешалкой в прихожей нужен навесной шкафчик шириной 60 см с подъёмной дверцей. Потолок 2,7 м",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "home",
+            "template": "own"
+          },
+          "expect": {
+            "revision": "MWD-1767ba43e75db174",
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 12566.42,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 9
+          }
+        },
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Навесной шкафчик над вешалкой",
+            "edits": [
+              {
+                "op": "resize",
+                "axis": "h",
+                "value": 400,
+                "body_id": "h2"
+              },
+              {
+                "op": "resize",
+                "axis": "d",
+                "value": 350,
+                "body_id": "h2"
+              },
+              {
+                "op": "set_back",
+                "body_id": "h2",
+                "back": "hdf"
+              },
+              {
+                "op": "set_base",
+                "body_id": "h2",
+                "kind": "wall",
+                "height": 1800
+              },
+              {
+                "op": "add_door",
+                "body_id": "h2",
+                "lo": null,
+                "hi": null,
+                "hinge": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-aae389022944d7b1",
+            "applied": [
+              "resize",
+              "resize",
+              "set_back",
+              "set_base",
+              "add_door"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 16753.34,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 6
+          }
+        },
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Подъёмная дверца",
+            "edits": [
+              {
+                "op": "set_door_lift",
+                "body_id": "h2",
+                "door_id": "h3",
+                "on": true
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-178ad4505b582cc8",
+            "applied": [
+              "set_door_lift"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 18962.46,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 6
+          }
+        }
+      ],
+      "ai": "Поставил навесной шкафчик 600 × 400 × 350 мм с подъёмной дверцей: низ на 1800 мм от пола, верх на 2200. Подвесному шкафу конструктор ставит заднюю стенку из ХДФ. Ход подъёма показан условно — его и место под потолком проверит мебельщик. Из чего стена: кирпич, бетон, гипсокартон?"
+    },
+    {
+      "human": "Гипсокартон. И сделай белым",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Белый",
+            "edits": [
+              {
+                "op": "set_material",
+                "material_id": "white"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-e814d1739634cfd9",
+            "applied": [
+              "set_material"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 18962.46,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 6
+          }
+        }
+      ],
+      "ai": "Сделал отделку «Тёплый белый». На гипсокартон навесной шкаф вешают на закладные или с усилением стены — скажите об этом мебельщику, крепёж подбирает он."
+    }
+  ],
+  "review": "Записан на ядре 1582b93e для AI-DEC-012 вместо прежней механики подъёмника в h04. Подвесной корпус ядро ставит только с задней стенкой ХДФ (без неё отказ «Подвесному корпусу нужна задняя стенка из ХДФ 3–5 мм…»), поэтому set_back hdf идёт до set_base wall. Замечаний о подъёмнике у фасада 378 мм нет; ход и столкновения ядро называет условными в общих warnings."
+}
