@@ -47,11 +47,12 @@ export function tokensOf(text: string): number {
 }
 
 let fixed: number | null = null;
-/** Постоянная часть запроса: инструменты стенда (договор 0.1 и расширение 0.2), системный промт помощника, служебный промт. */
+/** Постоянная часть запроса: инструменты стенда (договор 0.1 и расширение 0.2), системный промт помощника с перечнем эргономики (AI-DEC-011), служебный промт. */
 export function fixedTokens(): number {
   if (fixed !== null) return fixed;
   const tools = loadStandTools().tools;
-  const prompt = readFileSync(new URL('../../docs/start/SYSTEM_PROMPT_DRAFT.md', import.meta.url), 'utf8').split('\n---\n')[1] ?? '';
+  const part = (path: string) => readFileSync(new URL(path, import.meta.url), 'utf8').split('\n---\n')[1] ?? '';
+  const prompt = part('../../docs/start/SYSTEM_PROMPT_DRAFT.md') + part('../../docs/ergonomics/ASSISTANT_RULES.md');
   fixed = tokensOf(JSON.stringify(tools)) + tokensOf(prompt) + ASSUMPTIONS.toolSystemTokens;
   return fixed;
 }
