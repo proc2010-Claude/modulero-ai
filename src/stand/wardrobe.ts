@@ -77,8 +77,7 @@ function editOf(c: Core, i: WardrobeInput, e: Edit): EditResult {
       if (e.kind === 'shelf') return result(W.removeShelf(i, HW, e.section, e.index));
       if (e.kind === 'drawer') return result(W.removeDrawer(i, HW, e.section, e.index));
       if (e.kind === 'storage') return result(W.removeStorage(i, HW, e.section, e.index));
-      // В редакторе ядра нет правки «убрать штангу» (задача MOD-AI-19): штанга не убирается, проект не меняется.
-      return { ok: false, problem: 'Убрать штангу в редакторе шкафа пока нельзя: такой правки в конструкторе нет. Проект не изменён.' };
+      return result(W.removeRod(i, HW, e.section, e.index));
     case 'distribute_shelves':
       return result(W.distributeShelves(i, HW, e.section));
     case 'set_lighting':

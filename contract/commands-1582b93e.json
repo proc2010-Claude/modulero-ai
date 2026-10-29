@@ -1,0 +1,4230 @@
+{
+  "format": "modulero.ai-commands",
+  "formatVersion": "0.2-draft",
+  "engine": {
+    "repo": "proc2010-Claude/modulero-next",
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8"
+  },
+  "commands": [
+    {
+      "command": "kitchen/addKitchenModuleTo",
+      "doc": "A module of a palette card (the card and addDraft, r1.html:69334): on the given wall at the given place, or at the first free place along the wall (placesAlong); a mezzanine over the first tall cabinet without one (Д). The new module is selected.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "cardId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "place",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "wall": {
+                "type": "string"
+              },
+              "pos": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "cutout": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "width": {
+                        "type": "number"
+                      },
+                      "depth": {
+                        "type": "number"
+                      },
+                      "radius": {
+                        "type": "number"
+                      },
+                      "gas": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "width",
+                      "depth",
+                      "radius"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "kitchen/addKitchenObstacle",
+      "doc": "«Отметить участок стены» (addDraft, r1.html:69335): the mark gets the next number of the kitchen, as in the prototype.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "draft",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "wall": {
+                "type": "string"
+              },
+              "pos": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "floor": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "height": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "type",
+              "wall",
+              "pos",
+              "width"
+            ],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/addKitchenShelf",
+      "doc": "«Добавить полку» (k32Command 'add', r1.html:71611): the next free level of the grid above the last shelf (MOD-DEC-193, 196).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/confirmKitchenRoom",
+      "doc": "«Готово · свернуть помещение» (finish-room, r1.html:69459).",
+      "args": []
+    },
+    {
+      "command": "kitchen/dropKitchenCard",
+      "doc": "A card dropped on the plan (palettePointerUp, r1.html:69112): the module of the preview, or the refusal.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "cardId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "at",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/moveKitchenModule",
+      "doc": "A module dropped where it was dragged (pointerUp, r1.html:69227); the old place is kept on a refusal.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "d",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "dx": {
+                "type": "number"
+              },
+              "dy": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "dx",
+              "dy"
+            ],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/removeKitchenModule",
+      "doc": "Removes a module with the mezzanines over it (delete-item, r1.html:69492); refused when the worktops would not close.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/removeKitchenObstacle",
+      "doc": "The «×» of a mark (remove-obstacle, r1.html:69450).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/removeKitchenShelf",
+      "doc": "«Удалить» of a shelf (kRemoveShelf, r1.html:70440).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "shelfId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/replaceKitchenModule",
+      "doc": "Another card in the place of a module (MOD-AI-48, FINDINGS 3111): the module of the card stands on the same wall at the same place — on the island at the same point and turn — with the same width when the card offers it (else the card's own), keeps the id and is checked by the one path of a new modu",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "cardId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenAllEdges",
+      "doc": "«Кромка на всех торцах»: one band on every edge of a part (`partId`) or of the whole kitchen (`partId` null). For the whole kitchen the parts that are not banded (HDF, fronts of ЛМДФ or bought, worktops, parts with a contour) stay as they are; AUTO gives the automatic banding back.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "partId",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "AUTO",
+              "NONE",
+              "PVC_ABS_0_4",
+              "PVC_ABS_0_8_1_0",
+              "PVC_ABS_2_0"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "access",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenApplianceNiche",
+      "doc": "The bottom of the niche `index` of a tall appliance cabinet, mm from the floor (MOD-AI-46, FINDINGS 3160): the oven at the eye level. The niche keeps its height; the carrying shelf, the shelf over the niche and the fronts of the compartments follow it, the model's checks of the niche (the carrying s",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "bottomFromFloorMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenAppliancePlace",
+      "doc": "The appliance and the gaps of the place `id` (MOD-DEC-752): the place takes the appliance's size with the gaps, its left end stays where it is. The check of the module decides — the ranges of the appliance, the neighbours, the room.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "patch",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "deviceWidthMm": {
+                "type": "number"
+              },
+              "deviceHeightMm": {
+                "type": "number"
+              },
+              "sideGapMm": {
+                "type": "number"
+              },
+              "topGapMm": {
+                "type": "number"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenCutout",
+      "doc": "The cutout of the user's own sink or hob by the instruction of the appliance (MOD-DEC-412, FINDINGS 3106): the cabinet takes it in place of the model of the catalogue, the worktop is cut by it for production, and a hob cabinet may be narrower than the 600 of the catalogue's hob. null takes the model",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "cutout",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "number"
+                  },
+                  "depth": {
+                    "type": "number"
+                  },
+                  "radius": {
+                    "type": "number"
+                  },
+                  "gas": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "width",
+                  "depth",
+                  "radius"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenDefaultWidth",
+      "doc": "«Ширина новых модулей» (default-width, r1.html:69529): the next ordinary modules; the existing ones stay.",
+      "args": [
+        {
+          "name": "width",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenFacadeChoice",
+      "doc": "The material of the facades of the whole kitchen (MOD-DEC-573): `materialId` null — the fronts of the prototype, of a board of the decor; a material of the catalogue of the release with its execution (the first one, or the one kept when the material stays) and the colour code or the species of venee",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "materialId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "executionId": {
+                "type": "string"
+              },
+              "colorText": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "materialId"
+            ],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenFittings",
+      "doc": "Sets the handle of the kitchen ('NONE' — без ручек; null — the prototype's back) and the opening by pressing (true or false). An id the catalogue does not have is refused, the kitchen is not changed. Every front of the kitchen takes the choice: the doors opened by pressing lose their handles, the dr",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "change",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "handleId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "pushToOpen": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenIncludeAppliances",
+      "doc": "«Включить технику в итог» (kcd-appliances, r1.html:81807).",
+      "args": [
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenIsland",
+      "doc": "«Остров» (island-toggle, r1.html:69513): off only without island and peninsula modules.",
+      "args": [
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenIslandOverhang",
+      "doc": "The overhang of the worktop of the island row of the module `id` over its back, whole mm (MOD-AI-61, FINDINGS 3170): every module under the same worktop takes it, so the row keeps one worktop. 0 takes it away. The worktop stays inside the room and off the other worktops (the topology of the worktops",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "overhangMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenMaterial",
+      "doc": "«Материал корпусов» / «Материал фасадов» of the whole kitchen (kflow-corpus, kflow-facade, r1.html:70466).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "role",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "corpus",
+              "facade"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "code",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenModuleField",
+      "doc": "A control of the panels «Наполнение» and «Фасады» (KitchenModuleField.key). A number must be finite (the kcr layer's words for every field, Д: the prototype passed NaN of an empty field to its check, FINDINGS 664).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "key",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "value",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenModuleMaterial",
+      "doc": "The decor of the selected module (kflow-local-corpus, kflow-local-facade, r1.html:70485): '' or null — «Наследовать общий», the module's own value removed; the module is checked by the one check of K3/K4 as every edit of a module.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "role",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "corpus",
+              "facade"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "code",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenOption",
+      "doc": "Sets one setting of the whole kitchen: every module it concerns takes the value, a new module takes it too. The worktop — every floor cabinet under a worktop; the supports — every module on the supports 9028286, a tall cabinet keeps its top at the wall cabinets (MOD-DEC-567), a niche of a machine on",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "key",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "worktopDepthMm",
+              "legHeightMm",
+              "upperFloorMm",
+              "lowerFillerMm",
+              "upperFillerMm"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "value",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenOrientation",
+      "doc": "The side of the corner of an L kitchen (room-orientation, r1.html:69565).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "orientation",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenPartEdge",
+      "doc": "«Кромка торца»: the band of one edge of a part of the kitchen — a profile of the catalogue, «Без кромки» (NONE) or AUTO; `edge` is the edge of kitchenPartEdges. `access` — the «продвинутый» mode or the role of the user.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "partId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "edge",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "AUTO",
+              "NONE",
+              "PVC_ABS_0_4",
+              "PVC_ABS_0_8_1_0",
+              "PVC_ABS_2_0"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "access",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenRoom",
+      "doc": "A size of the room (setRoom, r1.html:69396): the room is confirmed by it; refused when a module no longer fits.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "key",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "width",
+              "depth",
+              "height"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "value",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenShelfFixed",
+      "doc": "«Полка N · фиксированная» (k7Fixed, r1.html:71498).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "shelfId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "fixed",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenShelfLevel",
+      "doc": "The level of a shelf from the bottom of the cavity (the change of data-k-shelf, r1.html:71671; k32Move 'exact', 71561): whole millimetres with System 32 off (MOD-DEC-196), the check of the module after the move.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "shelfId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "levelMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenSinkMount",
+      "doc": "«Монтаж мойки» of a wall sink cabinet (MOD-AI-60, MOD-DEC-753, FINDINGS 3193): 'inset' — the sink in the cutout of the worktop (the catalogue's model, or the user's cutout, MOD-DEC-412); 'overlay' — the sink laid on the cabinet in place of its worktop, as wide as the cabinet and 600 deep, bought wit",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "mount",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenType",
+      "doc": "The type of the kitchen (setType, r1.html:69416): confirmed by the choice; a U kitchen is «left».",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "type",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "straight",
+              "l",
+              "u"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/setKitchenWorktop",
+      "doc": "Sets the worktop of the kitchen (null or the id by default — back to it). An id the kitchen does not offer is refused, the kitchen is not changed.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "worktopId",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/updateKitchenModule",
+      "doc": "A change of a module (tryUpdate, r1.html:69361): the module is checked in the kitchen as it would be.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "patch",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "wall": {
+                "type": "string"
+              },
+              "pos": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "depth": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              },
+              "floor": {
+                "type": "number"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "rotation": {
+                "type": "number"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "kitchen/updateKitchenObstacle",
+      "doc": "A change of a mark (MOD-AI-45, FINDINGS 3150): its type, wall, place, bottom and height, checked as a new mark; it keeps its id and its place in the list. The prototype had only «×» and a new mark.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "patch",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "wall": {
+                "type": "string"
+              },
+              "pos": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "floor": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "height": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/addDrawer",
+      "doc": "A new drawer in the section (W7): internal by default; an external one behind a door is refused (WR-30).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "execution",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "internal",
+              "external"
+            ]
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/addDrawerAbove",
+      "doc": "«Добавить ящик сверху» over the top drawer (FINDINGS 1139).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/addPartition",
+      "doc": "«Добавить перегородку» inside the section `index` (fiSplit r1.html:92594 — a partition drawn from the bottom to the roof; MOD-DEC-550 п. 2, 570): a full-height partition stands `leftMm` from the left of the clear opening and cuts the section into two of one body; each section keeps 160 mm (565). The",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "leftMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/addRod",
+      "doc": "A new clothes rod in the section (MOD-DEC-290, 310, 333): its top by the section of the rod of the project from the catalogue (FIT, 480), not the prototype's 20 mm. The rod is a mechanism of the graph: no part.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/addShelf",
+      "doc": "A new fixed shelf in the section by the owner's rules (MOD-DEC-193, 225).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/addStorage",
+      "doc": "A new basket for linen or for shoes, trouser rack or pantograph in the section (MOD-DEC-484): the item of the catalogue for its width and depth, in the free height of the section; behind a door — as an inner drawer (288, 331, 360, 050).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "kind",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "LINEN_BASKET",
+              "SHOE_BASKET",
+              "TROUSER_RACK",
+              "PANTOGRAPH"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/addUpright",
+      "doc": "«Добавить стоевую» of the prototype (r1.html:90728, MOD-DEC-199: a partial upright stands on the bottom): in the middle of the section, the full inner height. The part needs the confirmation of the technology, as in r1.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/changeShelfType",
+      "doc": "The type of a shelf: fixed or removable on supports (MOD-DEC-312).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "type",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "fixedShelf",
+              "adjustableShelf"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/distributeShelves",
+      "doc": "«Распределить полки» (U2): equal clear openings in each span of the section on the grid of System 32.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/duplicateFill",
+      "doc": "«Дублировать» a shelf, a rod or the top drawer (FINDINGS 1139).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "kind",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "shelf",
+              "rod",
+              "drawer"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/equalFacadeRows",
+      "doc": "«Равная высота» (r1.html:83563): the rows share the field equally again.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/mergeFacadeRow",
+      "doc": "«Удалить разделение» (r1.html:83580): the row joins its neighbour above (the top row — the one below) with the seam between them. The last row left is the door of the section again.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "rowId",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/moveDrawer",
+      "doc": "Moves a drawer to the height of its bottom over the interior bottom, the shelf over it with it (FINDINGS 1073; FE-04, MOD-DEC-175).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "yMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/moveDrawerBlock",
+      "doc": "The block of drawers of the section as a whole: its lowest box to `yMm` over the interior bottom (MOD-AI-80).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "yMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/moveFacadeSeam",
+      "doc": "The seam over the row `seam` moved to `yMm` from the floor (MOD-DEC-560): the row below takes the new height, the row above the rest, the other rows keep theirs; a fixed shelf nearer than 20 mm draws the seam to its middle. Each of the two rows stays at least 80 mm.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "seam",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "yMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/movePartition",
+      "doc": "The place of the partition on the left of the section `index`: the clear opening on its left, mm (the field «Слева» of the filling layer, fiDividerMove r1.html:92927 → ckSectionWidth): the section on the left takes the change, the one on the right gives it, as a width of a section does (MOD-DEC-199)",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "leftMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/moveRod",
+      "doc": "Moves a rod to the height of its axis over the interior bottom (FINDINGS 1073; MOD-DEC-310, 333).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "yMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/moveShelf",
+      "doc": "Moves a shelf to the height of its middle over the interior bottom (U2; MOD-DEC-193, 196, 312).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "yMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/removeDrawer",
+      "doc": "Removes a drawer of the section; without drawers the door gets ordinary hinges again (MOD-DEC-311).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/removePartition",
+      "doc": "«Удалить перегородку» (ckMergePartition r1.html:90251; MOD-DEC-550 п. 4, 570): the partition on the left of the section `index` goes and the two sections of one body become one of their width. The fill of both stays at its heights (shelves with their types, loads, depths, ids; rods; the drawers of t",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/removeRod",
+      "doc": "Removes a rod of the section (R2-008): the other rods keep their heights, depths and ids.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/removeSection",
+      "doc": "Removes one section (MOD-DEC-199): the other sections of its body share the body equally again (widths set by hand in this body are reset), the other bodies keep theirs. A body left without sections goes; its width goes to the neighbour on the right, of the last body to the left ((Д), as a body widt",
+      "args": [
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/removeShelf",
+      "doc": "Removes a shelf of the section (U2): the other shelves keep their heights, types and ids.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/removeStorage",
+      "doc": "Removes a basket, a trouser rack or a pantograph of the section (MOD-DEC-484).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/removeUpright",
+      "doc": "Removes an upright (r1.html:90753).",
+      "args": [
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setAllEdges",
+      "doc": "«Кромка на всех торцах»: one band on every edge of a part (`partId`) or of the whole wardrobe (`partId` null), for example a wardrobe for a bathroom (MOD-DEC-743). For the whole wardrobe the parts that are not banded (HDF, MDF facades) are left as they are and named in the notice; AUTO gives every p",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "partId",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "AUTO",
+              "NONE",
+              "PVC_ABS_0_4",
+              "PVC_ABS_0_8_1_0",
+              "PVC_ABS_2_0"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "access",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setBase",
+      "doc": "Base of all bodies: plinth, fixed legs, legs behind a decorative plinth or none (MOD-DEC-291, 171, 483), with its height; «Ножки» by the range of baseHeightLimits when `hw` is given.",
+      "args": [
+        {
+          "name": "base",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "plinth",
+              "fixedLegs",
+              "legsPlinth",
+              "none"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "height",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setBodyWidth",
+      "doc": "Width of one body on the floor (ckBodyWidth r1.html:90179, MOD-DEC-199): the neighbour on the right takes the difference, the last body — the one on its left; the overall width does not change. The sections of both bodies change in proportion, the layout becomes manual (MOD-DEC-322, п. 4), the mezza",
+      "args": [
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "width",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setDecor",
+      "doc": "Carcass decor, as the prototype writes it (decorChoices, mfSelectDecor r1.html:58320).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "decorId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setDrawerBlockHeight",
+      "doc": "One box height for every drawer of the section, stacked again from the lowest (MOD-AI-80).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "heightMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setDrawerBoxHeight",
+      "doc": "The height of the box of a drawer, 80–320 mm (FINDINGS 1138).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "heightMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setDrawerExecution",
+      "doc": "Internal or external drawer (FINDINGS 1138; WR-30 behind a door).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "execution",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "internal",
+              "external"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setDrawerGap",
+      "doc": "The gap over a drawer; the drawers over it move by the change (FINDINGS 1138).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "gapMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setDrawerSystem",
+      "doc": "The drawers of the project (MOD-DEC-544): a series, 'TIER', or null — the own box. An unknown series is refused.",
+      "args": [
+        {
+          "name": "choice",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "BOYARD_START_SOFT",
+                  "BLUM_TANDEMBOX_ANTARO_M",
+                  "BLUM_LEGRABOX_PURE_M",
+                  "TIER"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setEdgeDecor",
+      "doc": "The decor of the bands of the visible edges (MOD-DEC-483): of the part (the default) or of the facades.",
+      "args": [
+        {
+          "name": "choice",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "PART",
+              "FACADE"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setFacade",
+      "doc": "Facade of a section: no door, one door, two doors (MOD-DEC-286: two doors meet on half-overlay hinges) or a lift front (MOD-DEC-320).",
+      "args": [
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "facade",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "one",
+              "none",
+              "two",
+              "lift"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setFacadeChoice",
+      "doc": "The material of the facades (MOD-DEC-573): `materialId` null — the doors are made from the corpus board (347); a material of the catalogue of the release with its execution (the first one, or the one kept when the material stays) and its colour: a decor of its board (it goes to the cutting plan), a ",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "materialId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "executionId": {
+                "type": "string"
+              },
+              "decorId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "colorText": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "materialId"
+            ],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setFacadeMaterial",
+      "doc": "The material of the doors (MOD-DEC-347): null — made in the order from the corpus board, in its decor; a decor of the catalogue — a ready-made door of that decor, out of the cutting plan, its cups drilled by the supplier (FINDINGS 266), priced by the chosen tariff or «Цена не определена» without one",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "decorId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "tariffId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setFacadeMounting",
+      "doc": "Mounting of the doors of every section (MOD-DEC-221: one choice «Тип фасадов» for the wardrobe): накладные in front of the carcass or вкладные in the opening with the gap of MOD-DEC-362. The facade field changes: rows of heights set by hand keep their seams where they were — on the shelves — and the",
+      "args": [
+        {
+          "name": "mounting",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "OVERLAY",
+              "INSET"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setFacadeRow",
+      "doc": "Doors of a row (one or two, r1.html:83557; none — an open opening of the section, MOD-DEC-561) and the hinge side of one door. One row of the section keeps a door: a section without any is «Без двери» of the section.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "rowId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "patch",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "leaves": {
+                "type": "integer",
+                "enum": [
+                  0,
+                  2,
+                  1
+                ]
+              },
+              "hingeSide": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "right"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setFacadeRowHeight",
+      "doc": "The height of a row (r1.html:83600): the top row takes the difference, the top row itself — the bottom one; each row stays at least 80 mm.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "rowId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "height",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setFittings",
+      "doc": "Sets the rod series, the handle ('NONE' — без ручек) or the leg of the project; null puts the default back. An id the catalogue does not have is refused, the project is not changed.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "change",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "rodSeriesId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "handleId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "legId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setHingeSide",
+      "doc": "Hinge side of the doors of a section: of its single door, or — with the facade in rows — of the doors of every row at once (MOD-DEC-722, MOD-AI-19; one by one — «Петли» of the row, setFacadeRow). A row of two doors keeps its pair.",
+      "args": [
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "side",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setLegsBase",
+      "doc": "«Ножки» (MOD-DEC-481): the bodies go on legs at a height an open leg of the catalogue gives — the current one when a leg gives it, else the nearest (from the plinth of 70 mm — 50 mm); the legs under a plinth are for «Ножки за цоколем» (483). A load-bearing plinth of board has no legs at any height (",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setLift",
+      "doc": "Kind of the lift front of a section and the mass of its handle (task LIFT; null — not entered, INV-D18-01 says so).",
+      "args": [
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "lift",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "FOLDING",
+                  "FLAP"
+                ]
+              },
+              "handleMassKg": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setLighting",
+      "doc": "Lighting of the project (MOD-DEC-483): the whole wardrobe on or off, or one section (`sectionId`) on or off. Turning a section off while the whole wardrobe is lit lights the others by name.",
+      "args": [
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        },
+        {
+          "name": "sectionId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setMezzanine",
+      "doc": "The mezzanine of the wardrobe (MOD-DEC-200): a separate upper body over every body, of `height` (default 400 mm) in the overall height, with one section; null removes it with its sections. A new height keeps the sections. The notice says what the body under it keeps (MOD-AI-53), of a sliding wardrob",
+      "args": [
+        {
+          "name": "height",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": true
+        },
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setPanel",
+      "doc": "Roof or back panel of all bodies on or off (prototype: «Крыша», «Задняя стенка»; without the back — 168, 309).",
+      "args": [
+        {
+          "name": "panel",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "top",
+              "back"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setPartEdge",
+      "doc": "«Кромка торца»: the band of one edge of a part — a profile of the catalogue, «Без кромки» (NONE) or AUTO (MOD-DEC-319, 325, 743). `access` — the «продвинутый» mode or the role of the user. The refusals are the rule's: no access, a part not of chipboard, an edge the part has not, a profile not in the",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "partId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "edge",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "AUTO",
+              "NONE",
+              "PVC_ABS_0_4",
+              "PVC_ABS_0_8_1_0",
+              "PVC_ABS_2_0"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "access",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setPlinthLegsBase",
+      "doc": "«Ножки за цоколем» (MOD-DEC-483): the bodies go on the legs under a plinth at a height such a leg gives — the current one when it does, else the nearest (from the plinth of 70 mm — 80 mm on the leg H.80); the decorative plinth of board stands in front of them on clips.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setProduct",
+      "doc": "«Тип изделия» (swProduct, r1.html:61580): the sliding wardrobe keeps the carcass and the fill. The first switch of a project (no doors configured yet) is the prototype's fresh one (r1.html:84700): no doors, the base «Нет», the swing fronts off, the depth read as the depth of the sides (the depth of ",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "product",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "sliding",
+              "swing"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setPushToOpen",
+      "doc": "Doors opened by pressing (MOD-DEC-485): on — the doors get the hinges without a spring (BOYARD ЭVO H901) and a latch each, and lose their handles; the drawers and the lift fronts keep their handles. Off removes the choice.",
+      "args": [
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setRodDepth",
+      "doc": "The depth of the axis of a rod from the front edge (FINDINGS 1137; r1 `depthAxis`).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "depthAxisMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setRoom",
+      "doc": "The room (the fields of «Помещение и установка», r1.html:90598): niche, walls, the width of the place, the ceiling, the assembly, the skirting with its height and projection. A size is a positive whole number of mm or null (not given); the graph checks the lift, the height and the width (roomInstall",
+      "args": [
+        {
+          "name": "patch",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "niche": {
+                "type": "boolean"
+              },
+              "left": {
+                "type": "boolean"
+              },
+              "right": {
+                "type": "boolean"
+              },
+              "width": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "ceiling": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "assembly": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "lying",
+                      "standing"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "skirting": {
+                "type": "boolean"
+              },
+              "skirtHeight": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "skirtDepth": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setSectionCount",
+      "doc": "Number of sections: the kept ones stay as they are, new ones are empty with the facade of the last one.",
+      "args": [
+        {
+          "name": "n",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setSectionWidth",
+      "doc": "Width of one section (ckSectionWidth r1.html:90299, MOD-DEC-199): the neighbour on the right in the same body takes the difference, the last section of a body — the one on its left; the body and the overall width do not change. A section that fills its body is refused: its width is the width of the ",
+      "args": [
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "width",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setSectionWidths",
+      "doc": "Widths of every section on the floor at once, left to right (MOD-AI-68, FINDINGS 2955): one edit where setSectionWidth would move a neighbour each time — «две секции по 876 мм» is one call. The widths add up to the overall width; each body takes the sum of its sections, the layout becomes manual (MO",
+      "args": [
+        {
+          "name": "widths",
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setShelfDepth",
+      "doc": "The front setback or the depth of a shelf, its rear kept (FINDINGS 1136; r1 fiEditOne).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "section",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "value",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "frontMm": {
+                "type": "number"
+              },
+              "depthMm": {
+                "type": "number"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setSideDecor",
+      "doc": "The decor of the left or the right outer side of the wardrobe (MOD-DEC-483): «в цвет корпуса» (the default), «в цвет фасадов» or a decor of the catalogue; the inner partitions stay the carcass's. The sheets of that decor are cut and priced apart.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "side",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setSize",
+      "doc": "Overall size: width and height are the prototype's controls, the depth is the depth model (FINDINGS 8).",
+      "args": [
+        {
+          "name": "size",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              },
+              "depth": {
+                "type": "number"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setSlidingDoors",
+      "doc": "The doors of the sliding wardrobe, as the prototype commits them (swCommit with its layers, r1.html:63387, 84699, 85695): the configuration of the project with the patch over it and stable ids of the leaves; a scheme of four leaves falls back to «Чередование» when the number changes, «Три дорожки» o",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "patch",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "n": {
+                "type": "number"
+              },
+              "system": {
+                "type": "string"
+              },
+              "scheme": {
+                "type": "string",
+                "enum": [
+                  "ALT",
+                  "PAIR4"
+                ]
+              },
+              "mirror": {
+                "type": "boolean"
+              },
+              "openingMode": {
+                "type": "string",
+                "enum": [
+                  "auto",
+                  "custom"
+                ]
+              },
+              "W": {
+                "type": "number"
+              },
+              "H": {
+                "type": "number"
+              },
+              "material": {
+                "type": "string"
+              },
+              "slimUpperMount": {
+                "type": "string"
+              },
+              "slimLowerMount": {
+                "type": "string"
+              },
+              "slimSeal": {
+                "type": "string"
+              },
+              "profileFinish": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setSlidingInsert",
+      "doc": "The insert of the leaves (MOD-DEC-573, 140; FINDINGS 1615–1617): «материал → исполнение → цвет» of the catalogue. 'CARCASS' — in the decor of the carcass (the choice of the material of the facades goes); the control material of the prototype; a material of the facades made from a board (ЛДСП, ЛМДФ) ",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "material": {
+                "type": "string"
+              },
+              "decorId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "material"
+            ],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setSlidingLeafInsert",
+      "doc": "The insert of one leaf (MOD-DEC-573, 140; FINDINGS 1618–1620): 'DOORS' — as the doors; a material of the catalogue of the facades made from a board (ЛДСП, ЛМДФ) with a decor of it (the one asked, the one the leaf had, the decor of the doors, else the first). The record is the prototype's `leafMateri",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "leafId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "material": {
+                "type": "string"
+              },
+              "decorId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "material"
+            ],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setStorageColour",
+      "doc": "The colour of the baskets, trouser racks and pantographs of the project (MOD-DEC-484): white, graphite or black; null puts the default (white) back. A pantograph has no white: it is grey metallic then.",
+      "args": [
+        {
+          "name": "colour",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "BLACK",
+                  "WHITE",
+                  "GRAPHITE"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/setUpright",
+      "doc": "Height and place of an upright from the left of its section (the fields «Высота перегородки», «От левого края» of r1.html:90751).",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "patch",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "heightMm": {
+                "type": "number"
+              },
+              "xMm": {
+                "type": "number"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/splitFacadeRow",
+      "doc": "«Разделить по высоте» (r1.html:83565): the row (the top one when none is given) is cut into two of equal height with the seam between them; up to the rows of the policy (4). A row lower than 2 × 80 mm with the seam is refused.",
+      "args": [
+        {
+          "name": "hw",
+          "schema": {},
+          "optional": false,
+          "catalog": true
+        },
+        {
+          "name": "index",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "rowId",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "wardrobe/toggleBodyJoint",
+      "doc": "The joint between the sections `joint − 1` and `joint` (MOD-DEC-322, п. 4: the user moves the joint of the bodies; the manual layout is kept, 200): a joint of two bodies is removed — they become one body of their width; a joint inside a body cuts it there into two bodies with the widths of their sec",
+      "args": [
+        {
+          "name": "joint",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/addDoor",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "lo",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        {
+          "name": "hi",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        {
+          "name": "y",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        {
+          "name": "h",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        {
+          "name": "hinge",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right"
+            ]
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/addDrawer",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "lo",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        {
+          "name": "hi",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        {
+          "name": "y",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        {
+          "name": "h",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/addPartition",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "x",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        {
+          "name": "fromShelfId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/addShelf",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "lo",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        {
+          "name": "hi",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        {
+          "name": "y",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/applyMaterial",
+      "doc": "",
+      "args": [
+        {
+          "name": "materialId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/copy",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "elementId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        {
+          "name": "place",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "side": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "right"
+                ]
+              },
+              "gapMm": {
+                "type": "number"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/equalBays",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/equalDrawers",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "lo",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "hi",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "count",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "from",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        {
+          "name": "to",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/equalShelves",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "lo",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "hi",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "count",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/freeRoom",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "lo",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        },
+        {
+          "name": "hi",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/moveFront",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "frontId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "y",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        },
+        {
+          "name": "h",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/remove",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "elementId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/resize",
+      "doc": "",
+      "args": [
+        {
+          "name": "axis",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "w",
+              "h",
+              "d"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "value",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        },
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/setAllEdges",
+      "doc": "",
+      "args": [
+        {
+          "name": "partId",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "AUTO",
+              "NONE",
+              "PVC_ABS_0_4",
+              "PVC_ABS_0_8_1_0",
+              "PVC_ABS_2_0"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "access",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setBack",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "back",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "none",
+              "board",
+              "hdf"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setBase",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "kind",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "wall",
+              "plinth",
+              "pads",
+              "legs",
+              "casters"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "heightMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/setBayWidth",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "lo",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "hi",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "widthMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setCable",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setDecor",
+      "doc": "",
+      "args": [
+        {
+          "name": "decorId",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "thicknessMm",
+          "schema": {
+            "type": "number"
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/setDeskPedestal",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "side",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setDoorGlass",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "doorId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setDoorLift",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "doorId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setFacadeChoice",
+      "doc": "",
+      "args": [
+        {
+          "name": "choice",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "materialId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "executionId": {
+                "type": "string"
+              },
+              "decorId": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "colorText": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "materialId"
+            ],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setFloor",
+      "doc": "",
+      "args": [
+        {
+          "name": "floor",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "hard",
+              "carpet"
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setHandle",
+      "doc": "",
+      "args": [
+        {
+          "name": "handleId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setKitLevel",
+      "doc": "",
+      "args": [
+        {
+          "name": "level",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setLight",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setMirror",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "heightMm",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setNichePanel",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "panel",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "top",
+              "bottom"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "omitted",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setPartEdge",
+      "doc": "",
+      "args": [
+        {
+          "name": "partId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "edge",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "choice",
+          "schema": {
+            "type": "string",
+            "enum": [
+              "AUTO",
+              "NONE",
+              "PVC_ABS_0_4",
+              "PVC_ABS_0_8_1_0",
+              "PVC_ABS_2_0"
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "access",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setPushToOpen",
+      "doc": "",
+      "args": [
+        {
+          "name": "on",
+          "schema": {
+            "type": "boolean"
+          },
+          "optional": false
+        }
+      ]
+    },
+    {
+      "command": "home/setRim",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "heightMm",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        },
+        {
+          "name": "sides",
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "left",
+                "right",
+                "back"
+              ]
+            }
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "home/setTopCorners",
+      "doc": "",
+      "args": [
+        {
+          "name": "bodyId",
+          "schema": {
+            "type": "string"
+          },
+          "optional": false
+        },
+        {
+          "name": "radiusMm",
+          "schema": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "optional": false
+        }
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "command": "kitchen/kitchenExampleProject",
+      "reason": "пример кухни — start_project с template"
+    },
+    {
+      "command": "kitchen/moduleEdit",
+      "reason": "тип не переводится в схему (параметр change: (c: Rec, s: KitchenScene) => void)"
+    },
+    {
+      "command": "kitchen/setKitchenCurrency",
+      "reason": "валюта ставок мебельщика"
+    },
+    {
+      "command": "kitchen/setKitchenCutting",
+      "reason": "параметры раскроя производства"
+    },
+    {
+      "command": "kitchen/setKitchenRates",
+      "reason": "ставки мебельщика"
+    },
+    {
+      "command": "wardrobe/removeAffected",
+      "reason": "тип не переводится в схему (параметр after: WardrobeInput)"
+    },
+    {
+      "command": "wardrobe/resizeAffected",
+      "reason": "тип не переводится в схему (параметр after: WardrobeInput)"
+    },
+    {
+      "command": "wardrobe/setCutting",
+      "reason": "параметры раскроя производства"
+    }
+  ]
+}

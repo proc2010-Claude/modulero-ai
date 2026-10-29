@@ -8,7 +8,7 @@
 - `reference/start/` — пример «Хочу кухню» на настоящем движке и определения инструментов; хранится побайтно, сверяется по `SHA256SUMS`.
 - `docs/DECISIONS.md`, `docs/ROADMAP.md`, `docs/SOURCES.md` — журнал решений, план, внешние материалы.
 - `src/stand/` — стенд движка: инструменты `tools.claude-api.json` функциями ядра, сеансы, страница прототипа, оценка расхода API; `src/cli/dialog.ts` — команда `npm run dialog`.
-- `vendor/modulero-next-cbaf1534/` — копия ядра modulero-next (только чтение, AI-DEC-003); состав сверяет `npm run check`, обновление — `npm run engine:setup`.
+- `vendor/modulero-next-1582b93e/` — копия ядра modulero-next (только чтение, AI-DEC-009); состав сверяет `npm run check`, обновление — `npm run engine:setup`.
 - `scenarios/kitchen/` — 13 сценариев кухни, `scenarios/wardrobe/` — 11 сценариев шкафа и купе; `npm run check` проигрывает их без ИИ.
 - `docs/reports/` — отчёты владельцу; `tests/` — тесты.
 
@@ -36,7 +36,7 @@ npm run dialog -- page          # путь к sessions/<сеанс>/prototype.ht
 
 ## Диалог в конструкторе на компьютере владельца
 
-`dist/modulero-live.html` — один офлайн-файл: слева лента диалога из треда, справа настоящий конструктор modulero-next (сборка `cbaf1534` без изменений, `vendor/modulero-next-cbaf1534-web/`, сверяется по `BUILD.json`). Страница следит за папкой с файлами `<сеанс>.json` и после каждого хода сама открывает текущую версию кухни или шкафа кнопкой конструктора «Открыть проект»; в первый раз включает 3D. Писать помощнику — по-прежнему в треде, без Claude API.
+`dist/modulero-live.html` — один офлайн-файл: слева лента диалога из треда, справа настоящий конструктор modulero-next (сборка `1582b93e` без изменений, `vendor/modulero-next-cbaf1534-web/`, сверяется по `BUILD.json`). Страница следит за папкой с файлами `<сеанс>.json` и после каждого хода сама открывает текущую версию кухни или шкафа кнопкой конструктора «Открыть проект»; в первый раз включает 3D. Писать помощнику — по-прежнему в треде, без Claude API.
 
 ```
 npm run live -- page                 # → dist/modulero-live.html

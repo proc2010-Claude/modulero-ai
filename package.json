@@ -14,7 +14,8 @@
     "test": "node --experimental-transform-types --disable-warning=ExperimentalWarning --import ./src/engine/register.mjs --test \"tests/**/*.test.ts\"",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "live": "node src/live/cli.ts",
-    "contract:commands": "node --experimental-transform-types --disable-warning=ExperimentalWarning scripts/commands.ts"
+    "contract:commands": "node --experimental-transform-types --disable-warning=ExperimentalWarning scripts/commands.ts",
+    "scenarios:rerecord": "node --experimental-transform-types --disable-warning=ExperimentalWarning --import ./src/engine/register.mjs scripts/scenario-rerecord.ts"
   },
   "devDependencies": {
     "@types/node": "24.19.2",

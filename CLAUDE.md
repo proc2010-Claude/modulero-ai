@@ -15,7 +15,7 @@
 - AR, фото и голос не делаем.
 
 ## Модуль modulero-next
-`proc2010-Claude/modulero-next` — только чтение, на закреплённом SHA (AI-DEC-003). Стенд работает на копии ядра в `vendor/modulero-next-cbaf1534/` (состав и sha256 списка файлов — `engine.json`, сверяет `npm run check`); подключение modulero-next к проекту для работы не нужно. Копию не править: новая основа — `npm run engine:setup` из клона modulero-next на новом SHA, отдельным PR с проигрышем сценариев. Код modulero-next не меняем. Чего не хватает в конструкторе — задача MOD-AI-N для Modulero (`EXCHANGE_SPEC.md` §8), а не обходной путь здесь.
+`proc2010-Claude/modulero-next` — только чтение, на закреплённом SHA (AI-DEC-009, `1582b93e`). Стенд работает на копии ядра в `vendor/modulero-next-1582b93e/` (состав и sha256 списка файлов — `engine.json`, сверяет `npm run check`); подключение modulero-next к проекту для работы не нужно. Копию не править: новая основа — `npm run engine:setup` из клона modulero-next на новом SHA, отдельным PR с проигрышем сценариев: `npm run scenarios:rerecord` показывает расхождения, каждое — решение Modulero или задача MOD-AI-N. Код modulero-next не меняем. Чего не хватает в конструкторе — задача MOD-AI-N для Modulero (`EXCHANGE_SPEC.md` §8), а не обходной путь здесь.
 
 ## Условие приёмки
 `npm run check` — быстрая проверка без ИИ и без сети: Node 24, имена латиницей, отсутствие API, типы, копия ядра без изменений, тесты (sha256 входов, схемы инструментов, пример `EXCHANGE_SPEC.md` §6 на стенде, проигрыш записанных вызовов сценариев `scenarios/` со сверкой версий, отказов и сумм). Должна закончиться строкой `All checks passed.` Итог, SHA и версию Node — комментарием в PR.

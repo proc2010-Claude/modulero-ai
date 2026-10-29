@@ -1,0 +1,63 @@
+{
+  "format": "modulero.project",
+  "formatVersion": 1,
+  "kind": "kitchen",
+  "app": {
+    "name": "Modulero",
+    "version": "ai-dialog-example"
+  },
+  "savedAt": "2026-10-28T12:00:00.000Z",
+  "digest": "MWD-a4e39b50bebe902f",
+  "catalogs": {
+    "hardware": {
+      "version": "hw-2026-10-29.17",
+      "sha256": "016fdeaa9e3ccb3447d7ac255f57c7c2b17f2a280588a7a2ba3324185d1148af"
+    }
+  },
+  "project": {
+    "system32Policy": {
+      "version": "SYSTEM32-193-196-R10",
+      "enabled": true,
+      "provenance": "NEW_PROJECT"
+    },
+    "kitchenProjectSchemaVersion": 3,
+    "wallNaming": "ABC_CHAIN",
+    "roomConfirmed": false,
+    "typeConfirmed": false,
+    "type": "straight",
+    "orientation": "left",
+    "islandEnabled": false,
+    "room": {
+      "width": 3000,
+      "depth": 2600,
+      "height": 2500
+    },
+    "modules": [],
+    "obstacles": [],
+    "selected": null,
+    "selectedPart": null,
+    "stage": "construction",
+    "view": "plan",
+    "row": "base",
+    "wall": "A",
+    "facades": true,
+    "corpusMaterial": "W980",
+    "facadeMaterial": "W980",
+    "defaultWidth": 600,
+    "upperHeight": 720,
+    "proposed": {
+      "outerGap": 2,
+      "topFront": 30,
+      "topRear": 10
+    },
+    "nextId": 1,
+    "showFilling": true,
+    "kitchenReleaseAdapterRevision": 2,
+    "costSettings": {
+      "schema": "modulero.kitchen.rates.v1",
+      "currency": "RUB",
+      "includeAppliances": false,
+      "rates": []
+    }
+  }
+}

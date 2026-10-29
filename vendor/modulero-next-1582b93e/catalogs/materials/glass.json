@@ -1,0 +1,365 @@
+{
+ "version": "1",
+ "note": "Общий каталог стекла и зеркала (FINDINGS 3400–3404). Позиции — те, что уже считаются в main, с теми же id, числами и источниками: вставки 4 мм створок купе (sliding-doors.glassInserts, sliding-price v7, MOD-AI-30, 70; FINDINGS 2957) и стекло 6 мм витрины кухни KW_GLASS (kitchen/carcass.ts, kitchen-price.glass, MOD-DEC-569). Масса — из документа производителя, где он есть, иначе 2500 кг/м³ × толщина, DERIVED (MOD-DEC-751). Потребители пока читают свои карты; переход на каталог — отдельными PR. Стеклянная дверь другой мебели (#583) добавляется после её слияния",
+ "documents": [
+  {
+   "id": "ARISTO-STANDARD-ECO",
+   "path": "КАТАЛОГИ\\ARISTO\\Tablitsa-raschetov-Standart-i-Eko_05_02_25.xlsx",
+   "sha256": "3c9f3854d477729628c14ac32346e4ede93d64e1beff0c36db506c9cf7bacfca",
+   "title": "Таблица расчёта дверей ARISTO «Стандарт и Эко»"
+  },
+  {
+   "id": "ARISTO-SDA-TECH",
+   "path": "КАТАЛОГИ\\ARISTO\\SDA_UN_Tekh-katalog-19.01.2026.pdf",
+   "sha256": "c5b291ff88c1059bed446bf2eeeb7b3583ce5a6da1623c140c459894231585c8",
+   "title": "Технический каталог раздвижных дверей ARISTO (19.01.2026)"
+  }
+ ],
+ "glass": [
+  {
+   "id": "GLASS-MIRROR-SILVER",
+   "title": "Зеркало серебро, 4 мм",
+   "kind": "MIRROR",
+   "thicknessMm": 4,
+   "colour": null,
+   "tempered": null,
+   "massKgPerM2": {
+    "value": 11,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "ARISTO, таблица расчёта «Стандарт и Эко» (Tablitsa-raschetov-Standart-i-Eko_05_02_25.xlsx)",
+     "sha256": "3c9f3854",
+     "page": "лист «Раздвижные двери», M32",
+     "note": "стекло, зеркало 4 мм — 11 кг/м² (sliding-doors.glassArealMass, MOD-DEC-334)"
+    }
+   },
+   "price": {
+    "rub": 1730,
+    "per": "m²",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "GLASS-2026-10-29",
+     "page": "docs/product/prices/glass-2026-10-29.json"
+    },
+    "status": "TEMPORARY",
+    "basis": "ANALOGUE: средняя цена м² стекольных мастерских Москвы — зеркало серебро 4 мм: Стеклотрейд 1130, Дом стекла 1560, Зерцало 2500 ₽/м²; вверх до 10 ₽ (sliding-price.conditionalGlassRates, MOD-DEC-264, 346)"
+   },
+   "uses": [
+    "SLIDING_INSERT"
+   ],
+   "operations": [
+    {
+     "id": "FILM",
+     "title": "Травмобезопасная плёнка",
+     "per": "m²",
+     "price": {
+      "rub": 350,
+      "per": "m²",
+      "date": "2026-10-29",
+      "source": {
+       "doc": "GLASS-2026-10-29",
+       "page": "docs/product/prices/glass-2026-10-29.json"
+      },
+      "status": "TEMPORARY",
+      "basis": "ANALOGUE: «Антискольная пленка: 350 руб кв.м», Зерцало (zertsalo.ru/prais_list), 2026-10-29 (sliding-price.conditionalGlassFilmRate, MOD-DEC-264)"
+     },
+     "minSizeMm": {
+      "value": {
+       "heightMm": 380,
+       "widthMm": 300
+      },
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "ARISTO, технический каталог раздвижных дверей 19.01.2026 (SDA_UN_Tekh-katalog-19.01.2026.pdf)",
+       "sha256": "c5b291ff",
+       "page": "24",
+       "note": "«Малые размеры стекла (меньше 380 × 300 мм) не подвергаются закалке и покрытию ТБ плёнкой» (sliding-doors.glassLimits.filmMin)"
+      }
+     }
+    }
+   ],
+   "maxSizeMm": {
+    "value": {
+     "heightMm": 3000,
+     "widthMm": 1300
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "ARISTO, технический каталог раздвижных дверей 19.01.2026 (SDA_UN_Tekh-katalog-19.01.2026.pdf)",
+     "sha256": "c5b291ff",
+     "page": "23–24",
+     "note": "зеркало Silver, стекло М1 сатинат — высота до 3000, ширина до 1300 мм; политика купе держит этот предел для всех вставок (sliding-doors.glassLimits)"
+    }
+   }
+  },
+  {
+   "id": "GLASS-LACOBEL-9003",
+   "title": "Лакобель белый RAL 9003, 4 мм",
+   "kind": "LACQUERED",
+   "thicknessMm": 4,
+   "colour": "RAL 9003",
+   "tempered": null,
+   "massKgPerM2": {
+    "value": 11,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "ARISTO, таблица расчёта «Стандарт и Эко» (Tablitsa-raschetov-Standart-i-Eko_05_02_25.xlsx)",
+     "sha256": "3c9f3854",
+     "page": "лист «Раздвижные двери», M32",
+     "note": "стекло, зеркало 4 мм — 11 кг/м² (sliding-doors.glassArealMass, MOD-DEC-334)"
+    }
+   },
+   "price": {
+    "rub": 2380,
+    "per": "m²",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "GLASS-2026-10-29",
+     "page": "docs/product/prices/glass-2026-10-29.json"
+    },
+    "status": "TEMPORARY",
+    "basis": "ANALOGUE: средняя цена м² стекольных мастерских Москвы — лакобель RAL 9003 4 мм: АБС 1900, Стекло Ком 2200, Дом стекла 3635, Адем Гласс 1750 ₽/м², среднее 2371,25; вверх до 10 ₽ (sliding-price.conditionalGlassRates, MOD-DEC-264, 346)"
+   },
+   "uses": [
+    "SLIDING_INSERT"
+   ],
+   "operations": [
+    {
+     "id": "FILM",
+     "title": "Травмобезопасная плёнка",
+     "per": "m²",
+     "price": {
+      "rub": 350,
+      "per": "m²",
+      "date": "2026-10-29",
+      "source": {
+       "doc": "GLASS-2026-10-29",
+       "page": "docs/product/prices/glass-2026-10-29.json"
+      },
+      "status": "TEMPORARY",
+      "basis": "ANALOGUE: «Антискольная пленка: 350 руб кв.м», Зерцало (zertsalo.ru/prais_list), 2026-10-29 (sliding-price.conditionalGlassFilmRate, MOD-DEC-264)"
+     },
+     "minSizeMm": {
+      "value": {
+       "heightMm": 380,
+       "widthMm": 300
+      },
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "ARISTO, технический каталог раздвижных дверей 19.01.2026 (SDA_UN_Tekh-katalog-19.01.2026.pdf)",
+       "sha256": "c5b291ff",
+       "page": "24",
+       "note": "«Малые размеры стекла (меньше 380 × 300 мм) не подвергаются закалке и покрытию ТБ плёнкой» (sliding-doors.glassLimits.filmMin)"
+      }
+     }
+    }
+   ],
+   "maxSizeMm": {
+    "value": {
+     "heightMm": 3000,
+     "widthMm": 1300
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "ARISTO, технический каталог раздвижных дверей 19.01.2026 (SDA_UN_Tekh-katalog-19.01.2026.pdf)",
+     "sha256": "c5b291ff",
+     "page": "23–24",
+     "note": "зеркало Silver, стекло М1 сатинат — высота до 3000, ширина до 1300 мм; политика купе держит этот предел для всех вставок (sliding-doors.glassLimits)"
+    }
+   }
+  },
+  {
+   "id": "GLASS-SATIN",
+   "title": "Стекло матовое сатинат, 4 мм",
+   "kind": "SATIN",
+   "thicknessMm": 4,
+   "colour": null,
+   "tempered": null,
+   "massKgPerM2": {
+    "value": 11,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "ARISTO, таблица расчёта «Стандарт и Эко» (Tablitsa-raschetov-Standart-i-Eko_05_02_25.xlsx)",
+     "sha256": "3c9f3854",
+     "page": "лист «Раздвижные двери», M32",
+     "note": "стекло, зеркало 4 мм — 11 кг/м² (sliding-doors.glassArealMass, MOD-DEC-334)"
+    }
+   },
+   "price": {
+    "rub": 1600,
+    "per": "m²",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "GLASS-2026-10-29",
+     "page": "docs/product/prices/glass-2026-10-29.json"
+    },
+    "status": "TEMPORARY",
+    "basis": "ANALOGUE: средняя цена м² стекольных мастерских Москвы — стекло матовое сатинат 4 мм: АБС 2000, Дом стекла 1950, Адем Гласс 850 ₽/м²; вверх до 10 ₽ (sliding-price.conditionalGlassRates, MOD-DEC-264, 346)"
+   },
+   "uses": [
+    "SLIDING_INSERT"
+   ],
+   "operations": [
+    {
+     "id": "FILM",
+     "title": "Травмобезопасная плёнка",
+     "per": "m²",
+     "price": {
+      "rub": 350,
+      "per": "m²",
+      "date": "2026-10-29",
+      "source": {
+       "doc": "GLASS-2026-10-29",
+       "page": "docs/product/prices/glass-2026-10-29.json"
+      },
+      "status": "TEMPORARY",
+      "basis": "ANALOGUE: «Антискольная пленка: 350 руб кв.м», Зерцало (zertsalo.ru/prais_list), 2026-10-29 (sliding-price.conditionalGlassFilmRate, MOD-DEC-264)"
+     },
+     "minSizeMm": {
+      "value": {
+       "heightMm": 380,
+       "widthMm": 300
+      },
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "ARISTO, технический каталог раздвижных дверей 19.01.2026 (SDA_UN_Tekh-katalog-19.01.2026.pdf)",
+       "sha256": "c5b291ff",
+       "page": "24",
+       "note": "«Малые размеры стекла (меньше 380 × 300 мм) не подвергаются закалке и покрытию ТБ плёнкой» (sliding-doors.glassLimits.filmMin)"
+      }
+     }
+    }
+   ],
+   "maxSizeMm": {
+    "value": {
+     "heightMm": 3000,
+     "widthMm": 1300
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "ARISTO, технический каталог раздвижных дверей 19.01.2026 (SDA_UN_Tekh-katalog-19.01.2026.pdf)",
+     "sha256": "c5b291ff",
+     "page": "23–24",
+     "note": "зеркало Silver, стекло М1 сатинат — высота до 3000, ширина до 1300 мм; политика купе держит этот предел для всех вставок (sliding-doors.glassLimits)"
+    }
+   }
+  },
+  {
+   "id": "GLASS-PRINT",
+   "title": "Стекло с фотопечатью, 4 мм",
+   "kind": "PRINT",
+   "thicknessMm": 4,
+   "colour": null,
+   "tempered": null,
+   "massKgPerM2": {
+    "value": 11,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "ARISTO, таблица расчёта «Стандарт и Эко» (Tablitsa-raschetov-Standart-i-Eko_05_02_25.xlsx)",
+     "sha256": "3c9f3854",
+     "page": "лист «Раздвижные двери», M32",
+     "note": "стекло, зеркало 4 мм — 11 кг/м² (sliding-doors.glassArealMass, MOD-DEC-334)"
+    }
+   },
+   "price": {
+    "rub": 4020,
+    "per": "m²",
+    "date": "2026-10-29",
+    "source": {
+     "doc": "GLASS-2026-10-29",
+     "page": "docs/product/prices/glass-2026-10-29.json"
+    },
+    "status": "TEMPORARY",
+    "basis": "ANALOGUE: средняя цена м² стекольных мастерских Москвы — стекло осветлённое 4 мм (АБС 3000, Дом стекла 2100, Принтпластик 1960 — 2353,33) и УФ-печать (БСК 2300, УФ Принт 1200, ПикГласс 1500 — 1666,67) ₽/м²; вверх до 10 ₽ (sliding-price.conditionalGlassRates, MOD-DEC-264, 346)"
+   },
+   "uses": [
+    "SLIDING_INSERT"
+   ],
+   "operations": [
+    {
+     "id": "FILM",
+     "title": "Травмобезопасная плёнка",
+     "per": "m²",
+     "price": {
+      "rub": 350,
+      "per": "m²",
+      "date": "2026-10-29",
+      "source": {
+       "doc": "GLASS-2026-10-29",
+       "page": "docs/product/prices/glass-2026-10-29.json"
+      },
+      "status": "TEMPORARY",
+      "basis": "ANALOGUE: «Антискольная пленка: 350 руб кв.м», Зерцало (zertsalo.ru/prais_list), 2026-10-29 (sliding-price.conditionalGlassFilmRate, MOD-DEC-264)"
+     },
+     "minSizeMm": {
+      "value": {
+       "heightMm": 380,
+       "widthMm": 300
+      },
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "ARISTO, технический каталог раздвижных дверей 19.01.2026 (SDA_UN_Tekh-katalog-19.01.2026.pdf)",
+       "sha256": "c5b291ff",
+       "page": "24",
+       "note": "«Малые размеры стекла (меньше 380 × 300 мм) не подвергаются закалке и покрытию ТБ плёнкой» (sliding-doors.glassLimits.filmMin)"
+      }
+     }
+    }
+   ],
+   "maxSizeMm": {
+    "value": {
+     "heightMm": 3000,
+     "widthMm": 1300
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "ARISTO, технический каталог раздвижных дверей 19.01.2026 (SDA_UN_Tekh-katalog-19.01.2026.pdf)",
+     "sha256": "c5b291ff",
+     "page": "23–24",
+     "note": "зеркало Silver, стекло М1 сатинат — высота до 3000, ширина до 1300 мм; политика купе держит этот предел для всех вставок (sliding-doors.glassLimits)"
+    }
+   }
+  },
+  {
+   "id": "GLASS_CLEAR_6",
+   "title": "Стекло прозрачное, 6 мм",
+   "kind": "CLEAR",
+   "thicknessMm": 6,
+   "colour": null,
+   "tempered": null,
+   "massKgPerM2": {
+    "value": 15,
+    "status": "DERIVED",
+    "ref": null
+   },
+   "price": {
+    "rub": 4000,
+    "per": "m²",
+    "date": "2026-10-27",
+    "source": {
+     "doc": "kitchen-price.glass (MOD-DEC-569)"
+    },
+    "status": "TEMPORARY",
+    "basis": "RATE: усреднённая цена проекта карты kitchen-price.glass (MOD-DEC-569): ориентир по рынку, источника нет — у Рондо стекло «под заказ», без цены"
+   },
+   "uses": [
+    "HINGED_DOOR",
+    "FRAME_INSERT"
+   ],
+   "operations": [
+    {
+     "id": "EDGE",
+     "title": "Обработка кромки",
+     "per": "m",
+     "price": null
+    },
+    {
+     "id": "HOLE",
+     "title": "Отверстие насквозь под чашку петли для стекла",
+     "per": "op",
+     "price": null
+    }
+   ]
+  }
+ ]
+}

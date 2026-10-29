@@ -1,4 +1,4 @@
-// Закреплённая основа движка (engine.json, AI-DEC-003) и папка её копии.
+// Закреплённая основа движка (engine.json, AI-DEC-009) и папка её копии.
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';

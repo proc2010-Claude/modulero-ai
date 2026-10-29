@@ -4,8 +4,8 @@
   "title": "Шкаф из двух корпусов",
   "kind": "wardrobe",
   "engine": {
-    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
-    "hardwareCatalog": "hw-2026-10-27.8"
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
   },
   "goal": "Владелец просит разбить шкаф на два корпуса со стыком между 2-й и 3-й секцией, добавить антресоль и сменить ручки: правок нет в wardrobe_edits 0.1, помощник делает их командами редактора через editor_call (AI-DEC-007).",
   "criteria": [
@@ -58,7 +58,7 @@
             ]
           },
           "expect": {
-            "revision": "MWD-113999733adcef7e",
+            "revision": "MWD-1c810959a750bc01",
             "applied": [
               "set_size",
               "set_section_count"
@@ -66,8 +66,8 @@
             "refused": null,
             "price": {
               "status": "PROVISIONAL_ESTIMATE",
-              "amount_rub": 64079.52,
-              "known_amount_rub": 64079.52
+              "amount_rub": 64252.32,
+              "known_amount_rub": 64252.32
             },
             "sections": 4,
             "bodies": 1,
@@ -87,7 +87,7 @@
             "kind": "wardrobe"
           },
           "expect": {
-            "commands": 61
+            "commands": 67
           }
         },
         {
@@ -104,7 +104,7 @@
             ]
           },
           "expect": {
-            "revision": "MWD-2036690505c793e4",
+            "revision": "MWD-187f8ab12e4cf39d",
             "applied": [
               "wardrobe/toggleBodyJoint"
             ],
@@ -135,7 +135,7 @@
             "topic": "handles"
           },
           "expect": {
-            "values": 4
+            "values": 8
           }
         },
         {
@@ -152,7 +152,7 @@
             ]
           },
           "expect": {
-            "revision": "MWD-16a223d4103d92db",
+            "revision": "MWD-24b50448bac6ed7f",
             "applied": [
               "wardrobe/setMezzanine"
             ],
@@ -216,7 +216,7 @@
             ]
           },
           "expect": {
-            "revision": "MWD-913c8c38954bbe12",
+            "revision": "MWD-aea0d51cb1dd2887",
             "applied": [
               "wardrobe/setFittings"
             ],
@@ -238,5 +238,5 @@
       "ai": "Поставил ручки TILDA 160 мм на все двери."
     }
   ],
-  "review": "Раньше (w05) ИИ мог показать список ручек, но не поставить ручку (MOD-AI-21), и не умел стыки корпусов. Через общий проход editor_call обе правки делает сам конструктор: стык 2-3 дал корпуса M01 и B2 по 1200 мм, антресоль — корпуса B3 и B4 над ними, ручка TILDA — из каталога выпуска. Задачи MOD-AI-21 для договора больше не нужно: команда есть в ядре и в списке list_commands."
+  "review": "Раньше (w05) ИИ мог показать список ручек, но не поставить ручку (MOD-AI-21), и не умел стыки корпусов. Через общий проход editor_call обе правки делает сам конструктор: стык 2-3 дал корпуса M01 и B2 по 1200 мм, антресоль — корпуса B3 и B4 над ними, ручка TILDA — из каталога выпуска. Задачи MOD-AI-21 для договора больше не нужно: команда есть в ядре и в списке list_commands.\n\nПерезапись на 1582b93e (AI-DEC-009): list_commands шкафа — 67 команд вместо 61 (новые: setSectionWidths, removeRod, moveDrawerBlock, setDrawerBlockHeight, кромка), get_options handles — 8 ручек вместо 4."
 }

@@ -25,16 +25,18 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     assert.equal((stand.run('kitchen_edits', { project_id: 'w', base_revision: start.revision, label: 'x', edits: [{ op: 'set_type', type: 'l' }] }) as any).is_error, true);
 
     const edit = (base: string, label: string, edits: unknown[]): any => stand.run('wardrobe_edits', { project_id: 'w', base_revision: base, label, edits });
+    // Секция 650 мм: в свету 634 мм, между размерами корзины BELLE — отказ ядра с подходящими ширинами (MOD-AI-29, 67).
     const a = edit(start.revision, 'Шкаф 2 м', [
       { op: 'set_size', width: 2000, height: 2400, depth: null },
       { op: 'set_section_count', n: 4 },
       { op: 'add_fill', section: 0, kind: 'rod', execution: null },
-      { op: 'add_storage', section: 3, kind: 'SHOE_BASKET' },
+      { op: 'set_section_width', section: 1, width: 650 },
+      { op: 'add_storage', section: 1, kind: 'SHOE_BASKET' },
       { op: 'set_mezzanine', height: 450 },
     ]);
-    assert.deepEqual(a.applied.map((x: any) => x.op), ['set_size', 'set_section_count', 'add_fill']);
-    assert.match(a.refused.problem, /Корзина для обуви не подходит/);
-    assert.deepEqual(a.not_run, [4]);
+    assert.deepEqual(a.applied.map((x: any) => x.op), ['set_size', 'set_section_count', 'add_fill', 'set_section_width']);
+    assert.match(a.refused.problem, /Корзина для обуви не подходит: .* подойдёт секция шириной/);
+    assert.deepEqual(a.not_run, [5]);
     assert.equal(a.state.sections[0].rods.length, 1);
     // Высоты деталей секции от пола — из 3D-сцены ядра: помощник берёт их из ответа, а не считает.
     const g = a.state.sections[0].geometry;
@@ -48,18 +50,20 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     assert.equal(opened.editable, true);
     assert.equal(core.wardrobeGraph(opened.project.input, core.HW).revision.projectRevisionId, a.revision);
 
-    // Без задней стенки — отказ ядра; в нише — можно. Нажатие в нише без стенки граф не строит (MOD-AI-18): отказ, проект прежний.
+    // Без задней стенки — отказ ядра; в нише — можно. Нажатие в нише без стенки граф теперь строит (MOD-AI-65, было MOD-AI-18).
     const b = edit(a.revision, 'Без задней стенки', [{ op: 'set_panel', panel: 'back', on: false }]);
     assert.match(b.refused.problem, /только в нише или между стенами/);
     const c = edit(a.revision, 'В нише без задней стенки', [{ op: 'set_room', ...ROOM, niche: true }, { op: 'set_panel', panel: 'back', on: false }]);
     assert.equal(c.refused, null);
     const d = edit(c.revision, 'Без ручек', [{ op: 'set_push_to_open', on: true }]);
-    assert.match(d.refused.problem, /Конструктор не строит шкаф после этой правки/);
-    assert.equal(d.revision, c.revision);
-    // Убрать штангу ядро не умеет (MOD-AI-19).
-    assert.match(edit(c.revision, 'Без штанги', [{ op: 'remove_fill', section: 0, kind: 'rod', index: 0 }]).refused.problem, /Убрать штангу/);
+    assert.equal(d.refused, null);
+    assert.notEqual(d.revision, c.revision);
+    // Штанга убирается правкой ядра removeRod (R2-008, 456b336e; на cbaf1534 её не было).
+    const noRod = edit(d.revision, 'Без штанги', [{ op: 'remove_fill', section: 0, kind: 'rod', index: 0 }]);
+    assert.equal(noRod.refused, null);
+    assert.equal(noRod.state.sections[0].rods.length, 0);
 
-    const e = edit(c.revision, 'Купе', [{ op: 'set_product', product: 'sliding' }, { op: 'set_sliding_doors', n: 3, system: null, scheme: null, mirror: true }]);
+    const e = edit(noRod.revision, 'Купе', [{ op: 'set_product', product: 'sliding' }, { op: 'set_sliding_doors', n: 3, system: null, scheme: null, mirror: true }]);
     assert.equal(e.refused, null);
     assert.equal(e.state.kind, 'sliding');
     assert.equal(e.state.sliding.doors, 3);

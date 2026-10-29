@@ -1,14 +1,16 @@
 // EXCHANGE_SPEC.md §6 / TASK_FIRST.md п. 6: стенд даёт те же версии KPR2-…, отказы и суммы, что прогон примера
-// на настоящем движке (reference/start/examples/kitchen-dialog.log.json), и те же файлы проекта шагов.
+// на настоящем движке той же основы (reference/engine-<sha>/examples/kitchen-dialog.log.json), и те же файлы проекта шагов.
+// Пример пакета старта (reference/start, cbaf1534) — исторический документ, на новой основе не воспроизводится.
 import { strict as assert } from 'node:assert';
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
+import { PIN } from '../src/engine/pin.mjs';
 import { loadCore } from '../src/stand/engine.ts';
 import { Stand } from '../src/stand/stand.ts';
 
-const EXAMPLES = new URL('../reference/start/examples/', import.meta.url);
+const EXAMPLES = new URL(`../reference/engine-${PIN.sha.slice(0, 8)}/examples/`, import.meta.url);
 const log: any[] = JSON.parse(readFileSync(new URL('kitchen-dialog.log.json', EXAMPLES), 'utf8'));
 
 /** Вызов функции ядра из журнала примера → правка договора §4.1. */

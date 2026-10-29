@@ -1,0 +1,9 @@
+{
+  "repo": "proc2010-Claude/modulero-next",
+  "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+  "decision": "AI-DEC-009",
+  "file": "modulero-next.html",
+  "bytes": 6588762,
+  "sha256": "018448a23dfb247ace6cfc5b5672ef47f93a9bfdd2914cc561f1caf9458e8deb",
+  "how": "git checkout 1582b93e && npm ci --ignore-scripts && node scripts/build.mjs --no-typecheck (сборка modulero-next без изменений, esbuild 0.25.12, three 0.180.0; повторная сборка даёт тот же sha256)"
+}

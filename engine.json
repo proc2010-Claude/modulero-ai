@@ -1,7 +1,7 @@
 {
   "repo": "proc2010-Claude/modulero-next",
-  "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
-  "hardwareCatalog": "hw-2026-10-27.8",
+  "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+  "hardwareCatalog": "hw-2026-10-29.17",
   "paths": [
     "packages/core/src",
     "packages/bazis/src",
@@ -20,7 +20,7 @@
     "apps/web/src/view3d",
     "apps/web/public/decors"
   ],
-  "decision": "AI-DEC-003",
-  "dir": "vendor/modulero-next-cbaf1534",
-  "manifestSha256": "1fba0c2a1f16b15310e474a607e6d69e88548bfce006a6ab24d6807fef0ae976"
+  "decision": "AI-DEC-009",
+  "dir": "vendor/modulero-next-1582b93e",
+  "manifestSha256": "0f63a14f8581604d2b17faf089faa0bafb912c40b17ab911e3283284d464cb74"
 }

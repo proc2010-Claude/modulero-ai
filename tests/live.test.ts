@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import { test } from 'node:test';
 import { LIVE_FORMAT, liveState } from '../src/live/export.ts';
 import { constructorHtml, renderLivePage, ROOT } from '../src/live/page.ts';
+import { PIN } from '../src/engine/pin.mjs';
 
 const examples = join(ROOT, 'reference/start/examples');
 
@@ -23,7 +24,7 @@ function session(): string {
       format: 'modulero-ai.session/1',
       name: 'k-test',
       created: '2026-10-28T00:00:00Z',
-      engine: { repo: 'proc2010-Claude/modulero-next', sha: 'cbaf153417691cf81f8b4c4112baf9fd521fef77', hardwareCatalog: 'hw-2026-10-27.8' },
+      engine: { repo: PIN.repo, sha: PIN.sha, hardwareCatalog: PIN.hardwareCatalog },
       kind: 'kitchen',
       head: 3,
       history: [v(1, 'Прямая кухня'), v(2, 'Угловая кухня'), v(3, 'Возврат к версии 1')],
@@ -66,9 +67,9 @@ test('live.json: чужой формат сеанса не читается', ()
   assert.throws(() => liveState(dir), /формат other\/1/);
 });
 
-test('конструктор в vendor/ совпадает с BUILD.json (cbaf1534)', () => {
+test('конструктор в vendor/ собран на SHA engine.json и совпадает с BUILD.json', () => {
   const { build, html } = constructorHtml();
-  assert.equal(build.sha, 'cbaf153417691cf81f8b4c4112baf9fd521fef77');
+  assert.equal(build.sha, PIN.sha);
   assert.equal(Buffer.byteLength(html), build.bytes);
 });
 
