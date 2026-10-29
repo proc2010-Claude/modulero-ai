@@ -1,0 +1,167 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "h02",
+  "title": "Туалетный столик: зеркало, скругление, декор, копия",
+  "kind": "home",
+  "engine": {
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
+  },
+  "goal": "Заготовка vanity: зеркало, скругление углов крышки, декор из каталога, копия корпуса рядом.",
+  "criteria": [
+    "Старт vanity даёт стол с тремя ящиками и зеркалом 600 мм",
+    "set_top_corners radius 50 даёт top_radius 50",
+    "set_decor с id из каталога применяется; бетона в каталоге нет, предложены серые",
+    "copy side right ставит второй корпус x=1100 вплотную"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Хочу туалетный столик с зеркалом",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "home",
+            "template": "vanity"
+          },
+          "expect": {
+            "revision": "MWD-1de1bf822efbec48",
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 40854.93,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 30
+          }
+        }
+      ],
+      "ai": "Поставил туалетный столик: 1100 мм в ширину, 750 в высоту, 550 в глубину. Слева тумба с тремя ящиками, над столешницей зеркало высотой 600 мм. Цена внизу слева на 3D. Что поправить: размеры, цвет, число ящиков? Углы столешницы скруглить?"
+    },
+    {
+      "human": "Да, углы столешницы скруглить, радиус сантиметров 5",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Скругление углов крышки 50 мм",
+            "edits": [
+              {
+                "op": "set_top_corners",
+                "body_id": "h2",
+                "radius": 50
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-426f701e62e846e4",
+            "applied": [
+              "set_top_corners"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 40846.09,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 30
+          }
+        }
+      ],
+      "ai": "Скруглил передние углы столешницы, радиус 50 мм. Хотите другой цвет, например под бетон или дерево из каталога?"
+    },
+    {
+      "human": "Да, цвет под бетон",
+      "calls": [
+        {
+          "tool": "get_options",
+          "input": {
+            "kind": "home",
+            "topic": "decors"
+          },
+          "expect": {
+            "values": 2
+          }
+        }
+      ],
+      "ai": "Именно «бетона» в каталоге декоров нет. Ближе всего серые: EGGER «Серый камень» (U727), «Серый асфальт» (U732), «Светло-серый» (U708), Lamarty «Серый камень». Поставить «Серый камень» EGGER?"
+    },
+    {
+      "human": "Давай серый камень от EGGER",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Декор EGGER Серый камень",
+            "edits": [
+              {
+                "op": "set_decor",
+                "decor_id": "DEC-EGG-U727-ST9",
+                "thickness": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-74aeb5848b0c7a23",
+            "applied": [
+              "set_decor"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 44573.47,
+              "known_amount_rub": null
+            },
+            "bodies": 1,
+            "parts": 30
+          }
+        }
+      ],
+      "ai": "Готово: корпус и ящики теперь в декоре EGGER «Серый камень». Что дальше?"
+    },
+    {
+      "human": "А сделай ещё такой же рядом справа",
+      "calls": [
+        {
+          "tool": "home_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Копия столика справа",
+            "edits": [
+              {
+                "op": "copy",
+                "body_id": "h2",
+                "element_id": null,
+                "side": "right",
+                "gap": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-28f48aad2ff7c4c3",
+            "applied": [
+              "copy"
+            ],
+            "refused": null,
+            "price": {
+              "status": "COMPLETE",
+              "amount_rub": 78308.48,
+              "known_amount_rub": null
+            },
+            "bodies": 2,
+            "parts": 60
+          }
+        }
+      ],
+      "ai": "Добавил второй такой же столик справа вплотную: тоже 1100 мм, с тремя ящиками, зеркалом и скруглёнными углами, в том же декоре. Переходим к следующему предмету?"
+    }
+  ],
+  "review": "Сработало: все правки применены без отказов. Помощник честно сказал, что бетона в каталоге нет. Замечание: цена копии почти вдвое выше (как и ожидается). Неудобство: в первой реплике помощника зеркало уже в заготовке, спрашивать про него не нужно."
+}

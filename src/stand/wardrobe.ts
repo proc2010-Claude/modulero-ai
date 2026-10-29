@@ -85,9 +85,14 @@ function editOf(c: Core, i: WardrobeInput, e: Edit): EditResult {
     case 'set_push_to_open':
       return result(W.setPushToOpen(i, e.on));
     case 'set_sliding_doors':
-      return result(W.setSlidingDoors(i, HW, defined({ n: opt(e.n), system: opt(e.system), scheme: opt(e.scheme), mirror: opt(e.mirror) })));
+      return result(W.setSlidingDoors(i, HW, defined({ n: opt(e.n), system: opt(e.system), scheme: opt(e.scheme), mirror: opt(e.mirror), profileFinish: opt(e.profile_finish) })));
     case 'set_sliding_insert':
-      return result(W.setSlidingInsert(i, HW, { material: e.material, decorId: e.decor_id }));
+      // 0.3-draft: leaf_id — вставка одной створки (setSlidingLeafInsert); стекло и зеркало — id из sliding_inserts.
+      return result(
+        e.leaf_id ? W.setSlidingLeafInsert(i, HW, e.leaf_id, { material: e.material, decorId: e.decor_id }) : W.setSlidingInsert(i, HW, { material: e.material, decorId: e.decor_id }),
+      );
+    case 'set_section_widths':
+      return result(W.setSectionWidths(i, e.widths));
     default:
       throw new Error(`Нет правки шкафа «${e.op}».`);
   }
@@ -166,6 +171,8 @@ export function wardrobeView(c: Core, i: WardrobeInput): WardrobeView {
     size: { width: sum.width, height: sum.height, depth: sum.depth },
     sections,
     mezzanine_height: sum.mezzanineHeight,
+    // Пределы высоты антресоли у этого шкафа (mezzanineLimits ядра) — для set_mezzanine.
+    mezzanine_limits_mm: W.mezzanineLimits(i),
     facade_mounting: sliding ? null : sum.facadeMounting === 'INSET' ? 'вкладные' : sum.facadeMounting === 'OVERLAY' ? 'накладные' : 'разные',
     base: { kind: BASE_RU[sum.base] ?? sum.base, height: sum.base === 'none' ? null : sum.baseHeight },
     top: sum.top,
@@ -177,7 +184,18 @@ export function wardrobeView(c: Core, i: WardrobeInput): WardrobeView {
     lighting: fit.lighting === 'ALL' ? 'весь шкаф' : Array.isArray(fit.lighting) && fit.lighting.length ? fit.lighting : null,
     // mirror ядра — зеркальная раскладка створок по дорожкам (tracksOf), а не зеркало на дверях.
     sliding: doors
-      ? { doors: doors.doors, system: systems.get(doors.system) ?? doors.system, scheme: doors.scheme, mirrored_tracks: doors.mirror, insert: insert?.material ?? null, insert_decor: insert?.decorId ?? null, leaves: leavesOf(scene3d.scene) }
+      ? {
+          doors: doors.doors,
+          system: systems.get(doors.system) ?? doors.system,
+          scheme: doors.scheme,
+          mirrored_tracks: doors.mirror,
+          profile_finish: W.slidingFinishChoices(i, HW).find(([code]: [string, string]) => code === doors.profileFinish)?.[1] ?? doors.profileFinish,
+          insert: insert?.material ?? null,
+          insert_decor: insert?.decorId ?? null,
+          // Вставки створок по id для set_sliding_insert leaf_id: DOORS — как у дверей.
+          leaf_inserts: W.slidingLeafInserts(i).map((x: any) => ({ leaf_id: x.leafId, material: x.material, decor_id: x.decorId })),
+          leaves: leavesOf(scene3d.scene),
+        }
       : null,
     // Корпуса, стыки, перегородки, стоевые, декоры и фурнитура — что видно в редакторе и нужно командам editor_call.
     bodies: i.state.bodies.map((b: any) => defined({ id: b.id, width_mm: exactMm(b.widthExact) ?? b.width, over: b.parent ?? undefined })),
@@ -212,6 +230,8 @@ export function wardrobeOptions(c: Core, kind: 'wardrobe' | 'sliding', topic: st
       return {
         ...JSON.parse(JSON.stringify(W.EDITOR_LIMITS)),
         mezzanine_default_mm: W.MEZZANINE_HEIGHT,
+        // У стартового шкафа; у текущего — state.mezzanine_limits_mm (зависят от высоты шкафа).
+        mezzanine_mm: W.mezzanineLimits(kind === 'sliding' ? W.newSlidingInput() : W.newWardrobeInput()),
         legs_base_height_mm: W.baseHeightLimits('fixedLegs', HW),
         ...(kind === 'sliding' ? { sliding_leaves: { ...W.SLIDING_LEAVES } } : {}),
       };
@@ -224,7 +244,19 @@ export function wardrobeOptions(c: Core, kind: 'wardrobe' | 'sliding', topic: st
     case 'sliding_systems':
       return W.SLIDING_SYSTEM_CHOICES.map(([id, name]: [string, string]) => ({ id, name }));
     case 'sliding_inserts':
-      return W.slidingInsertMaterials(HW).map((m: any) => ({ id: m.id, title: m.title, decors: m.decors }));
+      return {
+        boards: W.slidingInsertMaterials(HW).map((m: any) => ({ id: m.id, title: m.title, decors: m.decors })),
+        // 0.3-draft: стекло и зеркало 4 мм (MOD-AI-30, 70) — material в set_sliding_insert, decor_id null.
+        glass: W.SLIDING_GLASS_CHOICES.map(([id, title]: [string, string]) => ({ id, title })),
+        glass_note: W.SLIDING_GLASS_NOTE,
+      };
+    case 'profile_finishes':
+      // Цвета профиля по системам: серебро — всегда, другие — где у всех профилей системы есть цена (MOD-AI-24).
+      return W.SLIDING_SYSTEM_CHOICES.map(([id, name]: [string, string]) => ({
+        system: id,
+        name,
+        finishes: W.slidingFinishChoices(W.newSlidingInput(), HW, id).map(([code, title]: [string, string]) => ({ id: code, title })),
+      }));
     default:
       return null;
   }

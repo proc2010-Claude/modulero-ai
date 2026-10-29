@@ -63,7 +63,7 @@ test('шкаф: старт, правки, отказы ядра, файл вер
     assert.equal(noRod.refused, null);
     assert.equal(noRod.state.sections[0].rods.length, 0);
 
-    const e = edit(noRod.revision, 'Купе', [{ op: 'set_product', product: 'sliding' }, { op: 'set_sliding_doors', n: 3, system: null, scheme: null, mirror: true }]);
+    const e = edit(noRod.revision, 'Купе', [{ op: 'set_product', product: 'sliding' }, { op: 'set_sliding_doors', n: 3, system: null, scheme: null, mirror: true, profile_finish: null }]);
     assert.equal(e.refused, null);
     assert.equal(e.state.kind, 'sliding');
     assert.equal(e.state.sliding.doors, 3);

@@ -68,13 +68,21 @@ export function toolsProblems(file: ToolsFile): string[] {
 }
 
 export const EXTENSION_PATH = new URL('../contract/tools-0.2-draft.json', import.meta.url);
+export const EXTENSION_03_PATH = new URL('../contract/tools-0.3-draft.json', import.meta.url);
 
 /**
- * Инструменты стенда: договор 0.1-draft и расширение 0.2-draft (AI-DEC-007) — list_commands и editor_call,
- * общий проход к командам редактора конструктора. Файл договора 0.1 не меняется.
+ * Инструменты стенда: договор 0.1-draft, расширение 0.2-draft (AI-DEC-007) — list_commands и editor_call, общий проход
+ * к командам редактора конструктора, — и 0.3-draft (AI-DEC-010): новые правки *_edits на ядре 1582b93e, инструменты
+ * из его replaces заменяют одноимённые 0.1 целиком. Файл договора 0.1 не меняется.
  */
 export function loadStandTools(): ToolsFile {
   const base = loadTools();
   const ext = JSON.parse(readFileSync(EXTENSION_PATH, 'utf8')) as { formatVersion: string; tools: ToolDefinition[] };
-  return { ...base, formatVersion: `${base.formatVersion}+${ext.formatVersion}`, tools: [...base.tools, ...ext.tools] };
+  const ext3 = JSON.parse(readFileSync(EXTENSION_03_PATH, 'utf8')) as { formatVersion: string; replaces: string[]; tools: ToolDefinition[] };
+  const replaced = new Map(ext3.tools.map((t) => [t.name, t]));
+  return {
+    ...base,
+    formatVersion: `${base.formatVersion}+${ext.formatVersion}+${ext3.formatVersion}`,
+    tools: [...base.tools.map((t) => replaced.get(t.name) ?? t), ...ext.tools],
+  };
 }
