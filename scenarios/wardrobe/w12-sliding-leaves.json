@@ -1,0 +1,248 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w12-sliding-leaves",
+  "title": "Купе: секции по створкам",
+  "kind": "sliding",
+  "engine": {
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
+  },
+  "goal": "Купе: секции по створкам (AI-DEC-012, перечень W12–W13). Заготовка купе приходит с тремя секциями под двумя створками — помощник сразу ставит по секции на створку; на просьбу о трёх секциях под двумя дверями предупреждает, что средняя откроется наполовину, и предлагает три двери; замечание конструктора об узкой створке пересказывает и возвращает две двери.",
+  "criteria": [
+    "Первый ход: start_project sliding и set_section_count 2 — секций столько же, сколько створок (W12)",
+    "Три секции под двумя дверями без правки: предупреждение, что средняя секция откроется только наполовину, и выбор — три двери или две секции (W13)",
+    "Три двери ставятся вместе с тремя секциями; замечание конструктора «створка 503 × 2128 мм вне таблицы ЭКО C… в проём встают 2 створки» пересказано, двери не оставлены молча",
+    "Возврат — undo к версии с двумя створками, затем наполнение одним wardrobe_edits и moveRod одним editor_call",
+    "Числа в ответах — из ответа стенда: размеры купе, ширины секций, размер створки, верх полок и штанги по geometry",
+    "Цены в тексте нет (AI-DEC-008)"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Шкаф-купе в прихожую, ширина 1,5 м, две двери",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "sliding",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-f37330d632e721d6",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 55428.11,
+              "known_amount_rub": 55428.11
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 11
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Две секции — по секции под створкой",
+            "edits": [
+              {
+                "op": "set_section_count",
+                "n": 2
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-a578753165f1fc05",
+            "applied": [
+              "set_section_count"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 54279.7,
+              "known_amount_rub": 54279.7
+            },
+            "sections": 2,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 9
+          }
+        }
+      ],
+      "ai": "Поставил купе 1500 × 2200 × 600 мм с двумя створками. Внутри две секции по 750 мм — по секции под каждой створкой, так сдвинутая дверь открывает секцию целиком. Что в основном будете хранить: верхнюю одежду, обувь, что-то ещё?"
+    },
+    {
+      "human": "А можно три секции? Посередине хочу узкую под полки",
+      "calls": [],
+      "ai": "Можно, но под двумя дверями средняя секция всегда будет наполовину закрыта одной из створок — открываться она будет только наполовину. Удобнее так: три двери — по секции под каждой, или две секции, а полки поставить в одной из них. Как сделать?"
+    },
+    {
+      "human": "Давай три двери",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Три створки и три секции — по секции под створкой",
+            "edits": [
+              {
+                "op": "set_sliding_doors",
+                "n": 3,
+                "system": null,
+                "scheme": null,
+                "mirror": null,
+                "profile_finish": null
+              },
+              {
+                "op": "set_section_count",
+                "n": 3
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-8ac0609b855d8335",
+            "applied": [
+              "set_sliding_doors",
+              "set_section_count"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 58922.38,
+              "known_amount_rub": 58922.38
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 12
+          }
+        }
+      ],
+      "ai": "Конструктор поставил три двери, но с замечанием: створка выходит 503 × 2128 мм — слишком узкая для своей высоты, а в этот проём, по его словам, встают две створки. Предлагаю вернуть две двери с двумя секциями по 750 мм, а полки поставить в одной из секций. Вернуть?"
+    },
+    {
+      "human": "Да, верни. Слева полки, справа штанга для курток",
+      "calls": [
+        {
+          "tool": "undo",
+          "input": {
+            "project_id": "$project",
+            "to_revision": "MWD-a578753165f1fc05"
+          },
+          "expect": {
+            "revision": "MWD-a578753165f1fc05",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 54279.7,
+              "known_amount_rub": 54279.7
+            },
+            "sections": 2,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 9
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Полки слева, штанга справа",
+            "edits": [
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "add_fill",
+                "section": 0,
+                "kind": "shelf",
+                "execution": null
+              },
+              {
+                "op": "distribute_shelves",
+                "section": 0
+              },
+              {
+                "op": "add_fill",
+                "section": 1,
+                "kind": "rod",
+                "execution": null
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-5d8d1155b38f841a",
+            "applied": [
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "add_fill",
+              "distribute_shelves",
+              "add_fill"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 58163.68,
+              "known_amount_rub": 58163.68
+            },
+            "sections": 2,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 13
+          }
+        },
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Штанга под куртки",
+            "calls": [
+              {
+                "command": "wardrobe/moveRod",
+                "args_json": "{\"section\":1,\"index\":0,\"yMm\":1200}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-4afc42e818b049cd",
+            "applied": [
+              "wardrobe/moveRod"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 58163.68,
+              "known_amount_rub": 58163.68
+            },
+            "sections": 2,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 13
+          }
+        }
+      ],
+      "ai": "Вернул две двери и две секции по 750 мм. Слева четыре полки, их верх — на 432, 880, 1328 и 1776 мм от пола. Справа штанга для курток, её верх — на 1231 мм от пола. Если на полках будет сложенная одежда, могу поставить их чаще."
+    }
+  ],
+  "review": "Записан на ядре 1582b93e для AI-DEC-012 (правило владельца после автотеста ae-25: «2 двери на 3 секции»). Находки: заготовка купе (start) — 1500 мм, три секции по 500 под двумя створками, то есть сама нарушает правило; при трёх створках в 1500 мм ядро строит двери с замечанием (створка 503 × 2128 мм, предел отношения высоты к ширине 4) и называет, сколько створок встаёт в проём, — помощнику этого хватает, чтобы вернуть две двери. Положения створок по ширине в state нет (у `sliding.leaves` только z), поэтому совпадение стоек со стыками помощник обеспечивает равным числом секций и створок, а не сверкой координат (кандидат стенда (Д): x створок в geometry)."
+}
