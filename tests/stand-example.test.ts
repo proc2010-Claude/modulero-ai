@@ -87,7 +87,7 @@ test('стенд: STALE_REVISION, вход не по схеме, правки н
     assert.equal(stale.revision, start.revision);
     const bad: any = stand.run('kitchen_edits', { project_id: 'checks', base_revision: start.revision, label: 'x', edits: [{ op: 'set_room', key: 'width', value: 5000 }] });
     assert.equal(bad.is_error, true);
-    assert.match(bad.error, /не больше 4000/);
+    assert.match(bad.error, /5000 вне предела 600–4000/);
     assert.equal((stand.run('home_edits', { project_id: 'checks', base_revision: start.revision, label: 'x', edits: [{ op: 'set_material', material_id: 'white' }] }) as any).is_error, true);
     assert.equal((stand.run('wardrobe_edits', { project_id: 'checks', base_revision: start.revision, label: 'x', edits: [{ op: 'set_section_count', n: 2 }] }) as any).is_error, true);
     // Цена — только поля полосы цены конструктора: без себестоимости и ставок (MOD-DEC-497).

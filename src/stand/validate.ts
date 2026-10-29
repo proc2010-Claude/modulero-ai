@@ -13,7 +13,11 @@ export function validate(schema: JsonSchema, value: unknown, at = '$'): string[]
     const own = branches.find((s) => ((s.properties as Record<string, JsonSchema> | undefined)?.op as JsonSchema | undefined)?.const === op);
     if (op !== undefined && own) return validate(own, value, at);
     const all = branches.map((s) => validate(s, value, at));
-    return all.some((p) => !p.length) ? [] : all[all.length - 1]!;
+    if (all.some((p) => !p.length)) return [];
+    // Сообщение — от ветки того же типа, что и значение: «не больше 800», а не «ожидается null» у anyOf(integer, null).
+    const k = kind(value);
+    const same = branches.findIndex((s) => s.type === k || (s.type === 'number' && k === 'integer'));
+    return all[same >= 0 ? same : all.length - 1]!;
   }
   if ('const' in schema && value !== schema.const) return [`${at}: ожидается ${JSON.stringify(schema.const)}`];
   if (Array.isArray(schema.enum) && !schema.enum.includes(value)) return [`${at}: одно из ${schema.enum.map((x) => JSON.stringify(x)).join(', ')}`];
@@ -22,8 +26,10 @@ export function validate(schema: JsonSchema, value: unknown, at = '$'): string[]
   if (t && !(t === k || (t === 'number' && k === 'integer'))) return [`${at}: ожидается ${t}, пришло ${k}`];
   const problems: string[] = [];
   if (typeof value === 'number') {
-    if (typeof schema.minimum === 'number' && value < schema.minimum) problems.push(`${at}: не меньше ${schema.minimum}`);
-    if (typeof schema.maximum === 'number' && value > schema.maximum) problems.push(`${at}: не больше ${schema.maximum}`);
+    const lo = schema.minimum, hi = schema.maximum;
+    const out = (typeof lo === 'number' && value < lo) || (typeof hi === 'number' && value > hi);
+    // Предел целиком, чтобы помощник сразу назвал его человеку и предложил ближайшее значение.
+    if (out) problems.push(`${at}: ${value} вне предела ${typeof lo === 'number' && typeof hi === 'number' ? `${lo}–${hi}` : typeof lo === 'number' ? `не меньше ${lo}` : `не больше ${hi}`}`);
   }
   if (Array.isArray(value)) {
     if (typeof schema.minItems === 'number' && value.length < schema.minItems) problems.push(`${at}: не меньше ${schema.minItems} элементов`);

@@ -170,6 +170,13 @@ export class Stand {
     if (!schema) return error(`Нет инструмента «${tool}». Есть: ${[...this.schemas.keys()].join(', ')}.`);
     // list_commands 0.2 без filter и detail (вызовы до их появления) — как с null.
     if (tool === 'list_commands' && input && typeof input === 'object' && !Array.isArray(input)) input = { filter: null, detail: null, ...input };
+    // У start_project в схеме нет project_id: проект получает имя сеанса. Поле с именем этого сеанса (как у прочих
+    // инструментов) — не ошибка хода, стенд его снимает; чужое имя — ошибка, а не тихая подмена.
+    if (tool === 'start_project' && input && typeof input === 'object' && !Array.isArray(input) && 'project_id' in input) {
+      const { project_id: id, ...rest } = input as Record<string, unknown>;
+      if (id !== null && id !== this.projectId) return error(`У start_project нет поля project_id: проект получает имя сеанса «${this.projectId}», а пришло «${String(id)}».`);
+      input = rest;
+    }
     const problems = validate(schema, input);
     if (problems.length) return error(`Вход ${tool} не по схеме: ${problems.slice(0, 5).join('; ')}`);
     const a = input as Record<string, any>;
@@ -183,8 +190,12 @@ export class Stand {
       case 'home_edits':
       case 'editor_call':
         return this.edits(tool, a);
-      case 'list_commands':
-        return { kind: a.kind, commands: commandList(this.commands, a.kind, { filter: a.filter ?? null, detail: a.detail ?? null }) };
+      case 'list_commands': {
+        const commands = commandList(this.commands, a.kind, { filter: a.filter ?? null, detail: a.detail ?? null });
+        // Пустой список по filter — ещё не «такого нет в конструкторе»: имена и описания команд в основном английские.
+        const hint = !commands.length && a.filter ? 'По этим словам команд нет. Имена и описания команд — по-английски, кнопки конструктора — по-русски в кавычках: проверь одно-два английских слова (shelf, drawer, door, joint, handle) или список без filter, прежде чем сказать, что этого нет.' : null;
+        return { kind: a.kind, commands, ...(hint ? { hint } : {}) };
+      }
       case 'get_project':
         return this.withProject(a.project_id, () => this.projectAnswer());
       case 'undo':
@@ -264,9 +275,12 @@ export class Stand {
       }
       const notRun = refused ? items.map((_, i) => i).filter((i) => i > refused!.i) : [];
       const before = head.revision;
-      if (applied.length) this.commit(p, a.label, tool);
+      // Отказ в середине пакета: принятые правки остаются новой версией (EXCHANGE_SPEC.md §5, пока нет MOD-AI-2) —
+      // «проект не изменён» в тексте отказа относится только к отказанной правке, поэтому ответ говорит, что применено.
+      const partial = refused && applied.length ? `Применено ${applied.length} из ${items.length}, остановлено на правке ${refused.i} (${refused.op}): принятые правки сохранены версией с пометкой «частично».` : null;
+      if (applied.length) this.commit(p, partial ? `${a.label} (частично)` : a.label, tool);
       const now = this.headVersion()!;
-      return { project_id: this.projectId, revision: now.revision, previous_revision: before, version: now.n, applied, refused, not_run: notRun, ...this.summary() };
+      return { project_id: this.projectId, revision: now.revision, previous_revision: before, version: now.n, applied, refused, not_run: notRun, ...(partial ? { partial } : {}), ...this.summary() };
     });
   }
 
@@ -321,7 +335,8 @@ export class Stand {
     if (!target) return { project_id: this.projectId, refused: { problem: `Варианта «${name}» нет.` }, variants: list() };
     const selected = D.selectVariant(d, target.id);
     if (!selected.ok) return { project_id: this.projectId, refused: { problem: selected.problem } };
-    this.data.draft = D.draftText(selected.draft);
+    d = selected.draft; // список ниже — с новой активной меткой
+    this.data.draft = D.draftText(d);
     const before = this.headVersion()!.revision;
     const now = this.commit(target.input, `Вариант «${target.name}»`, 'variants');
     return { project_id: this.projectId, revision: now.revision, previous_revision: before, version: now.n, ...this.summary(), variants: list() };
