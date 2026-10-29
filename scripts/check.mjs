@@ -61,7 +61,7 @@ step('без Claude API и ключей (режим владельца 2026-10-2
   return [...hits.map((p) => `обращение к API: ${relative(root, p)}`), ...deps.map((d) => `зависимость: ${d}`)];
 });
 
-step(`копия ядра modulero-next ${PIN.sha.slice(0, 8)} не изменена (AI-DEC-003)`, () => {
+step(`копия ядра modulero-next ${PIN.sha.slice(0, 8)} не изменена (engine.json)`, () => {
   const text = manifest(engineDir());
   const sha = createHash('sha256').update(text).digest('hex');
   if (sha === PIN.manifestSha256) return [];

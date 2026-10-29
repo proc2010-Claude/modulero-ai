@@ -1,0 +1,3457 @@
+{
+ "version": "1",
+ "powerFactorRule": {
+  "text": "индекс нагрузки = высота корпуса, мм × (масса фасада + 2 × масса ручки), кг; со вторым механизмом допустимый индекс удваивается",
+  "ref": {
+   "doc": "MARATHON-DTC-SE",
+   "sha256": "",
+   "page": "DTC Top Stays SE: «Power Factor = Cabinet Height (in mm) x Door Weight (in kg) including 2x handle weight»",
+   "note": "напечатано для серии SE; для SQ та же величина индекса нагрузки (DERIVED)"
+  }
+ },
+ "lifts": [
+  {
+   "id": "DTC_TOP_STAY_ST01_1",
+   "brand": "DTC",
+   "article": "DTCST01.007/1",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST01.007/1"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=480-529 мм, нагрузка 5-10 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 480,
+     "maxMm": 529
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST01.007/1: «индекс h=480-529 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 5,
+     "max": 10
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST01.007/1: «нагрузка 5-10 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST01.007/1",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST01.043/1",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST01_2",
+   "brand": "DTC",
+   "article": "DTCST01.007/2",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST01.007/2"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=480-529 мм, нагрузка 9,6-16 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 480,
+     "maxMm": 529
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST01.007/2: «индекс h=480-529 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 9.6,
+     "max": 16
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST01.007/2: «нагрузка 9.6-16 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST01.007/2",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST01.043/2",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST02_1",
+   "brand": "DTC",
+   "article": "DTCST02.007/1",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST02.007/1"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=530-589 мм, нагрузка 4,5-8,9 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 530,
+     "maxMm": 589
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST02.007/1: «индекс h=530-589 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 4.5,
+     "max": 8.9
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST02.007/1: «нагрузка 4.5-8.9 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST02.007/1",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST02.043/1",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST02_2",
+   "brand": "DTC",
+   "article": "DTCST02.007/2",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST02.007/2"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=530-589 мм, нагрузка 8,7-14,4 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 530,
+     "maxMm": 589
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST02.007/2: «индекс h=530-589 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 8.7,
+     "max": 14.4
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST02.007/2: «нагрузка 8.7-14.4 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST02.007/2",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST02.043/2",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST03_1",
+   "brand": "DTC",
+   "article": "DTCST03.007/1",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST03.007/1"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=590-649 мм, нагрузка 4,1-8,1 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 590,
+     "maxMm": 649
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST03.007/1: «индекс h=590-649 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 4.1,
+     "max": 8.1
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST03.007/1: «нагрузка 4.1-8.1 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST03.007/1",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST03.043/1",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST03_2",
+   "brand": "DTC",
+   "article": "DTCST03.007/2",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST03.007/2"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=590-649 мм, нагрузка 7,8-13 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 590,
+     "maxMm": 649
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST03.007/2: «индекс h=590-649 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 7.8,
+     "max": 13
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST03.007/2: «нагрузка 7.8-13 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST03.007/2",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST03.043/2",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST04_1",
+   "brand": "DTC",
+   "article": "DTCST04.007/1",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST04.007/1"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=650-729 мм, нагрузка 3,7-7,2 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 650,
+     "maxMm": 729
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST04.007/1: «индекс h=650-729 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 3.7,
+     "max": 7.2
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST04.007/1: «нагрузка 3.7-7.2 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 102,
+     "maxDeg": 115,
+     "ref": {
+      "doc": "HANDBOOK-R8",
+      "sha256": "121d88ed",
+      "page": "§18.3"
+     },
+     "note": "данные DTC, сохранённые при HB-REVIEW (около 102–115°)"
+    },
+    {
+     "minDeg": 105,
+     "maxDeg": 115,
+     "ref": {
+      "doc": "MAKMART-TOPSTAYS-ST",
+      "sha256": "36dbb3bc",
+      "page": "ST04"
+     },
+     "note": "инструкция MAKMART: около 115–105°, ограничитель STW83"
+    }
+   ],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST04.007/1",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST04.043/1",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST04_2",
+   "brand": "DTC",
+   "article": "DTCST04.007/2",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST04.007/2"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=650-729 мм, нагрузка 7-11,6 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 650,
+     "maxMm": 729
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST04.007/2: «индекс h=650-729 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 7,
+     "max": 11.6
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST04.007/2: «нагрузка 7-11.6 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 102,
+     "maxDeg": 115,
+     "ref": {
+      "doc": "HANDBOOK-R8",
+      "sha256": "121d88ed",
+      "page": "§18.3"
+     },
+     "note": "данные DTC, сохранённые при HB-REVIEW (около 102–115°)"
+    },
+    {
+     "minDeg": 105,
+     "maxDeg": 115,
+     "ref": {
+      "doc": "MAKMART-TOPSTAYS-ST",
+      "sha256": "36dbb3bc",
+      "page": "ST04"
+     },
+     "note": "инструкция MAKMART: около 115–105°, ограничитель STW83"
+    }
+   ],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST04.007/2",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST04.043/2",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST04_3",
+   "brand": "DTC",
+   "article": "DTCST04.007/3",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST04.007/3"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=650-729 мм, нагрузка 11,5-19,8 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 650,
+     "maxMm": 729
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST04.007/3: «индекс h=650-729 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 11.5,
+     "max": 19.8
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST04.007/3: «нагрузка 11.5-19.8 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 102,
+     "maxDeg": 115,
+     "ref": {
+      "doc": "HANDBOOK-R8",
+      "sha256": "121d88ed",
+      "page": "§18.3"
+     },
+     "note": "данные DTC, сохранённые при HB-REVIEW (около 102–115°)"
+    },
+    {
+     "minDeg": 105,
+     "maxDeg": 115,
+     "ref": {
+      "doc": "MAKMART-TOPSTAYS-ST",
+      "sha256": "36dbb3bc",
+      "page": "ST04"
+     },
+     "note": "инструкция MAKMART: около 115–105°, ограничитель STW83"
+    }
+   ],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST04.007/3",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST04.043/3",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST05_1",
+   "brand": "DTC",
+   "article": "DTCST05.007/1",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST05.007/1"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=730-799 мм, нагрузка 3,2-6,5 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 730,
+     "maxMm": 799
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST05.007/1: «индекс h=730-799 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 3.2,
+     "max": 6.5
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST05.007/1: «нагрузка 3.2-6.5 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST05.007/1",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST05.043/1",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST05_2",
+   "brand": "DTC",
+   "article": "DTCST05.007/2",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST05.007/2"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=730-799 мм, нагрузка 6,3-10,6 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 730,
+     "maxMm": 799
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST05.007/2: «индекс h=730-799 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 6.3,
+     "max": 10.6
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST05.007/2: «нагрузка 6.3-10.6 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST05.007/2",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST05.043/2",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST05_3",
+   "brand": "DTC",
+   "article": "DTCST05.007/3",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST05.007/3"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=730-799 мм, нагрузка 10,5-18,1 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 730,
+     "maxMm": 799
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST05.007/3: «индекс h=730-799 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 10.5,
+     "max": 18.1
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST05.007/3: «нагрузка 10.5-18.1 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST05.007/3",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST05.043/3",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST06_2",
+   "brand": "DTC",
+   "article": "DTCST06.007/2",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST06.007/2"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=800-879 мм, нагрузка 5,8-9,6 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 800,
+     "maxMm": 879
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST06.007/2: «индекс h=800-879 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 5.8,
+     "max": 9.6
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST06.007/2: «нагрузка 5.8-9.6 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST06.007/2",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST06.043/2",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST06_3",
+   "brand": "DTC",
+   "article": "DTCST06.007/3",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST06.007/3"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=800-879 мм, нагрузка 9,5-16,5 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 800,
+     "maxMm": 879
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST06.007/3: «индекс h=800-879 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 9.5,
+     "max": 16.5
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST06.007/3: «нагрузка 9.5-16.5 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST06.007/3",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST06.043/3",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST07_2",
+   "brand": "DTC",
+   "article": "DTCST07.007/2",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST07.007/2"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=880-959 мм, нагрузка 5,2-8,8 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 880,
+     "maxMm": 959
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST07.007/2: «индекс h=880-959 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 5.2,
+     "max": 8.8
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST07.007/2: «нагрузка 5.2-8.8 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST07.007/2",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST07.043/2",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST07_3",
+   "brand": "DTC",
+   "article": "DTCST07.007/3",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST07.007/3"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=880-959 мм, нагрузка 8,7-15,1 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 880,
+     "maxMm": 959
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST07.007/3: «индекс h=880-959 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 8.7,
+     "max": 15.1
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST07.007/3: «нагрузка 8.7-15.1 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST07.007/3",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST07.043/3",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST08_2",
+   "brand": "DTC",
+   "article": "DTCST08.007/2",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST08.007/2"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=960-1040 мм, нагрузка 4,8-8,1 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 960,
+     "maxMm": 1040
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST08.007/2: «индекс h=960-1040 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 4.8,
+     "max": 8.1
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST08.007/2: «нагрузка 4.8-8.1 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST08.007/2",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST08.043/2",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_ST08_3",
+   "brand": "DTC",
+   "article": "DTCST08.007/3",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCST08.007/3"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY ST для складных фасадов, индекс h=960-1040 мм, нагрузка 8,0-13,9 кг",
+   "series": "DTC TOP STAY ST",
+   "frontKind": "FOLDING",
+   "heightBasis": "CARCASS",
+   "heightMm": {
+    "value": {
+     "minMm": 960,
+     "maxMm": 1040
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST08.007/3: «индекс h=960-1040 мм»; MAKMART: строка ST04 — для каркаса 650–729 мм"
+    }
+   },
+   "loadBasis": "MASS_KG",
+   "load": {
+    "value": {
+     "min": 8.0,
+     "max": 13.9
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCST08.007/3: «нагрузка 8.0-13.9 кг»; MAKMART: по массе фасада с ручкой"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "в строке не указана"
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "состав комплекта (петли между створками и крепление верхней створки) в строке не указан"
+   },
+   "articles": [
+    {
+     "article": "DTCST08.007/3",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCST08.043/3",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCST100",
+    "DTCST83",
+    "DTCST00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_SQ01",
+   "brand": "DTC",
+   "article": "DTCSQ01.007",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCSQ01.007"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY SQ NEW для откидных фасадов, индекс нагрузки 480-1250, высота фасада h=250-400 мм",
+   "series": "DTC TOP STAY SQ",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 250,
+     "maxMm": 400
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCSQ01.007: «высота фасада h=250-400 мм»"
+    }
+   },
+   "loadBasis": "POWER_FACTOR",
+   "load": {
+    "value": {
+     "min": 480,
+     "max": 1250
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCSQ01.007: «индекс нагрузки 480-1250»"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": 1200,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "DTC Top Stays SQ: cabinet width up to 1200 mm, door thickness 16–28 mm"
+    }
+   },
+   "frontThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": 28
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "DTC Top Stays SQ: cabinet width up to 1200 mm, door thickness 16–28 mm"
+    }
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": true,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "«Hinge-less lift system»",
+     "note": "SQ — подъёмник без петель: фасад держат рычаги механизма"
+    }
+   },
+   "articles": [
+    {
+     "article": "DTCSQ01.007",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCSQ01.043",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCSQ100",
+    "DTCSQ75",
+    "DTCSQ00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_SQ02",
+   "brand": "DTC",
+   "article": "DTCSQ02.007",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCSQ02.007"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY SQ NEW для откидных фасадов, индекс нагрузки 960-2350, высота фасада h=250-500 мм",
+   "series": "DTC TOP STAY SQ",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 250,
+     "maxMm": 500
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCSQ02.007: «высота h=250-500 мм»; правило: «высота h» строки — высота фасада, как прямо напечатано у DTCSQ01.007 той же серии (толкование, FINDINGS 530)"
+    }
+   },
+   "loadBasis": "POWER_FACTOR",
+   "load": {
+    "value": {
+     "min": 960,
+     "max": 2350
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCSQ02.007: «индекс нагрузки 960-2350»"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": 1200,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "DTC Top Stays SQ: cabinet width up to 1200 mm, door thickness 16–28 mm"
+    }
+   },
+   "frontThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": 28
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "DTC Top Stays SQ: cabinet width up to 1200 mm, door thickness 16–28 mm"
+    }
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": true,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "«Hinge-less lift system»",
+     "note": "SQ — подъёмник без петель: фасад держат рычаги механизма"
+    }
+   },
+   "articles": [
+    {
+     "article": "DTCSQ02.007",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCSQ02.043",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCSQ100",
+    "DTCSQ75",
+    "DTCSQ00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_SQ03",
+   "brand": "DTC",
+   "article": "DTCSQ03.007",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCSQ03.007"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY SQ NEW для откидных фасадов, индекс нагрузки 1600-3600, высота фасада h=250-500 мм",
+   "series": "DTC TOP STAY SQ",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 250,
+     "maxMm": 500
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCSQ03.007: «высота h=250-500 мм»; правило: «высота h» строки — высота фасада, как прямо напечатано у DTCSQ01.007 той же серии (толкование, FINDINGS 530)"
+    }
+   },
+   "loadBasis": "POWER_FACTOR",
+   "load": {
+    "value": {
+     "min": 1600,
+     "max": 3600
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCSQ03.007: «индекс нагрузки 1600-3600»"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": 1200,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "DTC Top Stays SQ: cabinet width up to 1200 mm, door thickness 16–28 mm"
+    }
+   },
+   "frontThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": 28
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "DTC Top Stays SQ: cabinet width up to 1200 mm, door thickness 16–28 mm"
+    }
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": true,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "«Hinge-less lift system»",
+     "note": "SQ — подъёмник без петель: фасад держат рычаги механизма"
+    }
+   },
+   "articles": [
+    {
+     "article": "DTCSQ03.007",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCSQ03.043",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCSQ100",
+    "DTCSQ75",
+    "DTCSQ00"
+   ]
+  },
+  {
+   "id": "DTC_TOP_STAY_SQ04",
+   "brand": "DTC",
+   "article": "DTCSQ04.007",
+   "ref": {
+    "doc": "CATALOG-READER-INDEX",
+    "sha256": "0387cf7b",
+    "page": "ТБМ.xml",
+    "note": "DTCSQ04.007"
+   },
+   "name": "Комплект подъёмного механизма TOP STAY SQ NEW для откидных фасадов, индекс нагрузки 2500-4500, высота фасада h=250-600 мм",
+   "series": "DTC TOP STAY SQ",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 250,
+     "maxMm": 600
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCSQ04.007: «высота h=250-600 мм»; правило: «высота h» строки — высота фасада, как прямо напечатано у DTCSQ01.007 той же серии (толкование, FINDINGS 530)"
+    }
+   },
+   "loadBasis": "POWER_FACTOR",
+   "load": {
+    "value": {
+     "min": 2500,
+     "max": 4500
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "CATALOG-READER-INDEX",
+     "sha256": "0387cf7b",
+     "page": "ТБМ.xml",
+     "note": "DTCSQ04.007: «индекс нагрузки 2500-4500»"
+    }
+   },
+   "kitsPerFront": 1,
+   "maxCarcassWidthMm": {
+    "value": 1200,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "DTC Top Stays SQ: cabinet width up to 1200 mm, door thickness 16–28 mm"
+    }
+   },
+   "frontThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": 28
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "DTC Top Stays SQ: cabinet width up to 1200 mm, door thickness 16–28 mm"
+    }
+   },
+   "manufacturerAngles": [],
+   "drilling": null,
+   "leafHingesIncluded": {
+    "value": true,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MARATHON-DTC-SQ",
+     "sha256": "",
+     "page": "«Hinge-less lift system»",
+     "note": "SQ — подъёмник без петель: фасад держат рычаги механизма"
+    }
+   },
+   "articles": [
+    {
+     "article": "DTCSQ04.007",
+     "colour": "белый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    },
+    {
+     "article": "DTCSQ04.043",
+     "colour": "серый",
+     "priceRub": {
+      "value": 2135,
+      "status": "DERIVED",
+      "ref": {
+       "doc": "RONDO-2026-10-23",
+       "sha256": "",
+       "page": "аналог «Solo Mech Lift C1 с демпфером, левый+правый Samet», 2135 ₽",
+       "note": "усреднённая цена проекта (MOD-DEC-569): по аналогу подъёмника Рондо, как BLUM_20K2E00_06 до уточнения; цена DTC TOP STAY в прайсах не найдена"
+      }
+     }
+    }
+   ],
+   "accessories": [
+    "DTCSQ100",
+    "DTCSQ75",
+    "DTCSQ00"
+   ]
+  },
+  {
+   "id": "MDM_FLAP_AIR_S",
+   "brand": "MDM",
+   "article": "FL327SNK",
+   "ref": {
+    "doc": "OWNER-PRICES-2026-10-23",
+    "sha256": "1f31bdc7",
+    "page": "артикул FL327SNK",
+    "note": "Механизм подъёмный МДМ FLAP AIR, стандартный"
+   },
+   "name": "Механизм подъёмный МДМ FLAP AIR, стандартный",
+   "series": "MDM FLAP AIR",
+   "tier": "ECONOMY",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 240,
+     "maxMm": 500
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Подбор механизма»: высота фасада 240–500 мм"
+    }
+   },
+   "loadBasis": "POWER_FACTOR_FRONT",
+   "load": {
+    "value": {
+     "min": 520,
+     "max": 920
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Подбор механизма»: коэффициент мощности 520–920 = высота фасада × вес фасада с ручками; на один механизм или на пару — не сказано"
+    }
+   },
+   "maxCarcassWidthMm": {
+    "value": 1500,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "корпус: ширина max 1500, высота 240–500 мм"
+    }
+   },
+   "frontThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": 26
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Минимальные зазоры»: таблица MFo для FD = 16…26 мм; отдельного диапазона толщины фасада нет"
+    }
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 100,
+     "maxDeg": 100,
+     "ref": {
+      "doc": "MDM-FLAP-AIR-ZIP",
+      "sha256": "47e2628f",
+      "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+      "note": "«Расчёт вылета верхней панели»: 100°"
+     }
+    }
+   ],
+   "leafHingesIncluded": {
+    "value": false,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Состав комплекта»: механизм, ответная планка, установочная планка, 5 шурупов M3,5×14 — петель нет; фасад висит на петлях (B, C схемы)"
+    }
+   },
+   "kitsPerFront": 1,
+   "drilling": {
+    "holes": [
+     {
+      "part": "SIDE",
+      "belowTopMm": 184,
+      "acrossMm": 38,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 209.5,
+      "acrossMm": 23.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 209.5,
+      "acrossMm": 53,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 82,
+      "acrossMm": 0,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 114,
+      "acrossMm": 0,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     }
+    ],
+    "sides": "ONE",
+    "hingeShift": {
+     "byMountingMm": {
+      "OVERLAY": 0,
+      "HALF_OVERLAY": 9.5,
+      "INSET": 18
+     }
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": "Л стор. при B=0(отв. пл-ка H0) и С=0(накл. петля)/FLAP AIR подъем. мех-зм, *.fr3d; FLAP AIR (схема при B=0 и C=0) .fr3d",
+     "note": "установочная планка в боковине — разметка Ø3 × 1: 184 мм под низом верхней стенки, 38 мм от кромки; ещё две — 209,5 мм, 23,5 и 53 мм; ответная планка на фасаде — 82 и 114 мм под низом верхней стенки, в плоскости внутренней стороны боковины (на схеме — 16 мм от края фасада); набор нарисован при B = 0 и C = 0, схема FLAP-AIR_sch.pdf: «184 + B + C», «82 + B + C» (FINDINGS 3351)"
+    }
+   },
+   "articles": [
+    {
+     "article": "FL327SNK",
+     "colour": "никель",
+     "priceRub": {
+      "value": 970,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL327SNK",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 960 ₽; mdm-complect.ru: 970 ₽), вверх до 10 ₽"
+      }
+     }
+    },
+    {
+     "article": "FL327SBNK",
+     "colour": "чёрный никель",
+     "priceRub": {
+      "value": 1010,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL327SBNK",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 1000 ₽; mdm-complect.ru: 1010 ₽), вверх до 10 ₽"
+      }
+     }
+    }
+   ],
+   "accessories": []
+  },
+  {
+   "id": "MDM_FLAP_AIR_M",
+   "brand": "MDM",
+   "article": "FL327MNK",
+   "ref": {
+    "doc": "OWNER-PRICES-2026-10-23",
+    "sha256": "1f31bdc7",
+    "page": "артикул FL327MNK",
+    "note": "Механизм подъёмный МДМ FLAP AIR, средний"
+   },
+   "name": "Механизм подъёмный МДМ FLAP AIR, средний",
+   "series": "MDM FLAP AIR",
+   "tier": "ECONOMY",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 240,
+     "maxMm": 500
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Подбор механизма»: высота фасада 240–500 мм"
+    }
+   },
+   "loadBasis": "POWER_FACTOR_FRONT",
+   "load": {
+    "value": {
+     "min": 1200,
+     "max": 1750
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Подбор механизма»: коэффициент мощности 1200–1750 = высота фасада × вес фасада с ручками; на один механизм или на пару — не сказано"
+    }
+   },
+   "maxCarcassWidthMm": {
+    "value": 1500,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "корпус: ширина max 1500, высота 240–500 мм"
+    }
+   },
+   "frontThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": 26
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Минимальные зазоры»: таблица MFo для FD = 16…26 мм; отдельного диапазона толщины фасада нет"
+    }
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 100,
+     "maxDeg": 100,
+     "ref": {
+      "doc": "MDM-FLAP-AIR-ZIP",
+      "sha256": "47e2628f",
+      "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+      "note": "«Расчёт вылета верхней панели»: 100°"
+     }
+    }
+   ],
+   "leafHingesIncluded": {
+    "value": false,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Состав комплекта»: механизм, ответная планка, установочная планка, 5 шурупов M3,5×14 — петель нет; фасад висит на петлях (B, C схемы)"
+    }
+   },
+   "kitsPerFront": 1,
+   "drilling": {
+    "holes": [
+     {
+      "part": "SIDE",
+      "belowTopMm": 184,
+      "acrossMm": 38,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 209.5,
+      "acrossMm": 23.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 209.5,
+      "acrossMm": 53,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 82,
+      "acrossMm": 0,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 114,
+      "acrossMm": 0,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     }
+    ],
+    "sides": "ONE",
+    "hingeShift": {
+     "byMountingMm": {
+      "OVERLAY": 0,
+      "HALF_OVERLAY": 9.5,
+      "INSET": 18
+     }
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": "Л стор. при B=0(отв. пл-ка H0) и С=0(накл. петля)/FLAP AIR подъем. мех-зм, *.fr3d; FLAP AIR (схема при B=0 и C=0) .fr3d",
+     "note": "установочная планка в боковине — разметка Ø3 × 1: 184 мм под низом верхней стенки, 38 мм от кромки; ещё две — 209,5 мм, 23,5 и 53 мм; ответная планка на фасаде — 82 и 114 мм под низом верхней стенки, в плоскости внутренней стороны боковины (на схеме — 16 мм от края фасада); набор нарисован при B = 0 и C = 0, схема FLAP-AIR_sch.pdf: «184 + B + C», «82 + B + C» (FINDINGS 3351)"
+    }
+   },
+   "articles": [
+    {
+     "article": "FL327MNK",
+     "colour": "никель",
+     "priceRub": {
+      "value": 970,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL327MNK",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 960 ₽; mdm-complect.ru: 970 ₽), вверх до 10 ₽"
+      }
+     }
+    },
+    {
+     "article": "FL327MBNK",
+     "colour": "чёрный никель",
+     "priceRub": {
+      "value": 1010,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL327MBNK",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 1000 ₽; mdm-complect.ru: 1010 ₽), вверх до 10 ₽"
+      }
+     }
+    }
+   ],
+   "accessories": []
+  },
+  {
+   "id": "MDM_FLAP_AIR_L",
+   "brand": "MDM",
+   "article": "FL327LNK",
+   "ref": {
+    "doc": "OWNER-PRICES-2026-10-23",
+    "sha256": "1f31bdc7",
+    "page": "артикул FL327LNK",
+    "note": "Механизм подъёмный МДМ FLAP AIR, усиленный"
+   },
+   "name": "Механизм подъёмный МДМ FLAP AIR, усиленный",
+   "series": "MDM FLAP AIR",
+   "tier": "ECONOMY",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 240,
+     "maxMm": 500
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Подбор механизма»: высота фасада 240–500 мм"
+    }
+   },
+   "loadBasis": "POWER_FACTOR_FRONT",
+   "load": {
+    "value": {
+     "min": 1500,
+     "max": 2240
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Подбор механизма»: коэффициент мощности 1500–2240 = высота фасада × вес фасада с ручками; на один механизм или на пару — не сказано"
+    }
+   },
+   "maxCarcassWidthMm": {
+    "value": 1500,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "корпус: ширина max 1500, высота 240–500 мм"
+    }
+   },
+   "frontThicknessMm": {
+    "value": {
+     "minMm": 16,
+     "maxMm": 26
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Минимальные зазоры»: таблица MFo для FD = 16…26 мм; отдельного диапазона толщины фасада нет"
+    }
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 100,
+     "maxDeg": 100,
+     "ref": {
+      "doc": "MDM-FLAP-AIR-ZIP",
+      "sha256": "47e2628f",
+      "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+      "note": "«Расчёт вылета верхней панели»: 100°"
+     }
+    }
+   ],
+   "leafHingesIncluded": {
+    "value": false,
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": ".установка/FLAP-AIR_sch.pdf, с. 1",
+     "note": "«Состав комплекта»: механизм, ответная планка, установочная планка, 5 шурупов M3,5×14 — петель нет; фасад висит на петлях (B, C схемы)"
+    }
+   },
+   "kitsPerFront": 1,
+   "drilling": {
+    "holes": [
+     {
+      "part": "SIDE",
+      "belowTopMm": 184,
+      "acrossMm": 38,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 209.5,
+      "acrossMm": 23.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 209.5,
+      "acrossMm": 53,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 82,
+      "acrossMm": 0,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 114,
+      "acrossMm": 0,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     }
+    ],
+    "sides": "ONE",
+    "hingeShift": {
+     "byMountingMm": {
+      "OVERLAY": 0,
+      "HALF_OVERLAY": 9.5,
+      "INSET": 18
+     }
+    },
+    "status": "CONFIRMED",
+    "ref": {
+     "doc": "MDM-FLAP-AIR-ZIP",
+     "sha256": "47e2628f",
+     "page": "Л стор. при B=0(отв. пл-ка H0) и С=0(накл. петля)/FLAP AIR подъем. мех-зм, *.fr3d; FLAP AIR (схема при B=0 и C=0) .fr3d",
+     "note": "установочная планка в боковине — разметка Ø3 × 1: 184 мм под низом верхней стенки, 38 мм от кромки; ещё две — 209,5 мм, 23,5 и 53 мм; ответная планка на фасаде — 82 и 114 мм под низом верхней стенки, в плоскости внутренней стороны боковины (на схеме — 16 мм от края фасада); набор нарисован при B = 0 и C = 0, схема FLAP-AIR_sch.pdf: «184 + B + C», «82 + B + C» (FINDINGS 3351)"
+    }
+   },
+   "articles": [
+    {
+     "article": "FL327LNK",
+     "colour": "никель",
+     "priceRub": {
+      "value": 970,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL327LNK",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 960 ₽; mdm-complect.ru: 970 ₽), вверх до 10 ₽"
+      }
+     }
+    },
+    {
+     "article": "FL327LBNK",
+     "colour": "чёрный никель",
+     "priceRub": {
+      "value": 1010,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL327LBNK",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 1000 ₽; mdm-complect.ru: 1010 ₽), вверх до 10 ₽"
+      }
+     }
+    }
+   ],
+   "accessories": []
+  },
+  {
+   "id": "MDM_FLAP_S",
+   "brand": "MDM",
+   "article": "FL123SGR",
+   "ref": {
+    "doc": "OWNER-PRICES-2026-10-23",
+    "sha256": "1f31bdc7",
+    "page": "артикул FL123SGR",
+    "note": "Механизм подъёмный поворотный МДМ FLAP, стандартный"
+   },
+   "name": "Механизм подъёмный поворотный МДМ FLAP, стандартный",
+   "series": "MDM FLAP",
+   "tier": "STANDARD",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 330,
+     "maxMm": 450
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FLAP+ фасад/планка тип-1/FL123SGR (∠110°)тип 1.fr3d",
+     "note": "имя панели фасада в комплекте «фасад(наложение 15 мм) H:330-450» (с планкой тип 2 — H:300-450); H считается высотой фасада: фасад набора нарисован высотой нижней границы (FINDINGS 3352)"
+    }
+   },
+   "loadBasis": "POWER_FACTOR",
+   "load": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 110,
+     "maxDeg": 110,
+     "ref": {
+      "doc": "MDM-FLAP-ZIP",
+      "sha256": "bd936e6b",
+      "page": "FLAP/FL123SGR (тип 1).fr3d",
+      "note": "«FLAP+ фасад»: комплекты FL123 (∠110°)"
+     }
+    }
+   ],
+   "leafHingesIncluded": {
+    "value": false,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FL123SGR (тип 1).fr3d",
+     "note": "в комплекте набора — механизм и планки фасада, петель и отверстий под них нет"
+    }
+   },
+   "kitsPerFront": 1,
+   "drilling": {
+    "holes": [
+     {
+      "part": "SIDE",
+      "belowTopMm": 49,
+      "acrossMm": 36,
+      "diameterMm": 5.2,
+      "depthMm": 5,
+      "marking": false,
+      "kind": "EURO_SCREW"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 49,
+      "acrossMm": 100,
+      "diameterMm": 5.2,
+      "depthMm": 5,
+      "marking": false,
+      "kind": "EURO_SCREW"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 12,
+      "acrossMm": 52,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 43,
+      "acrossMm": 141,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 81,
+      "acrossMm": 42,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 115,
+      "acrossMm": 146,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 62,
+      "acrossMm": 12.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 92,
+      "acrossMm": 12.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     }
+    ],
+    "sides": "BOTH",
+    "hingeShift": null,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FLAP+ фасад/планка тип-1/FL123*GR (∠110°)тип 1.fr3d",
+     "note": "в боковине — евровинты Ø5,2 × 5: 49 мм под низом верхней стенки, 36 и 100 мм от кромки, разметка Ø3 × 1 — (12; 52), (43; 141), (81; 42), (115; 146); планка фасада тип 1 — разметка в 12,5 мм от боковины, 62 и 92 мм под низом верхней стенки; низ верхней стенки — под наложением фасада 15 мм набора; зависимость от планки петли набор не показывает (FINDINGS 3352)"
+    }
+   },
+   "articles": [
+    {
+     "article": "FL123SGR",
+     "colour": "серый",
+     "priceRub": {
+      "value": 3140,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL123SGR",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 3120 ₽; mdm-complect.ru: 3150 ₽), вверх до 10 ₽"
+      }
+     }
+    },
+    {
+     "article": "FL123SDGR",
+     "colour": "графит",
+     "priceRub": {
+      "value": 3210,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL123SDGR",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 3190 ₽; mdm-complect.ru: 3220 ₽), вверх до 10 ₽"
+      }
+     }
+    }
+   ],
+   "accessories": []
+  },
+  {
+   "id": "MDM_FLAP_M",
+   "brand": "MDM",
+   "article": "FL123MGR",
+   "ref": {
+    "doc": "OWNER-PRICES-2026-10-23",
+    "sha256": "1f31bdc7",
+    "page": "артикул FL123MGR",
+    "note": "Механизм подъёмный поворотный МДМ FLAP, средний"
+   },
+   "name": "Механизм подъёмный поворотный МДМ FLAP, средний",
+   "series": "MDM FLAP",
+   "tier": "STANDARD",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 360,
+     "maxMm": 500
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FLAP+ фасад/планка тип-1/FL123MGR (∠110°)тип 1.fr3d",
+     "note": "имя панели фасада в комплекте «фасад(наложение 15 мм) H:360-500»; H считается высотой фасада: фасад набора нарисован высотой нижней границы (FINDINGS 3352)"
+    }
+   },
+   "loadBasis": "POWER_FACTOR",
+   "load": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 110,
+     "maxDeg": 110,
+     "ref": {
+      "doc": "MDM-FLAP-ZIP",
+      "sha256": "bd936e6b",
+      "page": "FLAP/FL123SGR (тип 1).fr3d",
+      "note": "«FLAP+ фасад»: комплекты FL123 (∠110°)"
+     }
+    }
+   ],
+   "leafHingesIncluded": {
+    "value": false,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FL123SGR (тип 1).fr3d",
+     "note": "в комплекте набора — механизм и планки фасада, петель и отверстий под них нет"
+    }
+   },
+   "kitsPerFront": 1,
+   "drilling": {
+    "holes": [
+     {
+      "part": "SIDE",
+      "belowTopMm": 49,
+      "acrossMm": 36,
+      "diameterMm": 5.2,
+      "depthMm": 5,
+      "marking": false,
+      "kind": "EURO_SCREW"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 49,
+      "acrossMm": 100,
+      "diameterMm": 5.2,
+      "depthMm": 5,
+      "marking": false,
+      "kind": "EURO_SCREW"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 12,
+      "acrossMm": 52,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 43,
+      "acrossMm": 141,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 81,
+      "acrossMm": 42,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 115,
+      "acrossMm": 146,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 62,
+      "acrossMm": 12.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 92,
+      "acrossMm": 12.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     }
+    ],
+    "sides": "BOTH",
+    "hingeShift": null,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FLAP+ фасад/планка тип-1/FL123*GR (∠110°)тип 1.fr3d",
+     "note": "в боковине — евровинты Ø5,2 × 5: 49 мм под низом верхней стенки, 36 и 100 мм от кромки, разметка Ø3 × 1 — (12; 52), (43; 141), (81; 42), (115; 146); планка фасада тип 1 — разметка в 12,5 мм от боковины, 62 и 92 мм под низом верхней стенки; низ верхней стенки — под наложением фасада 15 мм набора; зависимость от планки петли набор не показывает (FINDINGS 3352)"
+    }
+   },
+   "articles": [
+    {
+     "article": "FL123MGR",
+     "colour": "серый",
+     "priceRub": {
+      "value": 3140,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL123MGR",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 3120 ₽; mdm-complect.ru: 3150 ₽), вверх до 10 ₽"
+      }
+     }
+    },
+    {
+     "article": "FL123MDGR",
+     "colour": "графит",
+     "priceRub": {
+      "value": 3230,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL123MDGR",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 3210 ₽; mdm-complect.ru: 3240 ₽), вверх до 10 ₽"
+      }
+     }
+    }
+   ],
+   "accessories": []
+  },
+  {
+   "id": "MDM_FLAP_L",
+   "brand": "MDM",
+   "article": "FL123LGR",
+   "ref": {
+    "doc": "OWNER-PRICES-2026-10-23",
+    "sha256": "1f31bdc7",
+    "page": "артикул FL123LGR",
+    "note": "Механизм подъёмный поворотный МДМ FLAP, усиленный"
+   },
+   "name": "Механизм подъёмный поворотный МДМ FLAP, усиленный",
+   "series": "MDM FLAP",
+   "tier": "STANDARD",
+   "frontKind": "FLAP",
+   "heightBasis": "FRONT",
+   "heightMm": {
+    "value": {
+     "minMm": 400,
+     "maxMm": 500
+    },
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FLAP+ фасад/планка тип-1/FL123LGR (∠110°)тип 1.fr3d",
+     "note": "имя панели фасада в комплекте «фасад(наложение 15 мм) H:400-500»; H считается высотой фасада: фасад набора нарисован высотой нижней границы (FINDINGS 3352)"
+    }
+   },
+   "loadBasis": "POWER_FACTOR",
+   "load": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "maxCarcassWidthMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "frontThicknessMm": {
+    "value": null,
+    "status": "UNKNOWN",
+    "ref": null,
+    "reason": "требует уточнения: в наборе БАЗИС FLAP (FLAP_FLAPLIGHT.zip) и в папке КАТАЛОГИ нет таблицы FL123 — не подбирается по умолчанию (Д Директора 2026-10-29, FINDINGS 2753)"
+   },
+   "manufacturerAngles": [
+    {
+     "minDeg": 110,
+     "maxDeg": 110,
+     "ref": {
+      "doc": "MDM-FLAP-ZIP",
+      "sha256": "bd936e6b",
+      "page": "FLAP/FL123SGR (тип 1).fr3d",
+      "note": "«FLAP+ фасад»: комплекты FL123 (∠110°)"
+     }
+    }
+   ],
+   "leafHingesIncluded": {
+    "value": false,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FL123SGR (тип 1).fr3d",
+     "note": "в комплекте набора — механизм и планки фасада, петель и отверстий под них нет"
+    }
+   },
+   "kitsPerFront": 1,
+   "drilling": {
+    "holes": [
+     {
+      "part": "SIDE",
+      "belowTopMm": 49,
+      "acrossMm": 36,
+      "diameterMm": 5.2,
+      "depthMm": 5,
+      "marking": false,
+      "kind": "EURO_SCREW"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 49,
+      "acrossMm": 100,
+      "diameterMm": 5.2,
+      "depthMm": 5,
+      "marking": false,
+      "kind": "EURO_SCREW"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 12,
+      "acrossMm": 52,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 43,
+      "acrossMm": 141,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 81,
+      "acrossMm": 42,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "SIDE",
+      "belowTopMm": 115,
+      "acrossMm": 146,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 62,
+      "acrossMm": 12.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     },
+     {
+      "part": "FRONT",
+      "belowTopMm": 92,
+      "acrossMm": 12.5,
+      "diameterMm": 3,
+      "depthMm": 1,
+      "marking": true,
+      "kind": "PILOT"
+     }
+    ],
+    "sides": "BOTH",
+    "hingeShift": null,
+    "status": "DERIVED",
+    "ref": {
+     "doc": "MDM-FLAP-ZIP",
+     "sha256": "bd936e6b",
+     "page": "FLAP/FLAP+ фасад/планка тип-1/FL123*GR (∠110°)тип 1.fr3d",
+     "note": "в боковине — евровинты Ø5,2 × 5: 49 мм под низом верхней стенки, 36 и 100 мм от кромки, разметка Ø3 × 1 — (12; 52), (43; 141), (81; 42), (115; 146); планка фасада тип 1 — разметка в 12,5 мм от боковины, 62 и 92 мм под низом верхней стенки; низ верхней стенки — под наложением фасада 15 мм набора; зависимость от планки петли набор не показывает (FINDINGS 3352)"
+    }
+   },
+   "articles": [
+    {
+     "article": "FL123LGR",
+     "colour": "серый",
+     "priceRub": {
+      "value": 3140,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL123LGR",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 3120 ₽; mdm-complect.ru: 3150 ₽), вверх до 10 ₽"
+      }
+     }
+    },
+    {
+     "article": "FL123LDGR",
+     "colour": "графит",
+     "priceRub": {
+      "value": 3260,
+      "status": "CONFIRMED",
+      "ref": {
+       "doc": "OWNER-PRICES-2026-10-23",
+       "sha256": "1f31bdc7",
+       "page": "артикул FL123LDGR",
+       "note": "средняя цена проекта (MOD-DEC-724): среднее ориентиров поставщиков (furnimax.ru: 3240 ₽; mdm-complect.ru: 3280 ₽), вверх до 10 ₽"
+      }
+     }
+    }
+   ],
+   "accessories": []
+  }
+ ],
+ "documents": [
+  {
+   "id": "CATALOG-READER-INDEX",
+   "path": "Файлы проекта Modulero (Claude): catalog_reader/data/articles.json.gz — индекс читателя каталогов, строки библиотеки БАЗИС ТБМ (КАТАЛОГИ\\ТБМ\\technicalCatalog-archive-278_d595ba7137eda20c974504a32aeca139.zip › 2867bac8-10c7-4e51-b4f4-cf0efb290769.zip › TBM_TOPSTAY\\ТБМ.xml)",
+   "sha256": "0387cf7b7692f30dfff6983bd99d53566f3e7d5f88a75fbfc9f0723ee3608cce",
+   "title": "Индекс читателя каталогов: база материалов БАЗИС ТБМ, подъёмники DTC TOP STAY"
+  },
+  {
+   "id": "MAKMART-TOPSTAYS-ST",
+   "path": "КАТАЛОГИ\\MAKMART-RU\\TOP-STAYS ST\\TOP-STAYS ST - инструкция MAKMART.pdf",
+   "sha256": "36dbb3bc738a346365fbb1e540e0f726d93d4408d04882bf894f02677e4b6249",
+   "title": "Инструкция подъёмника TOP-STAYS ST (MAKMART)"
+  },
+  {
+   "id": "HANDBOOK-R8",
+   "path": "reference/sources/handbook-r8-proposal/MODULERO_TECH_HANDBOOK_r8_PROPOSAL_RU.md",
+   "sha256": "121d88ed89539cef5b1e6884725bc6928a7999e524030dd5ad3d6e59081c702d",
+   "title": "Handbook r8, глава 18 «Подъёмные механизмы антресолей»"
+  },
+  {
+   "id": "MARATHON-DTC-SE",
+   "path": "https://marathonhardware.com/pd/dtc-top-stays-se-series/pr-423736",
+   "sha256": "",
+   "title": "Marathon Hardware: DTC Top Stays SE (страница продавца)",
+   "retrievedOn": "2026-10-23"
+  },
+  {
+   "id": "MARATHON-DTC-SQ",
+   "path": "https://marathonhardware.com/pd/dtc-top-stays-sq-soft-close-lift-system-580-1250-pf-light-weight/105-SQ00AL",
+   "sha256": "",
+   "title": "Marathon Hardware: DTC Top Stays SQ (страница продавца)",
+   "retrievedOn": "2026-10-23"
+  },
+  {
+   "id": "RONDO-2026-10-23",
+   "path": "https://rondo-perm.ru/catalog/furnitura_/?display=table",
+   "sha256": "",
+   "title": "Рондо: фурнитура (страница продавца)",
+   "retrievedOn": "2026-10-23"
+  },
+  {
+   "id": "OWNER-PRICES-2026-10-23",
+   "path": "E:\\CLAUDE\\CATALOG\\PRICES.csv",
+   "sha256": "1f31bdc7532d46c1dab7a850f88bd9737f29d5b2d37e34e96320050b856cc3de",
+   "title": "Сводный прайс каталога владельца (2026-10-23): furnimax.ru, МДМ и другие"
+  },
+  {
+   "id": "MDM-FLAP-AIR-ZIP",
+   "path": "КАТАЛОГИ\\МДМ-Комплект\\FLAP_AIR.zip",
+   "sha256": "47e2628f36cd27c089886fe719ab2634a1487d5efa50a94bd9903b9c29740812",
+   "title": "Библиотека БАЗИС МДМ «FLAP AIR» (PULSE, 06.03.2025): комплекты Л/П стороны, схема FLAP-AIR_sch.pdf; страница — файл в архиве"
+  },
+  {
+   "id": "MDM-FLAP-ZIP",
+   "path": "КАТАЛОГИ\\МДМ-Комплект\\FLAP_FLAPLIGHT.zip",
+   "sha256": "bd936e6ba508df564db60754c51d307656401200e65a109c75c92b4afda92680",
+   "title": "Библиотека БАЗИС МДМ «FLAP подъёмный механизм» (24.10.2025): FLAP FL123, FLAP LIGHT FL317; страница — файл в архиве"
+  }
+ ]
+}

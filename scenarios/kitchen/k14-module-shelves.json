@@ -4,8 +4,8 @@
   "title": "Полка в модуле и ширина новых модулей",
   "kind": "kitchen",
   "engine": {
-    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
-    "hardwareCatalog": "hw-2026-10-27.8"
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
   },
   "goal": "Правки панелей редактора кухни, которых нет в kitchen_edits 0.1: полка внутри модуля и ширина новых модулей — командами editor_call по id из сводки.",
   "criteria": [
@@ -25,11 +25,11 @@
             "template": "straight"
           },
           "expect": {
-            "revision": "KPR2-af6c0f5505e21cc3",
+            "revision": "KPR2-d7259e4a0bff71b0",
             "price": {
-              "status": "PARTIAL",
-              "amount_rub": null,
-              "known_amount_rub": 141557.79
+              "status": "COMPLETE_CONFIGURED_ESTIMATE",
+              "amount_rub": 141957.09,
+              "known_amount_rub": 141957.09
             },
             "modules": 10,
             "parts": 84
@@ -55,15 +55,15 @@
             ]
           },
           "expect": {
-            "revision": "KPR2-97e9d291abb7e8d3",
+            "revision": "KPR2-6229d9e65fcff8c0",
             "applied": [
               "kitchen/addKitchenShelf"
             ],
             "refused": null,
             "price": {
-              "status": "PARTIAL",
-              "amount_rub": null,
-              "known_amount_rub": 142827.76
+              "status": "COMPLETE_CONFIGURED_ESTIMATE",
+              "amount_rub": 143225.84,
+              "known_amount_rub": 143225.84
             },
             "modules": 10,
             "parts": 85
@@ -89,15 +89,15 @@
             ]
           },
           "expect": {
-            "revision": "KPR2-e04145bc629a9e7e",
+            "revision": "KPR2-e377de952912fae3",
             "applied": [
               "kitchen/setKitchenDefaultWidth"
             ],
             "refused": null,
             "price": {
-              "status": "PARTIAL",
-              "amount_rub": null,
-              "known_amount_rub": 142827.76
+              "status": "COMPLETE_CONFIGURED_ESTIMATE",
+              "amount_rub": 143225.84,
+              "known_amount_rub": 143225.84
             },
             "modules": 10,
             "parts": 85
@@ -107,5 +107,5 @@
       "ai": "Хорошо: новые модули будут по 45 см, те, что уже стоят, конструктор не меняет."
     }
   ],
-  "review": "Полки модулей и поля панелей «Наполнение» и «Фасады» теперь видны в сводке (shelves, fields) и меняются командами ядра. В пробном прогоне ИИ сначала указал модуль без расчётной геометрии и получил отказ «Выберите корпус с рассчитанной геометрией» — по сводке can_add_shelf видно, куда полку добавить можно."
+  "review": "Полки модулей и поля панелей «Наполнение» и «Фасады» теперь видны в сводке (shelves, fields) и меняются командами ядра. В пробном прогоне ИИ сначала указал модуль без расчётной геометрии и получил отказ «Выберите корпус с рассчитанной геометрией» — по сводке can_add_shelf видно, куда полку добавить можно.\n\nПерезапись на 1582b93e (AI-DEC-009): цена полная (MOD-AI-43), остальное без изменений."
 }

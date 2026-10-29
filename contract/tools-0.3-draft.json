@@ -1,0 +1,2570 @@
+{
+  "format": "modulero.ai-tools-extension",
+  "formatVersion": "0.3-draft",
+  "basis": "AI-DEC-010: договор на ядре modulero-next 1582b93e (AI-DEC-009) — новое в конструкторе с MOD-AI-12…80 правками *_edits; остальное — editor_call (0.2-draft).",
+  "note": "Заменяет одноимённые инструменты 0.1-draft целиком (start_project, get_options, kitchen_edits, wardrobe_edits, home_edits); прежние операции и поля без изменений, кроме: set_room кухни до 8000 мм, set_base HOME — casters и wall, у set_sliding_doors поле profile_finish, у set_sliding_insert поле leaf_id. list_commands и editor_call — из 0.2-draft.",
+  "replaces": [
+    "start_project",
+    "get_options",
+    "kitchen_edits",
+    "wardrobe_edits",
+    "home_edits"
+  ],
+  "tools": [
+    {
+      "name": "start_project",
+      "description": "Создать проект изделия со стартовой конфигурации конструктора. Вызывай сразу, как только понятно изделие, даже без размеров: человек должен видеть прототип с первого ответа.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "kitchen",
+              "wardrobe",
+              "sliding",
+              "home"
+            ]
+          },
+          "template": {
+            "anyOf": [
+              {
+                "type": "string",
+                "description": "kitchen: empty, straight, l, u, island; home: chest, bedside, tv, bookcase, shoe, desk, vanity, sideboard, own; wardrobe и sliding: start"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "template"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_options",
+      "description": "Допустимые значения для правок: пределы размеров, карточки модулей кухни, декоры, материалы фасадов, системы купе, типы пометок, наполнение. Бери id отсюда, не выдумывай. 0.3-draft: worktops и handles кухни, profile_finishes купе, стекло и зеркало в sliding_inserts, пределы антресоли в limits шкафа, декоры общего каталога у HOME.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "kitchen",
+              "wardrobe",
+              "sliding",
+              "home"
+            ]
+          },
+          "topic": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "limits",
+              "kitchen_cards",
+              "decors",
+              "facade_materials",
+              "obstacle_types",
+              "sliding_systems",
+              "sliding_inserts",
+              "storage",
+              "home_templates",
+              "handles",
+              "hardware_levels",
+              "worktops",
+              "profile_finishes"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "topic"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "kitchen_edits",
+      "description": "Применить правки к проекту (кухня) движком Modulero. Правки идут по порядку; первая отказанная останавливает остальные. Ответ — новая версия, отказ словами движка, состояние и цена. Не придумывай размеры и цену сам: бери их только из ответа.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "description": "id проекта из start_project"
+          },
+          "base_revision": {
+            "type": "string",
+            "description": "Версия, от которой правишь (revision из последнего ответа); при несовпадении — отказ STALE_REVISION"
+          },
+          "label": {
+            "type": "string",
+            "description": "Коротко по-русски, что меняется, для истории версий: «Посудомойка 45 см»"
+          },
+          "edits": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "description": "Размер помещения, мм; подтверждает помещение. setKitchenRoom. Стена до 8000 мм, высота до 4000 (get_options limits, MOD-AI-12). Отказ, если модуль перестаёт помещаться.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_room"
+                    },
+                    "key": {
+                      "type": "string",
+                      "description": "Какой размер",
+                      "enum": [
+                        "width",
+                        "depth",
+                        "height"
+                      ]
+                    },
+                    "value": {
+                      "type": "integer",
+                      "description": "Целые мм",
+                      "minimum": 600,
+                      "maximum": 8000
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "key",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Форма кухни. setKitchenType.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_type"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "straight — вдоль стены, l — угловая (Г), u — П-образная",
+                      "enum": [
+                        "straight",
+                        "l",
+                        "u"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "type"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Сторона угла Г-образной кухни. setKitchenOrientation.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_orientation"
+                    },
+                    "orientation": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "left",
+                        "right"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "orientation"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Остров вкл/выкл. setKitchenIsland.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_island"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Модуль по карточке каталога (get_options topic=kitchen_cards). addKitchenModuleTo: без pos — первое свободное место вдоль стены.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "add_module"
+                    },
+                    "card": {
+                      "type": "string",
+                      "description": "id карточки из get_options kitchen_cards, например lower-sink, lower-hob (шкаф под варочную панель), filler (добор: ширина — по щели), dishwasher, tall-fridge-one"
+                    },
+                    "wall": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Стена кухни: id из state.walls (A, B, C). Человеку стену называть словами, не буквой."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "pos": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Начало вдоль стены, мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "width": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Ширина, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "card",
+                    "wall",
+                    "pos",
+                    "width"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Положение и размеры модуля. updateKitchenModule.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "update_module"
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "id модуля из state.modules"
+                    },
+                    "wall": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Стена кухни: id из state.walls (A, B, C). Человеку стену называть словами, не буквой."
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "pos": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "width": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "depth": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "floor": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Низ над полом, мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "id",
+                    "wall",
+                    "pos",
+                    "width",
+                    "depth",
+                    "height",
+                    "floor"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Удалить модуль (с антресолью над ним). removeKitchenModule.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "remove_module"
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "id модуля"
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Декор корпусов или фасадов всей кухни, или одного модуля (module_id). setKitchenMaterial / setKitchenModuleMaterial.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_material"
+                    },
+                    "role": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "corpus",
+                        "facade"
+                      ]
+                    },
+                    "code": {
+                      "type": "string",
+                      "description": "Код декора из get_options topic=decors, например W1000, U708"
+                    },
+                    "module_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Только для одного модуля"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "role",
+                    "code",
+                    "module_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Материал фасадов «материал → исполнение → цвет» (MOD-DEC-573). setKitchenFacadeChoice.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_facade_material"
+                    },
+                    "material_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "id материала из get_options topic=facade_materials; null — фасады из плиты"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "execution_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "color_text": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Цвет или порода шпона словами"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "material_id",
+                    "execution_id",
+                    "color_text"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Настройка всей кухни. setKitchenOption.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_option"
+                    },
+                    "key": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "worktopDepthMm",
+                        "legHeightMm",
+                        "upperFloorMm",
+                        "lowerFillerMm",
+                        "upperFillerMm"
+                      ]
+                    },
+                    "value": {
+                      "type": "integer",
+                      "description": "мм",
+                      "minimum": 1
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "key",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Пометка на стене: вывод воды, канализация, розетка, вентиляция, проём, окно. addKitchenObstacle.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "add_obstacle"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Тип из get_options topic=obstacle_types"
+                    },
+                    "wall": {
+                      "type": "string",
+                      "description": "Стена кухни: id из state.walls (A, B, C). Человеку стену называть словами, не буквой."
+                    },
+                    "pos": {
+                      "type": "integer",
+                      "description": "мм",
+                      "minimum": 0
+                    },
+                    "width": {
+                      "type": "integer",
+                      "description": "мм",
+                      "minimum": 1
+                    },
+                    "floor": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Низ участка, мм (окно, выступ)",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Высота участка, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "type",
+                    "wall",
+                    "pos",
+                    "width",
+                    "floor",
+                    "height"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Убрать пометку. removeKitchenObstacle.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "remove_obstacle"
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Учитывать технику в итоге цены. setKitchenIncludeAppliances.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_include_appliances"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Другая карточка на месте модуля, тот же id. Та же стена и место, ширина — модуля, если карточка её даёт. replaceKitchenModule (MOD-AI-48). Отказ — словами конструктора, кухня прежняя.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "replace_module"
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "id модуля из state.modules"
+                    },
+                    "card": {
+                      "type": "string",
+                      "description": "id карточки из get_options kitchen_cards"
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "id",
+                    "card"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Столешница кухни из topic=worktops, null — по умолчанию. setKitchenWorktop (MOD-AI-15).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_worktop"
+                    },
+                    "worktop_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "id столешницы"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "worktop_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Ручки кухни из topic=handles, открывание нажатием. handle_id: NONE — без ручек, null — стандартная; push_to_open null — не менять. setKitchenFittings (MOD-AI-16).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_handles"
+                    },
+                    "handle_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "id ручки или NONE"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "push_to_open": {
+                      "anyOf": [
+                        {
+                          "type": "boolean",
+                          "description": "Открывание нажатием"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "handle_id",
+                    "push_to_open"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Свой вырез мойки или варки по инструкции прибора, все размеры null — модель каталога. Столешница режется по нему, шкаф под варку может быть уже 600. setKitchenCutout (MOD-DEC-412).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_cutout"
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "id модуля мойки или варочной из state.modules"
+                    },
+                    "width": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Ширина выреза, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "depth": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Глубина выреза, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "radius": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Радиус углов, мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "gas": {
+                      "anyOf": [
+                        {
+                          "type": "boolean",
+                          "description": "Газовая варочная панель"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "id",
+                    "width",
+                    "depth",
+                    "radius",
+                    "gas"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "project_id",
+          "base_revision",
+          "label",
+          "edits"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "wardrobe_edits",
+      "description": "Применить правки к проекту (распашной шкаф и купе) движком Modulero. Правки идут по порядку; первая отказанная останавливает остальные. Ответ — новая версия, отказ словами движка, состояние и цена. Не придумывай размеры и цену сам: бери их только из ответа.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "description": "id проекта из start_project"
+          },
+          "base_revision": {
+            "type": "string",
+            "description": "Версия, от которой правишь (revision из последнего ответа); при несовпадении — отказ STALE_REVISION"
+          },
+          "label": {
+            "type": "string",
+            "description": "Коротко по-русски, что меняется, для истории версий: «Посудомойка 45 см»"
+          },
+          "edits": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "description": "Распашной шкаф или купе. setProduct.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_product"
+                    },
+                    "product": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "swing",
+                        "sliding"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "product"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Габарит, мм. setSize: ширина 160–3000, высота 800–3200, глубина 250–800.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_size"
+                    },
+                    "width": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "",
+                          "minimum": 160,
+                          "maximum": 3000
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "",
+                          "minimum": 800,
+                          "maximum": 3200
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "depth": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "",
+                          "minimum": 250,
+                          "maximum": 800
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "width",
+                    "height",
+                    "depth"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Число секций 1–6. setSectionCount.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_section_count"
+                    },
+                    "n": {
+                      "type": "integer",
+                      "description": "",
+                      "minimum": 1,
+                      "maximum": 6
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "n"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Ширина секции, мм. setSectionWidth.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_section_width"
+                    },
+                    "section": {
+                      "type": "integer",
+                      "description": "Номер секции слева направо, с 0",
+                      "minimum": 0
+                    },
+                    "width": {
+                      "type": "integer",
+                      "description": "",
+                      "minimum": 1
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "section",
+                    "width"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Убрать секцию. removeSection.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "remove_section"
+                    },
+                    "section": {
+                      "type": "integer",
+                      "description": "Номер секции слева направо, с 0",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "section"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Фасад секции. setFacade.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_facade"
+                    },
+                    "section": {
+                      "type": "integer",
+                      "description": "Номер секции слева направо, с 0",
+                      "minimum": 0
+                    },
+                    "facade": {
+                      "type": "string",
+                      "description": "none — открытая, one — одна дверь, two — две, lift — подъёмный",
+                      "enum": [
+                        "none",
+                        "one",
+                        "two",
+                        "lift"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "section",
+                    "facade"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Накладные или вкладные двери. setFacadeMounting.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_facade_mounting"
+                    },
+                    "mounting": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "OVERLAY",
+                        "INSET"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "mounting"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Сторона петель одной двери. setHingeSide.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_hinge_side"
+                    },
+                    "section": {
+                      "type": "integer",
+                      "description": "Номер секции слева направо, с 0",
+                      "minimum": 0
+                    },
+                    "side": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "left",
+                        "right"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "section",
+                    "side"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Антресоль: высота, мм, или null — убрать. setMezzanine.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_mezzanine"
+                    },
+                    "height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "height"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Основание. setBase / setLegsBase / setPlinthLegsBase.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_base"
+                    },
+                    "base": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "plinth",
+                        "fixedLegs",
+                        "legsPlinth",
+                        "none"
+                      ]
+                    },
+                    "height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 40,
+                          "maximum": 250
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "base",
+                    "height"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Крыша или задняя стенка. setPanel.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_panel"
+                    },
+                    "panel": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "top",
+                        "back"
+                      ]
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "panel",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Декор корпуса. setDecor.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_decor"
+                    },
+                    "decor_id": {
+                      "type": "string",
+                      "description": "id из get_options topic=decors"
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "decor_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Помещение: ниша, стены, ширина места, потолок, плинтус. setRoom.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_room"
+                    },
+                    "niche": {
+                      "anyOf": [
+                        {
+                          "type": "boolean",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "left": {
+                      "anyOf": [
+                        {
+                          "type": "boolean",
+                          "description": "Стена слева"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "right": {
+                      "anyOf": [
+                        {
+                          "type": "boolean",
+                          "description": "Стена справа"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "width": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Ширина места, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "ceiling": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Потолок, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "skirting": {
+                      "anyOf": [
+                        {
+                          "type": "boolean",
+                          "description": "Плинтус"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "skirt_height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "skirt_depth": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "niche",
+                    "left",
+                    "right",
+                    "width",
+                    "ceiling",
+                    "skirting",
+                    "skirt_height",
+                    "skirt_depth"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Полка, штанга или ящик в секцию. addShelf / addRod / addDrawer.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "add_fill"
+                    },
+                    "section": {
+                      "type": "integer",
+                      "description": "Номер секции слева направо, с 0",
+                      "minimum": 0
+                    },
+                    "kind": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "shelf",
+                        "rod",
+                        "drawer"
+                      ]
+                    },
+                    "execution": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Ящик: internal — за дверью, external — с фасадом",
+                          "enum": [
+                            "internal",
+                            "external"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "section",
+                    "kind",
+                    "execution"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Корзина, вешало для брюк, пантограф. addStorage.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "add_storage"
+                    },
+                    "section": {
+                      "type": "integer",
+                      "description": "Номер секции слева направо, с 0",
+                      "minimum": 0
+                    },
+                    "kind": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "LINEN_BASKET",
+                        "SHOE_BASKET",
+                        "TROUSER_RACK",
+                        "PANTOGRAPH"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "section",
+                    "kind"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Убрать элемент наполнения. removeShelf / removeDrawer / removeStorage.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "remove_fill"
+                    },
+                    "section": {
+                      "type": "integer",
+                      "description": "Номер секции слева направо, с 0",
+                      "minimum": 0
+                    },
+                    "kind": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "shelf",
+                        "rod",
+                        "drawer",
+                        "storage"
+                      ]
+                    },
+                    "index": {
+                      "type": "integer",
+                      "description": "Номер элемента в секции, с 0",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "section",
+                    "kind",
+                    "index"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Расставить полки секции равномерно. distributeShelves.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "distribute_shelves"
+                    },
+                    "section": {
+                      "type": "integer",
+                      "description": "Номер секции слева направо, с 0",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "section"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Подсветка всего шкафа или секции. setLighting.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_lighting"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    },
+                    "section_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "id секции из state"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "on",
+                    "section_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Открывание нажатием вместо ручек. setPushToOpen.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_push_to_open"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Двери купе: створки, система, схема, цвет профиля. ARISTO; setSlidingDoors (MOD-AI-24).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_sliding_doors"
+                    },
+                    "n": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Створок",
+                          "minimum": 2,
+                          "maximum": 5
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "system": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "",
+                          "enum": [
+                            "eco",
+                            "slim",
+                            "standard"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "scheme": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "",
+                          "enum": [
+                            "ALT",
+                            "PAIR4"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "mirror": {
+                      "anyOf": [
+                        {
+                          "type": "boolean",
+                          "description": "Зеркальная раскладка створок по дорожкам (не зеркало: зеркало — вставка set_sliding_insert)"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "profile_finish": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Цвет профиля из get_options topic=profile_finishes, например SLMAN, BKSPC"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "n",
+                    "system",
+                    "scheme",
+                    "mirror",
+                    "profile_finish"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Вставки створок: всех или одной (leaf_id). Стекло и зеркало — sliding_inserts.glass (MOD-AI-30, 70); setSlidingInsert, setSlidingLeafInsert.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_sliding_insert"
+                    },
+                    "material": {
+                      "type": "string",
+                      "description": "Материал из get_options topic=sliding_inserts: ЛДСП и ЛМДФ каталога, CARCASS — в декоре корпуса, стекло и зеркало 4 мм (glass)"
+                    },
+                    "decor_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "leaf_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "id створки из state.sliding.leaves — вставка одной створки; null — всех"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "material",
+                    "decor_id",
+                    "leaf_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Ширины всех секций слева направо, сумма — ширина шкафа. setSectionWidths (MOD-AI-68): одна правка вместо set_section_width, который двигает соседа.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_section_widths"
+                    },
+                    "widths": {
+                      "type": "array",
+                      "description": "Ширины, мм",
+                      "minItems": 1,
+                      "maxItems": 12,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "widths"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "project_id",
+          "base_revision",
+          "label",
+          "edits"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "home_edits",
+      "description": "Применить правки к проекту (другая мебель) движком Modulero. Правки идут по порядку; первая отказанная останавливает остальные. Ответ — новая версия, отказ словами движка, состояние и цена. Не придумывай размеры и цену сам: бери их только из ответа.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "description": "id проекта из start_project"
+          },
+          "base_revision": {
+            "type": "string",
+            "description": "Версия, от которой правишь (revision из последнего ответа); при несовпадении — отказ STALE_REVISION"
+          },
+          "label": {
+            "type": "string",
+            "description": "Коротко по-русски, что меняется, для истории версий: «Посудомойка 45 см»"
+          },
+          "edits": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "description": "Размер корпуса, мм: ширина 200–2400, высота 300–2200, глубина 200–650. resize.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "resize"
+                    },
+                    "axis": {
+                      "type": "string",
+                      "description": "w — ширина, h — высота, d — глубина",
+                      "enum": [
+                        "w",
+                        "h",
+                        "d"
+                      ]
+                    },
+                    "value": {
+                      "type": "integer",
+                      "description": "",
+                      "minimum": 200,
+                      "maximum": 2400
+                    },
+                    "body_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "id корпуса из state.bodies"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "axis",
+                    "value",
+                    "body_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Полка. addShelf.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "add_shelf"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "lo": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Левая граница: left или id перегородки"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "hi": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Правая граница"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "y": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Высота, мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "lo",
+                    "hi",
+                    "y"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Дверца (ширина до 600 мм). addDoor.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "add_door"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "lo": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "hi": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "hinge": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "",
+                          "enum": [
+                            "left",
+                            "right"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "lo",
+                    "hi",
+                    "hinge"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Ящик. addDrawer.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "add_drawer"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "lo": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "hi": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "y": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "h": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Высота фасада, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "lo",
+                    "hi",
+                    "y",
+                    "h"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Вертикальная перегородка. addPartition.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "add_partition"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "x": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "От левой стороны, мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "x"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Убрать элемент. remove.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "remove"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "element_id": {
+                      "type": "string",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "element_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "N полок с равным шагом. equalShelves.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "equal_shelves"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "count": {
+                      "type": "integer",
+                      "description": "",
+                      "minimum": 1,
+                      "maximum": 20
+                    },
+                    "lo": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "hi": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": ""
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "count",
+                    "lo",
+                    "hi"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Отделка: oak, white, graphite. applyMaterial.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_material"
+                    },
+                    "material_id": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "oak",
+                        "white",
+                        "graphite"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "material_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Подпятники, цоколь, ножки, колёса или подвесной (wall). У подвесного height — низ корпуса от пола; setBase (MOD-AI-33).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_base"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "pads",
+                        "plinth",
+                        "legs",
+                        "casters",
+                        "wall"
+                      ]
+                    },
+                    "height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "kind",
+                    "height"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Задняя стенка. setBack.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_back"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "back": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "board",
+                        "hdf",
+                        "none"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "back"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Ручка. setHandle.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_handle"
+                    },
+                    "handle_id": {
+                      "type": "string",
+                      "description": "id из get_options topic=handles"
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "handle_id"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Уровень фурнитуры. setKitLevel.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_kit_level"
+                    },
+                    "level": {
+                      "type": "string",
+                      "description": "Эконом, Стандарт, Премиум — id из get_options topic=hardware_levels"
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "level"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Зеркало над крышкой, null — убрать. Туалетный столик; setMirror (MOD-AI-73).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_mirror"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Высота зеркала, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "height"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Скругление передних углов крышки, null — прямые. setTopCorners (MOD-AI-73).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_top_corners"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "radius": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Радиус, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "radius"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Стеклянная дверь. setDoorGlass (MOD-AI-37).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_door_glass"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "door_id": {
+                      "type": "string",
+                      "description": "id двери из state.bodies[].doors"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "door_id",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Откидной фасад на подъёмнике вместо двери. setDoorLift (MOD-AI-40).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_door_lift"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "door_id": {
+                      "type": "string",
+                      "description": "id двери из state.bodies[].doors"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "door_id",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Подсветка в нишах корпуса. setLight (MOD-AI-37).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_light"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Корпус в нише без дна или крышки (omitted). setNichePanel (MOD-AI-32).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_niche_panel"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "panel": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "top",
+                        "bottom"
+                      ]
+                    },
+                    "omitted": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "panel",
+                    "omitted"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Бортик на крышке, null — убрать. setRim (MOD-AI-40).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_rim"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "height": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Высота бортика, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "sides": {
+                      "anyOf": [
+                        {
+                          "type": "array",
+                          "description": "Края крышки; null — как предлагает конструктор",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "left",
+                              "right",
+                              "back"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "height",
+                    "sides"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Отверстие под провода в крышке. setCable (MOD-AI-40).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_cable"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Сторона тумбы стола. setDeskPedestal (MOD-AI-41).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_desk_pedestal"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "side": {
+                      "type": "string",
+                      "description": "",
+                      "enum": [
+                        "left",
+                        "right"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "side"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Копия корпуса рядом (element_id null) или элемента. copy (MOD-AI-42).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "copy"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "element_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "id элемента"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "side": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "Сторона новой копии корпуса",
+                          "enum": [
+                            "left",
+                            "right"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "gap": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Зазор между корпусами, мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "element_id",
+                    "side",
+                    "gap"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Декор корпусов из topic=decors catalog, null — материал. Общий каталог; setDecor (MOD-AI-39).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_decor"
+                    },
+                    "decor_id": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "description": "id декора"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "thickness": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Толщина плиты, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "decor_id",
+                    "thickness"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Фасад по высоте: y — низ от пола, h — высота. Дверь или ящик; moveFront.",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "move_front"
+                    },
+                    "body_id": {
+                      "type": "string",
+                      "description": "id корпуса из state.bodies"
+                    },
+                    "front_id": {
+                      "type": "string",
+                      "description": "id двери или ящика"
+                    },
+                    "y": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Низ, мм",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "h": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "description": "Высота, мм",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "body_id",
+                    "front_id",
+                    "y",
+                    "h"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "description": "Открывание нажатием у всех фасадов. setPushToOpen (MOD-AI-36).",
+                  "properties": {
+                    "op": {
+                      "type": "string",
+                      "const": "set_push_to_open"
+                    },
+                    "on": {
+                      "type": "boolean",
+                      "description": ""
+                    }
+                  },
+                  "required": [
+                    "op",
+                    "on"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "project_id",
+          "base_revision",
+          "label",
+          "edits"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

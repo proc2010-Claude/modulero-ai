@@ -4,19 +4,18 @@
   "title": "Корзина для обуви не помещается",
   "kind": "wardrobe",
   "engine": {
-    "sha": "cbaf153417691cf81f8b4c4112baf9fd521fef77",
-    "hardwareCatalog": "hw-2026-10-27.8"
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
   },
-  "goal": "Корзина для обуви не помещается в секцию: отказ пересказан, одна попытка исправить по смыслу отказа, затем вопрос человеку вместо подбора размеров.",
+  "goal": "Корзины для обуви по ширине секции: первая встаёт сразу, вторая в секцию 65 см не встаёт — отказ с подходящими ширинами пересказан, одна попытка по смыслу отказа.",
   "criteria": [
-    "Отказ движка пересказан без смены смысла",
-    "После отказа — не больше одной повторной попытки",
-    "ИИ не подбирает ширину секции «на глаз» дальше, а спрашивает человека",
-    "Цена — только из ответа стенда"
+    "Отказ движка пересказан без смены смысла, ширины — из отказа",
+    "После отказа — не больше одной повторной попытки, по ширинам из отказа",
+    "Ширины секций ставятся одной командой setSectionWidths, корзина в соседней секции не сужается",
+    "Цены в тексте нет: она на прототипе в углу 3D (AI-DEC-008)"
   ],
   "expected_refusals": [
-    "Корзина для обуви не подходит: ширина секции в свету 460 мм",
-    "Корзина для обуви не подходит: ширина секции в свету 626 мм"
+    "подойдёт секция шириной 580–626 или 680–726 мм"
   ],
   "turns": [
     {
@@ -36,6 +35,8 @@
               "known_amount_rub": 49179.18
             },
             "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
             "parts": 14
           }
         },
@@ -74,66 +75,57 @@
             ]
           },
           "expect": {
-            "revision": "MWD-203fb3af719c4b59",
+            "revision": "MWD-12a006d90d609ca2",
             "applied": [
               "set_size",
-              "set_section_count"
+              "set_section_count",
+              "add_storage"
             ],
-            "refused": {
-              "i": 2,
-              "op": "add_storage",
-              "problem": "Корзина для обуви не подходит: ширина секции в свету 460 мм, а BELLE ставится в проём от 464 до 910 мм (MOD-DEC-484). Проект не изменён."
-            },
+            "refused": null,
             "price": {
               "status": "PROVISIONAL_ESTIMATE",
-              "amount_rub": 63335.72,
-              "known_amount_rub": 63335.72
+              "amount_rub": 73839.26,
+              "known_amount_rub": 73839.26
             },
             "sections": 4,
+            "bodies": 1,
+            "body_joints": [],
             "parts": 17
           }
         }
       ],
-      "ai": "Сделал шкаф 2 м на четыре секции по 50 см. Корзина для обуви в правую секцию не встала: конструктор говорит, что ей нужна секция чуть шире. Ориентир около 63 тыс. ₽. Сделать правую секцию пошире?"
+      "ai": "Сделал шкаф 2 м на четыре секции по 50 см, в правой — корзина для обуви. Что положим в остальные секции?"
     },
     {
-      "human": "А если правую секцию сделать пошире?",
+      "human": "И во вторую справа тоже корзину для обуви, а эту секцию сделайте пошире, 65 см.",
       "calls": [
         {
-          "tool": "wardrobe_edits",
+          "tool": "editor_call",
           "input": {
             "project_id": "$project",
             "base_revision": "$head",
-            "label": "Правая секция 600, корзина для обуви",
-            "edits": [
+            "label": "Секции 425, 425, 650, 500",
+            "calls": [
               {
-                "op": "set_section_width",
-                "section": 3,
-                "width": 600
-              },
-              {
-                "op": "add_storage",
-                "section": 3,
-                "kind": "SHOE_BASKET"
+                "command": "wardrobe/setSectionWidths",
+                "args_json": "{\"widths\": [425, 425, 650, 500]}"
               }
             ]
           },
           "expect": {
-            "revision": "MWD-2535e399b533da9e",
+            "revision": "MWD-5043b3703cf2a6cd",
             "applied": [
-              "set_section_width"
+              "wardrobe/setSectionWidths"
             ],
-            "refused": {
-              "i": 1,
-              "op": "add_storage",
-              "problem": "Корзина для обуви не подходит: ширина секции в свету 560 мм между размерами BELLE: 464–510, 564–610, 664–710, 764–810, 864–910 мм (MOD-DEC-484). Проект не изменён."
-            },
+            "refused": null,
             "price": {
               "status": "PROVISIONAL_ESTIMATE",
-              "amount_rub": 62119.36,
-              "known_amount_rub": 62119.36
+              "amount_rub": 72622.89,
+              "known_amount_rub": 72622.89
             },
             "sections": 4,
+            "bodies": 1,
+            "body_joints": [],
             "parts": 17
           }
         },
@@ -142,68 +134,108 @@
           "input": {
             "project_id": "$project",
             "base_revision": "$head",
-            "label": "Правая секция 650, корзина для обуви",
+            "label": "Корзина для обуви в третьей секции",
             "edits": [
               {
-                "op": "set_section_width",
-                "section": 3,
-                "width": 650
-              },
-              {
                 "op": "add_storage",
-                "section": 3,
+                "section": 2,
                 "kind": "SHOE_BASKET"
               }
             ]
           },
           "expect": {
-            "revision": "MWD-966b937646a91bb3",
-            "applied": [
-              "set_section_width"
-            ],
+            "revision": "MWD-5043b3703cf2a6cd",
+            "applied": [],
             "refused": {
-              "i": 1,
+              "i": 0,
               "op": "add_storage",
-              "problem": "Корзина для обуви не подходит: ширина секции в свету 626 мм между размерами BELLE: 464–510, 564–610, 664–710, 764–810, 864–910 мм (MOD-DEC-484). Проект не изменён."
+              "problem": "Корзина для обуви не подходит: ширина секции в свету 634 мм между размерами BELLE: 464–510, 564–610, 664–710, 764–810, 864–910 мм (MOD-DEC-484); подойдёт секция шириной 580–626 или 680–726 мм (сейчас 650 мм). Проект не изменён."
             },
             "price": {
               "status": "PROVISIONAL_ESTIMATE",
-              "amount_rub": 62119.36,
-              "known_amount_rub": 62119.36
+              "amount_rub": 72622.89,
+              "known_amount_rub": 72622.89
             },
             "sections": 4,
+            "bodies": 1,
+            "body_joints": [],
             "parts": 17
+          }
+        },
+        {
+          "tool": "editor_call",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Секции 450, 450, 600, 500",
+            "calls": [
+              {
+                "command": "wardrobe/setSectionWidths",
+                "args_json": "{\"widths\": [450, 450, 600, 500]}"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-628aeeed769f8f3e",
+            "applied": [
+              "wardrobe/setSectionWidths"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 72622.89,
+              "known_amount_rub": 72622.89
+            },
+            "sections": 4,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 17
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Корзина для обуви в третьей секции",
+            "edits": [
+              {
+                "op": "add_storage",
+                "section": 2,
+                "kind": "SHOE_BASKET"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-a384188707ede4b2",
+            "applied": [
+              "add_storage"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 82371.75,
+              "known_amount_rub": 82371.75
+            },
+            "sections": 4,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 18
           }
         }
       ],
-      "ai": "Расширил правую секцию, соседняя стала уже, но корзина всё равно не встаёт: она ставится только в секции определённой ширины, и я дважды не попал. Ориентир около 62 тыс. ₽. Поставить в эту секцию полки для обуви или выбрать другую корзину?"
+      "ai": "В секцию 65 см корзина не встаёт: конструктор говорит, что ей подходит секция шириной 58–62,6 или 68–72,6 см. Поэтому сделал третью секцию 60 см, две левые — по 45 см, и поставил в неё корзину; правая осталась 50 см со своей корзиной. Что положим в две левые секции?"
     },
     {
-      "human": "Тогда в правую — полки для обуви, а в первую — вешало для брюк.",
+      "human": "Хорошо. А в первую — вешало для брюк.",
       "calls": [
         {
           "tool": "wardrobe_edits",
           "input": {
             "project_id": "$project",
             "base_revision": "$head",
-            "label": "Полки в правой секции, вешало для брюк",
+            "label": "Вешало для брюк в первой секции",
             "edits": [
-              {
-                "op": "add_fill",
-                "section": 3,
-                "kind": "shelf",
-                "execution": null
-              },
-              {
-                "op": "add_fill",
-                "section": 3,
-                "kind": "shelf",
-                "execution": null
-              },
-              {
-                "op": "distribute_shelves",
-                "section": 3
-              },
               {
                 "op": "add_storage",
                 "section": 0,
@@ -212,27 +244,25 @@
             ]
           },
           "expect": {
-            "revision": "MWD-374e6731db659a44",
+            "revision": "MWD-c4542b7e43bb1bf9",
             "applied": [
-              "add_fill",
-              "add_fill",
-              "distribute_shelves",
               "add_storage"
             ],
             "refused": null,
             "price": {
               "status": "PROVISIONAL_ESTIMATE",
-              "amount_rub": 73468.76,
-              "known_amount_rub": 73468.76
+              "amount_rub": 87460.88,
+              "known_amount_rub": 87460.88
             },
             "sections": 4,
-            "parts": 19
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 18
           }
         }
       ],
-      "ai": "Поставил в правую секцию две полки для обуви, а в первую — вешало для брюк. Ориентир около 73 тыс. ₽. Что положим во вторую и третью секции?"
+      "ai": "Поставил в первую секцию вешало для брюк. Что положим во вторую?"
     }
   ],
-  "review": "Хватило: отказ ядра точный — какие ширины в свету подходят корзине. Неудобно: ширина «в свету» не равна ширине секции и меняется нелинейно (600 → 560, 650 → 626 мм), поэтому ИИ не может сам подобрать секцию под корзину. Нужна правка «поставить корзину и подогнать секцию» или ответ ядра с подходящей шириной секции — задача MOD-AI-20.",
-  "price_in_answer": true
+  "review": "Перезаписан на 1582b93e (AI-DEC-009). На cbaf1534 корзина не вставала в секцию 50 см (в свету 460 мм); теперь одиночные двери открываются от середины шкафа (MOD-AI-78, 20d6fd71), у правой секции петля справа, и в свету хватает места — корзина BE50SHWH встаёт сразу. Отказ корзины теперь называет подходящие ширины секции (MOD-AI-29, 67) — помощнику не нужно подбирать ширину «на глаз», задача MOD-AI-20 из прежнего разбора закрыта. Ширины секций — одной командой setSectionWidths (MOD-AI-68) через editor_call: set_section_width двигает правого соседа. Находка (б): set_section_width не проверяет корзину в секции, которую сужает или расширяет, — корзина BE50 остаётся в секции 350 мм (задача MOD-AI-84)."
 }

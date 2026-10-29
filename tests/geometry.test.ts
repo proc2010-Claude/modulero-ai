@@ -36,14 +36,19 @@ test('геометрия: тумба под ТВ — фасад ящика и п
     const drawer = a.state.bodies[0].geometry.drawers[0];
     assert.ok(isZ(drawer) && drawer.box[1] <= drawer.z[1]);
     assert.equal(drawer.id, a.state.bodies[0].drawers[0].id);
-    // Полка «на 2 мм выше верха фасада ящика»: y — низ полки от пола; переставляемую ядро ставит на ряд отверстий,
-    // где она встала — видно только в geometry.
-    const b: any = stand.run('home_edits', { project_id: 'g', base_revision: a.revision, label: 'Полка над ящиком', edits: [{ op: 'add_shelf', body_id: body.id, lo: mid.lo, hi: mid.hi, y: drawer.z[1] + 2 }] });
+    // Полка «на 2 мм выше верха фасада ящика»: y — низ полки от пола; переставляемую ядро ставит на ряд отверстий —
+    // на ряд ниже верха ящика, и ядро отказывает пересечением деталей (на cbaf1534 принимало, задача MOD-AI-83:
+    // отказ без названия деталей и ближайшей высоты).
+    const refused: any = stand.run('home_edits', { project_id: 'g', base_revision: a.revision, label: 'Полка над ящиком', edits: [{ op: 'add_shelf', body_id: body.id, lo: mid.lo, hi: mid.hi, y: drawer.z[1] + 2 }] });
+    assert.match(refused.refused.problem, /Физические детали пересекаются/);
+    assert.equal(refused.revision, a.revision);
+    // Выше на 30 мм — принято; где полка встала, видно только в geometry: над фасадом ящика.
+    const b: any = stand.run('home_edits', { project_id: 'g', base_revision: a.revision, label: 'Полка над ящиком', edits: [{ op: 'add_shelf', body_id: body.id, lo: mid.lo, hi: mid.hi, y: drawer.z[1] + 30 }] });
     assert.equal(b.refused, null);
     const shelf = b.state.bodies[0].shelves.at(-1),
       placed = b.state.bodies[0].geometry.shelves.find((s: any) => s.id === shelf.id);
-    assert.equal(shelf.y, drawer.z[1] + 2);
-    assert.ok(isZ(placed));
+    assert.equal(shelf.y, drawer.z[1] + 30);
+    assert.ok(isZ(placed) && placed.z[0] >= drawer.z[1]);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

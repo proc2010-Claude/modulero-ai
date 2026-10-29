@@ -1,12 +1,14 @@
 // Страница «диалог в конструкторе»: лента диалога сбоку и настоящий конструктор modulero-next
-// (сборка cbaf1534 без изменений) в том же файле. Один офлайн-файл: открывается двойным щелчком.
+// (сборка на SHA из engine.json без изменений) в том же файле. Один офлайн-файл: открывается двойным щелчком.
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PIN } from '../engine/pin.mjs';
 
 export const ROOT = fileURLToPath(new URL('../..', import.meta.url));
-export const CONSTRUCTOR_DIR = join(ROOT, 'vendor/modulero-next-cbaf1534-web');
+/** Сборка конструктора рядом с копией ядра: engine.json dir + «-web» (BUILD.json). */
+export const CONSTRUCTOR_DIR = join(ROOT, `${PIN.dir}-web`);
 
 export interface ConstructorBuild {
   repo: string;

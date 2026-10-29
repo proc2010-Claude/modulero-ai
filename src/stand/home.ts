@@ -39,6 +39,37 @@ export function applyHomeEdit(c: Core, file: CommandsFile, p: HomeProject, e: Ed
       return call('setHandle', { handleId: e.handle_id });
     case 'set_kit_level':
       return call('setKitLevel', { level: e.level });
+    // 0.3-draft (AI-DEC-010): правки HOME ядра 1582b93e (конструкция r5).
+    case 'set_mirror':
+      return call('setMirror', { bodyId: e.body_id, heightMm: e.height });
+    case 'set_top_corners':
+      return call('setTopCorners', { bodyId: e.body_id, radiusMm: e.radius });
+    case 'set_door_glass':
+      return call('setDoorGlass', { bodyId: e.body_id, doorId: e.door_id, on: e.on });
+    case 'set_door_lift':
+      return call('setDoorLift', { bodyId: e.body_id, doorId: e.door_id, on: e.on });
+    case 'set_light':
+      return call('setLight', { bodyId: e.body_id, on: e.on });
+    case 'set_niche_panel':
+      return call('setNichePanel', { bodyId: e.body_id, panel: e.panel, omitted: e.omitted });
+    case 'set_rim':
+      return call('setRim', { bodyId: e.body_id, heightMm: e.height, sides: e.sides ?? undefined });
+    case 'set_cable':
+      return call('setCable', { bodyId: e.body_id, on: e.on });
+    case 'set_desk_pedestal':
+      return call('setDeskPedestal', { bodyId: e.body_id, side: e.side });
+    case 'copy':
+      return call('copy', {
+        bodyId: e.body_id,
+        elementId: e.element_id ?? undefined,
+        place: e.side === null && e.gap === null ? undefined : JSON.parse(JSON.stringify({ side: e.side ?? undefined, gapMm: e.gap ?? undefined })),
+      });
+    case 'set_decor':
+      return call('setDecor', { decorId: e.decor_id, thicknessMm: e.thickness ?? undefined });
+    case 'move_front':
+      return call('moveFront', { bodyId: e.body_id, frontId: e.front_id, y: e.y ?? undefined, h: e.h ?? undefined });
+    case 'set_push_to_open':
+      return call('setPushToOpen', { on: e.on });
     default:
       throw new Error(`Нет правки другой мебели «${e.op}».`);
   }
@@ -46,9 +77,16 @@ export function applyHomeEdit(c: Core, file: CommandsFile, p: HomeProject, e: Ed
 
 /** Заготовка редактора HOME: комод, тумба, стеллаж… или «Своя конструкция» (own). */
 export function startHome(c: Core, template: string | null): EditResult {
-  const id = template ?? 'own';
-  if (!c.H.templates.some((t: any) => t.id === id)) return { ok: false, problem: `Заготовки «${id}» нет. Есть: ${c.H.templates.map((t: any) => t.id).join(', ')}.` };
-  return { ok: true, project: c.H.createHomeEditor(c.HW, homeIds(null)).create(id) };
+  const id = template ?? 'own',
+    editor = c.H.createHomeEditor(c.HW, homeIds(null)),
+    list = homeTemplates(c);
+  if (!list.some((t: any) => t.id === id)) return { ok: false, problem: `Заготовки «${id}» нет. Есть: ${list.map((t: any) => t.id).join(', ')}.` };
+  return { ok: true, project: editor.create(id) };
+}
+
+/** Заготовки текущей конструкции редактора HOME (r5 — с туалетным столиком, MOD-AI-73): homeTemplates нового проекта. */
+function homeTemplates(c: Core): any[] {
+  return c.H.homeTemplates(c.H.createHomeEditor(c.HW, homeIds(null)).create('own'));
 }
 
 export interface HomeView {
@@ -60,7 +98,7 @@ export interface HomeView {
   scene3d: Scene3dView;
 }
 
-const BASE_RU: Record<string, string> = { pads: 'подпятники', plinth: 'цоколь', legs: 'ножки' };
+const BASE_RU: Record<string, string> = { pads: 'подпятники', plinth: 'цоколь', legs: 'ножки', casters: 'колёса', wall: 'подвесной на стене' };
 const BACK_RU: Record<string, string> = { board: 'ЛДСП', hdf: 'ХДФ', none: 'без задней стенки' };
 
 /** Граф, версия, сводка, цена другой мебели — всё из ядра. */
@@ -80,11 +118,20 @@ export function homeView(c: Core, p: HomeProject): HomeView {
     height: b.h,
     depth: b.d,
     base: b.base ? { kind: BASE_RU[b.base.kind] ?? b.base.kind, height: b.base.heightMm ?? null } : null,
+    // Конструкция r5 (0.3-draft): подвесной — y низа корпуса от пола; зеркало, скругление, бортик, провод, подсветка, ниша.
+    y: b.base?.kind === 'wall' ? b.y : undefined,
+    pedestal: b.kind === 'desk' ? (b.pedestal === 'right' ? 'справа' : 'слева') : undefined,
+    mirror_height: b.mirror?.heightMm,
+    top_radius: b.topRadiusMm,
+    rim: b.rim ? { height: b.rim.heightMm, sides: b.rim.sides } : undefined,
+    cable: b.cable || undefined,
+    light: b.light || undefined,
+    without: b.omit?.length ? b.omit : undefined,
     back: b.back === false ? BACK_RU.none : (BACK_RU[b.backMaterial] ?? b.backMaterial),
     bays: b.bayIds,
     partitions: b.partitions.map((x: any) => ({ id: x.id, x: x.x })),
     shelves: b.shelves.map((s: any) => ({ id: s.id, lo: s.lo, hi: s.hi, y: s.y, fixed: !!s.fixed })),
-    doors: b.doors.map((d: any) => ({ id: d.id, lo: d.lo, hi: d.hi, y: d.y, h: d.h, hinge: d.hinge })),
+    doors: b.doors.map((d: any) => ({ id: d.id, lo: d.lo, hi: d.hi, y: d.y, h: d.h, hinge: d.hinge, ...(d.glass ? { glass: true } : {}), ...(d.lift ? { lift: true } : {}) })),
     drawers: b.drawers.map((d: any) => ({ id: d.id, lo: d.lo, hi: d.hi, y: d.y, h: d.h })),
     // Высоты деталей корпуса от пола — из 3D-сцены ядра (geometry.ts); id — элемента редактора (полка, дверь, ящик).
     geometry: homeGeometry(scene3d.scene, b),
@@ -94,6 +141,8 @@ export function homeView(c: Core, p: HomeProject): HomeView {
     template: p.templateId,
     name: p.name,
     material: material?.name ?? p.material,
+    // Декор общего каталога (set_decor, MOD-AI-39) — вместо материала заготовки.
+    decor: p.decorId ? H.carcassDecorName(p.decorId, HW.materials) : null,
     facade: p.facadeChoice ? H.homeFacadeTitle(p.facadeChoice) : null,
     floor: p.floor === 'carpet' ? 'ковёр' : 'твёрдый пол',
     kit_level: p.kitLevel,
@@ -131,9 +180,13 @@ export function homeOptions(c: Core, topic: string): unknown {
   const { H, HW } = c;
   switch (topic) {
     case 'home_templates':
-      return H.templates.map((t: any) => ({ id: t.id, name: t.name, room: t.room, description: t.description, size: t.bodies[0] && { w: t.bodies[0].w, h: t.bodies[0].h, d: t.bodies[0].d } }));
+      return homeTemplates(c).map((t: any) => ({ id: t.id, name: t.name, room: t.room, description: t.description, size: t.bodies[0] && { w: t.bodies[0].w, h: t.bodies[0].h, d: t.bodies[0].d } }));
     case 'decors':
-      return H.materials.map((m: any) => ({ id: m.id, name: m.name }));
+      return {
+        materials: H.materials.map((m: any) => ({ id: m.id, name: m.name })),
+        // 0.3-draft: декоры общего каталога для set_decor (MOD-AI-39) — те же, что у корпуса шкафа.
+        catalog: H.homeDecorChoices(HW).map((d: any) => ({ id: d.id, title: d.title, group: d.group })),
+      };
     case 'handles':
       // Ручки выпуска каталога — те же, что у шкафа (validate HOME сверяет handleId с hw.fittings.handles); NONE — без ручек.
       return c.W.fittingsOptions(HW.fittings).handles.map((h: any) => ({ id: h.id, name: h.name }));

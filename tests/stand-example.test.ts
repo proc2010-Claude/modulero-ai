@@ -1,14 +1,16 @@
 // EXCHANGE_SPEC.md §6 / TASK_FIRST.md п. 6: стенд даёт те же версии KPR2-…, отказы и суммы, что прогон примера
-// на настоящем движке (reference/start/examples/kitchen-dialog.log.json), и те же файлы проекта шагов.
+// на настоящем движке той же основы (reference/engine-<sha>/examples/kitchen-dialog.log.json), и те же файлы проекта шагов.
+// Пример пакета старта (reference/start, cbaf1534) — исторический документ, на новой основе не воспроизводится.
 import { strict as assert } from 'node:assert';
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
+import { PIN } from '../src/engine/pin.mjs';
 import { loadCore } from '../src/stand/engine.ts';
 import { Stand } from '../src/stand/stand.ts';
 
-const EXAMPLES = new URL('../reference/start/examples/', import.meta.url);
+const EXAMPLES = new URL(`../reference/engine-${PIN.sha.slice(0, 8)}/examples/`, import.meta.url);
 const log: any[] = JSON.parse(readFileSync(new URL('kitchen-dialog.log.json', EXAMPLES), 'utf8'));
 
 /** Вызов функции ядра из журнала примера → правка договора §4.1. */
@@ -85,9 +87,9 @@ test('стенд: STALE_REVISION, вход не по схеме, правки н
     const stale: any = stand.run('kitchen_edits', { project_id: 'checks', base_revision: 'KPR2-0000000000000000', label: 'x', edits: [{ op: 'set_type', type: 'l' }] });
     assert.equal(stale.refused.code, 'STALE_REVISION');
     assert.equal(stale.revision, start.revision);
-    const bad: any = stand.run('kitchen_edits', { project_id: 'checks', base_revision: start.revision, label: 'x', edits: [{ op: 'set_room', key: 'width', value: 5000 }] });
+    const bad: any = stand.run('kitchen_edits', { project_id: 'checks', base_revision: start.revision, label: 'x', edits: [{ op: 'set_room', key: 'width', value: 9000 }] });
     assert.equal(bad.is_error, true);
-    assert.match(bad.error, /не больше 4000/);
+    assert.match(bad.error, /не больше 8000/);
     assert.equal((stand.run('home_edits', { project_id: 'checks', base_revision: start.revision, label: 'x', edits: [{ op: 'set_material', material_id: 'white' }] }) as any).is_error, true);
     assert.equal((stand.run('wardrobe_edits', { project_id: 'checks', base_revision: start.revision, label: 'x', edits: [{ op: 'set_section_count', n: 2 }] }) as any).is_error, true);
     // Цена — только поля полосы цены конструктора: без себестоимости и ставок (MOD-DEC-497).

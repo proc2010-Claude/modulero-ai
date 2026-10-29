@@ -69,14 +69,15 @@ test('editor_call: шкаф на два корпуса со стыком меж�
     assert.match(call(a.revision, [['kitchen/setKitchenIsland', { on: true }]]).refused.problem, /не для этого изделия/);
     assert.match(call(a.revision, [['wardrobe/setCutting', {}]]).refused.problem, /недоступна: параметры раскроя/);
     assert.match(call(a.revision, [['wardrobe/nope', {}]]).refused.problem, /Нет команды/);
-    // Правка, которую редактор принял, а граф не строит (MOD-AI-18), — отказ, как у wardrobe_edits.
+    // Нажатие в нише без задней стенки у шкафа на два корпуса с антресолью граф строит (MOD-AI-65; на cbaf1534 —
+    // отказ «Конструктор не строит шкаф», MOD-AI-18). Отказ стенда при непостроенном графе другим вызовом не воспроизводится.
     const c = call(a.revision, [
       ['wardrobe/setRoom', { patch: { niche: true } }],
       ['wardrobe/setPanel', { panel: 'back', on: false }],
       ['wardrobe/setPushToOpen', { on: true }],
     ]);
-    assert.match(c.refused.problem, /Конструктор не строит шкаф/);
-    assert.equal(c.refused.op, 'wardrobe/setPushToOpen');
+    assert.equal(c.refused, null);
+    assert.deepEqual(c.applied.map((x: any) => x.op), ['wardrobe/setRoom', 'wardrobe/setPanel', 'wardrobe/setPushToOpen']);
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

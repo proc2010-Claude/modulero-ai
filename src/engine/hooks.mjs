@@ -1,4 +1,4 @@
-// Хуки загрузчика Node для ядра modulero-next (стенд, AI-DEC-003): исходники ядра на TypeScript
+// Хуки загрузчика Node для ядра modulero-next (стенд, AI-DEC-009): исходники ядра на TypeScript
 // импортируют друг друга как «.js» и пакеты @modulero/*, как в их tsconfig. Хук отдаёт вместо
 // несуществующего «.js» соседний «.ts» и разрешает @modulero/* в папку движка. Код ядра не меняется.
 import { existsSync } from 'node:fs';

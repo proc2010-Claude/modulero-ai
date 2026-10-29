@@ -1,4 +1,4 @@
-// Ядро modulero-next на закреплённом SHA (engine.json, AI-DEC-003): модули, которые вызывает стенд.
+// Ядро modulero-next на закреплённом SHA (engine.json, AI-DEC-009): модули, которые вызывает стенд.
 // Стенд только вызывает функции ядра; формул мебели и цены здесь нет. Копию ядра делает
 // npm run engine:setup, загрузку исходников TypeScript — src/engine/register.mjs.
 import { existsSync, readFileSync } from 'node:fs';

@@ -6,7 +6,7 @@
 Репозиторий, `CLAUDE.md`, `npm run check` на Node 24, журнал решений, план, внешние материалы, пакет старта в `docs/start/` и `reference/start/`.
 
 ## Этап 1. Стенд и кухня в треде (`docs/start/TASK_FIRST.md`)
-1. Стенд движка: `npm run dialog -- <инструмент> '<JSON>'` — `start_project`, `get_options`, `kitchen_edits`, `get_project`, `undo`, `variants` функциями ядра modulero-next (только чтение, `cbaf1534`, `hw-2026-10-27.8`). Ответ — `EXCHANGE_SPEC.md` §5.
+1. Стенд движка: `npm run dialog -- <инструмент> '<JSON>'` — `start_project`, `get_options`, `kitchen_edits`, `get_project`, `undo`, `variants` функциями ядра modulero-next (только чтение, `cbaf1534`, `hw-2026-10-27.8`; с 2026-10-29 — `1582b93e`, `hw-2026-10-29.17`, AI-DEC-009). Ответ — `EXCHANGE_SPEC.md` §5.
 2. Сеанс на диске `sessions/<имя>/`: файл проекта каждой версии, история с подписями, журнал вызовов, текст диалога.
 3. Страница прототипа после каждой правки: превью, план, состав, цена «полная / неполная», история, лента диалога.
 4. «Режим диалога» в `CLAUDE.md`: Claude отвечает как помощник по `SYSTEM_PROMPT_DRAFT.md`, только через стенд.
