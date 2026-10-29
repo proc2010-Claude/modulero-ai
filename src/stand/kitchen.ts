@@ -41,6 +41,19 @@ export function applyKitchenEdit(c: Core, p: KitchenProject, e: Edit): EditResul
       return K.removeKitchenObstacle(p, HW, e.id);
     case 'set_include_appliances':
       return K.setKitchenIncludeAppliances(p, e.on);
+    // 0.3-draft (AI-DEC-010): правки ядра 1582b93e.
+    case 'replace_module':
+      return K.replaceKitchenModule(p, HW, e.id, e.card);
+    case 'set_worktop':
+      return K.setKitchenWorktop(p, HW, e.worktop_id ?? null);
+    case 'set_handles':
+      return K.setKitchenFittings(p, HW, defined({ handleId: e.handle_id, pushToOpen: opt(e.push_to_open) }));
+    case 'set_cutout': {
+      const sizes = [e.width, e.depth, e.radius];
+      if (sizes.every((v) => v === null)) return K.setKitchenCutout(p, HW, e.id, null);
+      if (sizes.some((v) => v === null)) return { ok: false, problem: 'Для своего выреза нужны ширина, глубина и радиус углов из инструкции прибора. Вырез не изменён.' };
+      return K.setKitchenCutout(p, HW, e.id, defined({ width: e.width, depth: e.depth, radius: e.radius, gas: opt(e.gas) }));
+    }
     default:
       throw new Error(`Нет правки кухни «${e.op}».`);
   }
@@ -77,6 +90,9 @@ export interface KitchenView {
   scene3d: Scene3dView;
 }
 
+/** Замечания графа кухни, которые конструктор показывает человеку у навесных шкафов. */
+const UPPER_REMARKS = new Set(['UPPER_OVER_WORKTOP', 'HOOD_OVER_HOB']);
+
 /** Условия мебельщика в словах цены: проценты сборки, наценка (MOD-DEC-497). */
 export const TERMS = /наценк|\d\s*%/i;
 
@@ -90,7 +106,9 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
     decors = new Map<string, string>(K.kitchenDecors(HW).map((d: any) => [d.code, d.label])),
     scene3d = scene3dOf(c, graph);
   const decor = (code: unknown) => (code ? (decors.get(String(code)) ?? String(code)) : null);
-  const facadeChoice = K.kitchenFacadeChoiceOf(p, HW);
+  const facadeChoice = K.kitchenFacadeChoiceOf(p, HW),
+    worktop = K.kitchenWorktopView(p, HW),
+    fittings = K.kitchenFittingsView(p, HW);
   const modules = scene.modules.map((m: any) => {
     const v = plan.modules.find((x: any) => x.id === m.id);
     return defined({
@@ -134,6 +152,9 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
       corpus: decor(p.corpusMaterial),
       facade: decor(p.facadeMaterial),
       facade_material: facadeChoice ? `${facadeChoice.materialTitle} · ${facadeChoice.executionTitle}${facadeChoice.colorText ? ', ' + facadeChoice.colorText : ''}` : null,
+      worktop: worktop.worktops.find((w: any) => w.id === worktop.worktopId)?.name ?? null,
+      handle: fittings.handles.find((h: any) => h.id === fittings.handleId)?.name ?? null,
+      push_to_open: fittings.pushToOpen,
     },
     parts: graph.parts.length,
   };
@@ -151,7 +172,9 @@ export function kitchenView(c: Core, p: KitchenProject): KitchenView {
     unpriced_rows: pr.unpriced,
     appliances_included: !!K.kitchenOptionsView(p, HW).appliances?.include,
   };
-  const warnings = [...K.kitchenObstacleWarnings(p, HW).map((w: any) => w.text), ...(sceneError ? [sceneError] : [])];
+  // Замечания конструктора о навесных: ближе 450 мм к столешнице (MOD-DEC-749), вытяжка над варкой (MOD-AI-44).
+  const remarks = (graph.unresolved as any[]).filter((u) => UPPER_REMARKS.has(u.code)).map((u) => u.text as string);
+  const warnings = [...K.kitchenObstacleWarnings(p, HW).map((w: any) => w.text), ...remarks, ...(sceneError ? [sceneError] : [])];
   const elevations = plan.walls.map((w: any) => ({ title: wallTitle(w.line, plan.room.width), ...K.kitchenWallElevation(p, HW, w.id) }));
   return { revision: out.revision, state, price, warnings, previewSvg: c.previewSvg(graph), plan, elevations, scene3d };
 }
@@ -196,6 +219,11 @@ export function kitchenOptions(c: Core, topic: string): unknown {
       }));
     case 'obstacle_types':
       return K.KITCHEN_OBSTACLE_TYPES.map((t: any) => ({ id: t.id, name: t.name, needs_floor_and_height: t.measured }));
+    // 0.3-draft: столешницы и ручки — как в списках «Материалы и опции» конструктора, без цен.
+    case 'worktops':
+      return K.kitchenWorktopView(K.newKitchenProject(), HW).worktops.map((w: any) => ({ id: w.id, name: w.name, code: w.code }));
+    case 'handles':
+      return K.kitchenFittingsView(K.newKitchenProject(), HW).handles.map((h: any) => ({ id: h.id, name: h.name }));
     default:
       return null;
   }
