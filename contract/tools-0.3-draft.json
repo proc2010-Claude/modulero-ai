@@ -1,7 +1,7 @@
 {
   "format": "modulero.ai-tools-extension",
   "formatVersion": "0.3-draft",
-  "basis": "AI-DEC-010 (Д): договор на ядре modulero-next 1582b93e (AI-DEC-009) — новое в конструкторе с MOD-AI-12…80 правками *_edits; остальное — editor_call (0.2-draft).",
+  "basis": "AI-DEC-010: договор на ядре modulero-next 1582b93e (AI-DEC-009) — новое в конструкторе с MOD-AI-12…80 правками *_edits; остальное — editor_call (0.2-draft).",
   "note": "Заменяет одноимённые инструменты 0.1-draft целиком (start_project, get_options, kitchen_edits, wardrobe_edits, home_edits); прежние операции и поля без изменений, кроме: set_room кухни до 8000 мм, set_base HOME — casters и wall, у set_sliding_doors поле profile_finish, у set_sliding_insert поле leaf_id. list_commands и editor_call — из 0.2-draft.",
   "replaces": [
     "start_project",

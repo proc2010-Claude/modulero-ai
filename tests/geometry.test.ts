@@ -37,7 +37,7 @@ test('геометрия: тумба под ТВ — фасад ящика и п
     assert.ok(isZ(drawer) && drawer.box[1] <= drawer.z[1]);
     assert.equal(drawer.id, a.state.bodies[0].drawers[0].id);
     // Полка «на 2 мм выше верха фасада ящика»: y — низ полки от пола; переставляемую ядро ставит на ряд отверстий —
-    // на ряд ниже верха ящика, и ядро отказывает пересечением деталей (на cbaf1534 принимало, задача MOD-AI-83 (Д):
+    // на ряд ниже верха ящика, и ядро отказывает пересечением деталей (на cbaf1534 принимало, задача MOD-AI-83:
     // отказ без названия деталей и ближайшей высоты).
     const refused: any = stand.run('home_edits', { project_id: 'g', base_revision: a.revision, label: 'Полка над ящиком', edits: [{ op: 'add_shelf', body_id: body.id, lo: mid.lo, hi: mid.hi, y: drawer.z[1] + 2 }] });
     assert.match(refused.refused.problem, /Физические детали пересекаются/);
