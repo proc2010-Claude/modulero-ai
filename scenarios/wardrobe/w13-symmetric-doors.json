@@ -1,0 +1,189 @@
+{
+  "format": "modulero-ai.scenario/1",
+  "id": "w13-symmetric-doors",
+  "title": "Шкаф: симметричные двери",
+  "kind": "wardrobe",
+  "engine": {
+    "sha": "1582b93ef67ccf588cc565cd8cdbce8da270b4d8",
+    "hardwareCatalog": "hw-2026-10-29.17"
+  },
+  "goal": "Распашной шкаф: двери симметрично (предложение Modulero (Д), перечень F7, F8, раздел «Внешний вид»). Заготовка шкафа приходит с тремя секциями по 500 мм и всеми петлями слева — помощник сразу ставит ровную раскладку: секции 500 + 1000 + 500, в середине пара дверей, все двери одной ширины, крайние петли по краям шкафа. На просьбу об одной широкой двери предупреждает, что она тяжёлая на вид, и спрашивает; на четыре равные секции ставит двери парами и задаёт стороны петель заново.",
+  "criteria": [
+    "Первый ход: start_project wardrobe и один wardrobe_edits — размер, set_section_widths [500, 1000, 500], set_facade two в средней секции, петли правой секции справа (F7, F8)",
+    "Одна дверь шире 600 мм без правки: предупреждение, что она тяжёлая на вид и выбьется из ряда, и вопрос (F7)",
+    "Четыре секции: set_section_count 4, двери one у всех и стороны петель слева, справа, слева, справа — заново, потому что конструктор оставляет стороны от прошлой раскладки (F8)",
+    "Числа в ответах — из ответа стенда: размер шкафа, ширины секций",
+    "Цены в тексте нет (AI-DEC-008)"
+  ],
+  "expected_refusals": [],
+  "turns": [
+    {
+      "human": "Распашной шкаф в спальню, ширина 2 метра, высота 2400",
+      "calls": [
+        {
+          "tool": "start_project",
+          "input": {
+            "kind": "wardrobe",
+            "template": "start"
+          },
+          "expect": {
+            "revision": "MWD-ee777b3a0f77991c",
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 49179.18,
+              "known_amount_rub": 49179.18
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 14
+          }
+        },
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Шкаф 2000 × 2400, двери симметрично",
+            "edits": [
+              {
+                "op": "set_size",
+                "width": 2000,
+                "height": 2400,
+                "depth": null
+              },
+              {
+                "op": "set_section_widths",
+                "widths": [
+                  500,
+                  1000,
+                  500
+                ]
+              },
+              {
+                "op": "set_facade",
+                "section": 1,
+                "facade": "two"
+              },
+              {
+                "op": "set_hinge_side",
+                "section": 2,
+                "side": "right"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-0a3be5a1caa70bea",
+            "applied": [
+              "set_size",
+              "set_section_widths",
+              "set_facade",
+              "set_hinge_side"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 56887.94,
+              "known_amount_rub": 56887.94
+            },
+            "sections": 3,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 16
+          }
+        }
+      ],
+      "ai": "Поставил шкаф 2000 × 2400 × 600 мм. Двери симметричные: по краям секции по 500 мм с одной дверью, в середине секция 1000 мм под парой дверей, так все четыре двери одной ширины. Крайние двери открываются к краям шкафа.\n\nЧто будете хранить больше — вешать или складывать? Есть ли длинная одежда: пальто, платья?"
+    },
+    {
+      "human": "А можно в середине одну большую дверь вместо двух?",
+      "calls": [],
+      "ai": "Можно, но одна дверь на 1000 мм будет тяжёлой на вид и выбьется из ряда: остальные двери по 500 мм. С парой шкаф смотрится ровнее, а середина так же открывается целиком. Оставить пару или всё же поставить одну широкую?"
+    },
+    {
+      "human": "Ладно, пусть пара. А если сделать четыре одинаковые секции?",
+      "calls": [
+        {
+          "tool": "wardrobe_edits",
+          "input": {
+            "project_id": "$project",
+            "base_revision": "$head",
+            "label": "Четыре равные секции, двери парами",
+            "edits": [
+              {
+                "op": "set_section_count",
+                "n": 4
+              },
+              {
+                "op": "set_facade",
+                "section": 0,
+                "facade": "one"
+              },
+              {
+                "op": "set_facade",
+                "section": 1,
+                "facade": "one"
+              },
+              {
+                "op": "set_facade",
+                "section": 2,
+                "facade": "one"
+              },
+              {
+                "op": "set_facade",
+                "section": 3,
+                "facade": "one"
+              },
+              {
+                "op": "set_hinge_side",
+                "section": 0,
+                "side": "left"
+              },
+              {
+                "op": "set_hinge_side",
+                "section": 1,
+                "side": "right"
+              },
+              {
+                "op": "set_hinge_side",
+                "section": 2,
+                "side": "left"
+              },
+              {
+                "op": "set_hinge_side",
+                "section": 3,
+                "side": "right"
+              }
+            ]
+          },
+          "expect": {
+            "revision": "MWD-d71693cfb697c6d2",
+            "applied": [
+              "set_section_count",
+              "set_facade",
+              "set_facade",
+              "set_facade",
+              "set_facade",
+              "set_hinge_side",
+              "set_hinge_side",
+              "set_hinge_side",
+              "set_hinge_side"
+            ],
+            "refused": null,
+            "price": {
+              "status": "PROVISIONAL_ESTIMATE",
+              "amount_rub": 64334.16,
+              "known_amount_rub": 64334.16
+            },
+            "sections": 4,
+            "bodies": 1,
+            "body_joints": [],
+            "parts": 17
+          }
+        }
+      ],
+      "ai": "Сделал четыре секции по 500 мм, у каждой одна дверь. Двери стоят парами: в каждой паре левая открывается влево, правая вправо, поэтому ряд остаётся симметричным.\n\nЧто будете хранить больше — вешать или складывать?"
+    }
+  ],
+  "review": "Записан на ядре 1582b93e для предложения о внешнем виде (Д) после сравнения перечня с правилами Blum (владелец, 30.10.2026: «ии-помощник делает некрасивую мебель»). Находки: заготовка шкафа (start) — 1500 мм, три двери по 500 с петлями слева; одну дверь на секцию 1000 мм конструктор ставит без замечания (у HOME дверца не шире 600 мм) — кандидат MOD-AI (Д); после set_section_count стороны петель остаются от прошлой раскладки; у секции с парой дверей hinge_side в state нет."
+}
