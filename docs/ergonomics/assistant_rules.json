@@ -2,6 +2,7 @@
  "title": "Эргономика для помощника Modulero",
  "decision": "AI-DEC-012",
  "previous": "AI-DEC-011",
+ "proposals": "Правила с источником (Д) — предложение Modulero о внешнем виде мебели (симметрия дверей, повтор ширин, линии), ждёт решения владельца и номера от Директора.",
  "date": "2026-10-29",
  "source": {
   "document": "Manual proiectare mobilier custom (ARDI / Blum), 2025, 129 с.",
@@ -27,6 +28,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "5–7"
   },
@@ -48,6 +50,7 @@
    "modulero": [
     "AT3"
    ],
+   "proposal": false,
    "pdf_only": false,
    "pages": "5–7"
   },
@@ -58,13 +61,14 @@
     "все"
    ],
    "use": "предложить",
-   "text": "Порядок разговора: сначала размеры, секции, наполнение и открывание; материалы, декор, ручки и фурнитура — после.",
+   "text": "Порядок разговора: сначала общий вид, размеры, секции, наполнение и открывание; материалы, декор, ручки и фурнитура — после. Общий вид — с первого показа: секции и двери ровные и симметричные (раздел «Внешний вид», F7, F8). Декор и ручки не пропускай: когда наполнение согласовано, предложи их (V4).",
    "blum": [
     "R002"
    ],
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": true,
    "pdf_only": false,
    "pages": "5–7, 13–16"
   },
@@ -75,7 +79,7 @@
     "все"
    ],
    "use": "предложить",
-   "text": "Удобство и выполнимость важнее вида: не предлагай решение, из‑за которого вещь не достать, угол становится глухим или открытая дверь перекрывает проход.",
+   "text": "Вид, удобство и выполнимость согласуй вместе: мебель должна быть и удобной, и красивой. Не предлагай решение, из‑за которого вещь не достать, угол становится глухим или открытая дверь перекрывает проход; из удобных вариантов выбирай тот, что смотрится ровнее (раздел «Внешний вид»).",
    "blum": [
     "R003",
     "R038"
@@ -83,6 +87,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": true,
    "pdf_only": false,
    "pages": "13–16, 72, 82, 84, 98–100, 108, 111"
   },
@@ -100,6 +105,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "79–80, 82, 89"
   },
@@ -119,6 +125,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "79–80, 82, 89"
   },
@@ -138,6 +145,7 @@
    "modulero": [
     "E04"
    ],
+   "proposal": false,
    "pdf_only": false,
    "pages": "27, 73–74, 89"
   },
@@ -155,6 +163,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "27, 73–74, 89"
   },
@@ -174,6 +183,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "25, 27, 42–48, 105–109"
   },
@@ -193,6 +203,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "27"
   },
@@ -212,6 +223,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "27"
   },
@@ -232,6 +244,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "25, 27, 42–48, 62–63, 105–109"
   },
@@ -250,6 +263,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "84, 98–100, 108"
   },
@@ -269,6 +283,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 55–60"
   },
@@ -288,6 +303,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 31–32, 34, 55–60"
   },
@@ -306,6 +322,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "33, 114"
   },
@@ -323,6 +340,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "79"
   },
@@ -341,6 +359,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "17–18, 23, 45–48, 53, 67–68, 113–128"
   },
@@ -359,6 +378,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "27, 71"
   },
@@ -377,8 +397,88 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "28, 60"
+  },
+  {
+   "id": "V1",
+   "section": "Внешний вид",
+   "applies": [
+    "все"
+   ],
+   "use": "предложить",
+   "text": "Повтор и симметрия: секции, модули и корпуса одного ряда — одной ширины или зеркально от середины. Неровный остаток — к краю или к стене (узкая секция, добор, узкий модуль), а не в середину. Сравнивай по `width_mm` и `pos` ответа, не на глаз.",
+   "blum": [
+    "R216",
+    "R237",
+    "R070"
+   ],
+   "audit": [
+    "gaps-05"
+   ],
+   "owner": [],
+   "modulero": [],
+   "proposal": true,
+   "pdf_only": false,
+   "pages": "38, 113–114, 122"
+  },
+  {
+   "id": "V2",
+   "section": "Внешний вид",
+   "applies": [
+    "кухня"
+   ],
+   "use": "предложить",
+   "text": "Кухня: навесные — над нижними стык в стык, как в заготовке (те же `pos` и `width`). Меняешь ширину или место нижнего модуля — в той же правке подвинь навесной над ним. Не выходит из‑за окна, вытяжки или техники — скажи, где стыки не совпали.",
+   "blum": [],
+   "audit": [
+    "gaps-05"
+   ],
+   "owner": [],
+   "modulero": [],
+   "proposal": true,
+   "pdf_only": false,
+   "pages": ""
+  },
+  {
+   "id": "V3",
+   "section": "Внешний вид",
+   "applies": [
+    "шкаф",
+    "купе",
+    "HOME"
+   ],
+   "use": "предложить",
+   "text": "Горизонтальные линии — на одной высоте: наружные ящики и швы фасадов в соседних секциях, полки в открытых секциях рядом. Где встали детали — по geometry (`z`); выравнивай командами редактора (`wardrobe/moveFacadeSeam`, `wardrobe/moveDrawerBlock`, `wardrobe/moveShelf`) и проверяй по ответу. Ящики при этом остаются в зоне W10.",
+   "blum": [],
+   "audit": [
+    "gaps-05"
+   ],
+   "owner": [],
+   "modulero": [],
+   "proposal": true,
+   "pdf_only": false,
+   "pages": ""
+  },
+  {
+   "id": "V4",
+   "section": "Внешний вид",
+   "applies": [
+    "все"
+   ],
+   "use": "предложить",
+   "text": "Перед тем как сказать «готово», посмотри на вид по state: двери и секции симметричны (F7, F8, V1), линии совпадают (V3), декор, цвет фасадов и ручки выбраны одной гаммой (O18). Чего нет — предложи коротко, не больше трёх предложений за реплику.",
+   "blum": [
+    "R002",
+    "R005"
+   ],
+   "audit": [],
+   "owner": [],
+   "modulero": [],
+   "proposal": true,
+   "pdf_only": false,
+   "pages": "5–7, 13–16, 23, 45–48, 53, 67–68, 113–128"
   },
   {
    "id": "F1",
@@ -396,6 +496,7 @@
     "AI-DEC-012"
    ],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "24, 80, 95–97"
   },
@@ -418,6 +519,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "24, 80, 95–97, 103"
   },
@@ -436,6 +538,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "70"
   },
@@ -447,13 +550,14 @@
     "кухня"
    ],
    "use": "ориентир",
-   "text": "Витрина шире 600 мм — на две дверцы.",
+   "text": "Витрина шире 600 мм — на две дверцы: так она смотрится уравновешенно (в руководстве — «для функционального и эстетического равновесия»).",
    "blum": [
     "R014"
    ],
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "38"
   },
@@ -472,6 +576,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "94, 107"
   },
@@ -490,6 +595,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "23–24, 44, 90, 108–109"
   },
@@ -500,18 +606,42 @@
     "шкаф",
     "HOME"
    ],
-   "use": "предупредить",
-   "text": "Ширину и число распашных створок, их симметрию и сторону открывания руководство общим правилом не задаёт: створки по секциям ставит конструктор. Своё правило не придумывай; сторону петель меняй, только если человек просит или дверь упирается в стену.",
-   "blum": [],
+   "use": "предложить",
+   "text": "Распашные двери — симметрично, если человек не просил иначе. Все двери шкафа — одной ширины, не шире 600 мм: секция под одну дверь — шириной с дверь, под две — вдвое шире; секции равные или зеркально от середины (2000 мм — 500 + 1000 + 500 с парой дверей в середине, как в примере X1, или 4 × 500). Ширины — `set_section_count` (поровну) или `set_section_widths`, двери — `set_facade` one или two; что вышло — по `width_mm` ответа. Одну дверь шире 600 мм конструктор шкафа ставит без замечания, но на вид она тяжёлая — предложи две. У HOME дверца встаёт на проём между перегородками и не шире 600 мм: корпус шире дели перегородкой посередине и закрывай парой, как в заготовке `sideboard`. Общего правила симметрии в руководстве нет, это правило Modulero.",
+   "blum": [
+    "R216",
+    "R014"
+   ],
    "audit": [
     "gaps-04",
-    "gaps-05",
+    "gaps-05"
+   ],
+   "owner": [],
+   "modulero": [],
+   "proposal": true,
+   "pdf_only": false,
+   "pages": "38, 113–114"
+  },
+  {
+   "id": "F8",
+   "section": "Фасады и открывание",
+   "applies": [
+    "шкаф",
+    "HOME"
+   ],
+   "use": "предложить",
+   "text": "Петли — зеркально: у крайних дверей — по краям шкафа (левая открывается влево, правая вправо), две соседние одиночные двери — парой, петлями наружу (`set_hinge_side`; у HOME — `hinge` в `add_door`). При нечётном числе одиночных дверей средняя — в сторону, откуда чаще подходят; не знаешь — скажи, как поставил. Конструктор оставляет сторону петель от прошлой раскладки, а заготовка шкафа приходит со всеми петлями слева — после смены числа секций ставь стороны заново. Дверь упирается в стену (O15) или человек просит — меняй сторону у этой двери, симметрию держи на остальных.",
+   "blum": [
+    "R022"
+   ],
+   "audit": [
     "gaps-06"
    ],
    "owner": [],
    "modulero": [],
+   "proposal": true,
    "pdf_only": false,
-   "pages": ""
+   "pages": "20, 31–32, 34, 55–60"
   },
   {
    "id": "K1",
@@ -529,6 +659,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "72–79, 83–84, 89"
   },
@@ -550,6 +681,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "74–79, 81"
   },
@@ -568,6 +700,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "74, 81–82"
   },
@@ -585,6 +718,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "74, 77"
   },
@@ -602,6 +736,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "78, 81"
   },
@@ -623,6 +758,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "78, 85"
   },
@@ -640,6 +776,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "74–79, 83–85"
   },
@@ -658,6 +795,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "75–76"
   },
@@ -675,6 +813,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "76"
   },
@@ -692,6 +831,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "76–79"
   },
@@ -710,6 +850,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "74"
   },
@@ -729,6 +870,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "44, 97"
   },
@@ -747,6 +889,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "82, 87"
   },
@@ -767,6 +910,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "73–74, 77–79"
   },
@@ -785,6 +929,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "73–74, 98, 108"
   },
@@ -803,6 +948,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "73–74, 98, 108"
   },
@@ -822,6 +968,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "73–74, 77–79"
   },
@@ -840,6 +987,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "99–100, 105–106"
   },
@@ -857,6 +1005,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "109"
   },
@@ -879,6 +1028,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "79–80, 82"
   },
@@ -897,6 +1047,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "72, 82, 124, 126, 128"
   },
@@ -915,6 +1066,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "72, 79–82"
   },
@@ -936,6 +1088,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "79–80, 84"
   },
@@ -955,6 +1108,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "80–81"
   },
@@ -975,6 +1129,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "72, 79–82"
   },
@@ -994,6 +1149,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "81–82"
   },
@@ -1011,6 +1167,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "82"
   },
@@ -1028,6 +1185,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "82"
   },
@@ -1046,6 +1204,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "82"
   },
@@ -1065,6 +1224,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "74, 82"
   },
@@ -1082,6 +1242,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "98"
   },
@@ -1099,6 +1260,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "72, 74, 77"
   },
@@ -1119,6 +1281,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "76, 82, 85–88"
   },
@@ -1137,6 +1300,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "82"
   },
@@ -1154,6 +1318,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "85"
   },
@@ -1173,6 +1338,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 57"
   },
@@ -1193,6 +1359,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 57"
   },
@@ -1212,6 +1379,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 57"
   },
@@ -1234,6 +1402,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 58"
   },
@@ -1252,6 +1421,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "57–58"
   },
@@ -1272,6 +1442,7 @@
     "AI-DEC-011"
    ],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "70"
   },
@@ -1293,6 +1464,7 @@
     "AI-DEC-011"
    ],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 70"
   },
@@ -1315,6 +1487,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 58"
   },
@@ -1333,6 +1506,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "58"
   },
@@ -1352,6 +1526,7 @@
     "E04",
     "AT3"
    ],
+   "proposal": false,
    "pdf_only": false,
    "pages": ""
   },
@@ -1378,6 +1553,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "61"
   },
@@ -1399,6 +1575,7 @@
     "AI-DEC-012"
    ],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "122"
   },
@@ -1416,6 +1593,7 @@
     "AI-DEC-012"
    ],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": ""
   },
@@ -1435,6 +1613,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "54, 70"
   },
@@ -1453,6 +1632,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 58"
   },
@@ -1472,6 +1652,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "57"
   },
@@ -1490,6 +1671,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "69"
   },
@@ -1509,6 +1691,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "17–20"
   },
@@ -1527,6 +1710,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20"
   },
@@ -1545,6 +1729,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "19"
   },
@@ -1564,6 +1749,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "31"
   },
@@ -1589,6 +1775,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20–21, 58"
   },
@@ -1608,6 +1795,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": true,
    "pages": "21"
   },
@@ -1626,6 +1814,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20–21"
   },
@@ -1645,6 +1834,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "21"
   },
@@ -1668,6 +1858,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "19"
   },
@@ -1687,6 +1878,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "17–20, 31, 33"
   },
@@ -1708,6 +1900,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "38"
   },
@@ -1725,6 +1918,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "38"
   },
@@ -1744,6 +1938,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "38"
   },
@@ -1754,7 +1949,7 @@
     "HOME"
    ],
    "use": "ориентир",
-   "text": "ТВ‑тумба на полу: высота 400–600 мм, глубина 400–500; можно на невысоких ножках 10–50 мм (`set_base` legs), если конструктор даёт такую высоту.",
+   "text": "ТВ‑тумба на полу: высота 400–600 мм, глубина 400–500; можно на невысоких ножках 10–50 мм (`set_base` legs) — для уравновешенного вида, если конструктор даёт такую высоту.",
    "blum": [
     "R068",
     "R069"
@@ -1762,6 +1957,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "38"
   },
@@ -1781,6 +1977,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "31, 38, 54"
   },
@@ -1791,7 +1988,7 @@
     "HOME"
    ],
    "use": "ориентир",
-   "text": "ТВ: центр экрана — 900–1100 мм от пола, между низом ТВ и тумбой — 200–300. Высоту тумбы из размера телевизора сам не высчитывай. Если ТВ висит выше — кронштейн с наклоном подбирают отдельно, не мебель конструктора.",
+   "text": "ТВ: центр экрана — 900–1100 мм от пола, между низом ТВ и тумбой — 200–300, чтобы ТВ и тумба смотрелись соразмерно. Высоту тумбы из размера телевизора сам не высчитывай. Если ТВ висит выше — кронштейн с наклоном подбирают отдельно, не мебель конструктора.",
    "blum": [
     "R074",
     "R075",
@@ -1800,6 +1997,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "39"
   },
@@ -1819,6 +2017,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "29–30, 53–54, 67–68, 114"
   },
@@ -1839,6 +2038,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "37, 39"
   },
@@ -1849,7 +2049,7 @@
     "HOME"
    ],
    "use": "ориентир",
-   "text": "Стеллаж‑модуль гостиной: ширина 300–600 мм, высота 1200–2100, глубина 300–400. Для гибкой композиции — отдельные одинаковые модули рядом (`copy`).",
+   "text": "Стеллаж‑модуль гостиной: ширина 300–600 мм — по ритму, который нужен на стене; высота 1200–2100 — чтобы не загромождать стену; глубина 300–400. Для гибкой композиции — отдельные одинаковые модули рядом (`copy`), ритм — повтором одной ширины (V1).",
    "blum": [
     "R070",
     "R007"
@@ -1857,6 +2057,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "36, 38"
   },
@@ -1867,7 +2068,7 @@
     "HOME"
    ],
    "use": "ориентир",
-   "text": "Витрина: ширина 600–1000 мм (шире 600 — две дверцы), высота 2000–2400, можно до потолка, глубина 350–400; дверцы — стеклянные (`set_door_glass`).",
+   "text": "Витрина: ширина 600–1000 мм (шире 600 — две дверцы, для равновесия), высота 2000–2400, можно до потолка, глубина 350–400 — чтобы витрина не выглядела массивной; дверцы — стеклянные (`set_door_glass`).",
    "blum": [
     "R071",
     "R072",
@@ -1876,6 +2077,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "38"
   },
@@ -1894,6 +2096,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "54, 70"
   },
@@ -1913,6 +2116,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": ""
   },
@@ -1932,6 +2136,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": ""
   },
@@ -1960,6 +2165,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "33"
   },
@@ -1984,6 +2190,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "32"
   },
@@ -2005,6 +2212,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "33, 124, 126, 128"
   },
@@ -2023,6 +2231,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "29–30, 34, 68, 114, 116"
   },
@@ -2042,6 +2251,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "31, 80–81, 109, 114, 116, 118, 120, 122, 124, 126, 128"
   },
@@ -2061,6 +2271,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "29–30, 45–46, 53, 57–58, 67–68, 91, 94, 105–106"
   },
@@ -2083,6 +2294,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "69"
   },
@@ -2103,6 +2315,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "69"
   },
@@ -2121,6 +2334,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "70"
   },
@@ -2142,6 +2356,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "29–31, 33–34, 54, 114, 116"
   },
@@ -2162,6 +2377,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "42–52, 70, 90–109"
   },
@@ -2179,6 +2395,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "7"
   },
@@ -2197,6 +2414,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "23–24, 44, 90, 108–109"
   },
@@ -2216,6 +2434,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "42, 44"
   },
@@ -2235,6 +2454,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "42–44"
   },
@@ -2254,6 +2474,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "45–46, 91"
   },
@@ -2273,6 +2494,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "92–93"
   },
@@ -2293,6 +2515,7 @@
     "AI-DEC-012"
    ],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "95–97, 103"
   },
@@ -2313,6 +2536,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "52, 90, 94, 97, 101, 107"
   },
@@ -2333,6 +2557,7 @@
    ],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "42–52, 70, 90–109, 118"
   },
@@ -2351,6 +2576,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "113–114"
   },
@@ -2372,6 +2598,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "121–122"
   },
@@ -2392,6 +2619,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "114–116"
   },
@@ -2412,6 +2640,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 114"
   },
@@ -2432,6 +2661,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "20, 38, 58"
   },
@@ -2454,6 +2684,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "117–120"
   },
@@ -2473,6 +2704,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "118–120"
   },
@@ -2493,6 +2725,7 @@
    "audit": [],
    "owner": [],
    "modulero": [],
+   "proposal": false,
    "pdf_only": false,
    "pages": "81–82, 124, 126, 128"
   }
